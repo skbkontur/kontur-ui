@@ -1,1 +1,0 @@
-{"v":3,"stories":{"welcome--docs":{"id":"welcome--docs","title":"Welcome","name":"Docs","importPath":"./.storybook/docsPages/welcome.mdx","storiesImports":[],"tags":["unattached-mdx","docs"],"kind":"Welcome","story":"Docs","parameters":{"__id":"welcome--docs","docsOnly":true,"fileName":"./.storybook/docsPages/welcome.mdx"}}}}
