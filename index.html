@@ -171,6 +171,23 @@
           color: white;
         }
       }
+
+      body:not(.show-all-packages) #storybook-explorer-tree {
+        & > div[data-title],
+        & > div[aria-label] {
+          display: none;
+
+          &[data-title="React UI"],
+          &[data-title="React UI Validations"] {
+            display: block;
+          }
+
+          &[aria-label]:has([title="React UI"]),
+          &[aria-label]:has([title="React UI Validations"]) {
+            display: flex;
+          }
+        }
+      }
     </style>
 
     <script>
@@ -186,6 +203,10 @@
         },
         { capture: true }
       );
+
+      fetch("https://ui.gitlab-pages.kontur.host/docs/").then(() => {
+        document.body.classList.add("show-all-packages");
+      });
     </script>
 
     <style>
@@ -321,6 +342,17 @@
           },
           id: "react-ui-validations",
           type: "unknown",
+        },
+        "empty-state": {
+          expanded: true,
+          title: "EmptyState",
+          url: "https://ui.gitlab-pages.kontur.host/docs/storybook/empty-state/master",
+          versions: {
+            master:
+              "https://ui.gitlab-pages.kontur.host/docs/storybook/empty-state/master",
+          },
+          id: "empty-state",
+          type: "server-checked",
         },
       };
 
