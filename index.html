@@ -171,7 +171,7 @@
       ) {
       button {
         pointer-events: none;
-        opacity: 0.8;
+        color: rgba(0, 0, 0, 0.32);
 
         span:first-child {
           opacity: 0;
@@ -215,7 +215,7 @@
           background-image: url(https://s.kontur.ru/common-v2/icons-ui/black/security-lock-closed/security-lock-closed-16-Solid.svg);
           background-position: center;
           background-repeat: no-repeat;
-          opacity: 0.6;
+          opacity: 0.37; /* turns svg with #222 fill to equivalent of rgba(0, 0, 0, 0.32) */
         }
       }
     }
@@ -223,6 +223,10 @@
 
   .dom-content-loaded div:has(> #preview-loader) {
     display: none;
+  }
+
+  [data-radix-scroll-area-viewport] + div > div:before {
+    min-width: 24px !important;
   }
 </style>
 
