@@ -167,7 +167,7 @@
 
     &
       > div[aria-label]:not(
-        :has(+ div[data-title] [data-public-storybook="false"])
+        :has(+ div[data-title] [data-public-storybook="true"])
       ) {
       button {
         pointer-events: none;
@@ -233,10 +233,12 @@
     "click",
     (e) => {
       const anchor = e.target.closest("a[id^=list-item]");
-      if (anchor && anchor.href.startsWith("https://tech.skbkontur.ru/")) {
-        e.stopPropagation();
-      } else {
-        e.preventDefault(); // prevent scroll jumps
+      if (anchor) {
+        if (anchor.href.startsWith("https://tech.skbkontur.ru/")) {
+          e.stopPropagation();
+        } else {
+          e.preventDefault(); // prevent scroll jumps
+        }
       }
     },
     { capture: true }
