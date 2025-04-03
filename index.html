@@ -96,15 +96,15 @@
 
   #storybook-explorer-tree [aria-expanded] {
     /* Exteral storybooks with 1 story. Move 1st link to title */
-    &:has(+ div [data-nodetype="document"]:only-child),
+    /* &:has(+ div [data-nodetype="document"]:only-child),
     &:has(+ div [data-nodetype="document"]:only-child) + div > div {
       padding: 0;
       border: 0;
       margin: 8px 0;
-    }
+    } */
 
     & + div [data-nodetype="document"]:only-child {
-      margin-top: -32px;
+      margin-top: -25px;
       font-size: 0;
     }
 
@@ -154,14 +154,20 @@
     }
   }
 
-  body:not(.show-all-packages) #storybook-explorer-tree {
+  #storybook-explorer-tree > div[aria-label] {
+    button[data-action="collapse-ref"] + aside {
+      margin-right: 8px;
+    }
+  }
+
+  body.dom-content-loaded:not(.show-all-packages) #storybook-explorer-tree {
     & > div[data-title]:not(:has([data-public-storybook="true"])) {
       display: none;
     }
 
     &
       > div[aria-label]:not(
-        :has(+ div[data-title] [data-public-storybook="true"])
+        :has(+ div[data-title] [data-public-storybook="false"])
       ) {
       button {
         pointer-events: none;
@@ -174,7 +180,6 @@
 
       aside {
         position: relative;
-        margin-right: 8px;
         cursor: help;
 
         & > * {
@@ -216,7 +221,7 @@
     }
   }
 
-  div:has(> #preview-loader) {
+  .dom-content-loaded div:has(> #preview-loader) {
     display: none;
   }
 </style>
@@ -239,6 +244,10 @@
 
   fetch("https://ui.gitlab-pages.kontur.host/docs/").then(() => {
     document.body.classList.add("show-all-packages");
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("dom-content-loaded");
   });
 </script>
  
