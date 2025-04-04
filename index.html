@@ -246,6 +246,10 @@
     document.body.classList.add("show-all-packages");
   });
 
+  fetch("https://ui.gitlab-pages.testkontur.ru/test-project/test.json").then(
+    (r) => console.log(r.json())
+  );
+
   document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dom-content-loaded");
   });
@@ -286,6 +290,7 @@
     "versions": {
       "next": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/next",
       "5.0.16": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.0.16",
+      "5.0.15": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.0.15",
       "5.0.0": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.0.0",
       "4.27.0": "https://tech.skbkontur.ru/react-ui/4.27.0",
       "4.26.0": "https://tech.skbkontur.ru/react-ui/4.26.0",
@@ -387,7 +392,8 @@
     "title": "Typography",
     "url": "https://ui.gitlab-pages.kontur.host/docs/storybook/typography/0.1.0",
     "versions": {
-      "0.1.0": "https://ui.gitlab-pages.kontur.host/docs/storybook/typography/0.1.0"
+      "0.1.0": "https://ui.gitlab-pages.kontur.host/docs/storybook/typography/0.1.0",
+      "0.0.0": "https://ui.gitlab-pages.testkontur.ru/test-project/typography/0.1.0"
     },
     "id": "typography",
     "type": "server-checked"
