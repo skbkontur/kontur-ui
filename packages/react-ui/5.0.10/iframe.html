@@ -322,25 +322,201 @@
   body {
     height: 100%;
   }
+
   body {
-    font-family: 'Lab Grotesque', 'Helvetica Neue', Roboto, Arial, sans-serif;
     font-size: 14px;
     margin: 0;
     background: white;
     color: rgba(0, 0, 0, 0.87);
     padding: 0 !important;
   }
+
+  body,
+  .sb-wrapper {
+    font-family: 'Lab Grotesque', 'Helvetica Neue', Roboto, Arial, sans-serif;
+  }
+
+  #storybook-docs .sbdocs-wrapper p,
+  #storybook-docs .sbdocs-wrapper li {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  #storybook-docs .sbdocs-wrapper code {
+    font-family: monospace;
+    font-size: 14px;
+  }
+
   html.relative {
     position: relative;
     height: auto;
   }
+
   #root {
     min-height: 100%;
   }
-  .dark {
+
+  .dark:not(:has(.sbdocs-wrapper)) {
     background: #1f1f1f;
     color: rgba(255, 255, 255, 0.865);
-  }</style><style>#storybook-root[hidden],
+  }
+
+  .dark [data-role='code-wrapper'] {
+    color: rgba(255, 255, 255, 0.865);
+  }
+
+  .dark [data-role='code-wrapper'] button.active {
+    color: #fff;
+  }
+
+  .dark [data-role='preview-wrapper'] > div,
+  .dark [data-role='preview-wrapper'] + div {
+    background: rgb(40, 42, 54);
+  }
+
+  #storybook-docs .sbdocs-wrapper details > summary {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  /*Кастомные стили*/
+  :root {
+    --sidebar-width: 13rem;
+    --sidebar-left-padding: 0.5rem;
+    --sidebar-inner-width: calc(var(--sidebar-width) - var(--sidebar-left-padding));
+
+    --content-width: calc(100% - var(--sidebar-width));
+  }
+
+  .sbdocs-wrapper {
+    gap: 2rem;
+    padding-left: 38px !important;
+  }
+
+  .sbdocs-wrapper:has(#themeplayground) > div:has(.toc-wrapper) {
+    display: none;
+  }
+
+  .docs-story div[scale='1'] {
+    transform: none;
+  }
+
+  .sbdocs-content {
+    width: var(--content-width) !important;
+  }
+
+  div:has(> .toc-wrapper) {
+    scrollbar-width: none;
+  }
+
+  div:has(> div > div.toc-wrapper) {
+    order: -1;
+    width: var(--sidebar-width) !important;
+    padding-left: var(--sidebar-left-padding);
+    flex-shrink: 0;
+    background: white;
+  }
+
+  div:has(> div > div.toc-wrapper) {
+    padding-left: 0;
+  }
+
+  div:has(> div > div.toc-wrapper) > * {
+    width: var(--sidebar-inner-width) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .toc-wrapper {
+    margin-top: 24px;
+  }
+
+  .toc-wrapper > .toc-list .toc-list,
+  div:has(> div > div.toc-wrapper) .toc-wrapper > .toc-list {
+    border: 0 !important;
+    margin: 0 !important;
+  }
+
+  div:has(> div > div.toc-wrapper) div:has(.toc-wrapper .toc-list) > div > p:first-child {
+    display: none;
+  }
+
+  div:has(> div > div.toc-wrapper) .toc-list-item {
+    padding-left: 0px !important;
+    margin-left: 0 !important;
+  }
+
+  div:has(> div > div.toc-wrapper) .toc-list-item::before {
+    content: none;
+  }
+
+  .toc-list-item.is-active-li:before {
+    content: none !important;
+  }
+
+  .toc-list-item > a {
+    color: #3c3c3c !important;
+
+    &:hover {
+      color: #222 !important;
+    }
+  }
+
+  div:has(> .toc-wrapper) > p,
+  .sbdocs-content a:not(.sb-unstyled a) {
+    color: #3c3c3c !important;
+  }
+
+  .sbdocs-content a:not(.sb-unstyled a) {
+    text-decoration: underline;
+    text-decoration-color: #adadad;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  .sbdocs-content a:not(.sb-unstyled a):hover {
+    color: #222 !important;
+    text-decoration-color: #222 !important;
+    transition: text-decoration-color 100ms cubic-bezier(0.5, 1, 0.89, 1);
+  }
+
+  .sb-unstyled table {
+    margin: 16px 0;
+    line-height: 24px;
+    padding: 0;
+    border-collapse: collapse;
+  }
+
+  .sb-unstyled table tr {
+    border-top: 1px solid hsla(203, 50%, 30%, 0.15);
+    margin: 0;
+  }
+
+  .sb-unstyled table tr th {
+    font-weight: bold;
+  }
+
+  .sb-unstyled table tr th,
+  .sb-unstyled table tr td {
+    color: #2e3438;
+    border: 1px solid hsla(203, 50%, 30%, 0.15);
+    margin: 0;
+    padding: 6px 13px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    div:has(> div > div.toc-wrapper) {
+      display: none;
+    }
+
+    .sbdocs-content {
+      width: 100% !important;
+    }
+  }</style><script>window.addEventListener('error', function (e) {
+    // prevent React's listener from firing
+    e.stopImmediatePropagation();
+    // prevent the browser's console error message
+    e.preventDefault();
+  });</script><style>#storybook-root[hidden],
       #storybook-docs[hidden] {
         display: none !important;
       }</style></head><body><div class="sb-preparing-story sb-wrapper"><div class="sb-loader"></div></div><div class="sb-preparing-docs sb-wrapper"><div class="sb-previewBlock"><div class="sb-previewBlock_header"><div class="sb-previewBlock_icon"></div><div class="sb-previewBlock_icon"></div><div class="sb-previewBlock_icon"></div><div class="sb-previewBlock_icon"></div></div><div class="sb-previewBlock_body"><div class="sb-loader"></div></div></div><table aria-hidden="true" class="sb-argstableBlock"><thead class="sb-argstableBlock-head"><tr><th><span>Name</span></th><th><span>Description</span></th><th><span>Default</span></th><th><span>Control</span></th></tr></thead><tbody class="sb-argstableBlock-body"><tr><td><span>propertyName</span><span title="Required">*</span></td><td><div><span>This is a short description</span></div><div class="sb-argstableBlock-summary"><div><span class="sb-argstableBlock-code">summary</span></div></div></td><td><div><span class="sb-argstableBlock-code">defaultValue</span></div></td><td><button>Set string</button></td></tr><tr><td><span>propertyName</span><span>*</span></td><td><div><span>This is a short description</span></div><div class="sb-argstableBlock-summary"><div><span class="sb-argstableBlock-code">summary</span></div></div></td><td><div><span class="sb-argstableBlock-code">defaultValue</span></div></td><td><button>Set string</button></td></tr><tr><td><span>propertyName</span><span>*</span></td><td><div><span>This is a short description</span></div><div class="sb-argstableBlock-summary"><div><span class="sb-argstableBlock-code">summary</span></div></div></td><td><div><span class="sb-argstableBlock-code">defaultValue</span></div></td><td><button>Set string</button></td></tr></tbody></table></div><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><pre id="error-message" class="sb-heading"></pre><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="storybook-root"></div><div id="storybook-docs"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
@@ -351,7 +527,7 @@
           
       
           
-            window['FRAMEWORK_OPTIONS'] = {"legacyRootApi":true,"fastRefresh":true,"strictMode":true};
+            window['FRAMEWORK_OPTIONS'] = {"legacyRootApi":false};
           
       
           
@@ -363,11 +539,15 @@
           
       
           
-            window['STORIES'] = [{"titlePrefix":"","directory":"./components","files":"**/*.stories.tsx","importPathMatcher":"^\\.[\\\\/](?:components(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.tsx)$"},{"titlePrefix":"","directory":"./internal","files":"**/*.stories.tsx","importPathMatcher":"^\\.[\\\\/](?:internal(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.tsx)$"}];</script><script type="module">import './sb-preview/runtime.js';
+            window['STORIES'] = [{"titlePrefix":"","directory":"./components","files":"**/*.stories.tsx","importPathMatcher":"^\\.[\\\\/](?:components(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.tsx)$"},{"titlePrefix":"","directory":"./internal","files":"**/*.stories.tsx","importPathMatcher":"^\\.[\\\\/](?:internal(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.tsx)$"},{"titlePrefix":"","directory":"./.storybook","files":"**/*.stories.tsx","importPathMatcher":"^\\.[\\\\/](?:\\.storybook(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.tsx)$"},{"titlePrefix":"","directory":"./components","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:components(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.mdx)$"},{"titlePrefix":"","directory":"./.storybook","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:\\.storybook(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.mdx)$"},{"titlePrefix":"","directory":".","files":"**/*.mdx","importPathMatcher":"^\\.(?:(?:^|[\\\\/]|(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/])(?!\\.)(?=.)[^\\\\/]*?\\.mdx)$"}];
+          
+      
+          
+            window['DOCS_OPTIONS'] = {"defaultName":"Docs","autodocs":"tag","docsMode":true};</script><script type="module">import './sb-preview/runtime.js';
 
       
-      import './runtime~main.71d7b57a.iframe.bundle.js';
+      import './runtime~main.4dac0179.iframe.bundle.js';
       
-      import './9781.83806ce6.iframe.bundle.js';
+      import './1537.40598c97.iframe.bundle.js';
       
-      import './main.76eb3975.iframe.bundle.js';</script></body></html>
+      import './main.3a4af0bb.iframe.bundle.js';</script></body></html>
