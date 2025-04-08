@@ -240,25 +240,11 @@
           )
         ) {
           e.stopPropagation();
-        } else {
-          e.preventDefault(); // prevent scroll jumps
         }
       }
     },
     { capture: true }
   );
-
-  const originalFetch = fetch;
-
-  window["fetch"] = (input, init) => {
-    // workaround for CORS errors while using version dropdowns
-    // turns this: https://github.com/storybookjs/storybook/blob/v7.6.18/code/lib/manager-api/src/modules/refs.ts#L201
-    // into always "omit"
-    if (init?.credentials == "include") {
-      init.credentials = "omit";
-    }
-    return originalFetch(input, init);
-  };
 
   fetch("https://ui.gitlab-pages.kontur.host/docs/").then(() => {
     document.body.classList.add("show-all-packages");
