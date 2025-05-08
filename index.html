@@ -185,19 +185,19 @@
         }
 
         &:before {
-          content: "Доступно только сотрудникам Контура";
+          content: "Доступно только из\00a0внутренней сети Контура";
           display: none;
           position: absolute;
           font-size: 12px;
           font-weight: 400;
           line-height: 14px;
-          left: -120px;
-          top: -40px;
+          right: 0;
+          top: -54px;
           width: 120px;
           background: white;
-          padding: 4px 8px;
+          padding: 4px 6px;
           border: 1px solid #ccc;
-          border-radius: 2px;
+          border-radius: 4px;
         }
 
         &:after {
@@ -237,14 +237,14 @@
           anchor.href.startsWith("https://tech.skbkontur.ru/react-ui") ||
           // packages from old ui-parkings owned by IF
           anchor.href.startsWith(
-            "https://ui.gitlab-pages.kontur.host/docs/ui-parking-old-if/#/"
+            "https://ui.gitlab-pages.kontur.host/docs/ui-parking-old-if/#/",
           )
         ) {
           e.stopPropagation();
         }
       }
     },
-    { capture: true }
+    { capture: true },
   );
 
   fetch("https://ui.gitlab-pages.kontur.host/docs/").then(() => {
