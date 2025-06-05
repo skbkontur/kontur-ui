@@ -160,7 +160,7 @@
     }
 
     &
-      > div[aria-label]:not(
+      > div[aria-label][aria-expanded="true"]:not(
         :has(+ div[data-title] [data-public-storybook="true"])
       ) {
       button {
@@ -237,14 +237,14 @@
           anchor.href.startsWith("https://tech.skbkontur.ru/react-ui") ||
           // packages from old ui-parkings owned by IF
           anchor.href.startsWith(
-            "https://ui.gitlab-pages.kontur.host/docs/ui-parking-old-if/#/",
+            "https://ui.gitlab-pages.kontur.host/docs/ui-parking-old-if/#/"
           )
         ) {
           e.stopPropagation();
         }
       }
     },
-    { capture: true },
+    { capture: true }
   );
 
   fetch("https://ui.gitlab-pages.kontur.host/docs/").then(() => {
