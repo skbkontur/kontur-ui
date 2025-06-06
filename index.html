@@ -160,7 +160,7 @@
     }
 
     &
-      > div[aria-label]:not(
+      > div[aria-label][aria-expanded="true"]:not(
         :has(+ div[data-title] [data-public-storybook="true"])
       ) {
       button {
@@ -237,14 +237,14 @@
           anchor.href.startsWith("https://tech.skbkontur.ru/react-ui") ||
           // packages from old ui-parkings owned by IF
           anchor.href.startsWith(
-            "https://ui.gitlab-pages.kontur.host/docs/ui-parking-old-if/#/",
+            "https://ui.gitlab-pages.kontur.host/docs/ui-parking-old-if/#/"
           )
         ) {
           e.stopPropagation();
         }
       }
     },
-    { capture: true },
+    { capture: true }
   );
 
   fetch("https://ui.gitlab-pages.kontur.host/docs/").then(() => {
@@ -295,8 +295,9 @@
   "react-ui": {
     "expanded": true,
     "title": "React UI",
-    "url": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.1.3",
+    "url": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.1.4",
     "versions": {
+      "5.1.4": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.1.4",
       "5.1.3": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.1.3",
       "5.1.2": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.1.2",
       "5.1.1": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/5.1.1",
