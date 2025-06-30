@@ -318,7 +318,7 @@
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to top frame for connecting dev tools');
-  }</script><link rel="stylesheet" href="https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque.css"><style>html,
+  }</script><link rel="preconnect" href="https://ui.gitlab-pages.kontur.host"><link rel="stylesheet" href="https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque.css"><style>html,
   body {
     height: 100%;
   }
@@ -334,6 +334,27 @@
   body,
   .sb-wrapper {
     font-family: 'Lab Grotesque', 'Helvetica Neue', Roboto, Arial, sans-serif;
+  }
+
+  #storybook-docs .sbdocs-content > h2 {
+    margin-top: 12px;
+    border-bottom: none !important;
+  }
+
+  #storybook-docs .sbdocs-content > h2:empty {
+    display: none;
+  }
+
+  #storybook-docs .sbdocs-content > div > h3 {
+    margin: 24px 0 12px;
+  }
+
+  #storybook-docs .sbdocs-content > div > p {
+    margin: 8px 0;
+  }
+
+  #storybook-docs .sbdocs-content > p + h2 {
+    margin-top: 32px;
   }
 
   #storybook-docs .sbdocs-wrapper p,
@@ -372,10 +393,6 @@
   .dark [data-role='preview-wrapper'] > div,
   .dark [data-role='preview-wrapper'] + div {
     background: rgb(40, 42, 54);
-  }
-
-  #storybook-docs .sbdocs-wrapper details > summary {
-    color: rgba(0, 0, 0, 0.87);
   }
 
   /*Кастомные стили*/
@@ -436,13 +453,16 @@
     margin: 0 !important;
   }
 
-  div:has(> div > div.toc-wrapper) div:has(.toc-wrapper .toc-list) > div > p:first-child {
+  div:has(> div > div.toc-wrapper) p {
     display: none;
   }
 
   div:has(> div > div.toc-wrapper) .toc-list-item {
+    padding-top: 6px;
     padding-left: 0 !important;
+    padding-bottom: 6px;
     margin-left: 0 !important;
+    text-wrap: balance;
     font-size: 14px !important;
   }
 
@@ -454,8 +474,12 @@
     content: none !important;
   }
 
+  .toc-list-item.is-active-li > a {
+    font-weight: 700 !important;
+  }
+
   .toc-list-item > a {
-    color: #3c3c3c !important;
+    color: #222 !important;
 
     &:hover {
       color: #222 !important;
@@ -528,7 +552,7 @@
           
       
           
-            window['FRAMEWORK_OPTIONS'] = {"legacyRootApi":true};
+            window['FRAMEWORK_OPTIONS'] = {"legacyRootApi":false};
           
       
           
@@ -547,8 +571,8 @@
             window['DOCS_OPTIONS'] = {"defaultName":"Docs","autodocs":"tag","docsMode":true};</script><script type="module">import './sb-preview/runtime.js';
 
       
-      import './runtime~main.72c125d8.iframe.bundle.js';
+      import './runtime~main.ffef62b6.iframe.bundle.js';
       
-      import './6003.59f0f857.iframe.bundle.js';
+      import './6636.dfbd1e03.iframe.bundle.js';
       
-      import './main.1744b9b2.iframe.bundle.js';</script></body></html>
+      import './main.e3dc6a8d.iframe.bundle.js';</script></body></html>
