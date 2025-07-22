@@ -14,22 +14,44 @@ const editLinkStyles = `
     right: 24px;
     bottom: 24px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    align-items: center;
     width: 40px;
     height: 40px;
+    border: 1px solid rgba(0,0,0,.09);
+    border-radius: 8px;
+    background:rgba(245, 245, 245, 1);
     cursor: pointer;
-    background: #F0F0F0;
     transition: .15s ease;
+    user-selection: none;
   }
 
   .${EDIT_ITEM_CLASS}:hover {
-    background: #e6e6e6;
+    background:rgba(240, 240, 240, 1);
   }
 
   .${EDIT_ITEM_CLASS}:active {
-    filter: brightness(96%);
+    background:rgba(235, 235, 235, 1);
+  }
+
+  .${EDIT_ITEM_CLASS}:before {
+    content: 'Редактировать на GitLab';
+    position: absolute;
+    top: calc(50% - 15px);
+    right: calc(100% + 8px);
+    padding: 8px;
+    border-radius: 6px;
+    background: rgba(0,0,0,.75);
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: .15s ease opacity;
+  }
+
+  .${EDIT_ITEM_CLASS}:hover:before {
+    opacity: 1;
   }
 `;
 
@@ -72,7 +94,7 @@ fetch(STORYBOOK_VERSIONS_URL)
       </div>
     `;
 
-    editLink.onclick = async () => {
+    const onClick = async () => {
       const packageNameElement = document.querySelector(
         `[${HIGHLIGHTED_REF_ID_ATTR}]`,
       );
@@ -115,6 +137,9 @@ fetch(STORYBOOK_VERSIONS_URL)
         console.error("Error fetching data:", error);
       }
     };
+
+    editLink.onclick = onClick;
+    editLink.onauxclick = onClick;
 
     document.body.appendChild(editLink);
   })
