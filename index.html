@@ -53,11 +53,15 @@
 
 <style>
   .sidebar-item svg {
-    color: #222 !important;
+    color: #3d3d3d !important;
   }
 
   .sidebar-item [data-selected="true"] {
     background: rgba(0, 0, 0, 0.32);
+  }
+
+  [data-action="toggle-indicator"] {
+    margin-right: -8px !important;
   }
 
   button.sidebar-item,
@@ -78,7 +82,7 @@
   }
 
   #storybook-explorer-searchfield {
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   /* 
@@ -95,6 +99,20 @@
   }
 
   #storybook-explorer-tree [aria-expanded] {
+    border: 0 !important;
+    
+    &:not([data-nodetype=group]) {
+      padding-top: 0;
+    }
+
+    & + [data-title] > div {
+      margin-bottom: 0 !important;
+    }
+
+    [data-action] {
+      border-radius: 4px;
+    }
+
     /* Exteral storybooks with 1 story. Move 1st link to title */
     /* &:has(+ div [data-nodetype="document"]:only-child),
     &:has(+ div [data-nodetype="document"]:only-child) + div > div {
