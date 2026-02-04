@@ -242,6 +242,48 @@
   }
 </style>
 
+
+<script>
+  // Prevent removing storybook hash first 3 seconds after load
+  (function() {
+    const targetHash = window.location.hash;
+    if (!targetHash) return;
+    let allowChanges = false;
+
+    const originalReplaceState = window.history.replaceState;
+    const originalPushState = window.history.pushState;
+
+    const lockHash = (args) => {
+      if (!allowChanges && args[2]) {
+        const url = new URL(args[2], window.location.origin);
+        if (url.hash !== targetHash) {
+          url.hash = targetHash;
+          args[2] = url.pathname + url.search + url.hash;
+        }
+      }
+      return args;
+    };
+
+    window.history.replaceState = function(...args) {
+      return originalReplaceState.apply(this, lockHash(args));
+    };
+
+    window.history.pushState = function(...args) {
+      return originalPushState.apply(this, lockHash(args));
+    };
+
+    window.addEventListener('hashchange', (e) => {
+      if (!allowChanges && window.location.hash !== targetHash) {
+        window.location.hash = targetHash;
+      }
+    }, { passive: true });
+
+    setTimeout(() => {
+      allowChanges = true;
+    }, 3000);
+  })();
+</script>
+
 <script>
   // treat links to old docs in storybook versions dropdown as external links and allow to open them in separate tabs
   // by default, they are treated as links to hosted storybooks and tries to open in the same master storybook
