@@ -1,0 +1,138 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+/*!
+  Copyright (c) 2018 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
+* tabbable 6.2.0
+* @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
+*/
+
+/*! Bundled license information:
+
+prismjs/prism.js:
+  (**
+   * Prism: Lightweight, robust, elegant syntax highlighting
+   *
+   * @license MIT <https://opensource.org/licenses/MIT>
+   * @author Lea Verou <https://lea.verou.me>
+   * @namespace
+   * @public
+   *)
+*/
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
+/**
+ * @license React
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v0.19.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.14.0
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.14.0
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.14.0
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @preserve
+/////    CoLoR PaRsLeY  a simple set of color parsing thingies!
+/////           Beta 0.1.8   Revision date: June 04, 2022
+/////
+/////    Functions to parse color values and return array
+/////    Copyright (c) 2019-2022 by Andrew Somers. All Rights Reserved.
+/////    LICENSE: AGPL 3
+/////    CONTACT: Please use the ISSUES or DISCUSSIONS tab at:
+/////    https://github.com/Myndex/colorparsley/
+/////
+///////////////////////////////////////////////////////////////////////////////
+/////
+/////    IMPORT:
+/////    import { colorParsley } from 'colorparsley';
+/////
+/////    let rgbaArray = colorParsley('#abcdef');
+/////
+/////    Output as array:  [r,g,b,a,isValid,colorspace]
+/////    Example: [123,123,123,1.0,true,'sRGB']
+// */
+
+/** @preserve
+/////    SAPC APCA - Advanced Perceptual Contrast Algorithm
+/////           Beta 0.1.9 W3 • contrast function only
+/////           DIST: W3 • Revision date: July 3, 2022
+/////    Function to parse color values and determine Lc contrast
+/////    Copyright © 2019-2022 by Andrew Somers. All Rights Reserved.
+/////    LICENSE: W3 LICENSE
+/////    CONTACT: Please use the ISSUES or DISCUSSIONS tab at:
+/////    https://github.com/Myndex/SAPC-APCA/
+/////
+///////////////////////////////////////////////////////////////////////////////
+/////
+/////    MINIMAL IMPORTS:
+/////      import { APCAcontrast, sRGBtoY, displayP3toY,
+/////               calcAPCA, fontLookupAPCA } from 'apca-w3';
+/////      import { colorParsley } from 'colorparsley';
+/////
+/////    FORWARD CONTRAST USAGE:
+/////      Lc = APCAcontrast( sRGBtoY( TEXTcolor ) , sRGBtoY( BACKGNDcolor ) );
+/////    Where the colors are sent as an rgba array [255,255,255,1]
+/////
+/////    Retrieving an array of font sizes for the contrast:
+/////      fontArray = fontLookupAPCA(Lc);
+/////
+/////    Live Demonstrator at https://www.myndex.com/APCA/
+// */

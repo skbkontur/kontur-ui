@@ -1,0 +1,709 @@
+{
+  "v": 3,
+  "stories": {
+    "sidemenu--docs": {
+      "id": "sidemenu--docs",
+      "title": "SideMenu",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "SideMenu",
+      "story": "Docs",
+      "parameters": {
+        "__id": "sidemenu--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.mdx",
+        "docsOnly": true
+      }
+    },
+    "sidemenu--basic-example": {
+      "type": "story",
+      "id": "sidemenu--basic-example",
+      "name": "Базовый пример использования SideMenu",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "Базовый пример использования SideMenu",
+      "parameters": {
+        "__id": "sidemenu--basic-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--separated-submenu-example": {
+      "type": "story",
+      "id": "sidemenu--separated-submenu-example",
+      "name": "SideMenu с меню второго уровня в отдельной колонке",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "SideMenu с меню второго уровня в отдельной колонке",
+      "parameters": {
+        "__id": "sidemenu--separated-submenu-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--manual-example": {
+      "type": "story",
+      "id": "sidemenu--manual-example",
+      "name": "SideMenu с ручным управлением",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "SideMenu с ручным управлением",
+      "parameters": {
+        "__id": "sidemenu--manual-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--customization-example": {
+      "type": "story",
+      "id": "sidemenu--customization-example",
+      "name": "Пример кастомизации",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "Пример кастомизации",
+      "parameters": {
+        "__id": "sidemenu--customization-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--is-open-usage-example": {
+      "type": "story",
+      "id": "sidemenu--is-open-usage-example",
+      "name": "Пример с использованием пропа `isOpen`",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "Пример с использованием пропа `isOpen`",
+      "parameters": {
+        "__id": "sidemenu--is-open-usage-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--is-pinned-usage-example": {
+      "type": "story",
+      "id": "sidemenu--is-pinned-usage-example",
+      "name": "Пример с использованием пропа `isPinned`",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "Пример с использованием пропа `isPinned`",
+      "parameters": {
+        "__id": "sidemenu--is-pinned-usage-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--no-wrap-usage-example": {
+      "type": "story",
+      "id": "sidemenu--no-wrap-usage-example",
+      "name": "Пример с использованием пропа `noWrap` у элементов меню",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "Пример с использованием пропа `noWrap` у элементов меню",
+      "parameters": {
+        "__id": "sidemenu--no-wrap-usage-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "sidemenu--subbrand-dropdown-example": {
+      "type": "story",
+      "id": "sidemenu--subbrand-dropdown-example",
+      "name": "Пример с выпадающим списком продуктов суббренда",
+      "title": "SideMenu",
+      "importPath": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenu/SideMenu.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "SideMenu",
+      "story": "Пример с выпадающим списком продуктов суббренда",
+      "parameters": {
+        "__id": "sidemenu--subbrand-dropdown-example",
+        "fileName": "./packages/side-menu/__docs__/SideMenu.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-avatar--docs": {
+      "id": "components-sidemenu-avatar--docs",
+      "title": "Components/SideMenu.Avatar",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuAvatar.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuAvatar.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Avatar",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-avatar--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuAvatar.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-body--docs": {
+      "id": "components-sidemenu-body--docs",
+      "title": "Components/SideMenu.Body",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuBody.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuBody.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Body",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-body--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuBody.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-divider--docs": {
+      "id": "components-sidemenu-divider--docs",
+      "title": "Components/SideMenu.Divider",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuDivider.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuDivider.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Divider",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-divider--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuDivider.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-dropdown--docs": {
+      "id": "components-sidemenu-dropdown--docs",
+      "title": "Components/SideMenu.Dropdown",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuDropdown.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuDropdown.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Dropdown",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-dropdown--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuDropdown.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-footer--docs": {
+      "id": "components-sidemenu-footer--docs",
+      "title": "Components/SideMenu.Footer",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuFooter.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuFooter.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Footer",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-footer--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuFooter.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-header--docs": {
+      "id": "components-sidemenu-header--docs",
+      "title": "Components/SideMenu.Header",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuHeader.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuHeader.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Header",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-header--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuHeader.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-item--docs": {
+      "id": "components-sidemenu-item--docs",
+      "title": "Components/SideMenu.Item",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuItem.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuItem.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Item",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-item--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuItem.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-link--docs": {
+      "id": "components-sidemenu-link--docs",
+      "title": "Components/SideMenu.Link",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuLink.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuLink.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Link",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-link--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuLink.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-notifications--docs": {
+      "id": "components-sidemenu-notifications--docs",
+      "title": "Components/SideMenu.Notifications",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuNotifications.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuNotifications.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Notifications",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-notifications--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuNotifications.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-organisations--docs": {
+      "id": "components-sidemenu-organisations--docs",
+      "title": "Components/SideMenu.Organisations",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuOrganisations.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuOrganisations.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.Organisations",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-organisations--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuOrganisations.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-subitem--docs": {
+      "id": "components-sidemenu-subitem--docs",
+      "title": "Components/SideMenu.SubItem",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuSubItem.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuSubItem.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.SubItem",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-subitem--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuSubItem.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-subitemheader--docs": {
+      "id": "components-sidemenu-subitemheader--docs",
+      "title": "Components/SideMenu.SubItemHeader",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuSubItemHeader.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuSubItemHeader.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.SubItemHeader",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-subitemheader--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuSubItemHeader.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-sublink--docs": {
+      "id": "components-sidemenu-sublink--docs",
+      "title": "Components/SideMenu.SubLink",
+      "name": "Docs",
+      "importPath": "./packages/side-menu/__docs__/SideMenuSubLink.mdx",
+      "storiesImports": [
+        "./packages/side-menu/__docs__/SideMenuSubLink.docs.stories.tsx"
+      ],
+      "type": "docs",
+      "tags": [
+        "dev",
+        "test",
+        "attached-mdx"
+      ],
+      "kind": "Components/SideMenu.SubLink",
+      "story": "Docs",
+      "parameters": {
+        "__id": "components-sidemenu-sublink--docs",
+        "fileName": "./packages/side-menu/__docs__/SideMenuSubLink.mdx",
+        "docsOnly": true
+      }
+    },
+    "components-sidemenu-avatar--side-menu-avatar-story": {
+      "type": "story",
+      "id": "components-sidemenu-avatar--side-menu-avatar-story",
+      "name": "SideMenu.Avatar с разными пропами",
+      "title": "Components/SideMenu.Avatar",
+      "importPath": "./packages/side-menu/__docs__/SideMenuAvatar.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuAvatar/SideMenuAvatar.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Avatar",
+      "story": "SideMenu.Avatar с разными пропами",
+      "parameters": {
+        "__id": "components-sidemenu-avatar--side-menu-avatar-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuAvatar.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-body--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-body--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Body",
+      "importPath": "./packages/side-menu/__docs__/SideMenuBody.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuBody/SideMenuBody.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Body",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-body--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuBody.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-divider--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-divider--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Divider",
+      "importPath": "./packages/side-menu/__docs__/SideMenuDivider.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuDivider/SideMenuDivider.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Divider",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-divider--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuDivider.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-dropdown--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-dropdown--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Dropdown",
+      "importPath": "./packages/side-menu/__docs__/SideMenuDropdown.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuDropdown/SideMenuDropdown.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Dropdown",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-dropdown--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuDropdown.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-footer--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-footer--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Footer",
+      "importPath": "./packages/side-menu/__docs__/SideMenuFooter.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuFooter/SideMenuFooter.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Footer",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-footer--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuFooter.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-header--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-header--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Header",
+      "importPath": "./packages/side-menu/__docs__/SideMenuHeader.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuHeader/SideMenuHeader.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Header",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-header--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuHeader.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-item--side-menu-item-story-1": {
+      "type": "story",
+      "id": "components-sidemenu-item--side-menu-item-story-1",
+      "name": "Пример работы с пропом isButton",
+      "title": "Components/SideMenu.Item",
+      "importPath": "./packages/side-menu/__docs__/SideMenuItem.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuItem/SideMenuItem.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Item",
+      "story": "Пример работы с пропом isButton",
+      "parameters": {
+        "__id": "components-sidemenu-item--side-menu-item-story-1",
+        "fileName": "./packages/side-menu/__docs__/SideMenuItem.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-item--side-menu-item-story-2": {
+      "type": "story",
+      "id": "components-sidemenu-item--side-menu-item-story-2",
+      "name": "Пример работы с пропом disabled",
+      "title": "Components/SideMenu.Item",
+      "importPath": "./packages/side-menu/__docs__/SideMenuItem.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuItem/SideMenuItem.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Item",
+      "story": "Пример работы с пропом disabled",
+      "parameters": {
+        "__id": "components-sidemenu-item--side-menu-item-story-2",
+        "fileName": "./packages/side-menu/__docs__/SideMenuItem.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-link--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-link--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Link",
+      "importPath": "./packages/side-menu/__docs__/SideMenuLink.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuLink/SideMenuLink.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Link",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-link--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuLink.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-notifications--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-notifications--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Notifications",
+      "importPath": "./packages/side-menu/__docs__/SideMenuNotifications.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuNotifications/SideMenuNotifications.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Notifications",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-notifications--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuNotifications.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-organisations--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-organisations--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.Organisations",
+      "importPath": "./packages/side-menu/__docs__/SideMenuOrganisations.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuOrganisations/SideMenuOrganisations.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.Organisations",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-organisations--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuOrganisations.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-subitem--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-subitem--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.SubItem",
+      "importPath": "./packages/side-menu/__docs__/SideMenuSubItem.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuSubItem/SideMenuSubItem.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.SubItem",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-subitem--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuSubItem.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-subitemheader--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-subitemheader--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.SubItemHeader",
+      "importPath": "./packages/side-menu/__docs__/SideMenuSubItemHeader.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuSubItemHeader/SideMenuSubItemHeader.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.SubItemHeader",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-subitemheader--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuSubItemHeader.docs.stories.tsx"
+      }
+    },
+    "components-sidemenu-sublink--dump-story": {
+      "type": "story",
+      "id": "components-sidemenu-sublink--dump-story",
+      "name": "Dump Story",
+      "title": "Components/SideMenu.SubLink",
+      "importPath": "./packages/side-menu/__docs__/SideMenuSubLink.docs.stories.tsx",
+      "componentPath": "./packages/side-menu/src/SideMenuSubLink/SideMenuSubLink.tsx",
+      "tags": [
+        "dev",
+        "test"
+      ],
+      "kind": "Components/SideMenu.SubLink",
+      "story": "Dump Story",
+      "parameters": {
+        "__id": "components-sidemenu-sublink--dump-story",
+        "fileName": "./packages/side-menu/__docs__/SideMenuSubLink.docs.stories.tsx"
+      }
+    }
+  }
+}
