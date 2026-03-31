@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tech.skbkontur.ru/kontur-ui/sitemap.xml
