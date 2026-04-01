@@ -1,0 +1,74 @@
+# @skbkontur/react-ui
+> A comprehensive React component library providing UI components, validation tools, and design utilities for building user interfaces.
+
+## Docs
+
+- [Full Documentation](https://tech.skbkontur.ru/kontur-ui/llms-full.txt): Complete documentation with all components, props, and examples
+
+## Guides
+
+- [DATATIDS](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-datatids--docs): DATATIDS documentation
+- [FEATUREFLAGSCONTEXT](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-featureflagscontext--docs): FEATUREFLAGSCONTEXT documentation
+- [FAQ](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-faq--docs): FAQ documentation
+- [StrictMode](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-strictmode--docs): StrictMode documentation
+- [LOCALECONTEXT](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-localecontext--docs): LOCALECONTEXT documentation
+- [SSR](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-ssr--docs): SSR documentation
+- [SizeControls](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-sizecontrols--docs): SizeControls documentation
+- [Theme](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-theme--docs): Theme documentation
+- [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs): ThemePlayground documentation
+- [changelog](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-changelog--docs): changelog documentation
+- [migration](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-migration--docs): migration documentation
+- [mobiles](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs): mobiles documentation
+
+## Components
+
+- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_autocomplete--docs)
+- [Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button_button--docs)
+- [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components_calendar--docs)
+- [Center](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout_center--docs)
+- [Checkbox](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_checkbox--docs)
+- [ComboBox](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_combobox--docs)
+- [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_currencyinput--docs)
+- [CurrencyLabel](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data_currencylabel--docs)
+- [DateInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components_dateinput--docs)
+- [DatePicker](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components_datepicker--docs)
+- [DateRangePicker](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components_daterangepicker--docs)
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_dropdown--docs)
+- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_dropdownmenu--docs)
+- [FileUploader](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_fileuploader_fileuploader--docs): `FileUploader` — контрол для выбора пользователем файла на компьютере и отображения статуса его отправки на сервер
+- [FxInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_fxinput--docs)
+- [Gapped](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout_gapped--docs)
+- [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data_globalloader--docs)
+- [Group](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout_group--docs)
+- [Hint](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_hint--docs)
+- [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_input--docs)
+- [Kebab](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_kebab--docs)
+- [Link](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button_link--docs)
+- [Loader](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data_loader--docs)
+- [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_maskedinput--docs): Поле ввода, которое ограничивает формат вводимого значения по заданной маске
+- [MenuFooter](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_menufooter--docs)
+- [MenuHeader](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_menuheader--docs)
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_menuitem--docs)
+- [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_menuseparator--docs)
+- [MiniModal](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_minimodal_minimodal--docs): `MiniModal` — модальное диалоговое окно, которое предполагает обязательный отклик пользователя по одному из доступных...
+- [Modal](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_modal_modal--docs)
+- [Paging](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data_paging--docs)
+- [PasswordInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_passwordinput--docs)
+- [Radio](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_radio--docs)
+- [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_radiogroup--docs)
+- [ResponsiveLayout](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout_responsivelayout--docs): Компонент `ResponsiveLayout` для определения текущего лэйаута.
+- [ScrollContainer](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout_scrollcontainer--docs)
+- [Select](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_select--docs)
+- [SidePage](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_sidepage_sidepage--docs)
+- [SingleToast](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_singletoast--docs): `SingleToast` — это короткое немодальное уведомление, которое сообщает пользователю о результате выполнения его команды
+- [Spinner](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data_spinner--docs)
+- [Sticky](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout_sticky--docs)
+- [Switcher](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button_switcher--docs)
+- [Tabs](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data_tabs_tabs--docs)
+- [Textarea](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_textarea--docs)
+- [Toast](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_toast--docs)
+- [Toggle](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_toggle--docs)
+- [Token](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_tokeninput_token--docs)
+- [TokenInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data_tokeninput_tokeninput--docs)
+- [Tooltip](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay_tooltip--docs)
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu_tooltipmenu--docs)
