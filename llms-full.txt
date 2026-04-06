@@ -6,7 +6,6 @@
 
 ## Installation
 
-
 ```bash
 npm install @skbkontur/react-ui
 # or
@@ -18,15 +17,7 @@ Import components directly:
 import { Button, Input, Modal } from '@skbkontur/react-ui';
 ```
 
-
 ---
-
-
-# Guides
-
-
-## DATATIDS
-
 
 # DataTids
 
@@ -34,13 +25,6 @@ import { Button, Input, Modal } from '@skbkontur/react-ui';
 При необходимости добавления аттрибута data-tid необходимо создать пулл-реквест.
 
 У всех компонентов также есть проп data-tid, которым можно переопределять корневые дата-тиды.
-
-<DataTids />
-
-
-
-## FEATUREFLAGSCONTEXT
-
 
 # Feature flags
 
@@ -53,6 +37,7 @@ import { Button, Input, Modal } from '@skbkontur/react-ui';
 Чтобы применить доработку/исправление нужно указать фича-флаги в `<ReactUIFeatureFlagsContext.Provider>`
 
 ```jsx static
+import { ReactUIFeatureFlagsContext } from '@skbkontur/react-ui';
 
 function ExampleComponent() {
   return (
@@ -68,6 +53,7 @@ function ExampleComponent() {
 Флаги задаются с помощью `ValidationsFeatureFlagsContext.Provider`.
 
 ```jsx static
+import { ReactUIFeatureFlagsContext } from '@skbkontur/react-ui';
 
 <ReactUIFeatureFlagsContext.Provider value={{ flagName: true }}>{/* ... */}</ReactUIFeatureFlagsContext.Provider>;
 ```
@@ -77,16 +63,10 @@ function ExampleComponent() {
 Для получения объекта со списком всех фича-флагов необходимо применить вспомогательные функции к объектам заданных флагов
 
 ```typescript static
+import { getFullReactUIFlagsContext } from '@skbkontur/react-ui';
 
 getFullReactUIFlagsContext(useContext(ReactUIFeatureFlagsContext));
 ```
-
-
-
-## FAQ
-
-
-# FAQ
 
 ### Выпадающие элементы и несколько React root
 
@@ -129,11 +109,6 @@ process.env.STORYBOOK_REACT_UI_TEST
 не стоит пользоваться этой возможностью для вмешательства во внутренние стили компонентов. Верстка компонентов может
 быть изменена в любой момент без предупреждения, что приведет к поломке ваших переопределенных стилей.
 
-
-
-## StrictMode
-
-
 # StrictMode
 
 Начиная с версий `@skbkontur/react-ui@3.10.0` и `@skbkontur/react-ui-validations@1.7.0` поддерживается `React.StrictMode`.
@@ -163,11 +138,6 @@ process.env.STORYBOOK_REACT_UI_TEST
 Без `StrictMode` будет применяться метод `findDomNode`, который несовместим со `StrictMode`.
 
 [Подробнее в pull request →](https://github.com/skbkontur/retail-ui/pull/2518)
-
-
-
-## LOCALECONTEXT
-
 
 # Локализации компонентов через контекст `React.Context<LocaleContextProps>`
 
@@ -217,17 +187,10 @@ interface LocaleControls {
 
 Локализация функционального компонента через useContext.
 
-## Обзор всех доступных контролов
-
 ## Локализация @skbkontur/react-ui-addons
 
 Компоненты `@skbkontur/react-ui-addons` так же поддерживают локализацию через `LocaleContext` из `@skbkontur/react-ui`.
 См. пример с кастомной локализацией. Дефолтные локали описаны для каждого компонента в [докумендации аддонов](https://ui.gitlab-pages.kontur.host/docs/#/react-ui-addons).
-
-
-
-## SSR
-
 
 # Server Side Rendering
 
@@ -239,6 +202,13 @@ interface LocaleControls {
 Условный файл `server.js` будет выглядеть примерно так:
 
 ```typescript static
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer, { EmotionCritical } from '@emotion/server/create-instance';
+import { cache } from '@skbkontur/react-ui/lib/theming/Emotion';
+
+import { App } from './App';
 
 const { extractCritical } = createEmotionServer(cache);
 
@@ -265,6 +235,12 @@ res.status(200).header('Content-Type', 'text/html').send(`<!DOCTYPE html>
 `client.js`
 
 ```typescript static
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { CacheProvider } from '@emotion/react';
+import { cache } from '@skbkontur/react-ui/lib/theming/Emotion';
+
+import { App } from './App';
 
 ReactDOM.hydrate(
   <CacheProvider value={cache}>
@@ -275,11 +251,6 @@ ReactDOM.hydrate(
 ```
 
 Для `react-ui` версии `2.x` актуален [старый пример](https://github.com/skbkontur/retail-ui/blob/2.x/packages/react-ui/SSR.md) с Emotion 10.
-
-
-
-## SizeControls
-
 
 # SizeControl
 
@@ -294,6 +265,7 @@ ReactDOM.hydrate(
 ## Подключение
 
 ```tsx static
+import { SizeControlContext } from '@skbkontur/react-ui';
 
 export function Page() {
   return (
@@ -326,21 +298,12 @@ type SizeProp = 'small' | 'medium' | 'large';
 
 Даже внутри провайдера можно задать конкретный размер компоненту через проп `size`. Это удобно для редких исключений.
 
-
-
-## Theme
-
-
 # Theme
 
 Темы в React UI позволяют переключаться между светлой и темной темами, а также кастомизировать внешний вид компонентов.
 Например, для гибкой настройки цветов, размеров, отступов, теней и др. параметров.
 
 <br />
-
-<Link onClick={linkTo('Information/ThemePlayground')} style={{ fontSize: 20 }}>
-  <b>Playground со всеми переменными →</b>
-</Link>
 
 <br />
 <br />
@@ -355,6 +318,8 @@ type SizeProp = 'small' | 'medium' | 'large';
 Тема задается с помощью `<ThemeContext.Provider>`:
 
 ```jsx static
+import { ThemeContext } from '@skbkontur/react-ui';
+import { DARK_THEME } from '@skbkontur/react-ui/lib/theming/themes/DarkTheme';
 
 <ThemeContext.Provider value={DARK_THEME}>{/* ... */}</ThemeContext.Provider>;
 ```
@@ -362,6 +327,7 @@ type SizeProp = 'small' | 'medium' | 'large';
 Объект со значениями темы доступен через `<ThemeContext.Consumer>`:
 
 ```jsx static
+import { ThemeContext, Button } from '@skbkontur/react-ui';
 
 <ThemeContext.Consumer>
   {theme => /* ... */ }
@@ -388,11 +354,10 @@ public context: Theme = this.context;
 Вторым аргументом `ThemeFactory.create` может принимать объект, который будет использован в качестве базовой темы.
 
 ```jsx static
+import { ThemeFactory, LIGHT_THEME } from '@skbkontur/react-ui';
 
 const myFlatTheme = ThemeFactory.create({ btnBorderRadiusSmall: '10px' }, LIGHT_THEME);
 ```
-
-## Использование переменных из темы
 
 ## Добавление своих переменных
 
@@ -403,15 +368,17 @@ const myFlatTheme = ThemeFactory.create({ btnBorderRadiusSmall: '10px' }, LIGHT_
 В случае, если контролы рендерятся через какую-то общую обертку, достаточно добавить в нее `ThemeContext.Provider` с вашей темой. В противном случае, вам подойдет метод `ThemeFactory.overrideDefaultTheme()`.
 
 ```typescript static
+import theme from './theme/theme';
+import { ThemeFactory } from '@skbkontur/react-ui/lib/theming/ThemeFactory';
 
 ThemeFactory.overrideDefaultTheme(theme);
 ```
 
-## Вложенные темы
-
 ## Несколько тем вместе
 
 ```jsx harmony
+import { ThemeContext, LIGHT_THEME, DARK_THEME } from '@skbkontur/react-ui';
+import { ShowcaseGroup } from '@skbkontur/react-ui/internal/ThemePlayground/ShowcaseGroup';
 
 const CombinedComponents = () => (
   <>
@@ -440,6 +407,8 @@ const CombinedComponents = () => (
 Компоненты `@skbkontur/react-ui-addons` так же поддерживают кастомизацию через `ThemeContext` из `@skbkontur/react-ui`. Достаточно переопределить нужные переменные, которые перечислены на страницах компонентов в [докумендации аддонов](https://ui.gitlab-pages.kontur.host/docs/#/react-ui-addons).
 
 ```tsx static
+import { ThemeContext, ThemeFactory } from '@skbkontur/react-ui';
+import { Logotype, AddonsThemeIn } from '@skbkontur/react-ui-addons';
 
 const myTheme = ThemeFactory.create<AddonsThemeIn>({
   logoColor: 'black',
@@ -455,6 +424,7 @@ const myTheme = ThemeFactory.create<AddonsThemeIn>({
 В библиотеке есть несколько утилит для работы с цветами при создании своих тем
 
 ```typescript static
+import { ColorFunctions } from '@skbkontur/react-ui'
 
 ColorFunctions.lighten(colorString: string, amount: number | string, method?: 'absolute' | 'relative'): string
 ColorFunctions.darken(colorString: string, amount: number | string, method?: 'absolute' | 'relative'): string
@@ -474,6 +444,7 @@ ColorFunctions.isValid(colorString: string): boolean // проверяет, мо
 Если это возможно, результат возвращается в том же виде, что и входная строка:
 
 ```typescript static
+import { ColorFunctions } from '@skbkontur/react-ui';
 
 ColorFunctions.lighten('hsl(90, 0.8, 0.2)', '20%') === 'hsl(90, 0.8, 0.4)';
 ColorFunctions.lighten('rgba(50, 50, 50, 0.2)', '20%') === 'rgba(102, 102, 102, 0.2)';
@@ -487,6 +458,7 @@ ColorFunctions.lighten('crimson', '20%') === '#f16581';
 shift(value: string, shift: string): string
 
 // пример
+import { DimensionFunctions } from '@skbkontur/react-ui'
 
 DimensionFunctions.shift('100%', '-20') === '80%'
 DimensionFunctions.shift('2em', '+2') === '4em'
@@ -501,6 +473,8 @@ DimensionFunctions.shift('10.2', '12.333451') === '22.5335px' //дробная �
 Помимо `LIGHT_THEME` и `DARK_THEME` с актуальным фирменным стилем, в пакете содержатся темы с фиксированными минорными версиями (например, `LIGHT_THEME_5_1` или `DARK_THEME_5_2`).
 
 ```
+import { ThemeContext } from '@skbkontur/react-ui/lib/theming/ThemeContext';
+import { LIGHT_THEME, LIGHT_THEME_5_2 } from '@skbkontur/react-ui/lib/theming/themes/LightTheme';
 
 // Тема последней версии библиотеки
 <ThemeContext.Provider value={LIGHT_THEME}>
@@ -530,37 +504,9 @@ DimensionFunctions.shift('10.2', '12.333451') === '22.5335px' //дробная �
 
 </details>
 
-
-
-## ThemePlayground
-
-
 # ThemePlayground
 
 На странице собраны все переменные для кастомизации компонентов
-
-<Unstyled>
-  <ThemeContextPlayground />
-</Unstyled>
-
-
-
-## changelog
-
-
-<Markdown options={{ wrapper: React.Fragment }}>{Changelog}</Markdown>
-
-
-
-## migration
-
-
-<Markdown options={{ wrapper: React.Fragment }}>{Migration}</Markdown>
-
-
-
-## mobiles
-
 
 # Адаптивность компонентов
 
@@ -568,16 +514,6 @@ DimensionFunctions.shift('10.2', '12.333451') === '22.5335px' //дробная �
 
 {/* prettier-ignore-start */}
 
-<Link onClick={linkTo('Overlay/Modal/Modal')}>Modal</Link>,
-<Link onClick={linkTo('Overlay/SidePage/SidePage')}>SidePage</Link>,
-<Link onClick={linkTo('Input data/ComboBox')}>ComboBox</Link>,
-<Link onClick={linkTo('Input data/Autocomplete')}>Autocomplete</Link>,
-<Link onClick={linkTo('Input data/Select')}>Select</Link>,
-<Link onClick={linkTo('Overlay/Hint')}>Hint</Link>, 
-<Link onClick={linkTo('Overlay/Tooltip')}>Tooltip</Link>, 
-<Link onClick={linkTo('Menu/Kebab')}>Kebab</Link>, 
-<Link onClick={linkTo('Menu/Dropdown')}>Dropdown</Link> и
-<Link onClick={linkTo('Menu/DropdownMenu')}>DropdownMenu</Link>
 стали адаптивными, получив новую верстку, которая активируются на мобильных устройствах.
 
 {/* prettier-ignore-end */}
@@ -592,6 +528,7 @@ DimensionFunctions.shift('10.2', '12.333451') === '22.5335px' //дробная �
 Управлять значением переменной `mobileMediaQuery` можно через `ThemeContext`.
 
 ```jsx static
+import { ThemeContext, ThemeFactory } from '@skbkontur/react-ui';
 
 <ThemeContext.Provider value={ThemeFactory.create({ mobileMediaQuery: '(max-width: 768px)' })}>
   /* ... */
@@ -611,9 +548,8 @@ DimensionFunctions.shift('10.2', '12.333451') === '22.5335px' //дробная �
 interface ResponsiveLayoutFlags {
   isMobile: boolean;
 }
-```
-
-```jsx static
+jsx static
+import { useResponsiveLayout } from '@skbkontur/react-ui';
 
 function SomeComponent(props) {
   const { isMobile } = useResponsiveLayout();
@@ -639,6 +575,7 @@ export interface ResponsiveLayoutOptions<MQ extends MediaQueriesType> {
 На основе `useResponsiveLayout` можно создать свой специфичный хук:
 
 ```jsx static
+import { useResponsiveLayout as useResponsiveLayoutOrigin } from '@skbkontur/react-ui';
 
 const customMediaQueries = {
   isTablet: '(min-width: 577px)',
@@ -664,14 +601,7 @@ function SomeComponent(props) {
 
 Как альтернативу можно использовать отдельный компонент ResponsiveLayout.
 
-
-
-
 ---
-
-
-# Components
-
 
 ## Autocomplete
 
@@ -680,7 +610,6 @@ import { Autocomplete } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **renderItem?**: Отрисовывает элементы результата поиска.
 - **source?**: Задаёт функцию поиска элементов, которая должна возвращать Promise с массивом значений.
@@ -699,19 +628,15 @@ import { Autocomplete } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Autocomplete } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
 В отличие от [комбобокса](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs) у поля нет стрелки и список со значениями нельзя открыть вручную. Подробнее об отличиях читайте в [Гайде](https://guides.kontur.ru/components/input-fields/combobox).
 
 Подсказки определяются в пропе `source` — задаёт функцию поиска элементов, которая должна возвращать `Promise` с массивом значений.
-
-## Примеры
 
 ## Доступность
 
@@ -728,7 +653,6 @@ import { Autocomplete } from '@skbkontur/react-ui';
 Автокомплит адаптивен: на мобильных устройствах поле с выпадающим список открывается на весь экран устройства и становится фокусным активным элементом, что упрощает работу с ним. Мобильный режим активируется при ширине вьюпорта `(max-width: 576px)` и наличии сенсорного экрана `(pointer: coarse)`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs).
 
 ### Examples
-
 
 ```tsx
 const items = ['Абакан', 'Алексин', 'Алматы', 'Альметьевск', 'Алтайский край', 'Амурская область'];
@@ -995,9 +919,7 @@ const items = [
   );
 ```
 
-
 ---
-
 
 ## Button
 
@@ -1007,11 +929,9 @@ import { Button } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Button } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы
 
 ## Использование
 
@@ -1023,8 +943,6 @@ import { Button } from '@skbkontur/react-ui';
 
 - [Link](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-link--docs) — если необходима кнопка, выглядящая как ссылка, можно переопределить корневой элемент на `component=button`.
 - [Group](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-group--docs) — если необходимы кнопки в составе группы элементов по горизонтали.
-
-## Примеры
 
 ## Доступность
 
@@ -1076,7 +994,6 @@ import { Button } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 return <Button>Кнопка</Button>;
@@ -1316,9 +1233,7 @@ return (
       </Button>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 return (
     <Button
       use="text"
@@ -1331,9 +1246,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## Calendar
 
@@ -1342,7 +1255,6 @@ import { Calendar } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **onValueChange?**: Задает функцию, которая вызывается при изменении value.
 - **value**: Задает текущую дату в формате `dd.mm.yyyy`.
@@ -1356,15 +1268,7 @@ import { Calendar } from '@skbkontur/react-ui';
 - **renderDay?**: Задает метод отрисовки дат в календаре. (default: `(props: CalendarDayProps) => <CalendarDay {...props} />`)
 - **onMonthChange?**: Задает функцию, которая вызывается при каждом изменении месяца. `month: number` - номер текущего отображаемого месяца от 1 до 12, `year: number` - отображаемый год.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const [date, setDate] = React.useState('01.11.2021');
@@ -1512,9 +1416,7 @@ const theme = React.useContext(ThemeContext);
       <Calendar value={value} renderDay={renderDay} onValueChange={setValue} />
     </ThemeContext.Provider>
   );
-```
-
-```tsx
+tsx
 const initialValue = '02.09.2023';
   const [value, setValue] = React.useState(initialValue);
   const calendarRef = React.useRef<Calendar>(null);
@@ -1535,9 +1437,7 @@ const initialValue = '02.09.2023';
   );
 ```
 
-
 ---
-
 
 ## Center
 
@@ -1547,18 +1447,9 @@ import { Center } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **align?**: Задает выравнивание контента по горизонтали
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const [alignAt, setAlignAt] = React.useState<'left' | 'center' | 'right'>('center');
@@ -1582,9 +1473,7 @@ const [alignAt, setAlignAt] = React.useState<'left' | 'center' | 'right'>('cente
   );
 ```
 
-
 ---
-
 
 ## Checkbox
 
@@ -1594,22 +1483,13 @@ import { Checkbox } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **error?**: Переводит контрол в состояние валидации "ошибка".
 - **warning?**: Переводит контрол в состояние валидации "предупреждение".
 - **size?**: Задает размер.
 - **onValueChange?**: Задает функцию, вызывающуюся при изменении value.
 - **initialIndeterminate?**: Устанавливает начальное [неопределенное состояние чекбокса](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#attr-indeterminate).
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const [checked, setChecked] = React.useState(false);
@@ -1619,9 +1499,7 @@ const [checked, setChecked] = React.useState(false);
       Обычный чекбокс
     </Checkbox>
   );
-```
-
-```tsx
+tsx
 const CheckboxWithState = ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => {
     const [checked, setChecked] = React.useState(false);
 
@@ -1639,9 +1517,7 @@ const CheckboxWithState = ({ children, ...props }: { children: React.ReactNode; 
       <CheckboxWithState warning>Чекбокс в состоянии предупреждения</CheckboxWithState>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped vertical>
       <Checkbox size="small" checked>
@@ -1655,9 +1531,7 @@ return (
       </Checkbox>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const [checked, setChecked] = React.useState(false);
 
   const checkboxInstance = React.useRef<Checkbox>(null);
@@ -1716,9 +1590,7 @@ const [checked, setChecked] = React.useState(false);
       </Gapped>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const [checkedSiblings, setCheckedSiblings] = React.useState<number[]>([]);
   const siblingCheckboxes = [1, 2];
 
@@ -1776,9 +1648,7 @@ const [checkedSiblings, setCheckedSiblings] = React.useState<number[]>([]);
   );
 ```
 
-
 ---
-
 
 ## ComboBox
 
@@ -1787,7 +1657,6 @@ import { ComboBox } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **showClearIcon?**: Показывает иконку очистки значения в заполненном поле. (default: `never`)
 - **align?**: Ввыравнивание текста в поле.
@@ -1835,11 +1704,9 @@ import { ComboBox } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { ComboBox } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -1852,8 +1719,6 @@ import { ComboBox } from '@skbkontur/react-ui';
 - [Autocomplete](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs) — поле ввода со списком подсказок. Отличается от комбобокса тем, что в нём выпадающий список появляется только после ввода первого символа или изменении уже введенного значения, а в поле нет стрелки для раскрытия списка.
 - [Select](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-select--docs) — используйте раскрывающийся список, если среди значений не больше 25 вариантов.
 - [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs) — используйте группу радиокнопок, если значений не больше 5.
-
-## Примеры
 
 ## Доступность
 
@@ -1870,7 +1735,6 @@ import { ComboBox } from '@skbkontur/react-ui';
 Комбобокс адаптивен: на мобильных устройствах поле с выпадающим списком открывается на весь экран устройства и становится фокусным активным элементом, что упрощает работу с ним. Мобильный режим активируется при ширине вьюпорта `(max-width: 576px)` и наличии сенсорного экрана `(pointer: coarse)`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs).
 
 ### Examples
-
 
 ```tsx
 const delay =
@@ -2253,9 +2117,7 @@ const delay =
       />
     </Tooltip>
   );
-```
-
-```tsx
+tsx
 const getItems = (q: string) => {
     return Promise.resolve(
       [
@@ -3024,9 +2886,7 @@ const delay =
   );
 ```
 
-
 ---
-
 
 ## CurrencyInput
 
@@ -3035,7 +2895,6 @@ import { CurrencyInput } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **value?**: Значение поля.
 - **hideTrailingZeros?**: Убирает лишние нули после запятой.
@@ -3047,11 +2906,9 @@ import { CurrencyInput } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { CurrencyInput } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -3064,8 +2921,6 @@ import { CurrencyInput } from '@skbkontur/react-ui';
 
 Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs).
 
-## Примеры
-
 ## Доступность
 
 Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs).
@@ -3077,7 +2932,6 @@ import { CurrencyInput } from '@skbkontur/react-ui';
 ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [value, setValue] = React.useState();
@@ -3179,9 +3033,7 @@ const [value, setValue] = React.useState();
   );
 ```
 
-
 ---
-
 
 ## CurrencyLabel
 
@@ -3191,7 +3043,6 @@ import { CurrencyLabel } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **fractionDigits?**: Минимальное количество отображаемых знаков после запятой. (default: `2`)
 - **value**: Значение.
 - **currencySymbol?**: Символ валюты.
@@ -3199,16 +3050,11 @@ import { CurrencyLabel } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { CurrencyLabel } from '@skbkontur/react-ui';
 ```
 
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return <CurrencyLabel value={12345.6} currencySymbol={'₽'} />;
@@ -3239,9 +3085,7 @@ return <CurrencyLabel value={123456.7} fractionDigits={3} currencySymbol={'₽'}
 return <CurrencyLabel value={123.4} hideTrailingZeros />;
 ```
 
-
 ---
-
 
 ## DateInput
 
@@ -3250,7 +3094,6 @@ import { DateInput } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **autoFocus?**: Устанавливает фокус на контроле после окончания загрузки страницы.
 - **value?**: Устанавливает значение датаинпута.
@@ -3268,31 +3111,17 @@ import { DateInput } from '@skbkontur/react-ui';
 - **onValueChange?**: Задает функцию, которая вызывается при изменении value.
 - **onKeyDown?**: Задает функцию, которая вызывается при нажатии кнопки на клавиатуре.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return <DateInput value="27.04.1992" />;
-```
-
-```tsx
+tsx
 const [value, setValue] = React.useState<string | undefined>();
 
   return <DateInput value={value} onValueChange={setValue} />;
-```
-
-```tsx
+tsx
 return <DateInput disabled value="27.04.1992" />;
-```
-
-```tsx
+tsx
 class DateInputFormatting2 extends React.Component<Record<string, never>, { langCode: LangCodes; value: string }> {
     constructor(props: Record<string, never>) {
       super(props);
@@ -3325,9 +3154,7 @@ class DateInputFormatting2 extends React.Component<Record<string, never>, { lang
   }
 
   return <DateInputFormatting2 />;
-```
-
-```tsx
+tsx
 class DateInputFormatting extends React.Component<
     Record<string, never>,
     { order: DateOrder; separator: keyof typeof DateSeparator; value: string }
@@ -3384,9 +3211,7 @@ class DateInputFormatting extends React.Component<
   return <DateInputFormatting />;
 ```
 
-
 ---
-
 
 ## DatePicker
 
@@ -3395,7 +3220,6 @@ import { DatePicker } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **autoFocus?**: Устанавливает фокус на контроле после окончания загрузки страницы.
 - **disabled?**: Делает компонент недоступным.
@@ -3416,15 +3240,7 @@ import { DatePicker } from '@skbkontur/react-ui';
 - **onMouseOver?**: Задает функцию, которая вызывается при наведении мышкой (событие `onmouseover`).
 - **useMobileNativeDatePicker?**: Позволяет использовать на мобильных устройствах нативный календарь для выбора дат. На iOS нативный календарь не умеет работать с minDate и maxDate.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 **Example1**: Пример с обработкой ошибок, когда пользователь ввел невалидную дату.
 
@@ -3508,9 +3324,7 @@ const [value, setValue] = React.useState('');
   };
 
   return <DatePicker isHoliday={isHoliday} value={value} onValueChange={setValue} enableTodayLink />;
-```
-
-```tsx
+tsx
 class DatePickerFormatting extends React.Component<any, any> {
     constructor(props: Record<string, never>) {
       super(props);
@@ -3584,9 +3398,7 @@ const [value, setValue] = React.useState('12.05.2022');
   return <DatePicker value={value} onValueChange={setValue} renderDay={renderDay} />;
 ```
 
-
 ---
-
 
 ## DateRangePicker
 
@@ -3596,12 +3408,10 @@ import { DateRangePicker } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **menuAnchorElement?**: Элемент относительно которого открывается календарь, Если передать значение `focused` - меню будет открываться у зафокусированного элемента. Если передать ссылку на DOM элемент или ref - меню откроется относительно переданного элемента.
 - **children**: Элементы DateRangePicker: `<DateRangePicker.Start />` `<DateRangePicker.Separator />` `<DateRangePicker.End />`
 
 ### Usage
-
 
 Компонент выбора периода состоит из 3-х дочерних компонентов:
 
@@ -3614,8 +3424,6 @@ import { DateRangePicker } from '@skbkontur/react-ui';
 - 2 значения указываются в пропах `value={'dd.mm.yyyy'}` (формат настраивается)
 - Пустыми значениями считаются `""`, `null` и `undefined`
 - Минимальная дата задаётся в `Start` через `minDate`, максимальная — в `End` через `maxDate`
-
-## Все пропсы и методы
 
 ## Адаптивность
 
@@ -3705,7 +3513,6 @@ const en_GB = {
 
 ### Examples
 
-
 **ExamplePrices**: Для валидаций используйте `DateRangePicker.validate(startValue, endValue, options)`, который принимает: - `startValue` и `endValue` — проверяемые значения `'dd.mm.yyyy'` - `options` — объект с настройками `{ startOptional, endOptional, minDate, maxDate }` Возвращается валидация полей `Start` и `End` в формате `[true, false]` / export const Validations = ValidationsStory; Validations.storyName = 'Валидации'; /** Пример с кастомизацией темы и кастомным рендером дня
 
 ```tsx
@@ -3766,9 +3573,7 @@ const [valueStart, setValueStart] = React.useState('');
       <DateRangePicker.End value={valueEnd} onValueChange={setValueEnd} optional />
     </DateRangePicker>
   );
-```
-
-```tsx
+tsx
 const [valueStart, setValueStart] = React.useState('');
   const [valueEnd, setValueEnd] = React.useState('');
   const [order, setOrder] = React.useState(DateOrder.YMD);
@@ -3812,9 +3617,7 @@ const [valueStart, setValueStart] = React.useState('');
       </LocaleContext.Provider>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const customRef = React.createRef<HTMLDivElement>();
 
   const [valueStart, setValueStart] = React.useState<string>('');
@@ -3846,9 +3649,7 @@ const customRef = React.createRef<HTMLDivElement>();
   );
 ```
 
-
 ---
-
 
 ## Dropdown
 
@@ -3857,7 +3658,6 @@ import { Dropdown } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **caption**: Текст кнопки-меню.
 - **icon?**: Добавляет иконку слева от текста кнопки.
@@ -3880,13 +3680,11 @@ import { Dropdown } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Dropdown } from '@skbkontur/react-ui';
 ```
 
 Кнопка-меню `Dropdown` объединяет действия и открывает раскрывающееся меню.
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -3901,8 +3699,6 @@ import { Dropdown } from '@skbkontur/react-ui';
 - [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdownmenu--docs) — выбирайте, когда нужен более гибкий сценарий:
   произвольный `caption` (в том числе render-function), кастомные `header`/`footer`, управление `positions`.
 - [Select](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-select--docs) — используйте для выбора значения из набора вариантов.
-
-## Примеры
 
 ## Доступность
 
@@ -3925,7 +3721,6 @@ import { Dropdown } from '@skbkontur/react-ui';
 Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs).
 
 ### Examples
-
 
 **ExampleBasic**: Базовый пример с подписью и элементами меню в `children`.
 
@@ -4161,9 +3956,7 @@ const dropdownRef = React.useRef<Dropdown>(null);
   );
 ```
 
-
 ---
-
 
 ## DropdownMenu
 
@@ -4172,7 +3965,6 @@ import { DropdownMenu } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **menuMaxHeight?**: Максимальная высота меню
 - **menuWidth?**: Ширина меню
@@ -4183,15 +3975,7 @@ import { DropdownMenu } from '@skbkontur/react-ui';
 - **positions?**: Список позиций доступных для расположения выпадашки относительно `caption`. Если во всех позициях выпадашка вылезает за пределы `viewport`, будет использована первая из этого списка. **Возможные значения**: `top left`, `top center`, `top right`, `right top`, `right middle`, `right bottom`, `bottom left`, `bottom center`, `bottom right`, `left top`, `left middle`, `left bottom` (default: `['bottom left', 'bottom right', 'top left', 'top right']`)
 - **disableAnimations?**: Не показывать анимацию
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -4207,9 +3991,7 @@ return (
       <MenuItem>Три</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu caption={<Button use="primary">Открыть меню c заданной шириной</Button>} menuWidth={350}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -4223,9 +4005,7 @@ return (
       <MenuItem>Три</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu caption={<Button use="primary">Открыть меню c заданной высотой</Button>} menuMaxHeight={150}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -4239,9 +4019,7 @@ return (
       <MenuItem>Три</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu positions={['left middle']} caption={<Button use="primary">Открыть меню</Button>}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -4255,9 +4033,7 @@ return (
       <MenuItem>Три</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu
       header={<p>Это шапка в виде обычного текста</p>}
@@ -4269,9 +4045,7 @@ return (
       <MenuItem>Три</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu caption={<Button use="primary">Открыть меню</Button>}>
       <MenuHeader>MenuHeader</MenuHeader>
@@ -4280,9 +4054,7 @@ return (
       <MenuItem>MenuItem3</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu preventIconsOffset caption={<Button use="primary">Открыть меню</Button>}>
       <MenuHeader>MenuHeader</MenuHeader>
@@ -4291,9 +4063,7 @@ return (
       <MenuItem>MenuItem3</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu disableAnimations caption={<Button use="primary">Открыть меню без анимации</Button>}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -4322,9 +4092,7 @@ return (
       <MenuItem>Три</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 const [checked, setChecked] = React.useState(false);
 
   let close: () => void;
@@ -4389,9 +4157,7 @@ const [showItems, setShowItems] = React.useState(false);
   );
 ```
 
-
 ---
-
 
 ## FileUploader
 
@@ -4402,7 +4168,6 @@ import { FileUploader } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **error?**: Переводит контрол в состояние валидации "ошибка". */ /** Состояние ошибки всего контрола
 - **warning?**: Переводит контрол в состояние валидации "предупреждение"
@@ -4423,13 +4188,6 @@ import { FileUploader } from '@skbkontur/react-ui';
 - **onRequestError?**: Задает функцию, которая вызывается при неудачной попытке отправки через request.
 - **validateBeforeUpload?**: Определяет функцию валидации каждого файла. Срабатывает после выбора файлов и перед попыткой отправить в request. Чтобы вывести валидацию ошибки, промис должен вернуть строку или объект с ошибкой.
 - **renderFile?**: Задает функцию, которая позволяет кастомизировать файлы. Через нее можно вешать кастомные валидации на каждый файл. (default: `(props: FileUploaderFileProps) => <FileUploaderFile {...props} />`)
-
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
 
 ## Локали по умолчанию (см. [LocaleContext](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-locale--localecontext))
 
@@ -4466,24 +4224,17 @@ const en_GB = {
 
 ### Examples
 
-
 ```tsx
 return <FileUploader />;
-```
-
-```tsx
+tsx
 const request = () => Promise.resolve();
 
   return <FileUploader request={request} />;
-```
-
-```tsx
+tsx
 const request = () => Promise.reject();
 
   return <FileUploader request={request} multiple />;
-```
-
-```tsx
+tsx
 const initialFiles = [createFile('test1.txt'), createFile('test2.txt')];
   return <FileUploader multiple initialFiles={initialFiles} />;
 ```
@@ -4499,13 +4250,9 @@ const initialFiles = [createFile('test1.txt'), createFile('test2.txt')];
       renderFile={(props) => <FileUploaderFile {...props} showSize />}
     />
   );
-```
-
-```tsx
+tsx
 return <FileUploader multiple accept="image/*" />;
-```
-
-```tsx
+tsx
 return (
     <FileUploader
       withValidationTooltip
@@ -4514,9 +4261,7 @@ return (
       }}
     />
   );
-```
-
-```tsx
+tsx
 return (
     <FileUploader
       multiple
@@ -4547,9 +4292,7 @@ const [error, setError] = React.useState(false);
       </Toggle>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 return <FileUploader multiple error />;
 ```
 
@@ -4630,9 +4373,7 @@ const initialFiles = [createFile('test1.txt'), createFile('test2.txt')];
   );
 ```
 
-
 ---
-
 
 ## FxInput
 
@@ -4641,7 +4382,6 @@ import { FxInput } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **auto?**: Управляет видимостью кнопки Restore: - true — кнопка Restore не отображается. Значение в поле является автоматически рассчитанным. - false — кнопка Restore отображается в поле. Значение в поле считается отредактированным.
 - **type?**: Тип поля.
@@ -4654,11 +4394,9 @@ import { FxInput } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { FxInput } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы
 
 ## Использование
 
@@ -4666,8 +4404,6 @@ import { FxInput } from '@skbkontur/react-ui';
 Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs) и [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-currencyinput--docs).
 
 Пропсы для добавления маски в поле наследуются от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs).
-
-## Примеры
 
 ## Доступность
 
@@ -4680,7 +4416,6 @@ import { FxInput } from '@skbkontur/react-ui';
 ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const FxValue = 100500;
@@ -4776,9 +4511,7 @@ const [auto, setAuto] = React.useState<boolean>(true);
   );
 ```
 
-
 ---
-
 
 ## Gapped
 
@@ -4788,21 +4521,12 @@ import { Gapped } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **gap?**: Задает расстояние между элементами в пикселях.
 - **verticalAlign?**: Задает вертикальное выравнивание.
 - **vertical?**: Располагает элементы по вертикали.
 - **wrap?**: Переносит элементы на новую строку при горизонтальном расположении.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -4811,9 +4535,7 @@ return (
       <Button>Отмена</Button>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped vertical gap={20}>
       <Checkbox checked>Write todos</Checkbox>
@@ -4842,9 +4564,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## GlobalLoader
 
@@ -4853,7 +4573,6 @@ import { GlobalLoader } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **delayBeforeShow?**: Задержка до появления лоадера в миллисекундах.
 - **delayBeforeHide?**: Задержка до исчезновения лоадера в миллисекундах.
@@ -4864,11 +4583,9 @@ import { GlobalLoader } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { GlobalLoader } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -4885,8 +4602,6 @@ import { GlobalLoader } from '@skbkontur/react-ui';
 - Для локальных операций, которые выполняются мгновенно.
 - Для индикации загрузки отдельных элементов интерфейса. В этом случае используйте ['Loader'](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-loader--docs).
 - Если в приложении уже есть другой глобальный индикатор загрузки.
-
-## Примеры
 
 ### {GlobalLoaderStories.ExampleStaticMethods.storyName}
 
@@ -4941,7 +4656,6 @@ import { GlobalLoader } from '@skbkontur/react-ui';
 
 ### Examples
 
-
 ```tsx
 return (
     <Gapped>
@@ -4951,9 +4665,7 @@ return (
       <Button onClick={() => GlobalLoader.done()}>Завершить</Button>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped>
       <Button onClick={() => GlobalLoader.start()} use="primary">
@@ -4964,9 +4676,7 @@ return (
       <Button onClick={() => GlobalLoader.accept()}>Вернуться в состояние загрузки</Button>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const [manually, setManually] = React.useState<boolean>(false);
   const [active, setActive] = React.useState<boolean>(false);
   const [error, setError] = React.useState<boolean>(false);
@@ -5005,9 +4715,7 @@ const [manually, setManually] = React.useState<boolean>(false);
       )}
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const [opened, setOpened] = React.useState<boolean>(false);
 
   function renderModal() {
@@ -5040,9 +4748,7 @@ const [opened, setOpened] = React.useState<boolean>(false);
       <Button onClick={open}>Открыть модальное окно</Button>
     </div>
   );
-```
-
-```tsx
+tsx
 const [enableTheme, setEnableTheme] = React.useState<boolean>(false);
   const [active, setActive] = React.useState<boolean>(false);
 
@@ -5072,9 +4778,7 @@ const [enableTheme, setEnableTheme] = React.useState<boolean>(false);
   );
 ```
 
-
 ---
-
 
 ## Group
 
@@ -5084,18 +4788,9 @@ import { Group } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **width?**: Задает длину компонента Group.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const [value, setValue] = React.useState('Foo');
@@ -5128,9 +4823,7 @@ const [valueStart, setValueStart] = React.useState('');
       </Group>
     </DateRangePicker>
   );
-```
-
-```tsx
+tsx
 const [value, setValue] = React.useState('Foo');
 
   return (
@@ -5151,9 +4844,7 @@ const [value, setValue] = React.useState('Foo');
   );
 ```
 
-
 ---
-
 
 ## Hint
 
@@ -5162,7 +4853,6 @@ import { Hint } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **manual?**: Переводит отображение подсказки в _"ручной режим"_. В _"ручном режиме"_ подсказку можно активировать только задав значение пропу `opened`.
 - **maxWidth?**: Задает максимальную ширину подсказки.
@@ -5175,21 +4865,11 @@ import { Hint } from '@skbkontur/react-ui';
 - **disableAnimations?**: Отключает анимацию.
 - **useWrapper?**: Явно указывает, что вложенные элементы должны быть обёрнуты в `<span/>`. Используется для корректного позиционирования хинта при двух и более вложенных элементах. _Примечание_: при **двух и более** вложенных элементах обёртка будет добавлена автоматически.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return <Hint text="Подсказка">Базовая</Hint>;
-```
-
-```tsx
+tsx
 return (
     <Hint text="Редактирование">
       <svg width="16" height="16" viewBox="0 0 16 16">
@@ -5201,25 +4881,19 @@ return (
       </svg>
     </Hint>
   );
-```
-
-```tsx
+tsx
 return (
     <Hint pos={'left'} text="Подсказка слева">
       Всегда всплывает слева
     </Hint>
   );
-```
-
-```tsx
+tsx
 return (
     <Hint maxWidth="150px" text="Очень много текста, рассказывающего про этот очень непонятный элемент">
       Очень непонятный элемент
     </Hint>
   );
-```
-
-```tsx
+tsx
 const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -5229,9 +4903,7 @@ const [isOpen, setIsOpen] = React.useState(false);
       </Button>
     </Hint>
   );
-```
-
-```tsx
+tsx
 return (
     <Hint disableAnimations text={'Нет анимации :('}>
       Есть анимация?
@@ -5270,9 +4942,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## Input
 
@@ -5281,7 +4951,6 @@ import { Input } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **showClearIcon?**: Показывает иконку очистки значения в заполненном поле. (default: `never`)
 - **leftIcon?**: Добавляет иконку слева. При использовании `ReactNode` применяются дефолтные стили для иконки. При использовании `() => ReactNode` применяются только стили для позиционирования.
@@ -5302,11 +4971,9 @@ import { Input } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Input } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы
 
 ## Использование
 
@@ -5330,8 +4997,6 @@ import { Input } from '@skbkontur/react-ui';
 - [Autocomplete](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs)
 - [Combobox](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs)
 - [TokenInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput-tokeninput--docs)
-
-## Примеры
 
 ## Доступность
 
@@ -5376,7 +5041,6 @@ import { Input } from '@skbkontur/react-ui';
 ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 return <Input />;
@@ -5607,9 +5271,7 @@ const [unexpectedInput, setUnexpectedInput] = React.useState('');
       {unexpectedInput ? <>Некорректный ввод: {unexpectedInput}</> : <>Данные в поле валидны</>}
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const maxLength = 15;
   const [value, setValue] = React.useState('Очень длинная строка');
   const theme = React.useContext(ThemeContext);
@@ -5628,9 +5290,7 @@ const maxLength = 15;
   );
 ```
 
-
 ---
-
 
 ## Kebab
 
@@ -5639,7 +5299,6 @@ import { Kebab } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **size?**: Размер кнопки.
 - **positions?**: Список доступных позиций выпадающего меню относительно кнопки. (default: `['bottom left', 'bottom right', 'top left', 'top right'].`)
@@ -5650,11 +5309,9 @@ import { Kebab } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Kebab } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы
 
 ## Использование
 
@@ -5667,8 +5324,6 @@ import { Kebab } from '@skbkontur/react-ui';
 - [Dropdown](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdown--docs) — если необходима кастомизируемая кнопка вместо простой иконки кебаба.
 - [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdownmenu--docs) — если необходим произвольный элемент `caption` вместо кнопки.
 
-## Примеры
-
 ## Адаптивность
 
 `Kebab` адаптивен: на мобильных устройствах выпадающее меню открывается модально по центру экрана. Сама кнопка не меняет внешний вид и поведение.
@@ -5676,7 +5331,6 @@ import { Kebab } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 return (
@@ -5842,9 +5496,7 @@ const [isOpened, setIsOpened] = React.useState(false);
   );
 ```
 
-
 ---
-
 
 ## Link
 
@@ -5854,11 +5506,9 @@ import { Link } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Link } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -5868,8 +5518,6 @@ import { Link } from '@skbkontur/react-ui';
 Если же вам нужно сохранить нативные свойства ссылки, но визуально она должна выглядеть как кнопка, вы можете переопределить корневой элемент ссылки, см. пример [Управление корневым элементом](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-link--docs#управление-корневым-элементом).
 
 Для ссылки нет отдельных пропсов для размерности. На размер отображаемой ссылки влияет размер шрифта (font-size) и высота строки (line-height).
-
-## Примеры
 
 ## Доступность
 
@@ -5884,7 +5532,6 @@ import { Link } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 return (
@@ -5992,9 +5639,7 @@ return (
       </Link>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const textDecorationStyles = {
     linkTextUnderlineOffset: '1px',
   };
@@ -6061,9 +5706,7 @@ const textDecorationStyles = {
   );
 ```
 
-
 ---
-
 
 ## Loader
 
@@ -6073,16 +5716,12 @@ import { Loader } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **active?**: Показывает лоадер. (default: `false`)
 - **caption?**: Подпись под спиннером. (default: `""`)
 - **component?**: Задает компонент, заменяющий спиннер.
 - **type?**: Размер спиннера и текста. (default: `normal.`)
 - **delayBeforeSpinnerShow?**: Время в миллисекундах для показа вуали без спиннера. (default: `300`)
 - **minimalDelayBeforeSpinnerHide?**: Минимальное время в миллисекундах для показа спиннера. (default: `1000.`)
-
-### Usage
-
 
 ## Использование
 
@@ -6094,10 +5733,6 @@ import { Loader } from '@skbkontur/react-ui';
 
 - Для индикации длительных операций обмена данными с сервером, таких как загрузка данных, сохранение формы, отправка запросов и др. используйте [Глобальный лоадер](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-globalloader--docs).
 - Для инлайн-встраивания или более гибкой настройки внешнего вида (цвет, толщина, затемнённый режим) используйте [Спиннер](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs).
-
-## Все пропсы
-
-## Примеры
 
 ## Доступность
 
@@ -6117,7 +5752,6 @@ import { Loader } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [isActive, setIsActive] = React.useState(true);
@@ -6257,9 +5891,7 @@ const [loading, setLoading] = React.useState(false);
   );
 ```
 
-
 ---
-
 
 ## MaskedInput
 
@@ -6271,7 +5903,6 @@ import { MaskedInput } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **mask**: Шаблон ввода, определяющий допустимые символы.
 - **maskChar?**: Плейсхолдер, который отображается на месте ещё не введённых пользователем символов. (default: `_`)
 - **formatChars?**: Словарь правил для настройки маски, где: ключ — символ для использования в маске; значение — регулярка-правило. (default: `{ '9': '[0-9]', 'a': '[A-Za-z]', '*': '[A-Za-z0-9]' }`)
@@ -6282,11 +5913,9 @@ import { MaskedInput } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { MaskedInput } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -6296,8 +5925,6 @@ import { MaskedInput } from '@skbkontur/react-ui';
 Компонент наследует часть базовых пропcов от компонента Input — размер, ширина, иконка в поле и так далее. Они включены в таблицу пропсов выше.  
 Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs).
 Из пропсов Input исключены некоторые неприменимые к полю с маской пропсы и сокращен список возможных значений для пропа `type`.
-
-## Примеры
 
 ## Доступность
 
@@ -6316,7 +5943,6 @@ import { MaskedInput } from '@skbkontur/react-ui';
 ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [value, setValue] = React.useState('');
@@ -6500,9 +6126,7 @@ const [value, setValue] = React.useState('');
   );
 ```
 
-
 ---
-
 
 ## MenuFooter
 
@@ -6512,19 +6136,10 @@ import { MenuFooter } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **_enableIconPadding?**: Добавляет отступ иконке.
 - **size?**: Задает размер.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -6535,9 +6150,7 @@ return (
       <MenuFooter>Всего 3 человека</MenuFooter>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped vertical>
       <MenuFooter size={'small'}>Маленький</MenuFooter>
@@ -6547,9 +6160,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## MenuHeader
 
@@ -6559,19 +6170,10 @@ import { MenuHeader } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **_enableIconPadding?**: Добавляет отступ иконке.
 - **size?**: Задает размер.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -6590,9 +6192,7 @@ return (
       <MenuItem>Артём</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped vertical>
       <MenuHeader size={'small'}>Маленький</MenuHeader>
@@ -6602,9 +6202,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## MenuItem
 
@@ -6613,7 +6211,6 @@ import { MenuItem } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **comment?**: Добавляет описание для элемента меню.
 - **disabled?**: Делает компонент недоступным.
@@ -6630,15 +6227,7 @@ import { MenuItem } from '@skbkontur/react-ui';
 - **isNotSelectable?**: Запрещает выделение и выбор данного пункта меню.
 - **isMobile?**: Устанавливает стиль для отображения в мобильной версии.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -6648,9 +6237,7 @@ return (
       <MenuItem>И ещё один</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu caption={<Button use="primary">Открыть меню с базовыми и заблокированными элементами</Button>}>
       <MenuItem>Это базовый элемент меню</MenuItem>
@@ -6674,9 +6261,7 @@ return (
       <MenuItem isNotSelectable>И вот ещё один отключённый</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu caption={<Button use="primary">Открыть меню с причастными к Pied Piper</Button>}>
       <MenuItem comment="Системный инженер">Bertram Gilfoyle</MenuItem>
@@ -6686,9 +6271,7 @@ return (
       <MenuItem comment="Владелец инкубатора">Erlich Bachman</MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <DropdownMenu caption={<Button use="primary">Открыть меню с иконками</Button>}>
       <MenuItem icon={<CheckAIcon />}>Базовый элемент меню c иконкой</MenuItem>
@@ -6728,9 +6311,7 @@ return (
       </MenuItem>
     </DropdownMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped vertical>
       <MenuItem size={'small'}>Маленький</MenuItem>
@@ -6740,9 +6321,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## MenuSeparator
 
@@ -6750,15 +6329,7 @@ return (
 import { MenuSeparator } from '@skbkontur/react-ui';
 ```
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -6773,9 +6344,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## MiniModal
 
@@ -6785,15 +6354,7 @@ return (
 import { MiniModal } from '@skbkontur/react-ui';
 ```
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 **Example1**: Самый простой вариант использования:
 
@@ -7020,9 +6581,7 @@ const WaitingUpdate = ({
   );
 ```
 
-
 ---
-
 
 ## Modal
 
@@ -7031,7 +6590,6 @@ import { Modal } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **disableClose?**: Отключает событие `onClose` и блокирует кнопку закрытия модального окна.
 - **alignTop?**: Выравнивает модальное окно по верху страницы.
@@ -7045,13 +6603,9 @@ import { Modal } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Modal } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
-
-## Примеры
 
 ## Доступность
 
@@ -7077,7 +6631,6 @@ import { Modal } from '@skbkontur/react-ui';
 Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs).
 
 ### Examples
-
 
 ```tsx
 const [opened, setOpened] = React.useState(false);
@@ -7538,9 +7091,7 @@ const [opened, setOpened] = React.useState(false);
   );
 ```
 
-
 ---
-
 
 ## Paging
 
@@ -7549,7 +7100,6 @@ import { Paging } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **pagesCount**: Количество страниц.
 - **activePage**: Номер текущей страницы.
@@ -7563,11 +7113,9 @@ import { Paging } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Paging } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -7578,8 +7126,6 @@ import { Paging } from '@skbkontur/react-ui';
 - храните текущую страницу в состоянии и синхронизируйте её через `activePage` и `onPageChange`;
 - используйте `caption`, если нужна явная подпись у кнопки перехода вперед;
 - включайте `useGlobalListener`, только когда пользователю действительно нужна навигация стрелками без фокуса на компоненте.
-
-## Примеры
 
 ## Доступность
 
@@ -7604,7 +7150,6 @@ import { Paging } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 **ExampleBasic**: Базовый пример с обязательными пропсами `activePage`, `onPageChange` и `pagesCount`.
 
@@ -7709,9 +7254,7 @@ const [activePage, setActivePage] = React.useState(1);
   return <Paging onPageChange={setActivePage} activePage={activePage} pagesCount={10} component={CustomPagingItem} />;
 ```
 
-
 ---
-
 
 ## PasswordInput
 
@@ -7721,24 +7264,19 @@ import { PasswordInput } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **detectCapsLock?**: Визуально показывает, что активен CapsLock.
 
 ### Usage
 
-
 ```jsx
+import { PasswordInput } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы
 
 ## Использование
 
 Не используйте такое поле для ввода одноразовых СМС-кодов, так как пользователю нужно видеть вводимые цифры для самопроверки. Для этого лучше подойдет [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs).
 
 Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs).
-
-## Примеры
 
 ## Доступность
 
@@ -7756,7 +7294,6 @@ import { PasswordInput } from '@skbkontur/react-ui';
 
 ### Examples
 
-
 ```tsx
 return <PasswordInput />;
 ```
@@ -7767,9 +7304,7 @@ return <PasswordInput />;
 return <PasswordInput detectCapsLock />;
 ```
 
-
 ---
-
 
 ## Radio
 
@@ -7778,7 +7313,6 @@ import { Radio } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **error?**: Меняет визуальное отображение поля на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 - **warning?**: Меняет визуальное отображение поля на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
@@ -7789,13 +7323,9 @@ import { Radio } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Radio } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
-
-## Примеры
 
 ## Доступность
 
@@ -7810,7 +7340,6 @@ import { Radio } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [chosen, setChosen] = React.useState(null);
@@ -7878,9 +7407,7 @@ const [chosen, setChosen] = React.useState(null);
   );
 ```
 
-
 ---
-
 
 ## RadioGroup
 
@@ -7889,7 +7416,6 @@ import { RadioGroup } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **defaultValue?**: Значение по умолчанию. Должно быть одним из значений дочерних радиокнопок или значений из `items`.
 - **value?**: Значение группы радиокнопок. Должно быть одним из значений радиокнопок. Если не указано, то компонент будет работать как неконтролируемый.
@@ -7909,11 +7435,9 @@ import { RadioGroup } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { RadioGroup } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -7921,8 +7445,6 @@ import { RadioGroup } from '@skbkontur/react-ui';
 Тип значений в группе и радиокнопках должен совпадать.
 
 Значения активного элемента сравниваются по строгому равенству `===`.
-
-## Примеры
 
 ## Доступность
 
@@ -7943,7 +7465,6 @@ import { RadioGroup } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [chosen, setChosen] = React.useState(null);
@@ -8026,9 +7547,7 @@ const items = ['Первый вариант', 'Второй вариант', 'Т
   return <RadioGroup items={items} inline />;
 ```
 
-
 ---
-
 
 ## ResponsiveLayout
 
@@ -8040,14 +7559,8 @@ import { ResponsiveLayout } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **onLayoutChange?**: Задает функцию, которая вызывается при изменении лейаута.
 - **customMediaQueries?**: Позволяет кастомизировать возвращаемые флаги.
-
-### Usage
-
-
-## Все пропсы и методы
 
 ## Примеры
 
@@ -8060,6 +7573,7 @@ interface ResponsiveLayoutFlags {
 ### Компонент ожидает в себя функцию, в которую аргументом передается объект с флагом лэйаута.
 
 ```jsx static
+import { ResponsiveLayout } from '@skbkontur/react-ui';
 
 class SomeComponent {
   public render() {
@@ -8079,6 +7593,7 @@ class SomeComponent {
 ### Также существует проп `onLayoutChange`, который вызывает переданный в него коллбэк при изменении лэйаута. Аргументом передается объект с флагом.
 
 ```jsx static
+import { ResponsiveLayout } from '@skbkontur/react-ui';
 
 class SomeComponent {
   public render() {
@@ -8097,13 +7612,10 @@ class SomeComponent {
 type MediaQueriesType = Record<string, string>;
 ```
 
-### 1. Без кастомизации есть только флаг isMobile
-
-### 2. Поля из `customMediaQueries` дополняют список возвращаемых флагов в `ResponsiveLayoutFlags`
-
 ### 3. При добавлении кастомного флага isMobile, значение дефолтного флага перезаписывается в пользу кастомного
 
 ```jsx static
+import { ResponsiveLayout } from '@skbkontur/react-ui';
 
 const customMediaQueries = {
   isTablet: '(min-width: 577px)',
@@ -8127,9 +7639,7 @@ class SomeComponent {
 
 Как альтернативу можно использовать хук [useResponsiveLayout](#/Mobiles).
 
-
 ---
-
 
 ## ScrollContainer
 
@@ -8138,7 +7648,6 @@ import { ScrollContainer } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **invert?**: Инвертирует цвет скроллбара. (default: `false`)
 - **maxHeight?**: Задает максимальную высоту.
@@ -8155,15 +7664,7 @@ import { ScrollContainer } from '@skbkontur/react-ui';
 - **hideScrollBarDelay?**: Устанавливает задержку в миллисекундах перед скрытием скроллбара. Работает только при hideScrollBar = true или showScrollBar = 'scroll' | 'hover'.
 - **disableAnimations?**: Отключает анимацию.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 function items(count: number) {
@@ -8226,9 +7727,7 @@ function items(count: number) {
       </div>
     </div>
   );
-```
-
-```tsx
+tsx
 const divStyle: React.CSSProperties = {
     display: 'inline-block',
     border: '1px solid #f99',
@@ -8301,9 +7800,7 @@ const divStyle: React.CSSProperties = {
       </div>
     </div>
   );
-```
-
-```tsx
+tsx
 const containerStyle = {
     display: 'inline-block',
     border: '1px solid #f99',
@@ -8384,9 +7881,7 @@ const divStyle: React.CSSProperties = {
   );
 ```
 
-
 ---
-
 
 ## Select
 
@@ -8395,7 +7890,6 @@ import { Select } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **_renderButton?**: Отрисовывает кнопку.
 - **defaultValue?**: Значение по умолчанию.
@@ -8433,11 +7927,6 @@ import { Select } from '@skbkontur/react-ui';
 - **onBlur?**: HTML-событие `onblur`.
 - **mobileMenuHeaderText?**: Текст заголовка списка в мобильной версии.
 
-### Usage
-
-
-## Все пропсы и методы
-
 ## Использование
 
 Используйте раскрывающийся список при:
@@ -8447,8 +7936,6 @@ import { Select } from '@skbkontur/react-ui';
 - выборе предустановленных настроек, например, частоты уведомлений или часового пояса.
 
 Не используйте раскрывающийся список для выбора элементов меню. В таком случае воспользуйтесь компонентом [Dropdown](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdown--docs).
-
-## Примеры
 
 ## Доступность
 
@@ -8469,7 +7956,6 @@ import { Select } from '@skbkontur/react-ui';
 Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ### Examples
-
 
 ```tsx
 const [value, setValue] = React.useState();
@@ -8736,9 +8222,7 @@ const [value, setValue] = React.useState<string>();
   return <Select items={items} value={value} onValueChange={setValue} _renderButton={renderLinkButton} />;
 ```
 
-
 ---
-
 
 ## SidePage
 
@@ -8747,7 +8231,6 @@ import { SidePage } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **blockBackground?**: Добавляет блокирующий фон, когда сайдпейдж открыт.
 - **disableClose?**: Отключает событие onClose, также дизейблит кнопку закрытия сайдпейджа.
@@ -8763,15 +8246,7 @@ import { SidePage } from '@skbkontur/react-ui';
 - **offset?**: Задает отступ от края экрана.
 - **onOutsideClick?**: Задаёт функцию, которая вызывается при клике на фон.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const [opened, setOpened] = React.useState(false);
@@ -8959,9 +8434,7 @@ const [opened, setOpened] = React.useState(false);
   );
 ```
 
-
 ---
-
 
 ## SingleToast
 
@@ -8971,15 +8444,7 @@ const [opened, setOpened] = React.useState(false);
 import { SingleToast } from '@skbkontur/react-ui';
 ```
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const customTheme = {
@@ -9001,9 +8466,7 @@ const customTheme = {
       </Gapped>
     </>
   );
-```
-
-```tsx
+tsx
 return (
     <Button
       onClick={() =>
@@ -9017,9 +8480,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## Spinner
 
@@ -9028,7 +8489,6 @@ import { Spinner } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **caption?**: Подпись спиннера
 - **type?**: Размер индикатора и текста (default: `normal`)
@@ -9039,19 +8499,15 @@ import { Spinner } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Spinner } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
 Используйте `Spinner`, чтобы показать, что система выполняет команду, которую дал пользователь.
 
 Не применяйте `Spinner` для заполнения паузы при загрузке контента, для этого предназначен [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-globalloader--docs).
-
-## Примеры
 
 ## Доступность
 
@@ -9096,7 +8552,6 @@ const [active, setActive] = React.useState(false);
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 **ExampleType**: Проп `type` меняет размер индикатора и текста.
 
@@ -9153,9 +8608,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## Sticky
 
@@ -9165,20 +8618,11 @@ import { Sticky } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **side**: Задает сторону залипания.
 - **offset?**: Задает отступ от края экрана в пикселях, на который сдвигается элемент в залипшем состоянии. (default: `0`)
 - **getStop?**: Задает функцию, которая возвращает DOM-элемент, который нельзя пересекать.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const style = {
@@ -9224,9 +8668,7 @@ const style = {
   );
 ```
 
-
 ---
-
 
 ## Switcher
 
@@ -9235,7 +8677,6 @@ import { Switcher } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **items**: Задает список элементов в свитчере. Это массив строк или объектов типа `{ label: string, value: string, buttonProps?: Partial<ButtonProps> }`
 - **value?**: Устанавливает значение свитчера.
@@ -9247,15 +8688,7 @@ import { Switcher } from '@skbkontur/react-ui';
 - **disabled?**: Делает компонент недоступным.
 - **renderItem?**: Задает функцию отрисовки элемента. Параметр `renderDefault` - это встроенная дефолтная функция отрисовки элемента, которую можно вызывать в `renderItem`.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const [value, setValue] = React.useState('');
@@ -9383,9 +8816,7 @@ const [valueFirst, setValueFirst] = React.useState('');
   );
 ```
 
-
 ---
-
 
 ## Tabs
 
@@ -9394,7 +8825,6 @@ import { Tabs } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **indicatorClassName?**: Кастомный класс для индикатора (подчёркивания) активного таба.
 - **size?**: Размер табов.
@@ -9405,11 +8835,9 @@ import { Tabs } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Tabs } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
@@ -9419,8 +8847,6 @@ import { Tabs } from '@skbkontur/react-ui';
 
 - Для основной навигации. Для этого лучше подходит главное меню на цветной плашке — оно более заметно на странице.
 - Для состояний — для этого есть [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs), [Toggle](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-toggle--docs) и [Switcher](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-switcher--docs).
-
-## Примеры
 
 ## Доступность
 
@@ -9439,7 +8865,6 @@ import { Tabs } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [active, setActive] = React.useState('inbox');
@@ -9524,9 +8949,7 @@ const [active, setActive] = React.useState('inbox');
   );
 ```
 
-
 ---
-
 
 ## Textarea
 
@@ -9535,7 +8958,6 @@ import { Textarea } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **error?**: Меняет визуальное отображение поля на состояние ошибки.
 - **warning?**: Меняет визуальное отображение поля на состояние предупреждения.
@@ -9555,19 +8977,12 @@ import { Textarea } from '@skbkontur/react-ui';
 - **disableAnimations?**: Отключает анимацию при автоматическом ресайзе. Автоматически отключается, когда в `extraRow` передан `false`.
 - **align?**: Выравнивание текста в поле.
 
-### Usage
-
-
-## Все пропсы и методы
-
 ## Использование
 
 Принимает все атрибуты `React.TextareaHTMLAttributes<HTMLTextAreaElement>`.
 Пропсы `className` и `style` игнорируются.
 
 Используйте многострочное поле, если пользователю нужно ввести много слов. Если значение чаще всего состоит из 1–3 слов, следует использовать обычное поле ввода [Input](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs).
-
-## Примеры
 
 ## Доступность
 
@@ -9587,7 +9002,6 @@ import { Textarea } from '@skbkontur/react-ui';
 
 ### Examples
 
-
 ```tsx
 const [value, setValue] = React.useState('');
 
@@ -9598,9 +9012,7 @@ const [value, setValue] = React.useState('');
       placeholder="Используйте многострочное поле для ввода больших текстов"
     />
   );
-```
-
-```tsx
+tsx
 const [value, setValue] = React.useState('');
   return (
     <Gapped vertical>
@@ -9609,9 +9021,7 @@ const [value, setValue] = React.useState('');
       <Textarea size="large" value={value} onValueChange={setValue} placeholder="Большой" />
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const [valuePercent, setValuePercent] = React.useState('');
   const [valueNumber, setValueNumber] = React.useState('');
 
@@ -9762,9 +9172,7 @@ const [valid, setValid] = React.useState();
   );
 ```
 
-
 ---
-
 
 ## Toast
 
@@ -9774,20 +9182,11 @@ import { Toast } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **onPush?**: Задает функцию, которая вызывается при возникновении тоста.
 - **onClose?**: Задает функцию, которая вызывается при закрытии тоста.
 - **theme?**: Задает объект с переменными темы. Он будет объединён с темой из контекста.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const toastRef = React.useRef<Toast>(null);
@@ -9805,9 +9204,7 @@ const toastRef = React.useRef<Toast>(null);
       <Button onClick={showNotification}>Show notification</Button>
     </>
   );
-```
-
-```tsx
+tsx
 const toastRef = React.useRef<Toast>(null);
 
   const showNotification = () => {
@@ -9825,9 +9222,7 @@ const toastRef = React.useRef<Toast>(null);
       <Button onClick={showNotification}>Show notification</Button>
     </>
   );
-```
-
-```tsx
+tsx
 const toastRef = React.useRef<Toast>(null);
 
   const showNotification = () => {
@@ -9843,9 +9238,7 @@ const toastRef = React.useRef<Toast>(null);
       <Button onClick={showNotification}>Show notification</Button>
     </>
   );
-```
-
-```tsx
+tsx
 class Toaster extends React.Component {
     private notifier = React.createRef<Toast>();
 
@@ -9866,9 +9259,7 @@ class Toaster extends React.Component {
   return <Toaster />;
 ```
 
-
 ---
-
 
 ## Toggle
 
@@ -9877,7 +9268,6 @@ import { Toggle } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **captionPosition?**: Расположение названия относительно переключателя. (default: `'right'`)
 - **checked?**: Включает тогл. (default: `false`)
@@ -9896,13 +9286,9 @@ import { Toggle } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Toggle } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
-
-## Примеры
 
 ## Доступность
 
@@ -9922,7 +9308,6 @@ import { Toggle } from '@skbkontur/react-ui';
 
 ### Examples
 
-
 ```tsx
 const [checked, setChecked] = React.useState(false);
 
@@ -9931,9 +9316,7 @@ const [checked, setChecked] = React.useState(false);
       {checked ? 'Включен' : 'Выключен'}
     </Toggle>
   );
-```
-
-```tsx
+tsx
 return (
     <Gapped vertical>
       <Toggle size="small">Маленький</Toggle>
@@ -9958,9 +9341,7 @@ const [checked, setChecked] = React.useState(false);
       </Toggle>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const [checked, setChecked] = React.useState(false);
 
   return (
@@ -9989,9 +9370,7 @@ return <Toggle loading>Загрузка</Toggle>;
 return <Toggle disableAnimations>Без анимации</Toggle>;
 ```
 
-
 ---
-
 
 ## Token
 
@@ -10000,7 +9379,6 @@ import { Token } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **isActive?**: Делает токен активным.
 - **error?**: Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
@@ -10017,13 +9395,9 @@ import { Token } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { Token } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
-
-## Примеры
 
 ## Доступность
 
@@ -10038,7 +9412,6 @@ import { Token } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 return <Token>mail@example.ru</Token>;
@@ -10085,9 +9458,7 @@ return (
   );
 ```
 
-
 ---
-
 
 ## TokenInput
 
@@ -10096,7 +9467,6 @@ import { TokenInput } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **selectedItems?**: Токены, которые будут отображаться в поле ввода.
 - **onValueChange?**: Событие добавления нового токена.
@@ -10132,19 +9502,15 @@ import { TokenInput } from '@skbkontur/react-ui';
 
 ### Usage
 
-
 ```jsx
+import { TokenInput } from '@skbkontur/react-ui';
 ```
-
-## Все пропсы и методы
 
 ## Использование
 
 Поле с токенами похоже на [комбобокс](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs), но используется в случаях, когда нужно указать сразу много однородных элементов — токенов.
 
 Значения определяются в пропе `getItems` — задаёт функцию поиска элементов, которая должна возвращать `Promise` с массивом значений. По умолчанию ожидаются строки.
-
-## Примеры
 
 ## Доступность
 
@@ -10171,7 +9537,6 @@ import { TokenInput } from '@skbkontur/react-ui';
 ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-mobiles--docs)
 
 ### Examples
-
 
 ```tsx
 const [selectedItems, setSelectedItems] = React.useState(['Красный', 'Синий']);
@@ -10845,9 +10210,7 @@ const [value, setValue] = React.useState<string[]>([]);
   );
 ```
 
-
 ---
-
 
 ## Tooltip
 
@@ -10856,7 +10219,6 @@ import { Tooltip } from '@skbkontur/react-ui';
 ```
 
 ### Props
-
 
 - **anchorElement?**: Указывает элемент, относительно которого позиционировать тултип.
 - **className?**: Задает HTML-атрибут class.
@@ -10874,15 +10236,7 @@ import { Tooltip } from '@skbkontur/react-ui';
 - **useWrapper?**: Явно указывает, что вложенные элементы должны быть обёрнуты в `<span/>`. Используется для корректного позиционирования тултипа при двух и более вложенных элементах. _Примечание_: при **двух и более** вложенных элементах обёртка будет добавлена автоматически.
 - **delayBeforeShow?**: Устанавливает задержку в миллисекундах до появления лоадера.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 const tooltipContent = () => <div style={{ width: 150 }}>Подсказка, которая поможет понять сценарий</div>;
@@ -10924,9 +10278,7 @@ const tooltipContent = () => <div style={{ width: 150 }}>Подсказка, к�
       </Gapped>
     </div>
   );
-```
-
-```tsx
+tsx
 const tooltipContent = () => <div style={{ width: 150 }}>Подсказка, которая поможет понять сценарий</div>;
 
   return (
@@ -10951,9 +10303,7 @@ const tooltipContent = () => <div style={{ width: 150 }}>Подсказка, к�
       </Gapped>
     </Gapped>
   );
-```
-
-```tsx
+tsx
 const tooltipContent = () => (
     <Gapped vertical gap={12} style={{ width: 200 }}>
       Эта функциональность недоступна на вашем тарифе
@@ -11121,9 +10471,7 @@ const [delay, setDelay] = React.useState(100);
   );
 ```
 
-
 ---
-
 
 ## TooltipMenu
 
@@ -11133,7 +10481,6 @@ import { TooltipMenu } from '@skbkontur/react-ui';
 
 ### Props
 
-
 - **menuMaxHeight?**: Задает максимальную высоту меню.
 - **menuWidth?**: Задает ширину меню.
 - **caption**: Задает элемент или функцию возвращающую элемент, которые используется вместо `caption`. В случае функции, внутри нее необходимо управлять открытием и закрытием меню.
@@ -11142,15 +10489,7 @@ import { TooltipMenu } from '@skbkontur/react-ui';
 - **positions?**: Определяет список позиций, доступных для расположения выпадашки относительно caption. Если во всех позициях выпадашка вылезает за пределы `viewport`, будет использована первая из этого списка.
 - **disableAnimations?**: Отключает анимацию.
 
-### Usage
-
-
-## Все пропсы и методы
-
-## Примеры
-
 ### Examples
-
 
 ```tsx
 return (
@@ -11195,9 +10534,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu caption={<Button use="primary">Открыть меню с заданной шириной</Button>} menuWidth={350}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -11211,9 +10548,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu caption={<Button use="primary">Открыть меню с заданной высотой</Button>} menuMaxHeight={150}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -11227,9 +10562,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu disableAnimations caption={<Button use="primary">Открыть меню без анимации</Button>}>
       <MenuHeader>Заголовок меню</MenuHeader>
@@ -11258,9 +10591,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu
       caption={
@@ -11276,9 +10607,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu
       caption={
@@ -11294,9 +10623,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu
       header={<p>Это шапка в виде обычного текста</p>}
@@ -11308,9 +10635,7 @@ return (
       <MenuItem>Три</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu caption={<Button use="primary">Открыть меню</Button>}>
       <MenuHeader>MenuHeader</MenuHeader>
@@ -11319,9 +10644,7 @@ return (
       <MenuItem>MenuItem3</MenuItem>
     </TooltipMenu>
   );
-```
-
-```tsx
+tsx
 return (
     <TooltipMenu preventIconsOffset caption={<Button use="primary">Открыть меню</Button>}>
       <MenuHeader>MenuHeader</MenuHeader>
@@ -11357,6 +10680,5 @@ const [showItems, setShowItems] = React.useState(false);
     </Gapped>
   );
 ```
-
 
 ---
