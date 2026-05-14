@@ -1,0 +1,1 @@
+import{r}from"./index-C1pWCJj7.js";import"./index-euwJYB9f.js";import"./index-13FLB44w.js";var u=async(e,n)=>new Promise(o=>{r.render(e,n,()=>o(null))}),a=e=>{r.unmountComponentAtNode(e)};export{u as renderElement,a as unmountElement};
