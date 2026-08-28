@@ -1,0 +1,169 @@
+{
+  "name": "MenuItem",
+  "slug": "menuitem",
+  "description": "Пункт меню `MenuItem` — интерактивный элемент выполнения действий или навигации.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { MenuItem } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuitem--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md",
+  "sourcePath": "components/MenuItem/MenuItem.tsx",
+  "props": [
+    {
+      "name": "comment",
+      "description": "Описание пункта меню.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует пункт и перекрашивает в серый.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "icon",
+      "description": "Добавляет иконку слева от текста.",
+      "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер кнопки.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "target",
+      "description": "Задает HTML-атрибут `target`.",
+      "type": "HTMLAttributeAnchorTarget",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "title",
+      "description": "Задает HTML-атрибут `title`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "href",
+      "description": "Задает HTML-атрибут `href` - адрес, на который следует перейти.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "rel",
+      "description": "Задает HTML-атрибут `rel`. Для внешних ссылок аттрибут rel по умолчанию равен \"noopener noreferrer\".",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "component",
+      "description": "Заменяет корневой элемент, на компонент переданный в проп.\nПо умолчанию корневой элемент рендерится как `button`. <br />Если передан `href`, то вместо `button` рендерится `a`.",
+      "type": "ComponentType<any>",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "isNotSelectable",
+      "description": "Запрещает выделение и выбор данного пункта меню.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "isMobile",
+      "description": "Устанавливает стиль для отображения в мобильной версии.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "onClick",
+      "description": "`HTML`-событие `onclick`.",
+      "type": "(event: SyntheticEvent<HTMLElement, Event>) => void",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "`HTML`-событие `onmouseenter`.",
+      "type": "MouseEventHandler<Element>",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "`HTML`-событие `onmouseleave`.",
+      "type": "MouseEventHandler<Element>",
+      "required": false,
+      "source": "react-ui/components/MenuItem/MenuItem.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Меню с базовыми элементами меню",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер."
+    },
+    {
+      "name": "ExampleDescription",
+      "title": "Описание элементов",
+      "description": "Проп `comment` добавляет описания к пунктам."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Заблокированные пункты",
+      "description": "Проп `disabled` делает пункты неактивными и перекрашивает в серый цвет."
+    },
+    {
+      "name": "Example3",
+      "title": "Запрет выделения",
+      "description": "Проп `isNotSelectable` запрещает выделение и выбор пункта меню."
+    },
+    {
+      "name": "ExampleIcons",
+      "title": "Иконки в элементах",
+      "description": "Проп `icon` добавляет иконку слева."
+    },
+    {
+      "name": "ExampleLink",
+      "title": "Ссылки",
+      "description": "Для указания ссылки используйте `href`. Рекомендуется выделять такие элементы иконками."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "name": "Toggle",
+  "slug": "toggle",
+  "description": "Тогл переключает состояния. Например, включает или отключает уведомления в настройках.\nСостоит из надписи и переключателя.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Toggle } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-toggle--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/toggle.md",
+  "sourcePath": "components/Toggle/Toggle.tsx",
+  "props": [
+    {
+      "name": "captionPosition",
+      "description": "Расположение названия относительно переключателя.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "defaultValue": "right",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "checked",
+      "description": "Включает тогл.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "defaultChecked",
+      "description": "Делает тогл включенным по умолчанию. Не работает, если задан проп `checked`.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует тогл.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения.",
+      "type": "(value: boolean) => void",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "onChange",
+      "description": "Событие клика на тогл.",
+      "type": "ChangeEventHandler<HTMLInputElement>",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит тогл в состояние предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит тогл в состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "loading",
+      "description": "Переводит тогл в состояние загрузки: добавляет стили для состояния `loading` и отключает тогл.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на тогл после окончания загрузки страницы.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер тогла.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "onFocus",
+      "description": "Событие получения тоглом фокуса.",
+      "type": "FocusEventHandler<HTMLInputElement>",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "Событие потери тоглом фокуса.",
+      "type": "FocusEventHandler<HTMLInputElement>",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "comment",
+      "description": "Задаёт второстепенный пояснительный текст под основным текстом тогла.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/Toggle/Toggle.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": ""
+    },
+    {
+      "name": "ExampleComment",
+      "title": "Поясняющий текст",
+      "description": "Проп `comment` задаёт второстепенный пояснительный текст под основным текстом тогла."
+    },
+    {
+      "name": "ExampleCaptionPosition",
+      "title": "Расположение надписи",
+      "description": "Проп `captionPosition` определяет, с какой стороны от переключателя находится его название."
+    },
+    {
+      "name": "ExampleLabel",
+      "title": "Тогл с внешним `<label/>`",
+      "description": ""
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` переводит тогл в состояние блокировки."
+    },
+    {
+      "name": "ExampleLoading",
+      "title": "Состояние загрузки",
+      "description": "Проп `loading` переводит тогл в состояние загрузки."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Отключение анимации",
+      "description": "Проп `disableAnimations` отключает анимацию при переключении тогла. По умолчанию тогл переключается с анимацией: круг плавно перемещается, фон движется за ним."
+    }
+  ]
+}

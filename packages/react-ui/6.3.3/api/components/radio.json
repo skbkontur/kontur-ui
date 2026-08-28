@@ -1,0 +1,99 @@
+{
+  "name": "Radio",
+  "slug": "radio",
+  "description": "Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5.\n\nДля создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs).",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Radio } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/radio.md",
+  "sourcePath": "components/Radio/Radio.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "error",
+      "description": "Переводит контрол в состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Переводит контрол в состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "size",
+      "description": "Размер радиокнопки.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false
+    },
+    {
+      "name": "focused",
+      "description": "Задаёт состояние фокуса.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения `value`.",
+      "type": "(value: T) => void",
+      "required": false
+    },
+    {
+      "name": "value",
+      "description": "Значение.",
+      "type": "T",
+      "required": true
+    },
+    {
+      "name": "comment",
+      "description": "Задаёт второстепенный пояснительный текст под основным текстом радиокнопки.",
+      "type": "ReactNode",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер радиокнопки."
+    },
+    {
+      "name": "ExampleComment",
+      "title": "Поясняющий текст",
+      "description": "Проп `comment` задаёт второстепенный пояснительный текст под основным текстом радиокнопки."
+    },
+    {
+      "name": "ExampleMode",
+      "title": "Состояния",
+      "description": "У радиокнопки есть несколько пропсов состояний:\n- `disabled` — блокирует радиокнопку.\n- `checked` — делает радиокнопку контролируемым и выбранным по умолчанию элементом.\n- `focused` — задаёт состояние фокусировки.\n- `error` — задаёт состояние «Ошибка».\n- `warning` — задаёт состояние «Предупреждение».\nРадиокнопка может быть сразу в нескольких состояниях."
+    }
+  ]
+}

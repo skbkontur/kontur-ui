@@ -1,0 +1,644 @@
+# @skbkontur/react-ui
+
+> Guides | Version: 6.3.3 | Homepage: https://tech.skbkontur.ru/kontur-ui
+
+---
+
+# DataTids
+
+Аттрибуты data-tid экспортируются для компонентов в виде объекта.
+При необходимости добавления аттрибута data-tid необходимо создать пулл-реквест.
+
+У всех компонентов также есть проп data-tid, которым можно переопределять корневые дата-тиды.
+
+---
+
+# Feature flags
+
+Фича-флаги позволяют заранее применять будущие **breaking changes** (ломающие изменения) до выхода очередного мажорного релиза библиотеки.
+
+При выходе очередной мажорной версии, например, `5.x.x` → `6.x.x`, будет применено новое поведение, а сами фича-флаги будут удалены.
+
+## Подключение фича-флагов
+
+Чтобы применить доработку/исправление нужно указать фича-флаги в `<ReactUIFeatureFlagsContext.Provider>`
+
+```jsx static
+import { ReactUIFeatureFlagsContext } from '@skbkontur/react-ui';
+
+function ExampleComponent() {
+  return (
+    <ReactUIFeatureFlagsContext.Provider
+      value={{
+        selectAutoScrollToSelectedItem: true,
+      }}
+    >
+      {/* Внутри будут работать все фича-флаги с true */}
+    </ReactUIFeatureFlagsContext.Provider>
+  );
+}
+```
+
+Механизм работы: новая функциональность применяется или не применяется в зависимости от того, был ли передан со значением true соответствующий флаг или нет.
+
+Флаги задаются с помощью `ReactUIFeatureFlagsContext.Provider`.
+
+```jsx static
+import { ReactUIFeatureFlagsContext } from '@skbkontur/react-ui';
+
+<ReactUIFeatureFlagsContext.Provider value={{ selectAutoScrollToSelectedItem: true }}>
+  {/* ... */}
+</ReactUIFeatureFlagsContext.Provider>;
+```
+
+## Список фича-флагов
+
+### selectAutoScrollToSelectedItem
+
+Флаг включает автоскролл к выбранному значению при открытии меню.
+
+### maskedInputUseLegacyBehavior
+
+По умолчанию `MaskedInput` и `ComboBox` с маской используют исправленную реализацию MaskedInputV2. Флаг включает legacy-поведение прежней реализации.
+
+## Объект со всеми флагами
+
+Для получения объекта со списком всех фича-флагов необходимо применить вспомогательные функции к объектам заданных флагов
+
+```typescript static
+import { getFullReactUIFlagsContext } from '@skbkontur/react-ui';
+
+getFullReactUIFlagsContext(useContext(ReactUIFeatureFlagsContext));
+```
+
+---
+
+# FAQ
+
+### Выпадающие элементы и несколько React root
+
+React позволяет создавать root внутри root, но контекст между ними не прокидывается. Это вызывает проблемы в работе
+различных выпадашек, типа `Hint`, `Tooltip`, `Select`, `Modal` и других.
+
+В версии `4.26.0` появился мехнизм, который решает большинство этих проблем. Если вложенный root является виджетом,
+то будет достаточно обновить библиотеку только в нём.
+
+Однако, при удалении HTML-элемента, который был root, его необходимо предварительно явно размонтировать:
+
+```tsx static
+const REACT_MAJOR_VERSION = parseInt(React.version.split('.')[0] ?? '', 10) || 0;
+
+React.useLayoutEffect(
+  () => () => {
+    if (REACT_MAJOR_VERSION === 17) {
+      rootRef.current && ReactDOM.unmountComponentAtNode(rootRef.current);
+    } else if (REACT_MAJOR_VERSION >= 18) {
+      setTimeout(() => reactRoot.current?.unmount());
+    }
+  },
+  [],
+);
+```
+
+## Отключение анимаций во время тестирования
+
+Анимации в компонентах отключаются любой из следующих глобальных переменных:
+
+```static
+REACT_UI_TEST
+process.env.NODE_ENV === 'test'
+process.env.REACT_UI_TEST
+process.env.REACT_APP_REACT_UI_TEST
+process.env.STORYBOOK_REACT_UI_TEST
+```
+
+## Прокидывание className и style компонентам
+
+Начиная с версии 2.14.0, стало возможным передавать в компоненты свои css-классы для дополнительной стилизации. Однако,
+не стоит пользоваться этой возможностью для вмешательства во внутренние стили компонентов. Верстка компонентов может
+быть изменена в любой момент без предупреждения, что приведет к поломке ваших переопределенных стилей.
+
+---
+
+# StrictMode
+
+Начиная с версий `@skbkontur/react-ui@3.10.0` и `@skbkontur/react-ui-validations@1.7.0` поддерживается `React.StrictMode`.
+
+Некоторым компонентам библиотеки необходимо иметь доступ до корневой DOM-ноды своих children. Ранее для этого
+использовался метод `findDomNode`, который в `StrictMode` запрещён. Теперь получение DOM-ноды реализовано в библиотеке через
+`ref`, из-за чего появились некоторые требования к компонентам, передаваемым в `Hint`, `Tooltip`, `Popup` или `Tab`:
+
+## Использование с forwardRef
+
+При передаче функциональных компонентов в `react <= 18`, они должны использовать `React.forwardRef`:
+
+## Использование с useImperativeHandle
+
+При использовании хука `useImperativeHandle`, возвращаемый объект должен реализовывать метод `getRootNode`, возвращающий DOM-ноду:
+
+## Использование с классовыми компонентами
+
+В классовых компонентах инстанс должен реализовывать метод `getRootNode`, возвращающий DOM-ноду:
+
+## Использование с компонентами React UI
+
+При оборачивании компонентов React UI нужно брать DOM-ноду через `getRootNode` у инстанса компонента:
+
+## Без StrictMode
+
+Без `StrictMode` будет применяться метод `findDomNode`, который несовместим со `StrictMode`.
+
+[Подробнее в pull request →](https://github.com/skbkontur/retail-ui/pull/2518)
+
+---
+
+# Локализации компонентов через контекст `React.Context<LocaleContextProps>`
+
+```typescript static
+interface LocaleContextProps {
+  locale?: LocaleControls;
+  langCode?: LangCodes;
+}
+```
+
+## Доступные языки
+
+```typescript static
+enum LangCodes {
+  ru_RU = 'ru_RU',
+  en_GB = 'en_GB',
+}
+```
+
+## LocaleControls
+
+```typescript static
+interface LocaleControls {
+  [key: string]: any;
+  TokenInput?: Partial<TokenInputLocale>;
+  Token?: Partial<TokenLocale>;
+  ComboBox?: Partial<ComboBoxLocale>;
+  Select?: Partial<SelectLocale>;
+  Paging?: Partial<PagingLocale>;
+  DatePicker?: Partial<DatePickerLocale>;
+  Calendar?: Partial<CalendarLocale>;
+  FileUploader?: Partial<FileUploaderLocale>;
+  PasswordInput?: Partial<PasswordInputLocale>;
+  SidePage?: Partial<SidePageLocale>;
+}
+```
+
+## Использование
+
+Дефолтная локализация `<TokenInput />`
+
+Кастомная локализация `<TokenInput />`
+
+Некоторые контролы используют компоненты других контролов.
+
+Для инкапсуляции локализации можно использовать несколько контекстов.
+
+Локализация функционального компонента через useContext.
+
+## Обзор всех доступных контролов
+
+## Локализация @skbkontur/react-ui-addons
+
+Компоненты `@skbkontur/react-ui-addons` так же поддерживают локализацию через `LocaleContext` из `@skbkontur/react-ui`.
+См. пример с кастомной локализацией. Дефолтные локали описаны для каждого компонента в [докумендации аддонов](https://ui.gitlab-pages.kontur.host/docs/#/react-ui-addons).
+
+---
+
+<style>{` .node-name--H2 + .toc-list {display: none;} `}</style>
+
+---
+
+# Адаптивность компонентов
+
+Начиная с версии 4.0 многие компоненты, такие как
+
+{/* prettier-ignore-start */}
+
+стали адаптивными, получив новую верстку, которая активируются на мобильных устройствах.
+
+{/* prettier-ignore-end */}
+
+Механизм адаптивности основан на [медиазапросах](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) и управляется
+переменной темы `mobileMediaQuery`. В зависимости от того, удовлетворяет текущее устройство медиазапросу из переменной
+или нет, компоненты переходят в мобильный режим и обратно. По умолчанию, значение переменной равно `(max-width: 767.98px)`. Так же можно передавать свои
+медиазапросы в хук `useResponsiveLayout` или через проп `options` в ResponsiveLayout.
+
+## Настройка адаптивности
+
+Управлять значением переменной `mobileMediaQuery` можно через `ThemeContext`.
+
+```jsx static
+import { ThemeContext, ThemeFactory } from '@skbkontur/react-ui';
+
+<ThemeContext.Provider value={ThemeFactory.create({ mobileMediaQuery: '(max-width: 768px)' })}>
+  /* ... */
+</ThemeContext.Provider>;
+```
+
+### Отключение адаптивности
+
+Чтобы полностью отключить адаптивность компонентов достаточно изменить значение переменной на `not all`.
+
+## Определение текущего режима
+
+Для определения текущего режима предусмотрен хук `useResponsiveLayout`.
+Он возвращает объект с флагами активности текущих режимов, по умолчанию пока реализован только мобильный флаг.
+
+```ts static
+interface ResponsiveLayoutFlags {
+  isMobile: boolean;
+}
+jsx static
+import { useResponsiveLayout } from '@skbkontur/react-ui';
+
+function SomeComponent(props) {
+  const { isMobile } = useResponsiveLayout();
+
+  if (isMobile) {
+    return; /* ... */
+  } else {
+    return; /* ... */
+  }
+}
+```
+
+Так же можно передать в него параметр `options: ResponsiveLayoutOptions`, значения из которого дополнят список флагов в `ResponsiveLayoutFlags`:
+
+```ts static
+export type MediaQueriesType = Record<string, string>;
+
+export interface ResponsiveLayoutOptions<MQ extends MediaQueriesType> {
+  customMediaQueries?: MQ;
+}
+```
+
+На основе `useResponsiveLayout` можно создать свой специфичный хук:
+
+```jsx static
+import { useResponsiveLayout as useResponsiveLayoutOrigin } from '@skbkontur/react-ui';
+
+const customMediaQueries = {
+  isTablet: '(min-width: 577px)',
+  isDesktop: '(min-width: 1280px)',
+};
+
+const useResponsiveLayout = () => {
+  return useResponsiveLayoutOrigin({ customMediaQueries });
+};
+
+function SomeComponent(props) {
+  const { isMobile, isTablet, isDesktop } = useResponsiveLayout();
+
+  if (isMobile) {
+    return; /* ... */
+  } else if (isTablet) {
+    return; /* ... */
+  } else {
+    return; /* ... */
+  }
+}
+```
+
+Как альтернативу можно использовать отдельный компонент ResponsiveLayout.
+
+---
+
+# Server Side Rendering
+
+Контролы поддерживают рендеринг на стороне сервера начиная с версии `2.12.0`.
+Но для предварительного рендеринга стилей понадобится установить пакеты `@emotion/react` и `@emotion/server`. И импортировать `cache` из хука `useEmotion()` из библиотеки контролов.
+
+Подробнее - [https://emotion.sh](https://emotion.sh/docs/ssr)
+
+Условный файл `server.js` будет выглядеть примерно так:
+
+```typescript static
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer, { EmotionCritical } from '@emotion/server/create-instance';
+import { useEmotion } from '@skbkontur/react-ui/lib/renderEnvironment';
+
+import { App } from './App';
+
+const { extractCritical } = createEmotionServer(cache);
+
+let cache;
+
+const element = () => {
+  cache = useEmotion().cache;
+  return (
+    <CacheProvider value={cache}>
+      <App />
+    </CacheProvider>
+  );
+};
+
+const { html, css, ids } = extractCritical(renderToString(element));
+
+res.status(200).header('Content-Type', 'text/html').send(`<!DOCTYPE html>
+<html>
+  <head>
+    <style data-emotion-css="${cache.key} ${ids.join(' ')}">${css}</style>
+  </head>
+  <body>
+    <div id="root">${html}</div>
+    <script src="client.js"></script>
+  </body>
+</html>`);
+```
+
+`client.js`
+
+```typescript static
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { CacheProvider } from '@emotion/react';
+import { useEmotion } from '@skbkontur/react-ui/lib/renderEnvironment';
+
+import { App } from './App';
+
+const AppProvider = () => {
+  const { cache } = useEmotion();
+  return (
+    <CacheProvider value={cache}>
+      <App />
+    </CacheProvider>
+  );
+};
+
+ReactDOM.hydrate(<AppProvider />, document.getElementById('root'));
+```
+
+Для `react-ui` версии `2.x` актуален [старый пример](https://github.com/skbkontur/retail-ui/blob/2.x/packages/react-ui/SSR.md) с Emotion 10.
+
+---
+
+# SizeControl
+
+Контекст для управления размерами контролов `React.Context<SizeControlContext>`, позволяет единообразно задать дефолтный размер для большинства компонентов библиотеки. Это:
+
+- упрощает конфигурирование размеров на уровне экрана/модуля;
+- избавляет от дублирования пропа `size` у каждого компонента;
+- помогает быстро переключать плотность интерфейса (например, small ↔ medium ↔ large)
+
+Если компонент принимает проп `size`, он использует значение из контекста по умолчанию. При необходимости размер можно переопределить пропом.
+
+## Подключение
+
+```tsx static
+import { SizeControlContext } from '@skbkontur/react-ui';
+
+export function Page() {
+  return (
+    <SizeControlContext.Provider value={{ size: 'medium' }}>
+      {/* Внутри провайдера все компоненты по умолчанию будут medium */}
+    </SizeControlContext.Provider>
+  );
+}
+```
+
+## Поддерживаемые размеры
+
+```ts static
+type SizeProp = 'small' | 'medium' | 'large';
+```
+
+## Быстрый пример
+
+В примере ниже компонент внутри провайдера автоматически принимают размер из контекста.
+
+## Интерактивный переключатель размера
+
+Потестируйте разные значения `size` и посмотрите, как меняются компоненты.
+
+## Набор типовых компонентов
+
+Пример показывает, как единый размер влияет на разные компоненты одновременно.
+
+## Переопределение размера пропом
+
+Даже внутри провайдера можно задать конкретный размер компоненту через проп `size`. Это удобно для редких исключений.
+
+---
+
+# Theme
+
+Темы в React UI позволяют переключаться между светлой и темной темами, а также кастомизировать внешний вид компонентов.
+Например, для гибкой настройки цветов, размеров, отступов, теней и др. параметров.
+
+<br />
+
+<br />
+<br />
+<br />
+
+---
+
+<br />
+
+Для кастомизации компонентов используется `<ThemeContext>`. Динамические стили генерируются в зависимости от темы в процессе render'а с помощью <a href="https://www.npmjs.com/package/@emotion/css" target="_blank">@emotion/css</a>, полученные классы добавляются в `className` соответствующих элементов.
+
+Тема задается с помощью `<ThemeContext.Provider>`:
+
+```jsx static
+import { ThemeContext } from '@skbkontur/react-ui';
+import { DARK_THEME } from '@skbkontur/react-ui/lib/theming/themes/DarkTheme';
+
+<ThemeContext.Provider value={DARK_THEME}>{/* ... */}</ThemeContext.Provider>;
+```
+
+Объект со значениями темы доступен через `<ThemeContext.Consumer>`:
+
+```jsx static
+import { ThemeContext, Button } from '@skbkontur/react-ui';
+
+<ThemeContext.Consumer>
+  {theme => /* ... */ }
+</ThemeContext.Consumer>
+```
+
+В функцониальных компонентах применяется хук `useContext`
+
+```typescript static
+const theme = useContext(ThemeContext);
+```
+
+В классовых компонентах объект с темой доступен через `contextType`
+
+```typescript static
+public static contextType = ThemeContext;
+public context: Theme = this.context;
+```
+
+## Создание/редактирование темы
+
+Кастомные значения нужно передать в `ThemeFactory.create` и получившуюся тему можно использовать в `ThemeContext.Provider`. `ThemeFactory` расширяет переданный объект, задавая в качестве прототипа объект темы по умолчанию.
+
+Вторым аргументом `ThemeFactory.create` может принимать объект, который будет использован в качестве базовой темы.
+
+```jsx static
+import { ThemeFactory, LIGHT_THEME } from '@skbkontur/react-ui';
+
+const myFlatTheme = ThemeFactory.create({ btnBorderRadiusSmall: '10px' }, LIGHT_THEME);
+```
+
+## Использование переменных из темы
+
+## Добавление своих переменных
+
+Для дополнения существующей темы новыми переменными для своих компонентов, можно создать отдельный контекст с расширенным объектом темы
+
+## Кастомизация legacy-приложений
+
+В случае, если контролы рендерятся через какую-то общую обертку, достаточно добавить в нее `ThemeContext.Provider` с вашей темой. В противном случае, вам подойдет метод `ThemeFactory.overrideDefaultTheme()`.
+
+```typescript static
+import theme from './theme/theme';
+import { ThemeFactory } from '@skbkontur/react-ui/lib/theming/ThemeFactory';
+
+ThemeFactory.overrideDefaultTheme(theme);
+```
+
+## Вложенные темы
+
+## Несколько тем вместе
+
+```jsx harmony
+import { ThemeContext, LIGHT_THEME, DARK_THEME } from '@skbkontur/react-ui';
+import { ShowcaseGroup } from '@skbkontur/react-ui/internal/ThemePlayground/ShowcaseGroup';
+
+const CombinedComponents = () => (
+  <>
+    <div style={{ height: '100%', background: '#fff', padding: '16px' }}>
+      <ThemeContext.Provider value={LIGHT_THEME}>
+        <div>
+          <ShowcaseGroup title="LIGHT_THEME" />
+        </div>
+      </ThemeContext.Provider>
+    </div>
+    <div style={{ height: '100%', background: '#000', padding: '16px' }}>
+      <ThemeContext.Provider value={DARK_THEME}>
+        <div>
+          <ShowcaseGroup title="DARK_THEME" />
+        </div>
+      </ThemeContext.Provider>
+    </div>
+  </>
+);
+
+<CombinedComponents />;
+```
+
+## Темы @skbkontur/react-ui-addons
+
+Компоненты `@skbkontur/react-ui-addons` так же поддерживают кастомизацию через `ThemeContext` из `@skbkontur/react-ui`. Достаточно переопределить нужные переменные, которые перечислены на страницах компонентов в [докумендации аддонов](https://ui.gitlab-pages.kontur.host/docs/#/react-ui-addons).
+
+```tsx static
+import { ThemeContext, ThemeFactory } from '@skbkontur/react-ui';
+import { Logotype, AddonsThemeIn } from '@skbkontur/react-ui-addons';
+
+const myTheme = ThemeFactory.create<AddonsThemeIn>({
+  logoColor: 'black',
+});
+
+<ThemeContext.Provider value={myTheme}>
+  <Logotype />
+</ThemeContext.Provider>;
+```
+
+## Дополнительно: утилиты для цветов и размеров
+
+В библиотеке есть несколько утилит для работы с цветами при создании своих тем
+
+```typescript static
+import { ColorFunctions } from '@skbkontur/react-ui'
+
+ColorFunctions.lighten(colorString: string, amount: number | string, method?: 'absolute' | 'relative'): string
+ColorFunctions.darken(colorString: string, amount: number | string, method?: 'absolute' | 'relative'): string
+ColorFunctions.contrast(colorString: string, darkString?: string, lightString?: string, threshold: number = 0.43): string
+ColorFunctions.red(colorString: string): string
+ColorFunctions.green(colorString: string): string
+ColorFunctions.blue(colorString: string): string
+ColorFunctions.alpha(colorString: string): string
+ColorFunctions.isValid(colorString: string): boolean // проверяет, можно ли распарсить строку в цвет
+```
+
+Документацию по их работе можно найти на сайте [less](http://lesscss.org/functions/#color-operations).
+В качестве colorString можно передать цвет в одном из форматов: `keyword`, `hex`, `rgb(r, g, b)`, `rgba(r, g, b, a)`, `hsl(h, s, l)`, `hsla(h, s, l, a)`.
+В качестве `amount` можно передать строку вида 'N%' или число от 0 до 1.
+Все значения больше или меньше возможных обрезаются. Например, для `rgba(300, -100, 123, 20)` `r=255, g=0, b=123, a=1`.
+Если распарсить `colorString` не получилось - выбрасывается исключение.
+Если это возможно, результат возвращается в том же виде, что и входная строка:
+
+```typescript static
+import { ColorFunctions } from '@skbkontur/react-ui';
+
+ColorFunctions.lighten('hsl(90, 0.8, 0.2)', '20%') === 'hsl(90, 0.8, 0.4)';
+ColorFunctions.lighten('rgba(50, 50, 50, 0.2)', '20%') === 'rgba(102, 102, 102, 0.2)';
+ColorFunctions.lighten('#80e619', 0.2) === '#b3f075';
+ColorFunctions.lighten('crimson', '20%') === '#f16581';
+```
+
+Для работы с размерами предусмотрена одна функция (_DimensionFunctions.ts_):
+
+```typescript static
+shift(value: string, shift: string): string
+
+// пример
+import { DimensionFunctions } from '@skbkontur/react-ui'
+
+DimensionFunctions.shift('100%', '-20') === '80%'
+DimensionFunctions.shift('2em', '+2') === '4em'
+DimensionFunctions.shift('12', '+1') === '13px'  //если единица измерения не указана - используется px
+DimensionFunctions.shift('10.2', '12.333451') === '22.5335px' //дробная часть округляется до 4 знаков
+```
+
+## Версии тем
+
+С версии 5.0 в библиотеке появилось версионирование тем для облегчения обновления библиотеки. Версии тем позволяют <b>откатывать визуальные изменения</b> компоенентов к предыдущим минорным версиям, <b>отложив их на будущее</b>.
+
+Помимо `LIGHT_THEME` и `DARK_THEME` с актуальным фирменным стилем, в пакете содержатся темы с фиксированными минорными версиями (например, `LIGHT_THEME_5_1` или `DARK_THEME_5_2`).
+
+```
+import { ThemeContext } from '@skbkontur/react-ui/lib/theming/ThemeContext';
+import { LIGHT_THEME, LIGHT_THEME_5_2 } from '@skbkontur/react-ui/lib/theming/themes/LightTheme';
+
+// Тема последней версии библиотеки
+<ThemeContext.Provider value={LIGHT_THEME}>
+  {/* ... */}
+</ThemeContext.Provider>
+
+// Тема фиксированной версии библиотеки 5.2
+<ThemeContext.Provider value={LIGHT_THEME_5_2}>
+  {/* ... */}
+</ThemeContext.Provider>
+```
+
+⚠️ Вы можете использовать промежуточную версию темы неограниченно долго в рамках одной мажорной версии библиотеки. Однако, в момент выхода новой мажорной версии, все предыдущие промежуточные версии тем из нее удаляются. Это значит, что при миграции на новую мажорную версию, придется применить все отложенные визуальные изменения.
+
+<details>
+<summary>Подробнее о версиях</summary>
+
+Представим, что текущая версия библиотеки пользователя: `5.5.0`. Он решает обновить библиотеку до `5.10.0`, в которой есть визуальные изменения по сравнению с его текущей темой, но которые он пока не хочет применять. При этом, он не пользовался версионированием тем до этого момента, используя просто `LIGHT_THEME`. В версии `5.10.0` набор тем может выглядеть примерно так:
+
+- LIGHT_THEME
+- LIGHT_THEME_5_0
+- LIGHT_THEME_5_4
+- LIGHT_THEME_5_8
+- LIGHT_THEME_5_10
+
+Чтобы исключить все визуальные изменения, которых у пользователя нет на момент обновления, ему следует выбрать версию темы, наиболее близкую, но не превышающую ту, что он использовал до обновления. Т.е. на момент использования им версии `5.5.0` и дефолтной `LIGHT_THEME` внутри нее, он по факту использует `LIGHT_THEME_5_4`. И ему следует переключиться именно на нее, чтобы отложить применение визуальных изменений после обновления на `5.10.0`.
+
+</details>
+
+---
+
+# ThemePlayground
+
+На странице собраны все переменные для кастомизации компонентов

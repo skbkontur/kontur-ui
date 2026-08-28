@@ -1,0 +1,87 @@
+{
+  "name": "Gapped",
+  "slug": "gapped",
+  "description": "Контейнер, с помощью которого можно располагать элементы горизонтально или вертикально с нужным расстоянием между элементами.\n\nПо умолчанию располагает элементы горизонтально в одну строку. Расстояние между элементами указывается в пропе `gap`.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Gapped } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-gapped--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/gapped.md",
+  "sourcePath": "components/Gapped/Gapped.tsx",
+  "props": [
+    {
+      "name": "gap",
+      "description": "Расстояние между элементами в пикселях.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/Gapped/Gapped.tsx"
+    },
+    {
+      "name": "verticalAlign",
+      "description": "Выравнивает элементы при вертикальном расположении по нужной линии: сверху, снизу, по базовой линии или посередине.",
+      "type": "\"top\" | \"bottom\" | \"middle\" | \"baseline\"",
+      "required": false,
+      "defaultValue": "baseline",
+      "source": "react-ui/components/Gapped/Gapped.tsx"
+    },
+    {
+      "name": "vertical",
+      "description": "Располагает элементы по вертикали.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Gapped/Gapped.tsx"
+    },
+    {
+      "name": "wrap",
+      "description": "Переносит элементы на новую строку при горизонтальном расположении.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Gapped/Gapped.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleVertical",
+      "title": "Вертикальное расположение",
+      "description": "Проп `vertical` выстраивает элементы вертикально."
+    },
+    {
+      "name": "ExampleVerticalAlign",
+      "title": "Выравнивание по вертикали",
+      "description": "Проп `verticalAlign` задаёт расположение элементов относительно вертикальной оси: прижаты к верхней, нижней, базовой линии или находятся посередине."
+    },
+    {
+      "name": "ExampleWrap",
+      "title": "Перенос элементов на новую строку",
+      "description": "Проп `wrap` включает перенос элементов на новую строку, работает при горизонтальном расположении.\nМежду строчками будет отступ заданный в пропе `gap`.\nВ такой настройке из-за особенности верстки `Gapped` может перекрывать элементы расположенные сверху-слева."
+    }
+  ]
+}

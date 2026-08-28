@@ -1,0 +1,152 @@
+{
+  "name": "TooltipMenu",
+  "slug": "tooltipmenu",
+  "description": "Выпадающее меню в тултипе `TooltipMenu`. Раскрывается по клику на переданный в `caption` элемент.\n\nПоддерживает настройку `header`, `footer`, позиций открытия `positions` и другие настройки внешнего вида.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { TooltipMenu } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-tooltipmenu--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md",
+  "sourcePath": "components/TooltipMenu/TooltipMenu.tsx",
+  "props": [
+    {
+      "name": "caption",
+      "description": "Элемент или функция, которая возвращает кнопку-меню.\nПримечание: при использовании функции, нее необходимо управлять открытием и закрытием меню.",
+      "type": "ReactNode | ((props: PopupMenuCaptionProps) => ReactNode)",
+      "required": true,
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "menuMaxHeight",
+      "description": "Максимальная высота меню.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "menuWidth",
+      "description": "Ширина меню.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "header",
+      "description": "Элемент, который будет отрендерен в шапке меню.\nПримечание: не поддерживается компонент MenuHeader, который ожидается только в `children` меню.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "footer",
+      "description": "Элемент, который будет отрендерен в подвале меню.\nПеред элементом переданным в `footer` будет отрендерен `MenuSeparator`.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "positions",
+      "description": "Список позиций для расположения выпадашки относительно caption.\nЕсли во всех позициях выпадашка вылезает за пределы viewport, будет использована первая.",
+      "type": "(\"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\" | \"middle center\" | \"middle left\" | \"middle right\")[]",
+      "required": false,
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/TooltipMenu/TooltipMenu.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "preventIconsOffset",
+      "description": "Отключает выравнивание текста пунктов меню относительно иконок в других пунктах.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/internal/Menu/Menu.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Действие при закрытии меню.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/internal/PopupMenu/PopupMenu.tsx"
+    },
+    {
+      "name": "onOpen",
+      "description": "Действие при открытии меню.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/internal/PopupMenu/PopupMenu.tsx"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleCaption",
+      "title": "Кнопка открытия меню",
+      "description": "В проп `caption` можно передать любой элемент для кнопки открытия."
+    },
+    {
+      "name": "ExampleState",
+      "title": "Управление состоянием тултип-меню",
+      "description": "В проп `caption` помимо компонента можно передать функцию, возвращающую компонент, с помощью которой можно управлять текущим состоянием тултип-меню через аргументы `opened`, `openMenu`, `closeMenu` и `toggleMenu`."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` управляет шиирой меню."
+    },
+    {
+      "name": "ExampleMaxHeight",
+      "title": "Максимальная высота",
+      "description": "Проп `menuMaxHeight` управляет максимальной высотой меню. Если элементы не помещаются, показывается кроллбар."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Отключение анимации",
+      "description": "Проп `disableAnimations` отключает анимацию открытия меню."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Позиционирование",
+      "description": "Проп `positions` определяет список позиций доступных для расположения выпадашки относительно `caption`."
+    },
+    {
+      "name": "ExampleHeaderFooter",
+      "title": "Меню c шапкой и подвалом",
+      "description": "В пропы `header` и `footer` вкладывается контент шапки и подвала."
+    },
+    {
+      "name": "ExampleIconsAlign",
+      "title": "Иконки и автовыравнивание",
+      "description": "Проп `preventIconsOffset` отключает выравнивание иконок у пунктов."
+    }
+  ]
+}

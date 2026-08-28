@@ -1,0 +1,63 @@
+{
+  "name": "Group",
+  "slug": "group",
+  "description": "Контейнер используется для создания логически сгруппированных элементов, выровненных по горизонтали.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Group } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-group--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/group.md",
+  "sourcePath": "components/Group/Group.tsx",
+  "props": [
+    {
+      "name": "width",
+      "description": "Ширина компонента.",
+      "type": "Width<string | number>",
+      "required": false,
+      "source": "react-ui/components/Group/Group.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину контейнера."
+    },
+    {
+      "name": "ExampleUsageInDateRangePicker",
+      "title": "Внутри контрола DateRangePicker",
+      "description": "Пример с группой полей без разделителя в `DateRangePicker`."
+    },
+    {
+      "name": "ExampleWithHint",
+      "title": "С хинтом или тултипом",
+      "description": ""
+    }
+  ]
+}

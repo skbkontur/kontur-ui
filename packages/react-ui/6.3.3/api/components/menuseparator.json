@@ -1,0 +1,41 @@
+{
+  "name": "MenuSeparator",
+  "slug": "menuseparator",
+  "description": "Разделитель между элементами меню.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { MenuSeparator } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuseparator--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md",
+  "sourcePath": "components/MenuSeparator/MenuSeparator.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "Example1",
+      "title": "Меню с разделителями",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "name": "SidePage",
+  "slug": "sidepage",
+  "description": "Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.\n\nСоставной компонент, включает в себя:\n- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;\n- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);\n- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { SidePage } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/sidepage.md",
+  "sourcePath": "components/SidePage/SidePage.tsx",
+  "props": [
+    {
+      "name": "blockBackground",
+      "description": "Блокирует фон, когда сайдпейдж открыт: основная страница затемняется, действия на ней становятся недоступны.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "disableClose",
+      "description": "Отключает событие `onClose` и блокирует кнопку закрытия сайдпейджа.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "ignoreBackgroundClick",
+      "description": "Оставляет сайдпейдж открытым, когда пользователь нажал на фон.\n@deprecated Используйте `ignoreOutsideClick` вместо `ignoreBackgroundClick`",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "ignoreOutsideClick",
+      "description": "Оставляет сайдпейдж открытым, когда пользователь нажал на фон.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина сайдпейджа.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "mobileWidth",
+      "description": "Ширина сайдпейджа в мобильном режиме. По умолчанию ширина во весь экран.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Событие закрытия сайдпейджа пользователем: нажатие на фон, Escape или крестик.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "onOpened",
+      "description": "Событие завершения анимации открытия сайдпейджа.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "fromLeft",
+      "description": "Отображает сайдпейдж слева.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию открытия сайдпейджа.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "disableFocusLock",
+      "description": "Выключает ограничение на фокус вне сайдпейджа.\nРаботает только при заблокированном фоне `blockBackground = true`.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "offset",
+      "description": "Отступ от края экрана до сайдпейджа.",
+      "type": "string | number",
+      "required": false,
+      "defaultValue": "0",
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "onOutsideClick",
+      "description": "Событие нажатия на фон.",
+      "type": "(e: Event) => void",
+      "required": false,
+      "source": "react-ui/components/SidePage/SidePage.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину сайдпейджа."
+    },
+    {
+      "name": "ExampleFromLeft",
+      "title": "Расположение слева",
+      "description": "Проп `fromLeft` отображает сайдпейдж слева."
+    },
+    {
+      "name": "ExampleBlockBackground",
+      "title": "Блокировка фона",
+      "description": "Проп `blockBackground` блокирует фон, когда сайдпейдж открыт: основная страница затемняется, действия на ней становятся недоступны."
+    },
+    {
+      "name": "ExampleIgnoreOutsideClick",
+      "title": "Отключение закрытия сайдпейджа при нажатии на фон",
+      "description": "Проп `ignoreOutsideClick` игнорирует нажатие на фон, сайдпейдж остаётся открытым."
+    },
+    {
+      "name": "ExampleDisableClose",
+      "title": "Блокировка крестика и отключение события onClose",
+      "description": "Проп `disableClose` отключает событие `onClose` и блокирует кнопку закрытия сайдпейджа."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Отключение анимации",
+      "description": "Проп `disableAnimations` отключает анимацию открытия сайдпейджа."
+    },
+    {
+      "name": "ExampleOnOutsideClick",
+      "title": "Поведение при нажатии по фону",
+      "description": "Проп `onOutsideClick` управляет поведением при нажатии по фону.\nНапример, можно перезадать поведение и не закрывать сайдпейдж при нажатии на определённый элемент на странице."
+    }
+  ]
+}

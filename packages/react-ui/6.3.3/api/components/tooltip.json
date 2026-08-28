@@ -1,0 +1,209 @@
+{
+  "name": "Tooltip",
+  "slug": "tooltip",
+  "description": "Подсказка, которая объясняет состояние контрола или даёт контекстную справку.\n\nОткрывается по клику, фокусу на элемент или наведению.\nМожет содержать изображения, кнопки, ссылки и прочие интерактивные элементы.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Tooltip } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-tooltip--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md",
+  "sourcePath": "components/Tooltip/Tooltip.tsx",
+  "props": [
+    {
+      "name": "render",
+      "description": "Функция, возвращающая содержимое тултипа. При возврате `null` тултип не показывается.",
+      "type": "() => ReactNode",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер тултипа.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small",
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "pos",
+      "description": "Приоритетное расположение тултипа относительно элемента.",
+      "type": "\"top\" | \"bottom\" | \"left\" | \"right\" | \"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\" | \"middle center\" | \"middle left\" | \"middle right\"",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "allowedPositions",
+      "description": "Список позиций, которые может занимать тултип. В списке обязательно должна быть позиция из пропа `pos`.",
+      "type": "(\"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\" | \"middle center\" | \"middle left\" | \"middle right\")[]",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "trigger",
+      "description": "Триггер открытия тултипа.",
+      "type": "\"manual\" | \"hover\" | \"opened\" | \"click\" | \"focus\" | \"hover&focus\" | \"closed\" | \"hoverAnchor\"",
+      "required": false,
+      "defaultValue": "hover",
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "closeButton",
+      "description": "Показывает крестик для закрытия тултипа.\nПо умолчанию крестик показывается, если проп `trigger` не равен `hover` или `focus`.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "anchorElement",
+      "description": "Элемент, относительно которого позиционируется тултип.",
+      "type": "HTMLElement",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "useWrapper",
+      "description": "Оборачивает вложенные элементы в `<span />`.\n\n_Примечание_: при двух и более вложенных элементах обёртка будет добавлена автоматически.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "delayBeforeShow",
+      "description": "Задержка в миллисекундах до появления тултипа.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "100",
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "onCloseClick",
+      "description": "Событие нажатия на крестик.",
+      "type": "MouseEventHandler<HTMLElement>",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "onCloseRequest",
+      "description": "Событие нажатия на крестик или снаружи тултипа.",
+      "type": "(event?: Event | MouseEvent<Element, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Событие закрытия тултипа.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "onOpen",
+      "description": "Событие открытия тултипа.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/Tooltip/Tooltip.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleRender",
+      "title": "Содержимое тултипа",
+      "description": "Главное отличие тултипа от хинта — возможность рендерить подсказку с любым содержимым с помощью пропа `render`."
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер."
+    },
+    {
+      "name": "ExamplePos",
+      "title": "Позиционирование",
+      "description": "Можно позиционировать тултип относительно элемента пропом `pos`.\nВозможные значения:\n+ `top`, `top center`, `top left`, `top right`,\n+ `bottom`, `bottom center`, `bottom left`, `bottom right`,\n+ `left`, `left middle`, `left top`, `left bottom`,\n+ `right`, `right middle`, `right top`, `right bottom`."
+    },
+    {
+      "name": "ExampleTrigger",
+      "title": "Триггер открытия",
+      "description": "Проп `trigger` задаёт событие, по которому открывается тултип.\nВозможные значения:\n+ `hover` — по наведению (вариант по умолчанию),\n+ `click` — по нажатию,\n+ `focus` — по фокусу,\n+ `hover&focus` — по наведению или фокусу,\n+ `hoverAnchor` — по наведению только на вложенный элемент, без учёта поверхности тултипа,\n+ `opened` — статичное состояние с открытым тултипом,\n+ `closed` — статичное состояние с закрытым тултипом,\n+ `manual` — ручное управление через методы `show()` и `hide()`."
+    },
+    {
+      "name": "ExampleTriggerManual",
+      "title": "Ручное управление",
+      "description": "Подробный пример реализации тултипа с `trigger = \"manual\"` через `ref` и методы `show()` и `hide()`."
+    },
+    {
+      "name": "ExampleCloseButton",
+      "title": "Кнопка закрытия",
+      "description": "С помощью пропа `closeButton` можно переопределить логику отображения кнопки-крестика, закрывающую тултип.\nПо умолчанию крестик показывается в тултипах с `trigger = \"click\" | \"opened\" | \"manual\"`."
+    },
+    {
+      "name": "ExampleAnchorElement",
+      "title": "Якорный элемент",
+      "description": "С помощью пропа `anchorElement` можно привязывать один тултип к разным элементам на странице."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Всплытие без анимации",
+      "description": "Проп `disableAnimations` отключает анимацию всплывающего тултипа."
+    },
+    {
+      "name": "ExampleUseWrapper",
+      "title": "Встроенная обёртка",
+      "description": "С помощью пропа `useWrapper` можно обернуть вложенные элементы в `<span />`.\nЭто особенно полезно в двух сценариях:\n+ для правильного позиционирования относительно двух или более вложенных объектов,\n+ для отображения тултипа у отключённых нативных элементов (аттрибут `disabled` блокирует события мыши)."
+    },
+    {
+      "name": "ExampleDelayBeforeShow",
+      "title": "Задержка перед появлением",
+      "description": "Проп `delayBeforeShow` позволяет переопределить задержку перед появлением тултипа **по наведению**. По умолчанию: 100мс."
+    },
+    {
+      "name": "ExampleOnOpenAndClose",
+      "title": "События открытия и закрытия",
+      "description": "Колбэки `onOpen` и `onClose` вызываются при открытии и закрытии меню."
+    },
+    {
+      "name": "ExampleOnCloseClickAndRequest",
+      "title": "События нажатия на крестик и снаружи тултипа",
+      "description": "Колбэк `onCloseClick` вызывается при нажатии на крестик, а `onCloseRequest` — ещё и при нажатии снаружи тултипа."
+    },
+    {
+      "name": "ExampleContextualHints",
+      "title": "Кастомизация: тултип контекстного обучения",
+      "description": "[Гайд про контекстное обучение](https://guides.kontur.ru/principles/onbording/contextual-hints/)."
+    }
+  ]
+}

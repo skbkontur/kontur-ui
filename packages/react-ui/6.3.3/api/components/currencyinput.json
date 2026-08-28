@@ -1,0 +1,225 @@
+{
+  "name": "CurrencyInput",
+  "slug": "currencyinput",
+  "description": "Поле для денежных сумм.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { CurrencyInput } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-currencyinput--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/currencyinput.md",
+  "sourcePath": "components/CurrencyInput/CurrencyInput.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small"
+    },
+    {
+      "name": "type",
+      "description": "Тип поля ввода.",
+      "type": "\"number\" | \"search\" | \"email\" | \"tel\" | \"password\" | \"text\" | \"time\" | \"date\" | \"url\"",
+      "required": false
+    },
+    {
+      "name": "prefix",
+      "description": "Устанавливает префикс `ReactNode` перед значением, но после иконки.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "leftIcon",
+      "description": "Добавляет иконку слева.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "error",
+      "description": "Переводит поле в состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Переводит поле в состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "borderless",
+      "description": "Убирает обводку поля.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "align",
+      "description": "Выравнивает контент внутри поля.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false,
+      "defaultValue": "right"
+    },
+    {
+      "name": "suffix",
+      "description": "Устанавливает суффикс `ReactNode` после значения, но перед правой иконкой.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "selectAllOnFocus",
+      "description": "Выделяет введённое значение при фокусе в поле. Работает с типами `text`, `password`, `tel`, `search`, `url`.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "showLengthCounter",
+      "description": "Отображает счётчик введённых символов.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "lengthCounter",
+      "description": "Допустимое количество символов в поле. Отображается в счётчике символов.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "maxLength"
+    },
+    {
+      "name": "counterHelp",
+      "description": "Подсказка для счётчика символов.\n\nЕсли передать `ReactNode`, рисует тултип со встроенной иконкой.\nЕсли передать функцию, рисует произвольный элемент.\n@example ```\ncounterHelp={() => <Hint text=\"...\"><Icon /></Hint>}\n```",
+      "type": "ReactNode | (() => ReactNode)",
+      "required": false
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Устанавливает обработчик на случай некорректного ввода.\nЕсли передан onUnexpectedInput, он будет вызван при ошибке, а эффект мигания можно запустить вручную через публичный метод blink.\n@param value - значение поля.",
+      "type": "(value: string) => void",
+      "required": false
+    },
+    {
+      "name": "element",
+      "description": "Устанавливает элемент, заменяющий нативный input. Должен иметь пропсы `InputElementProps` и тип `InputElement`.",
+      "type": "ReactElement<InputElementProps, string | JSXElementConstructor<any>>",
+      "required": false
+    },
+    {
+      "name": "value",
+      "description": "Значение поля.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "null"
+    },
+    {
+      "name": "hideTrailingZeros",
+      "description": "Убирает лишние нули после запятой.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    },
+    {
+      "name": "fractionDigits",
+      "description": "Устанавливает минимальное количество отображаемых знаков после запятой. Если fractionDigits=15, то в целой части допускается только **0**.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "2"
+    },
+    {
+      "name": "signed",
+      "description": "Разрешает вводить в поле символ минуса для отрицательных значений.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "integerDigits",
+      "description": "Допустимое количество цифр целой части до запятой.\nЕсли передан **0**, то в целой части допускается только **0**.",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения `value`.",
+      "type": "(value: number) => void",
+      "required": true
+    },
+    {
+      "name": "onSubmit",
+      "description": "Событие отправки формы.",
+      "type": "() => void",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля. По умолчанию `\"small\"`."
+    },
+    {
+      "name": "ExampleAlign",
+      "title": "Выравнивание текста",
+      "description": "Проп `align` задаёт выравнивание текста. По умолчанию `\"right\"`. Меняйте правое выравнивание на левое, если значения других полей в колонке выровнены по левому краю."
+    },
+    {
+      "name": "ExampleFractionDigits",
+      "title": "Количество знаков после запятой",
+      "description": "Проп `fractionDigits` задаёт количество знаков после запятой. По умолчанию `{2}`.\nЕсли задать максимальное значение `fractionDigits={15}`, то в целой части допускается **0**.\nЧтобы поле могло принимать только целое число, установите `fractionDigits={0}`."
+    },
+    {
+      "name": "ExampleIntegerDigits",
+      "title": "Количество знаков до запятой",
+      "description": "Проп `integerDigits` задаёт количество знаков до запятой. По умолчанию `{2}`. Если задать значение `integerDigits=0`, то в целой части допускается только **0**."
+    },
+    {
+      "name": "ExampleHideTrailingZeros",
+      "title": "Лишние нули после запятой",
+      "description": "Проп `hideTrailingZeros` позволяет убрать лишние нули после запятой. Будет убирать лишние нули после запятой при потере фокуса с поля."
+    },
+    {
+      "name": "ExampleSigned",
+      "title": "Отрицательное значение",
+      "description": "Проп `signed` разрешает ввод отрицательного значения. В поле можно ввести символ минуса (−). При вводе дефис (-), короткое тире (–) или тире (—) автоматически заменятся на верный символ минуса."
+    },
+    {
+      "name": "ExampleClear",
+      "title": "Очистка поля",
+      "description": "Очистить значение в `CurrencyInput` можно с помощью `null` или `undefined`"
+    },
+    {
+      "name": "ExampleCurrency",
+      "title": "Знак валюты",
+      "description": "Знак валюты можно прокидывать как внутрь поля с помощью пропа `rightIcon`, так и вне поля с помощью элемента `label`."
+    }
+  ]
+}

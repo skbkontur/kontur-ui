@@ -1,0 +1,486 @@
+{
+  "name": "ComboBox",
+  "slug": "combobox",
+  "description": "Комбобокс — поле ввода с выпадающим списком подсказок, из которых пользователь может выбрать нужное. Открыть выпадающий список можно ещё до начала ввода значения, нажав на поле.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { ComboBox } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md",
+  "sourcePath": "components/ComboBox/ComboBox.tsx",
+  "props": [
+    {
+      "name": "showClearIcon",
+      "description": "Показывает иконку очистки значения в заполненном поле.",
+      "type": "\"auto\" | \"always\" | \"never\"",
+      "required": false,
+      "defaultValue": "never",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "align",
+      "description": "Ввыравнивание текста в поле.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "searchOnFocus",
+      "description": "Вызывает функцию поиска `getItems` при фокусе и очистке поля ввода.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "drawArrow",
+      "description": "Отображает справа иконку в виде стрелки.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на комбобоксе после окончания загрузки страницы.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "borderless",
+      "description": "Убирает обводку поля.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "disablePortal",
+      "description": "По умолчанию выпадающий список рендерится через [паттерн Portal](https://react.dev/reference/react-dom/createPortal). Проп отключает использование Portal и список рендерится как обычный блок с абсолютным позиционированием внутри компонента.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует комбобокс.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит комбобокс в состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "leftIcon",
+      "description": "Добавляет иконку слева.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "getItems",
+      "description": "Задаёт функцию поиска элементов, которая должна возвращать Promise с массивом значений.\nПо умолчанию ожидаются объекты с типом `{ value: string, label: string }`.\nЭлементы могут быть любого типа. В этом случае необходимо определить свойства `itemToId`, `renderValue`, `renderItem`, `valueToString`.",
+      "type": "(query: string) => Promise<ComboBoxExtendedItem<T>[]>",
+      "required": true,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "itemToId",
+      "description": "Сравнивает полученные результаты с `value`.",
+      "type": "(item: T) => string | number",
+      "required": false,
+      "defaultValue": "(item: ComboBoxItem) => item.value",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "maxLength",
+      "description": "Mаксимальная длина значения, которое пользователь может ввести в поле.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "menuPos",
+      "description": "Расположение выпадающего списка — над или под полем.",
+      "type": "\"top\" | \"bottom\"",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание выпадающего меню.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "defaultValue": "left",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "Событие потери комбобоксом фокуса.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения (`value`) в поле.",
+      "type": "(value: T) => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onFocus",
+      "description": "Событие получения комбобоксом фокуса.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onInputValueChange",
+      "description": "Событие, которое вызывается при изменении текста в поле ввода, если результатом функции будет строка, то она станет следующим состоянием полем ввода.\n\n**Не рекомендуется менять значение, передаваемое в проп `value`, внутри этой функции. Используйте для этих целей `onValueChange` или `onUnexpectedInput`. Иначе возможно неожиданное поведение компонента.**",
+      "type": "(value: string) => string | void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Событие обработки ввода строки в поле ввода и последующей потерей фокуса компонентом.\nФункция срабатывает с аргументом поля строки.\nЕсли при потере фокуса в выпадающем списке будет только один элемент и результат `valueToString` с этим элементом будет совпадать со значение в текстовом поле, то сработает `onValueChange` со значением данного элемента.\nСама функция также может вернуть значение, не равное undefined, с которым будет вызван `onValueChange`. Если возвращаемое значение будет равно null, то сработает очистка текущего значения поля, а в режиме редактирования токен будет удален.",
+      "type": "(value: string) => void | T",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "placeholder",
+      "description": "Текст, который отображается если не введено никакое значение.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "renderItem",
+      "description": "Отрисовывает элементы результата поиска.\nНе применяется, если элемент является функцией или React-элементом.\n@param item - элемент из результата поиска.\n@param state ? - состояние элемента.\n@returns React-элемент.",
+      "type": "(item: T, state?: MenuItemState) => ReactNode",
+      "required": false,
+      "defaultValue": "(item: ComboBoxItem) => item.label",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "itemWrapper",
+      "description": "Устанавливает компонент, заменяющий собой обёртку элементов результата поиска.\nПо умолчанию все элементы результата поиска оборачиваются в тег <button />.\n@example itemWrapper={(item) => {\n   if (item.value === 3) {\n     return (props) => {\n       return <a {...props} />\n     }\n   }\n}}",
+      "type": "(item: T) => ComponentType<{}>",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "renderNotFound",
+      "description": "Отображает сообщение о пустом результате поиска. При `renderAddButton` не работает.",
+      "type": "() => ReactNode",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "renderTotalCount",
+      "description": "Отображает сообщение об общем количестве элементов.\n@param found - количество элементов по результатам поиска. Учитывает только компонент MenuItem. Им \"оборачиваются\" элементы, возвращаемые `getItems()`.\n@param total - количество всех элементов.",
+      "type": "(found: number, total: number) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "renderValue",
+      "description": "Отображает выбранное значение.",
+      "type": "(item: T) => ReactNode",
+      "required": false,
+      "defaultValue": "(item: ComboBoxItem) => item.label",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "renderAddButton",
+      "description": "Отрисовывает кнопку добавления в выпадающем списке.",
+      "type": "(query?: string) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "totalCount",
+      "description": "Определяет общее количество элементов. Необходим для работы renderTotalCount.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Устанавливает выбранное в комбобоксе значение. Тип `value` совпадает с типом элементов в массиве, возвращаемом в `getItems`.",
+      "type": "T",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "valueToString",
+      "description": "Возвращает строковое представление `value`. Необходимо при фокусировке.",
+      "type": "(item: T) => string",
+      "required": false,
+      "defaultValue": "(item: ComboBoxItem) => item.label",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер комбобокса.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит комбобокс в состояние предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина комбобокса.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "maxMenuHeight",
+      "description": "Максимальная высота выпадающего списка.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "Событие наведения мышкой (событие `onmouseenter`). Смотрите разницу с `onMouseOver` в [документации](https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave)",
+      "type": "(e: MouseEvent<Element, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onMouseOver",
+      "description": "Событие наведения мышкой (событие `onmouseover`).",
+      "type": "(e: MouseEvent<Element, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "Событие ухода мышки с объекта (событие `onmouseleave`).",
+      "type": "(e: MouseEvent<Element, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onInputKeyDown",
+      "description": "Событие нажатия кнопки на клавиатуре.",
+      "type": "(e: KeyboardEvent<HTMLElement>) => void",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "inputMode",
+      "description": "Задаёт типы вводимых данных.",
+      "type": "\"none\" | \"search\" | \"email\" | \"tel\" | \"text\" | \"url\" | \"numeric\" | \"decimal\"",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "onBeforePasteInMask",
+      "description": "Событие вставки значения в поле с маской.",
+      "type": "MaskedInputOnBeforePasteValue",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "viewMode",
+      "description": "Режим отображения комбобокса:\n- `\"singleline\"` — однострочное поле;\n- `\"multiline\"` — многострочное поле;\n- `\"multiline-editing\"` — поле становится многострочным только при редактировании.\n\nМногострочные режимы не работают, если указан проп `mask`. В таком случае будет отображаться однострочное поле.",
+      "type": "\"singleline\" | \"multiline\" | \"multiline-editing\"",
+      "required": false,
+      "defaultValue": "singleline",
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "maxRows",
+      "description": "Максимальное количество отображаемых строк, если для поля добавлен проп многострочного режима  — `\"multiline\"` или `\"multiline-editing\"`.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "preventIconsOffset",
+      "description": "Отключает выравнивание текста пунктов списка относительно иконок в других пунктах.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ComboBox/ComboBox.tsx"
+    },
+    {
+      "name": "mask",
+      "description": "Шаблон ввода, определяющий допустимые символы.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "maskChar",
+      "description": "Плейсхолдер, который отображается на месте ещё не введённых пользователем символов.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "_",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "formatChars",
+      "description": "Словарь правил для настройки маски, где:\nключ — символ для использования в маске;\nзначение — регулярка-правило.",
+      "type": "Record<string, string>",
+      "required": false,
+      "defaultValue": "{ '9': '[0-9]', 'a': '[A-Za-z]', '*': '[A-Za-z0-9]' }",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер комбобокса. По умолчанию `\"small\"`."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина комбобокса",
+      "description": "Проп `width` задаёт ширину комбобокса. Может быть в пикселях, процентах или других конкретных единицах.\nЗаданная ширина применяется к полю и выпадающему списку."
+    },
+    {
+      "name": "ExampleViewMode",
+      "title": "Многострочное поле",
+      "description": "Проп `viewMode` позволяет сделать поле многострочным.\nДоступные значения:\n- `\"singleline\"` (по умолчанию) — однострочное поле;\n- `\"multiline\"` — многострочное поле;\n- `\"multiline-editing\"` — поле становится многострочным только при редактировании.\nДля многострочных полей можно дополнительно ограничить количество отображаемых строк через проп `maxRows`.\nМногострочные режимы не работают, если указан проп `mask`. В таком случае будет отображаться однострочное поле."
+    },
+    {
+      "name": "ExampleMenuHeight",
+      "title": "Высота выпадающего списка",
+      "description": "Проп `maxMenuHeight` фиксирует максимальную высоту выпадающего списка."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Расположение выпадающего списка",
+      "description": "Проп `menuPos` фиксирует расположение выпадающего списка. Оно может быть под полем — `\"bottom\"` или над полем — `\"top\"`.\nПо умолчанию список раскрывается под полем, а если список находится близко к нижней границе страницы, то он динамически меняет расположение и раскрывается над полем."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание выпадающего списка",
+      "description": "Проп `menuAlign` выравнивает выпадающий список. Выпадающий список может быть прикреплен к левому краю — `\"left\"` или к правому — `\"right\"`."
+    },
+    {
+      "name": "ExampleBorderless",
+      "title": "Поле без обводки",
+      "description": "Проп `borderless` убирает обводку у поля."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Иконка",
+      "description": ""
+    },
+    {
+      "name": "ExampleAlign",
+      "title": "Выравнивание текста в поле",
+      "description": "Проп `align` задаёт выравнивание текста в поле. Выравнивается только текст внутри поля, проп не влияет на выравнивание значений в выпадающем списке."
+    },
+    {
+      "name": "ExampleMaxLength",
+      "title": "Максимальная длина значения",
+      "description": "Проп `maxLength` задаёт максимальную длину значения, которое пользователь может ввести в поле. Значение пропа должно быть целым числом."
+    },
+    {
+      "name": "ExampleMask",
+      "title": "Маска ввода",
+      "description": "Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
+    },
+    {
+      "name": "ExampleAddButton",
+      "title": "Добавление значений в список",
+      "description": "Проп `renderAddButton` позволяет разрешить пользователю добавлять свои значения в список.\nИспользуйте проп `renderAddButton`, в котором задаётся функция отрисовки кнопки добавления в выпадающем списке.\nПроп `preventIconsOffset` отключает выравнивание текста пунктов списка относительно иконок в других пунктах.\nС его помощью можно отключить смещение пунктов в списке, если в кнопке есть иконка \"+\"."
+    },
+    {
+      "name": "ExampleClear",
+      "title": "Очистка поля",
+      "description": "Очистить значение в поле можно с помощью пустой строки, `null` или `undefined`."
+    },
+    {
+      "name": "ExampleShowClearIcon",
+      "title": "Иконка очистки поля",
+      "description": "Проп `showClearIcon` добавляет в поле иконку очистки, по нажатию на иконку поле будет очищаться.\nДоступные значения:\n- `\"never\"` (по умолчанию) — не показывает иконку очистки;\n- `\"always\"` — всегда показывает иконку очистки в заполненном поле, при очистке значения возвращается стрелка для раскрытия списка;\n- `\"auto\"` — показывает иконку в заполненном поле, только когда оно в состоянии hover или focus."
+    },
+    {
+      "name": "ExampleReset",
+      "title": "Сброс значения",
+      "description": "Метод `reset()` позволяет сбросить введённое пользователем вручную значение без изменения `value`."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` переводит комбообокс в состояние блокировки. Поле визуально приглушается и становится недоступно для редактирования."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит комбобокс в состояние ошибки."
+    },
+    {
+      "name": "ExampleCounter",
+      "title": "Cчётчик найденных значений",
+      "description": "Пропсы `totalCount` и `renderTotalCount` позволяют добавить в выпадающий список счётчик найденных значений.\n- `renderTotalCount` — задаёт функцию, которая отображает сообщение о количестве значений.\n- `totalCount` — определяет общее количество значений."
+    },
+    {
+      "name": "ExampleExtendedItems",
+      "title": "Шапка, разделитель и футер в списке",
+      "description": "В массиве, возвращаемом `getItems`, могут быть переданы React-компоненты:\n`<MenuHeader>`, `<MenuFooter>`, `<MenuSeparator />` и любые другие.\nВ таких случаях поиск необходимо контролировать дополнительно."
+    },
+    {
+      "name": "ExampleCustom",
+      "title": "Кастомизация: переопределение `renderValue`, `renderItem` и `itemWrapper`",
+      "description": "В примере с помощью пропсов `renderValue`, `renderItem` и `itemWrapper` переопределён внешний вид элементов списка и выбранного значения, задано отображение галочки для одобренных элементов."
+    },
+    {
+      "name": "ExampleHighlightedLabel",
+      "title": "Кастомизация: подсветка совпадающей части в результате поиска",
+      "description": "В примере настроено кастомное поведение, которое при поиске подсвечивает совпадающие части в значениях."
+    }
+  ]
+}

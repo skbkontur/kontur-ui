@@ -1,0 +1,172 @@
+{
+  "name": "DateRangePicker",
+  "slug": "daterangepicker",
+  "description": "Поле выбора периода дат.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { DateRangePicker } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-daterangepicker--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/daterangepicker.md",
+  "sourcePath": "components/DateRangePicker/DateRangePicker.tsx",
+  "props": [
+    {
+      "name": "menuAnchorElement",
+      "description": "Элемент, относительно которого открывается календарь.\nЕсли передать значение `focused` — меню будет открываться у зафокусированного элемента.\nЕсли передать ссылку на DOM элемент или ref — меню откроется относительно переданного элемента.",
+      "type": "Element | ReactNode | RefObject<any>",
+      "required": false,
+      "source": "react-ui/components/DateRangePicker/DateRangePicker.tsx"
+    },
+    {
+      "name": "children",
+      "description": "Элементы DateRangePicker:\n`<DateRangePicker.Start />`\n`<DateRangePicker.Separator />`\n`<DateRangePicker.End />`",
+      "type": "ReactNode",
+      "required": true,
+      "source": "react-ui/components/DateRangePicker/DateRangePicker.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля с датой.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина поля с датой.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание выпадающего окна с календарём.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "menuPos",
+      "description": "Расположение календаря — над или под полем.",
+      "type": "\"top\" | \"bottom\"",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "renderDay",
+      "description": "Отрисовка дат в календаре.\n@param props - параметры дня.\n@returns элемент, который отрисовывает контент числа месяца.",
+      "type": "(props: CalendarDayProps) => ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "defaultValue": "(props: CalendarDayProps) => <CalendarDay {...props} />",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "onMonthChange",
+      "description": "Событие изменения месяца.\n@param changeInfo - информация об изменении отображаемого месяца, где\n`month: number` - номер текущего отображаемого месяца от 1 до 12,\n`year: number` - отображаемый год.",
+      "type": "(changeInfo: CalendarMonthChangeInfo) => void",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "enableTodayLink",
+      "description": "Отображает в календаре кнопку «Сегодня», которая меняет выбранное значение на текущую дату.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "useMobileNativeDatePicker",
+      "description": "Позволяет использовать на мобильных устройствах нативный календарь для выбора дат.\nНа iOS нативный календарь не умеет работать с minDate и maxDate.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля. С помощью токенов `calendar*` можно управлять размерами календаря."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину полей."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Расположение календаря",
+      "description": "Проп `menuPos` фиксирует расположение выпадающего окна с календарём. Оно может быть под полем — `\"bottom\"` или над ним — `\"top\"`.\nПо умолчанию календарь отображается под полем, а если не хватает места, то динамически меняет расположение и показывается над полем."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание календаря",
+      "description": "Проп `menuAlign` выравнивает выпадающее окно с календарём. Оно может быть прикреплено к левому краю — `\"left\"` или к правому — `\"right\"`."
+    },
+    {
+      "name": "ExampleMinMax",
+      "title": "Минимальная и максимальная даты",
+      "description": "Минимальная дата задаётся в `Start` через `minDate`, максимальная — в `End` через `maxDate`."
+    },
+    {
+      "name": "ExampleCustomOptional",
+      "title": "Открытые даты начала или конца",
+      "description": "Проп `optional` позволяет указывать открытые диапазоны дат."
+    },
+    {
+      "name": "ExampleCustomMenuAnchorElement",
+      "title": "Настройка позиционирования меню",
+      "description": ""
+    },
+    {
+      "name": "ExampleTodayButton",
+      "title": "Кнопка «Сегодня»",
+      "description": "Проп `enableTodayLink` добавляет кнопку для выбора сегодяшней даты."
+    },
+    {
+      "name": "ExampleDateFormat",
+      "title": "Форматирование даты",
+      "description": ""
+    },
+    {
+      "name": "ExampleCustomDayRender",
+      "title": "Кастомизация: рендер дня",
+      "description": "Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs)."
+    },
+    {
+      "name": "ExampleCustomWithoutDash",
+      "title": "Кастомизация: поля без тире",
+      "description": "У дочерних элементов могут быть настроены `width`, `className`, `style`, `withIcon` и другие настройки `<DateInput>`"
+    },
+    {
+      "name": "ExamplePrices",
+      "title": "Кастомизация: выбор дат с ценами",
+      "description": "Пример с кастомизацией темы и кастомным рендером дня"
+    }
+  ]
+}

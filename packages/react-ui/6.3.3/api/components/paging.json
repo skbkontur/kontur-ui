@@ -1,0 +1,147 @@
+{
+  "name": "Paging",
+  "slug": "paging",
+  "description": "Постраничная навигация `Paging` (пейджинг или пагинация) — способ представления большого количества однородной информации, когда контент разбивается на страницы.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Paging } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-paging--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/paging.md",
+  "sourcePath": "components/Paging/Paging.tsx",
+  "props": [
+    {
+      "name": "pagesCount",
+      "description": "Количество страниц.",
+      "type": "number",
+      "required": true,
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "activePage",
+      "description": "Номер текущей страницы.",
+      "type": "number",
+      "required": true,
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "onPageChange",
+      "description": "Событие переключения страницы.",
+      "type": "(pageNumber: number) => void",
+      "required": true,
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер пейджинга.\n\n*Проп поддерживается начиная с версии 5.3.*",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "'small'",
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Делает компонент недоступным.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "caption",
+      "description": "Подпись у кнопки перехода на следующую страницу.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "component",
+      "description": "Компонент обёртки страниц.",
+      "type": "ComponentType<ItemComponentProps>",
+      "required": false,
+      "defaultValue": "({\n  onClick,\n  className,\n  children,\n  ...rest\n}: PagingDefaultComponentProps): React.JSX.Element => {\n  const { dataProps } = extractDataProps(rest);\n\n  return (\n    <span onClick={onClick} className={className} {...dataProps}>\n      {children}\n    </span>\n  );\n}",
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "withoutNavigationHint",
+      "description": "Отключает навигационные подсказки.\nПо умолчанию подсказки появляются, когда доступно управление с клавиатуры (либо контрол в фокусе, либо globalListeners === true).",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "useGlobalListener",
+      "description": "Включает глобальный слушатель `keyDown`, для навигации клавишами без фокуса на контроле.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Paging/Paging.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": "Базовый пример с обязательными пропсами `activePage`, `onPageChange` и `pagesCount`."
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер пейджинга."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует переключение страниц."
+    },
+    {
+      "name": "ExampleCaption",
+      "title": "Подпись кнопки перехода вперёд",
+      "description": "Проп `caption` задаёт подпись на кнопке перехода вперёд."
+    },
+    {
+      "name": "ExampleWithoutNavigationHint",
+      "title": "Отключение подсказки навигации",
+      "description": "Проп `withoutNavigationHint` отключает подсказку по навигации клавишами."
+    },
+    {
+      "name": "ExampleUseGlobalListener",
+      "title": "Глобальная навигация с клавиатуры",
+      "description": "Проп `useGlobalListener` включает глобальную навигацию по стрелкам без фокуса на компоненте."
+    },
+    {
+      "name": "ExampleWithoutLastPage",
+      "title": "Кастомизация: пейджинг без последней страницы",
+      "description": "Иногда у пейджинга не нужно показывать последнюю страницу заранее.\n[Ссылка на гайд](https://guides.kontur.ru/components/navigation/paging/#Opisanie_raboti/Peidzhing_bez_poslednei_stranitsi)."
+    },
+    {
+      "name": "ExampleCustomItemComponent",
+      "title": "Кастомизация: кастомный компонент элемента",
+      "description": "Проп `component` позволяет переопределить компонент элемента пагинации."
+    },
+    {
+      "name": "ExampleIsForwardMethod",
+      "title": "Кастомизация: использование isForward",
+      "description": "Статический метод `Paging.isForward` определяет, является ли элемент кнопкой перехода вперед."
+    }
+  ]
+}

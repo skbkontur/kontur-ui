@@ -1,0 +1,311 @@
+{
+  "name": "Autocomplete",
+  "slug": "autocomplete",
+  "description": "Автокомплит — поле ввода с выпадающим списком подсказок. Подсказки отображаются пользователю, когда он начинает вводить значение в поле.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Autocomplete } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/autocomplete.md",
+  "sourcePath": "components/Autocomplete/Autocomplete.tsx",
+  "props": [
+    {
+      "name": "menuPos",
+      "description": "Расположение выпадающего списка — над или под полем.",
+      "type": "\"top\" | \"bottom\"",
+      "required": false,
+      "source": "react-ui/components/Autocomplete/Autocomplete.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "alwaysShowMask",
+      "description": "Всегда показывать символы маски, независимо от фокуса в поле.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "mask",
+      "description": "Шаблон ввода, определяющий допустимые символы.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "maskChar",
+      "description": "Плейсхолдер, который отображается на месте ещё не введённых пользователем символов.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "_",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "type",
+      "description": "Тип поля ввода.",
+      "type": "\"number\" | \"search\" | \"email\" | \"tel\" | \"password\" | \"text\" | \"time\" | \"date\" | \"url\"",
+      "required": false
+    },
+    {
+      "name": "prefix",
+      "description": "Устанавливает префикс `ReactNode` перед значением, но после иконки.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "showClearIcon",
+      "description": "Показывает иконку очистки значения в заполненном поле.",
+      "type": "\"auto\" | \"always\" | \"never\"",
+      "required": false,
+      "defaultValue": "never"
+    },
+    {
+      "name": "leftIcon",
+      "description": "Добавляет иконку слева.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "error",
+      "description": "Переводит поле в состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Переводит поле в состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "borderless",
+      "description": "Убирает обводку поля.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "align",
+      "description": "Выравнивает контент внутри поля.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false
+    },
+    {
+      "name": "suffix",
+      "description": "Устанавливает суффикс `ReactNode` после значения, но перед правой иконкой.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "selectAllOnFocus",
+      "description": "Выделяет введённое значение при фокусе в поле. Работает с типами `text`, `password`, `tel`, `search`, `url`.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "showLengthCounter",
+      "description": "Отображает счётчик введённых символов.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "lengthCounter",
+      "description": "Допустимое количество символов в поле. Отображается в счётчике символов.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "maxLength"
+    },
+    {
+      "name": "counterHelp",
+      "description": "Подсказка для счётчика символов.\n\nЕсли передать `ReactNode`, рисует тултип со встроенной иконкой.\nЕсли передать функцию, рисует произвольный элемент.\n@example ```\ncounterHelp={() => <Hint text=\"...\"><Icon /></Hint>}\n```",
+      "type": "ReactNode | (() => ReactNode)",
+      "required": false
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Устанавливает обработчик на случай некорректного ввода.\nЕсли передан onUnexpectedInput, он будет вызван при ошибке, а эффект мигания можно запустить вручную через публичный метод blink.\n@param value - значение поля.",
+      "type": "(value: string) => void",
+      "required": false
+    },
+    {
+      "name": "element",
+      "description": "Устанавливает элемент, заменяющий нативный input. Должен иметь пропсы `InputElementProps` и тип `InputElement`.",
+      "type": "ReactElement<InputElementProps, string | JSXElementConstructor<any>>",
+      "required": false
+    },
+    {
+      "name": "renderItem",
+      "description": "Отрисовывает элементы результата поиска.",
+      "type": "(item: string) => ReactNode",
+      "required": false
+    },
+    {
+      "name": "source",
+      "description": "Задаёт функцию поиска элементов, которая должна возвращать Promise с массивом значений.",
+      "type": "string[] | ((patter: string) => Promise<string[]>)",
+      "required": false
+    },
+    {
+      "name": "disablePortal",
+      "description": "По умолчанию выпадающий список рендерится через [паттерн Portal](https://react.dev/reference/react-dom/createPortal). Проп отключает использование Portal и список рендерится как обычный блок с абсолютным позиционированием внутри компонента.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false"
+    },
+    {
+      "name": "hasShadow",
+      "description": "Определяет, нужно ли показывать тень у выпадающего списка.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание выпадающего списка.",
+      "type": "\"left\" | \"right\"",
+      "required": false
+    },
+    {
+      "name": "menuMaxHeight",
+      "description": "Максимальная высота выпадающего списка.",
+      "type": "string | number",
+      "required": false,
+      "defaultValue": "300"
+    },
+    {
+      "name": "menuWidth",
+      "description": "Ширина выпадающего списка.",
+      "type": "string | number",
+      "required": false
+    },
+    {
+      "name": "preventWindowScroll",
+      "description": "Отключает скролл окна, когда выпадающий список раскрыт.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения `value`.",
+      "type": "(value: string) => void",
+      "required": true
+    },
+    {
+      "name": "onBlur",
+      "description": "Событие потери автокомплитом фокуса.",
+      "type": "() => void",
+      "required": false
+    },
+    {
+      "name": "size",
+      "description": "Размер автокомплита.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false
+    },
+    {
+      "name": "value",
+      "description": "Значение автокомплита.",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "mobileMenuHeaderText",
+      "description": "Текст заголовка выпадающего списка в мобильной версии.",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер автокомплита."
+    },
+    {
+      "name": "ExampleMenuWidth",
+      "title": "Ширина выпадающего списка",
+      "description": "Проп `menuWidth` задаёт ширину выпадающего списка."
+    },
+    {
+      "name": "ExampleMenuMaxHeight",
+      "title": "Высота выпадающего списка",
+      "description": "Проп `menuMaxHeight` фиксирует максимальную высоту выпадающего списка."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Расположение выпадающего списка",
+      "description": "Проп `menuPos` фиксирует расположение выпадающего списка. Оно может быть под полем — `\"bottom\"` или над полем — `\"top\"`.\nПо умолчанию список раскрывается под полем, а если список находится близко к нижней границе страницы, то он динамически меняет расположение и раскрывается над полем."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание выпадающего списка",
+      "description": "Проп `menuAlign` выравнивает выпадающий список. Выпадающий список может быть прикреплен к левому краю — \"left\" или к правому — \"right\"."
+    },
+    {
+      "name": "ExampleBorderless",
+      "title": "Поле без обводки",
+      "description": "Проп `borderless` убирает обводку у поля."
+    },
+    {
+      "name": "ExampleAlign",
+      "title": "Выравнивание текста в поле",
+      "description": "Проп `align` задаёт выравнивание текста в поле. Выравнивается только текст внутри поля, проп не влияет на выравнивание значений в выпадающем списке."
+    },
+    {
+      "name": "ExampleMask",
+      "title": "Маска ввода",
+      "description": "Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
+    },
+    {
+      "name": "ExampleSelectAllOnFocus",
+      "title": "Выделение всего значения при фокусе",
+      "description": "Проп `selectAllOnFocus` добавляет автовыделение значения: всё значение внутри поля выделяется при фокусе на нем. Может быть полезно для полей, в которых пользователи могут часто копировать значение."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Иконка",
+      "description": "В поле можно передать иконку.\nИконка может находиться в начале поля — проп `leftIcon`, в конце — проп `rightIcon`.\nПод разный размер полей используйте подходящие начертания и размер иконок:\n- Small — Light 16\n- Medium — Light 20\n- Large — Regular 24"
+    },
+    {
+      "name": "ExampleClear",
+      "title": "Очистка поля",
+      "description": "Очистить значение в поле можно только с помощью пустой строки."
+    },
+    {
+      "name": "ExampleShowClearIcon",
+      "title": "Иконка очистки поля",
+      "description": "Проп `showClearIcon` добавляет в поле иконку очистки, по нажатию на иконку поле будет очищаться.\nДоступные значения:\n- `\"always\"` — всегда показывает иконку очистки в заполненном поле, при очистке значения возвращается стрелка для раскрытия списка;\n- `\"auto\"` — показывает иконку в заполненном поле, только когда оно в состоянии hover или focus;\n- `\"never\"` (по умолчанию) — не показывает иконку очистки.\nПри одновременной настройке `rightIcon` и `showClearIcon` иконка очистки заменит иконку справа."
+    }
+  ]
+}

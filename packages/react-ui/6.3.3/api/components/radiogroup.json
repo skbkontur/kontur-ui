@@ -1,0 +1,173 @@
+{
+  "name": "RadioGroup",
+  "slug": "radiogroup",
+  "description": "Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs).",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { RadioGroup } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/radiogroup.md",
+  "sourcePath": "components/RadioGroup/RadioGroup.tsx",
+  "props": [
+    {
+      "name": "defaultValue",
+      "description": "Значение по умолчанию. Должно быть одним из значений дочерних радиокнопок или значений из `items`.",
+      "type": "T",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Значение группы радиокнопок. Должно быть одним из значений радиокнопок.\nЕсли не указано, то компонент будет работать как неконтролируемый.",
+      "type": "T",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "items",
+      "description": "Массив параметров радиокнопок. Может быть типа `Array<Value>` или `Array<[Value, Data]>`,\nгде тип `Value` — значение радиокнопки, а `Data` — значение которое будет использовано вторым параметром в `renderItem`.\nТип `Array<Value>` будет приведен к типу `Array<[Value, Value]>`.\nМожет быть использовано, если не передан `children`.",
+      "type": "T[] | [T, ReactNode][]",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "name",
+      "description": "Устанавливает атрибут `name` для дочерних радиокнопок. Если не указан, то сгенерируется случайное имя.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "toKey",
+      "description": "Получает уникальный ключ по элементу.\n@param item - элемент, по которому нужно получить ключ.",
+      "type": "(item: T) => string | number",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует все радиокнопки в группе.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит контрол в состояние предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит контрол в состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "inline",
+      "description": "Размещает радиокнопки в строку. Работает только со значениями, переданными через `items`, не работает с `children`.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина радиогруппы. Работает только со значениями, переданными через `items`, не работает с `children`.",
+      "type": "Width<string | number>",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "renderItem",
+      "description": "Отрисовывает контент радиокнопки. Работает только со значениями, переданными через `items`, не работает с `children`.\n@param itemValue - значение радиокнопки.\n@param data - значение для отрисовки радиокнопки.",
+      "type": "(itemValue: T, data: ReactNode) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения `value`.",
+      "type": "(value: T) => void",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "Событие потери радиогруппой фокуса.",
+      "type": "(event: FocusEvent) => void",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "Событие ухода мышки с объекта (событие `onmouseleave`).",
+      "type": "() => any",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "onMouseOver",
+      "description": "Событие наведения мышкой (событие `onmouseover`).",
+      "type": "() => any",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "Событие наведения мышкой (событие `onmouseenter`). Смотрите разницу с `onMouseOver` в [документации](https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave)",
+      "type": "() => any",
+      "required": false,
+      "source": "react-ui/components/RadioGroup/RadioGroup.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт максимальную ширину элементов группы. Работает только со значениями, переданными через `items`, не работает с `children`."
+    },
+    {
+      "name": "ExampleMode",
+      "title": "Состояния",
+      "description": "У группы радиокнопок есть несколько пропсов состояний:\n- `disabled` — блокировка.\n- `error` — ошибка.\n- `warning` — предупреждение."
+    },
+    {
+      "name": "ExampleDefault",
+      "title": "Значение по умолчанию",
+      "description": "Проп `defaultValue` задаёт значение по умолчанию. Должно быть одним из значений дочерних радиокнопок или значений из `items`."
+    },
+    {
+      "name": "ExampleInline",
+      "title": "Расположение в строку",
+      "description": "Проп `inline` размещает радиокнопки в строку. Работает только со значениями, переданными через `items`, не работает с `children`."
+    }
+  ]
+}

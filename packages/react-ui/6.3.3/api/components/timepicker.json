@@ -1,0 +1,275 @@
+{
+  "name": "TimePicker",
+  "slug": "timepicker",
+  "description": "Поле с временем помогает пользователю быстро и удобно указать время в правильном формате.\nВ поле можно ввести время с клавиатуры либо выбрать из выпадающего списка,\nпередав массив или функцию в проп `source`.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { TimePicker } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-timepicker--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/timepicker.md",
+  "sourcePath": "components/TimePicker/TimePicker.tsx",
+  "props": [
+    {
+      "name": "format",
+      "description": "Устанавливает формат времени",
+      "type": "\"HH:mm\" | \"HH:mm:ss\"",
+      "required": false,
+      "defaultValue": "HH:mm",
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "source",
+      "description": "Задает источник элементов выпадающего списка: массив либо функцию запроса,\nкоторая возвращает массив или Promise с массивом.\nЗапрос — это введенные цифры сегментов с сохранением их позиций: `12`, `12:3`, а если заполнены только минуты — `:30`.\nЭлементы задаются либо строками со временем — `'09:00'`, — либо объектами `{ value, label?, disabled? }`\nс любыми дополнительными полями; смешивать формы в одном источнике нельзя, это ошибка типов.\nВ `onValueChange` приходит только время выбранного элемента: сам элемент можно найти в `source` по нему.\nКроме значений времени можно передать React-элементы — например `MenuHeader` или `MenuItem`:\nони отображаются в меню, но не участвуют в фильтрации и выборе значения.\nФильтрацию, индикацию загрузки и повторные запросы компонент берет на себя,\nподробности — в разделе документации про выпадающий список.\nЗамена самой функции уже открытый список не перезапрашивает: как в `ComboBox`,\nактуальная функция используется при следующем запросе.",
+      "type": "TimePickerSource<string>",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "renderItem",
+      "description": "Отрисовывает элемент со временем в выпадающем списке. Не применяется к React-элементам из `source`.\nВремя элемента приведено к формату поля, как и везде в компоненте:\nэлемент `'9:00'` приходит как `'09:00'`, а `{ value: '09:00:00' }` в формате `HH:mm` — как `{ value: '09:00' }`.\nОстальные поля элемента сохраняются.",
+      "type": "(item: string, state: MenuItemState) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "minTime",
+      "description": "Задает нижнюю границу времени. Элементы за границей становятся заблокированными.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "maxTime",
+      "description": "Задает верхнюю границу времени. Элементы за границей становятся заблокированными.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Задает значение поля: время в формате `HH:mm[:ss]`.\nПустое значение можно передать как `''` или `null`.\nЕсли проп не задан, компонент неконтролируемый: он хранит значение сам и сообщает о нем через `onValueChange`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на поле ввода после окончания загрузки страницы",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Делает компонент заблокированным.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит контрол в состояние валидации ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит контрол в состояние валидации предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "useMobileNativeTimePicker",
+      "description": "Включает нативный системный выбор времени в мобильной верстке.\nМобильная верстка определяется медиавыражением темы, как в остальных адаптивных контролах.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "menuPos",
+      "description": "Расположение выпадающего меню.",
+      "type": "\"top\" | \"bottom\"",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание выпадающего меню.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "menuWidth",
+      "description": "Ширина выпадающего меню. По умолчанию — минимальная ширина поля ввода, расширяется по контенту.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Задает ширину поля.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "rightIcon",
+      "description": "Переопределяет иконку или скрывает, если передать `null`.\nПока элементы уже показаны, а новый запрос к функции-источнику еще выполняется,\nвместо иконки показывается индикатор загрузки.",
+      "type": "ReactNode | (() => ReactNode)",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "suffix",
+      "description": "Устанавливает суффикс после значения и перед иконкой.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля ввода и выпадающего меню.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onClick",
+      "description": "Задает функцию, которая вызывается при нажатии на контрол.",
+      "type": "(event: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения `value`.\nВызывается при коммите значения: потере фокуса, нажатии Enter, выборе элемента из списка\nили изменении в нативном пикере.\nВремя полностью нормализовано до формата `HH:mm[:ss]`, а пустое значение приходит пустой строкой.\nЭлементы-объекты из `source` наружу не приходят: по времени их можно найти в самом `source`.",
+      "type": "(time: string) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onInputValueChange",
+      "description": "Событие изменения значения в процессе ввода.\nЗначение частично нормализуется по сегментам, например `1` => `01`, незаполненный хвост отбрасывается.\nПромежуточное значение может не соответствовать полной форме `HH:mm[:ss]`, поэтому тип — произвольная строка.",
+      "type": "(value: string) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Событие некорректного ввода: пользователь ввел или вставил значение, которое не может быть временем.\nВызывается с нажатой клавишей — например `а` или `,` — либо со значением из буфера,\nиз которого не получилось собрать время.\nЗначение вне диапазона `minTime`/`maxTime` некорректным вводом не считается,\nего можно проверить через `TimePicker.validate`.\nВторым аргументом передается метод вспыхивания рамки поля.\nЕсли обработчик не задан, поле вспыхивает само.\nОбработчик может подставить значение вместо некорректного ввода — например разобрать вставку\nв собственном формате: возвращенное время коммитится и приходит в `onValueChange`,\n`null` очищает поле, а `undefined` оставляет значение прежним.",
+      "type": "(value: string, blink: () => void) => string | void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "Событие потери фокуса.\nВызывается после коммита значения и следующего за ним рендера,\nпоэтому обработчик видит уже измененное значение — например при выборе элемента в мобильном попапе.\nИз-за этого событие приходит отложенно и его `currentTarget` уже пуст: элемент читайте из `target`.",
+      "type": "(event: FocusEvent<HTMLElement, Element>) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onFocus",
+      "description": "Событие получения фокуса.",
+      "type": "(event: FocusEvent<HTMLElement, Element>) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onKeyDown",
+      "description": "Событие нажатия клавиши.",
+      "type": "(event: KeyboardEvent<HTMLElement>) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "onPaste",
+      "description": "Событие вставки из буфера.",
+      "type": "(event: ClipboardEvent<HTMLElement>) => void",
+      "required": false,
+      "source": "react-ui/components/TimePicker/TimePicker.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля."
+    },
+    {
+      "name": "ExampleFormats",
+      "title": "Форматы",
+      "description": "Проп `format` задаёт строковую маску времени: `HH:mm` или `HH:mm:ss`."
+    },
+    {
+      "name": "ExampleSource",
+      "title": "Выпадающее меню",
+      "description": "Проп `source` задаёт элементы выпадающего меню: массив либо функцию запроса.\nЭлементы можно задать строками со временем или объектами `{ value, label?, disabled? }`\nс любыми дополнительными полями — в `onValueChange` приходит только время выбранного элемента."
+    },
+    {
+      "name": "ExampleSourceWithInfo",
+      "title": "Элементы с дополнительной информацией",
+      "description": "Элементы `source` могут содержать дополнительную подпись в поле `label`."
+    },
+    {
+      "name": "ExampleSourceWithDisabled",
+      "title": "Заблокированные значения",
+      "description": "Элемент из `source` можно сделать недоступным через `disabled`."
+    },
+    {
+      "name": "ExampleSourceWithMinMax",
+      "title": "Ограничение минимального и максимального значений",
+      "description": "Пропы `minTime` и `maxTime` ограничивают только доступность элементов в выпадающем меню.\nРучной ввод они не ограничивают — его можно проверить через `TimePicker.validate`."
+    },
+    {
+      "name": "ExampleRightIconAndSuffix",
+      "title": "Пропы rightIcon и suffix",
+      "description": "По умолчанию `TimePicker` показывает иконку часов справа.\nЧерез `rightIcon` её можно заменить или скрыть, передав `null`.\nЧерез `suffix` можно добавить дополнительный контент справа от значения, например часовой пояс."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит поле в состояние ошибки."
+    },
+    {
+      "name": "ExampleWarning",
+      "title": "Состояние предупреждения",
+      "description": "Проп `warning` переводит поле в состояние предупреждения."
+    },
+    {
+      "name": "ExampleMobileNative",
+      "title": "Нативный редактор на мобильных устройствах",
+      "description": "Проп `useMobileNativeTimePicker` включает нативный редактор времени в мобильной вёрстке.\nВёрстка определяется медиазапросом темы, поэтому нативный пикер включится и в узком окне десктопного браузера."
+    }
+  ]
+}

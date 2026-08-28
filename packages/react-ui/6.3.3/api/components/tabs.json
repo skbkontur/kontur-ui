@@ -1,0 +1,85 @@
+{
+  "name": "Tabs",
+  "slug": "tabs",
+  "description": "Табы группируют контент и помогают в навигации.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Tabs } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-tabs--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tabs.md",
+  "sourcePath": "components/Tabs/Tabs.tsx",
+  "props": [
+    {
+      "name": "indicatorClassName",
+      "description": "Кастомный класс для индикатора (подчёркивания) активного таба.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Tabs/Tabs.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер табов.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "large",
+      "source": "react-ui/components/Tabs/Tabs.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Идентификатор активного таба. Совпадает с `id` выбранного `<Tab />`.",
+      "type": "string",
+      "required": true,
+      "source": "react-ui/components/Tabs/Tabs.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие смены активного таба.",
+      "type": "(value: T) => void",
+      "required": false,
+      "source": "react-ui/components/Tabs/Tabs.tsx"
+    },
+    {
+      "name": "vertical",
+      "description": "Располагает табы вертикально.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Tabs/Tabs.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина компонента.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/Tabs/Tabs.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    }
+  ]
+}

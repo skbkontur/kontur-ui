@@ -1,0 +1,229 @@
+{
+  "name": "Input",
+  "slug": "input",
+  "description": "Поле ввода позволяет ввести или отредактировать значение.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Input } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/input.md",
+  "sourcePath": "components/Input/Input.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "showClearIcon",
+      "description": "Показывает иконку очистки значения в заполненном поле.",
+      "type": "\"auto\" | \"always\" | \"never\"",
+      "required": false,
+      "defaultValue": "never"
+    },
+    {
+      "name": "leftIcon",
+      "description": "Добавляет иконку слева.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "error",
+      "description": "Переводит поле в состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Переводит поле в состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "borderless",
+      "description": "Убирает обводку поля.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "align",
+      "description": "Выравнивает контент внутри поля.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false
+    },
+    {
+      "name": "size",
+      "description": "Размер поля.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения `value` в поле.",
+      "type": "(value: string) => void",
+      "required": false
+    },
+    {
+      "name": "type",
+      "description": "Тип поля ввода.",
+      "type": "\"number\" | \"search\" | \"email\" | \"tel\" | \"password\" | \"text\" | \"time\" | \"date\" | \"url\"",
+      "required": false,
+      "defaultValue": "text"
+    },
+    {
+      "name": "value",
+      "description": "Значение внутри поля.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "prefix",
+      "description": "Устанавливает префикс `ReactNode` перед значением, но после иконки.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "suffix",
+      "description": "Устанавливает суффикс `ReactNode` после значения, но перед правой иконкой.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "selectAllOnFocus",
+      "description": "Выделяет введённое значение при фокусе в поле. Работает с типами `text`, `password`, `tel`, `search`, `url`.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "showLengthCounter",
+      "description": "Отображает счётчик введённых символов.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "lengthCounter",
+      "description": "Допустимое количество символов в поле. Отображается в счётчике символов.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "maxLength"
+    },
+    {
+      "name": "counterHelp",
+      "description": "Подсказка для счётчика символов.\n\nЕсли передать `ReactNode`, рисует тултип со встроенной иконкой.\nЕсли передать функцию, рисует произвольный элемент.\n@example ```\ncounterHelp={() => <Hint text=\"...\"><Icon /></Hint>}\n```",
+      "type": "ReactNode | (() => ReactNode)",
+      "required": false
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Устанавливает обработчик на случай некорректного ввода.\nЕсли передан onUnexpectedInput, он будет вызван при ошибке, а эффект мигания можно запустить вручную через публичный метод blink.\n@param value - значение поля.",
+      "type": "(value: string) => void",
+      "required": false
+    },
+    {
+      "name": "element",
+      "description": "Устанавливает элемент, заменяющий нативный input. Должен иметь пропсы `InputElementProps` и тип `InputElement`.",
+      "type": "ReactElement<InputElementProps, string | JSXElementConstructor<any>>",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleLabel",
+      "title": "Название поля",
+      "description": "Название к полю можно добавить через `label`. Для названия поля есть рекомендации по соблюдению доступности, изучите раздел <a href=\"#доступность\" target=\"-_self\"> Доступность </a>."
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину поля. Может принимать как абсолютные значения — например, 150, так и относительные — например, 50%."
+    },
+    {
+      "name": "ExamplePlaceholder",
+      "title": "Плейсхолдер",
+      "description": "В пропе `placeholder` можно задать плейсхолдер в поле. Добавляет подсказку, которая отображается внутри поля, пока оно не заполнено."
+    },
+    {
+      "name": "ExampleAlign",
+      "title": "Выравнивание текста",
+      "description": "Проп `align` выравнивает текст в поле."
+    },
+    {
+      "name": "ExampleClear",
+      "title": "Очистка поля",
+      "description": "Очистить значение в поле можно только с помощью пустого значения."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Иконка",
+      "description": "В поле ввода можно передать иконку.\nИконка может находиться в начале поля — проп `leftIcon`, в конце — проп `rightIcon`.\nПод разный размер полей используйте подходящие начертания и размер иконок:\n- Small — Light 16\n- Medium — Light 20\n- Large — Regular 24"
+    },
+    {
+      "name": "ExampleShowClearIcon",
+      "title": "Иконка очистки",
+      "description": "По умолчанию очистить поле ввода можно с помощью пустой строки.\nДополнительно можно добавить проп `showClearIcon`, по нажатию на иконку очистки поле будет очищаться. По умолчанию `\"never\"`.\nМожет отображаться в разных вариантах:\n- `\"always\"` — всегда показывает иконку очистки в заполненном поле;\n- `\"auto\"` — показывает иконку в заполненном поле, когда поле ввода в состоянии hover или focus;\n- `\"never\"` (по умолчанию) — не показывает.\nПри одновременной настройке `rightIcon` и `showClearIcon` иконка очистки заменит иконку справа. В таких ситуациях не используйте для `rightIcon` интерактивную иконку, а значение для `showClearIcon` выбирайте `\"auto\"`."
+    },
+    {
+      "name": "ExampleSelectAllOnFocus",
+      "title": "Выделение всего значения при фокусе",
+      "description": "Чтобы значение внутри поля выделялось при фокусе на нем, добавьте проп `selectAllOnFocus`. Может быть полезно для полей, в которых пользователи могут часто копировать значение, или для полей только для чтения."
+    },
+    {
+      "name": "ExamplePrefixSuffix",
+      "title": "Префикс и суффикс",
+      "description": "Внутри поля можно отобразить префикс  — через проп `prefix` или суффикс — `suffix`. Префикс отображает контент слева от вводимого текста, суффикс — справа."
+    },
+    {
+      "name": "ExampleLengthCounter",
+      "title": "Счётчик введённых символов",
+      "description": "За отображение счётчика введённых символов отвечают пропсы:\n- `showLengthCounter` — отображает счётчик символов.\n- `lengthCounter` — допустимое количество символов в поле. Отображается в счётчике символов.\n- `counterHelp` — добавляет подсказку к счётчику символов."
+    },
+    {
+      "name": "ExampleBorderless",
+      "title": "Поле без обводки",
+      "description": "Поле без обводки задаётся пропом `borderless`."
+    },
+    {
+      "name": "ExampleType",
+      "title": "Тип",
+      "description": "Проп `type` задаёт тип поля. По умолчанию `\"text\"`.\nЭто стандартные типы поля ввода в HTML. Тип наделяет компонент нативными свойствами, может влиять на отображение подсказок, валидацию, автоматическое переключение раскладки клавиатуры на мобильных устройствах и другие свойства поведения. Подробнее смотрите в [Справке по HTML](https://developer.mozilla.org/ru/docs/Web/HTML/Reference/Elements/input#type).\nВ сервисах Контура допустимо использовать только типы text и password, для остальных используйте компоненты из React UI."
+    },
+    {
+      "name": "ExampleOnUnexpectedInput",
+      "title": "Обработчик некорректного ввода",
+      "description": "Проп `onUnexpectedInput` устанавливает обработчик на случай некорректного ввода. В примере ошибка возникнет при попытке ввести больше 3 символов."
+    }
+  ]
+}

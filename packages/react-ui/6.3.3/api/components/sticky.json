@@ -1,0 +1,63 @@
+{
+  "name": "Sticky",
+  "slug": "sticky",
+  "description": "`Sticky` позволяет закреплять элемент интерфейса в определенной позиции на экране при прокрутке страницы.\nЭто полезно для создания «прилипающих» элементов, которые должны оставаться видимыми при прокрутке содержимого.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Sticky } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-sticky--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/sticky.md",
+  "sourcePath": "components/Sticky/Sticky.tsx",
+  "props": [
+    {
+      "name": "side",
+      "description": "Край, к которому будет закреплен элемент.",
+      "type": "\"top\" | \"bottom\"",
+      "required": true,
+      "source": "react-ui/components/Sticky/Sticky.tsx"
+    },
+    {
+      "name": "offset",
+      "description": "Отступ от края экрана в пикселях, на который сдвигается элемент в закреплённом состоянии.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "0",
+      "source": "react-ui/components/Sticky/Sticky.tsx"
+    },
+    {
+      "name": "getStop",
+      "description": "Задаёт функцию, которая возвращает DOM-элемент, который нельзя пересекать.",
+      "type": "() => HTMLElement",
+      "required": false,
+      "source": "react-ui/components/Sticky/Sticky.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    }
+  ]
+}

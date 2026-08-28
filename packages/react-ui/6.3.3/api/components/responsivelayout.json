@@ -1,0 +1,28 @@
+{
+  "name": "ResponsiveLayout",
+  "slug": "responsivelayout",
+  "description": "`ResponsiveLayout` определяет текущий режим.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { ResponsiveLayout } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-responsivelayout--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/responsivelayout.md",
+  "sourcePath": "components/ResponsiveLayout/ResponsiveLayout.tsx",
+  "props": [
+    {
+      "name": "onLayoutChange",
+      "description": "Событие изменения режима.",
+      "type": "(layout: ResponsiveLayoutFlags<T>) => void",
+      "required": false,
+      "source": "react-ui/components/ResponsiveLayout/ResponsiveLayout.tsx"
+    },
+    {
+      "name": "customMediaQueries",
+      "description": "Позволяет кастомизировать возвращаемые флаги.",
+      "type": "MediaQueriesType",
+      "required": false,
+      "source": "react-ui/components/ResponsiveLayout/ResponsiveLayout.tsx"
+    }
+  ],
+  "examples": []
+}

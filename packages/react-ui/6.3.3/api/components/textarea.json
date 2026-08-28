@@ -1,0 +1,198 @@
+{
+  "name": "Textarea",
+  "slug": "textarea",
+  "description": "Многострочное поле — это поле ввода, в котором текст отображается в несколько строк.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.3",
+  "import": "import { Textarea } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-textarea--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/textarea.md",
+  "sourcePath": "components/Textarea/Textarea.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "error",
+      "description": "Меняет визуальное отображение поля на состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Меняет визуальное отображение поля на состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует поле.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "size",
+      "description": "Размер многострочного поля.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false
+    },
+    {
+      "name": "autoResize",
+      "description": "Выполняет автоматический ресайз в зависимости от количества текста в поле. Связан с пропом `extraRow`, который всегда добавляет дополнительную пустую строку.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "rows",
+      "description": "Высота поля — число видимых строк. При превышении этой высоты появляется скролл.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "3"
+    },
+    {
+      "name": "maxRows",
+      "description": "Максимальное число видимых строк при автоматическом ресайзе.",
+      "type": "string | number",
+      "required": false,
+      "defaultValue": "15"
+    },
+    {
+      "name": "resize",
+      "description": "Направление ресайза поля.\nПопадает в `style`. Описание всех значений смотрите [в документации MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/resize).",
+      "type": "\"none\" | \"inherit\" | \"inline\" | \"both\" | \"horizontal\" | \"vertical\" | \"-moz-initial\" | \"initial\" | \"revert\" | \"revert-layer\" | \"unset\" | \"block\"",
+      "required": false
+    },
+    {
+      "name": "width",
+      "description": "Ширина многострочного поля.",
+      "type": "Width<string | number>",
+      "required": false
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения `value`.",
+      "type": "(value: string) => void",
+      "required": false
+    },
+    {
+      "name": "selectAllOnFocus",
+      "description": "Выделяет введённое значение при фокусе в поле. Работает с типами `text`, `password`, `tel`, `search`, `url`.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "showLengthCounter",
+      "description": "Отображает счётчик введённых символов.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "lengthCounter",
+      "description": "Допустимое количество символов в поле. Отображается в счётчике символов.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "maxLength"
+    },
+    {
+      "name": "counterHelp",
+      "description": "Добавляет подсказку к счётчику символов.\nПо умолчанию - тултип с содержимым из пропа, если передан `ReactNode`.\nПередав функцию, можно переопределить подсказку целиком, вместе с иконкой.\n@example ```\ncounterHelp={() => <Tooltip render={...}><HelpIcon /></Tooltip>}\n```",
+      "type": "ReactNode | (() => ReactNode)",
+      "required": false
+    },
+    {
+      "name": "extraRow",
+      "description": "Добавляет дополнительную свободную строку при автоматическом ресайзе.\n@see https://guides.kontur.ru/components/textarea/#04",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию при автоматическом ресайзе. Автоматически отключается, когда в `extraRow` передан `false`.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()"
+    },
+    {
+      "name": "align",
+      "description": "Выравнивание текста в поле.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": ""
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": ""
+    },
+    {
+      "name": "ExampleRows",
+      "title": "Высота поля",
+      "description": "Проп `rows` задаёт высоту поля, которая равна количеству видимых строк. При превышении этой высоты появляется скролл."
+    },
+    {
+      "name": "ExampleResize",
+      "title": "Ресайз",
+      "description": "Проп `resize` определяет, в какую сторону или стороны будет расширяться поле. По умолчанию многострочное поле может изменять свой размер, если потянуть за нижний правый угол.\nОсновные значения:\n- none — размеры изменять нельзя;\n- both — размеры можно изменять по горизонтали и вертикали;\n- horizontal — размер можно изменять по горизонтали;\n- vertical — размер можно изменять по вертикали.\nОписания для экспериментальных значений смотрите [в документации MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/resize)."
+    },
+    {
+      "name": "ExampleAutoResize",
+      "title": "Автоматический ресайз поля",
+      "description": "Проп `autoResize` автоматически увеличивает поле под его содержимое.\nСвязан с пропом `extraRow`, который всегда добавляет дополнительную пустую строку, и пропом `maxRows` — максимальное число видимых строк."
+    },
+    {
+      "name": "ExampleAlign",
+      "title": "Выравнивание текста",
+      "description": "Проп `align` выравнивает текст в поле."
+    },
+    {
+      "name": "ExampleClear",
+      "title": "Очистка значения",
+      "description": "Очистить значение в поле можно только с помощью пустой строки."
+    },
+    {
+      "name": "ExampleCounter",
+      "title": "Счётчик введённых символов",
+      "description": "За отображение счётчика введённых символов отвечают пропсы:\n- `showLengthCounter` — отображает счётчик символов.\n- `lengthCounter` — допустимое количество символов в поле. Отображается в счётчике символов.\n- `counterHelp` — добавляет подсказку к счётчику символов."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует поле."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Пропсы `error` и `warning` используются для валидации."
+    }
+  ]
+}
