@@ -1,6 +1,6 @@
 # DatePicker
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-datepicker--docs)
 
 Поле с датой помогает вводить дату с клавиатуры или выбирать её с помощью мыши.
 
@@ -182,8 +182,8 @@ type: `string` · optional
 
 Составной компонент, включает в себя:
 
-- [DateInput](https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md) — компонент поля с маской для выбора даты с клавиатуры.
-- [Calendar](https://tech.skbkontur.ru/kontur-ui/docs/components/calendar.md) — компонент календаря для выбора даты с помощью мыши.
+- [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md) — компонент поля с маской для выбора даты с клавиатуры.
+- [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md) — компонент календаря для выбора даты с помощью мыши.
 
 ## Примеры
 
@@ -275,7 +275,7 @@ return <DatePicker value={value} onValueChange={setValue} warning />;
 
 ### Выходные и праздничные дни
 
-В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendarday--docs).
+В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendarday--docs).
 Функция должна вернуть `true` для выходного дня и `false` — для рабочего.
 
 ```tsx
@@ -369,7 +369,7 @@ return <DatePickerFormatting />;
 
 ### Кастомизация: рендер дня
 
-Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs).
+Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md).
 
 ```tsx
 const [value, setValue] = React.useState('12.05.2022');
@@ -388,7 +388,7 @@ return <DatePicker value={value} onValueChange={setValue} renderDay={renderDay} 
 
 ## Валидация
 
-Для сравнения и валидации дат в строках формата `DD.MM.YYYY` доступен набор утилит [Date Utilities](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-date-utilities--docs).
+Для сравнения и валидации дат в строках формата `DD.MM.YYYY` доступен набор утилит [Date Utilities](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-date-utilities--docs).
 
 Пример с обработкой ошибок, когда пользователь ввёл невалидную дату.
 
@@ -399,7 +399,7 @@ return <DatePicker value={value} onValueChange={setValue} renderDay={renderDay} 
 Через проп `useMobileNativeDatePicker` можно изменить режим на нативный календарь мобильного устройства.
 Обратите внимание, что [календарь в iOS не поддерживает](https://bugs.webkit.org/show_bug.cgi?id=225639) `minDate` и `maxDate`.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 

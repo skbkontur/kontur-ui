@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Spinner } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/spinner.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-spinner--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md",
   "sourcePath": "components/Spinner/Spinner.tsx",
   "props": [
     {

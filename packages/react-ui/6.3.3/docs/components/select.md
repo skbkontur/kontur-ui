@@ -1,6 +1,6 @@
 # Select
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-select--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-select--docs)
 
 Раскрывающийся список позволяет выбрать значение из заранее известного набора вариантов.
 
@@ -214,7 +214,7 @@ type: `boolean` · optional
 
 type: `"link" | "text" | "fill" | "default" | "outline" | "accent" | "danger" | "success" | "pay" | "backless" | "primary"` · optional · default: `default`
 
-Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs).
+Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md).
 
 ### `size`
 
@@ -274,7 +274,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-Не используйте раскрывающийся список для выбора элементов меню. В таком случае воспользуйтесь компонентом [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md).
+Не используйте раскрывающийся список для выбора элементов меню. В таком случае воспользуйтесь компонентом [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md).
 
 ## Примеры
 
@@ -556,13 +556,13 @@ return <Select items={items} value={value} onValueChange={setValue} _renderButto
 
 В мобильном режиме у раскрывающегося списка появляется заголовок, который необходимо передать через проп `mobileMenuHeaderText`. Полное описание адаптивного вида и поведения компонента смотрите в [Гайде](https://guides.kontur.ru/components/selection-elements/select/#Аdaptivnost').
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Source
 

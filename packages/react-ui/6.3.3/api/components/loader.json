@@ -1,12 +1,12 @@
 {
   "name": "Loader",
   "slug": "loader",
-  "description": "С помощью лоадера можно отобразить процесс выполнения задачи.\nЛоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.\nКогда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs).",
+  "description": "С помощью лоадера можно отобразить процесс выполнения задачи.\nЛоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.\nКогда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md).",
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Loader } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-loader--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-loader--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md",
   "sourcePath": "components/Loader/Loader.tsx",
   "props": [
     {

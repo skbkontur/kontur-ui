@@ -1,12 +1,12 @@
 {
   "name": "SidePage",
   "slug": "sidepage",
-  "description": "Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.\n\nСоставной компонент, включает в себя:\n- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;\n- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);\n- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).",
+  "description": "Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.\n\nСоставной компонент, включает в себя:\n- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;\n- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);\n- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).",
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { SidePage } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/sidepage.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/sidepage.md",
   "sourcePath": "components/SidePage/SidePage.tsx",
   "props": [
     {

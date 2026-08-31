@@ -1,6 +1,6 @@
 # Dropdown
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdown--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdown--docs)
 
 Кнопка-меню содержит несколько команд, объединенных по смыслу..
 
@@ -152,12 +152,12 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — выбирайте, когда нужен более гибкий сценарий:
+- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — выбирайте, когда нужен более гибкий сценарий:
   произвольный `caption` (в том числе render-function), кастомные `header`/`footer`, управление `positions`.
-- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) — используйте, если меню должно отображаться в тултипе.
-- [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md) — используйте узкую кнопку для малоиспользуемых ссылок и действий.
-- [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md) — используйте для выбора значения из набора вариантов.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) — используйте, если меню должно отображаться в тултипе.
+- [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md) — используйте узкую кнопку для малоиспользуемых ссылок и действий.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md) — используйте для выбора значения из набора вариантов.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -204,7 +204,7 @@ return (
 ### Стиль кнопки
 
 Проп `use` задаёт визуальный стиль кнопки-меню.
-Доступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs#%D1%81%D1%82%D0%B8%D0%BB%D1%8C).
+Доступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md#%D1%81%D1%82%D0%B8%D0%BB%D1%8C).
 
 ```tsx
 return (
@@ -458,7 +458,7 @@ return (
 - для полного отключения используйте проп `disabled`: компонент становится недоступен для взаимодействия и клавиатурной навигации;
 - если важно сохранить элемент в потоке озвучивания скринридером, используйте `aria-disabled="true"` и блокируйте действия логически.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -466,7 +466,7 @@ return (
 
 Мобильный режим активируется при ширине вьюпорта < `768px`.
 
-Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 

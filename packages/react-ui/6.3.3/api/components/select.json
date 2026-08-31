@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Select } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-select--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/select.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-select--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md",
   "sourcePath": "components/Select/Select.tsx",
   "props": [
     {
@@ -223,7 +223,7 @@
     },
     {
       "name": "use",
-      "description": "Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs).",
+      "description": "Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md).",
       "type": "\"link\" | \"text\" | \"fill\" | \"default\" | \"outline\" | \"accent\" | \"danger\" | \"success\" | \"pay\" | \"backless\" | \"primary\"",
       "required": false,
       "defaultValue": "default",

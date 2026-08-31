@@ -1,6 +1,6 @@
 # Button
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-button--docs)
 
 Кнопка запускает действие, сценарий или позволяет перейти на другую страницу.
 
@@ -173,8 +173,8 @@ type: `ButtonLinkAllowedValues` · optional · default: `button`
 
 **Альтернативы и дополнения**
 
-- [Link](https://tech.skbkontur.ru/kontur-ui/docs/components/link.md) — если необходима кнопка, выглядящая как ссылка, можно переопределить корневой элемент на `component=button`.
-- [Group](https://tech.skbkontur.ru/kontur-ui/docs/components/group.md) — если необходимы кнопки в составе группы элементов по горизонтали.
+- [Link](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/link.md) — если необходима кнопка, выглядящая как ссылка, можно переопределить корневой элемент на `component=button`.
+- [Group](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/group.md) — если необходимы кнопки в составе группы элементов по горизонтали.
 
 ## Примеры
 
@@ -386,7 +386,7 @@ return (
 ### Кастомизация: брендовая кнопка через переменные темы
 
 Проп `theme` позволяет кастомизировать кнопку через свойства темы. Заданные переменные будут объединены с темой из `<ThemeContext>`.
-Общие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs) .
+Общие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs) .
 
 ```tsx
 return (
@@ -515,13 +515,13 @@ return (
 
 В адаптивной верстке для кнопок, в особенности кнопок-иконок, используйте размеры Medium и Large. Если все же используете компактный размер, увеличивайте кликабельную область. [Подробнее в Контур.Гайдах](https://guides.kontur.ru/principles/base/adaptivity/#32).
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию кнопка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

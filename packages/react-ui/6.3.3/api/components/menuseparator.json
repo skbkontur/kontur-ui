@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { MenuSeparator } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuseparator--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuseparator--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md",
   "sourcePath": "components/MenuSeparator/MenuSeparator.tsx",
   "props": [
     {

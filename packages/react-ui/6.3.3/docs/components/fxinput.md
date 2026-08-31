@@ -1,6 +1,6 @@
 # FxInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fxinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fxinput--docs)
 
 В автополе можно вывести автоматически рассчитанное цифровое значение. В него можно передавать итог любого вычисления, например, сумму других полей, процент или более сложную функцию.
 
@@ -236,9 +236,9 @@ type: `string` · optional
 ## Использование
 
 Компонент наследует часть базовых пропcов (размер, ширина, количество символов до/после запятой и т.д.) от компонентов Input и CurrencyInput, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>.
-Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md) и [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/docs/components/currencyinput.md).
+Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md) и [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencyinput.md).
 
-Пропсы для добавления маски в поле наследуются от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/docs/components/maskedinput.md).
+Пропсы для добавления маски в поле наследуются от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md).
 
 ## Примеры
 
@@ -341,13 +341,13 @@ return (
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

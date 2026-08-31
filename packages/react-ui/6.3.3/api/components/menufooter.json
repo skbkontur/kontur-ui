@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { MenuFooter } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menufooter--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menufooter--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md",
   "sourcePath": "components/MenuFooter/MenuFooter.tsx",
   "props": [
     {

@@ -1,10 +1,10 @@
 # Loader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-loader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-loader--docs)
 
 С помощью лоадера можно отобразить процесс выполнения задачи.
 Лоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.
-Когда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs).
+Когда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md).
 
 ## Import
 
@@ -20,8 +20,8 @@ import { Loader } from '@skbkontur/react-ui';
 
 **Альтернативы и дополнения**
 
-- [Глобальный лоадер](https://tech.skbkontur.ru/kontur-ui/docs/components/globalloader.md) — подходит для индикации длительных операций обмена данными с сервером, таких как загрузка данных, сохранение формы, отправка запросов и др.
-- [Спиннер](https://tech.skbkontur.ru/kontur-ui/docs/components/spinner.md) — подходит для инлайн-встраивания или более гибкой настройки внешнего вида (цвет, толщина, затемнённый режим) используйте.
+- [Глобальный лоадер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/globalloader.md) — подходит для индикации длительных операций обмена данными с сервером, таких как загрузка данных, сохранение формы, отправка запросов и др.
+- [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md) — подходит для инлайн-встраивания или более гибкой настройки внешнего вида (цвет, толщина, затемнённый режим) используйте.
 
 ## Все пропсы
 
@@ -250,13 +250,13 @@ return (
 - Предоставляйте текстовые альтернативы для индикации состояния операции.
 - Убедитесь, что пользователи могут понять, что происходит загрузка, даже без визуального индикатора.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию лоадер не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

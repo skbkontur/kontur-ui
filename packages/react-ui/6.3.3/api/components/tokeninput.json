@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { TokenInput } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tokeninput.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-tokeninput--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tokeninput.md",
   "sourcePath": "components/TokenInput/TokenInput.tsx",
   "props": [
     {
@@ -161,14 +161,14 @@
     },
     {
       "name": "error",
-      "description": "Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
+      "description": "Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
       "type": "boolean",
       "required": false,
       "source": "react-ui/components/TokenInput/TokenInput.tsx"
     },
     {
       "name": "warning",
-      "description": "Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
+      "description": "Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
       "type": "boolean",
       "required": false,
       "source": "react-ui/components/TokenInput/TokenInput.tsx"
@@ -298,7 +298,7 @@
     {
       "name": "ExampleHideMenuIfEmptyInputValue",
       "title": "Скрытие выпадающего списка до ввода первого символа",
-      "description": "По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.\nПроп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs). Выпадающий список появляется, когда введён первый символ первого или последующего токена."
+      "description": "По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.\nПроп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md). Выпадающий список появляется, когда введён первый символ первого или последующего токена."
     },
     {
       "name": "ExampleType",

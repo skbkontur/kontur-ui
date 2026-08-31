@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { ComboBox } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-combobox--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md",
   "sourcePath": "components/ComboBox/ComboBox.tsx",
   "props": [
     {
@@ -430,7 +430,7 @@
     {
       "name": "ExampleMask",
       "title": "Маска ввода",
-      "description": "Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
+      "description": "Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
     },
     {
       "name": "ExampleAddButton",

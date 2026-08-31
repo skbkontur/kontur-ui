@@ -1,6 +1,6 @@
 # MiniModal
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-minimodal--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-minimodal--docs)
 
 Модальное диалоговое окно, которое предполагает обязательный отклик пользователя по одному из доступных действий. Обёртка над Modal.
 
@@ -58,7 +58,7 @@ type: `Partial<typeof BasicThemeClass>` · optional
 
 Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.
 
-Общие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Общие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ### `mobileAppearance`
 
@@ -112,7 +112,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-В следующих случаях лучше использовать обычное модальное окно [Modal](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md):
+В следующих случаях лучше использовать обычное модальное окно [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md):
 
 - длинные формы;
 - много прокручиваемого контента;
@@ -583,7 +583,7 @@ return (
 
 ## MiniModal.Indent
 
-Вертикальный отступ между группами элементов в зоне `MiniModal.Footer` (на практике — между группами кнопок). Не является частью [Modal](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md) — специфичен для мини-модалки.
+Вертикальный отступ между группами элементов в зоне `MiniModal.Footer` (на практике — между группами кнопок). Не является частью [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md) — специфичен для мини-модалки.
 
 Вставляйте `MiniModal.Indent` внутри `MiniModal.Footer`, когда нужно визуально разделить группы действий (см. пример «Синглтон»).
 
@@ -595,11 +595,11 @@ return (
 
 ## Доступность
 
-Поведение базируется на [Modal](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md): фокус внутри окна, поддержка стандартных aria-атрибутов при необходимости переопределения.
+Поведение базируется на [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md): фокус внутри окна, поддержка стандартных aria-атрибутов при необходимости переопределения.
 
-Смысл действия не должен опираться только на иконку в шапке — заголовок и подписи кнопок должны быть понятны без контекста дизайна. Кнопку, которая открывает мини-модалку, по возможности сопровождайте `aria-expanded` и `aria-haspopup="dialog"` (см. также раздел про кнопки и модальные окна в [документации Button](https://tech.skbkontur.ru/kontur-ui/docs/components/button.md)). Порядок фокуса по Tab должен логично вести по кнопкам действий в футере.
+Смысл действия не должен опираться только на иконку в шапке — заголовок и подписи кнопок должны быть понятны без контекста дизайна. Кнопку, которая открывает мини-модалку, по возможности сопровождайте `aria-expanded` и `aria-haspopup="dialog"` (см. также раздел про кнопки и модальные окна в [документации Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md)). Порядок фокуса по Tab должен логично вести по кнопкам действий в футере.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -614,7 +614,7 @@ return (
 
 Чтобы посмотреть мобильный вид на десктопе, сузьте окно браузера и используйте пример ниже (переопределённый медиазапрос темы) или инструменты разработчика.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

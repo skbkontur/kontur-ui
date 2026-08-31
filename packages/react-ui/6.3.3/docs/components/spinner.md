@@ -1,6 +1,6 @@
 # Spinner
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-spinner--docs)
 
 Зацикленный индикатор, не отображающий прогресс выполнения задачи
 
@@ -78,7 +78,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-Не применяйте `Spinner` для заполнения паузы при загрузке контента, для этого предназначен [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/docs/components/globalloader.md).
+Не применяйте `Spinner` для заполнения паузы при загрузке контента, для этого предназначен [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/globalloader.md).
 
 ## Примеры
 
@@ -195,13 +195,13 @@ const [active, setActive] = React.useState(false);
 </>;
 ```
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs), [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs), [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 
 ## Адаптивность
 
 По умолчанию лоадер не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

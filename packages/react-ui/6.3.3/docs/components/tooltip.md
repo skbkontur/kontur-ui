@@ -1,6 +1,6 @@
 # Tooltip
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-tooltip--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-tooltip--docs)
 
 Подсказка, которая объясняет состояние контрола или даёт контекстную справку.
 
@@ -126,7 +126,7 @@ type: `string` · optional
 
 Если для пояснения требуется большой объём текста, лучше написать статью и дать в тултипе ссылку на неё.
 
-Для краткой текстовой подсказки по наведению используйте [Hint](https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md).
+Для краткой текстовой подсказки по наведению используйте [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md).
 
 ## Примеры
 
@@ -465,7 +465,7 @@ return (
 
 По умолчанию тултип не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

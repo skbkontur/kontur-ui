@@ -1,8 +1,8 @@
 # RadioGroup
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radiogroup--docs)
 
-Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs).
+Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radio.md).
 
 ```jsx
 import { RadioGroup } from '@skbkontur/react-ui';
@@ -228,19 +228,19 @@ return <RadioGroup items={items} inline />;
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите [в документации пакета React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите [в документации пакета React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию группа радиокнопок не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

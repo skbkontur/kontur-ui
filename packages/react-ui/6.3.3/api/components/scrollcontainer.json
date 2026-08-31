@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { ScrollContainer } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-scrollcontainer--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/scrollcontainer.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-scrollcontainer--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/scrollcontainer.md",
   "sourcePath": "components/ScrollContainer/ScrollContainer.tsx",
   "props": [
     {
@@ -184,7 +184,7 @@
     {
       "name": "ExampleDisableAnimations",
       "title": "Отключенная анимация",
-      "description": "Проп `disableAnimations` отключает анимацию полосы прокрутки.\nℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)."
+      "description": "Проп `disableAnimations` отключает анимацию полосы прокрутки.\nℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)."
     },
     {
       "name": "ExampleScrollTo",

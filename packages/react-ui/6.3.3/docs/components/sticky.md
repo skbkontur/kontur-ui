@@ -1,6 +1,6 @@
 # Sticky
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-sticky--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-sticky--docs)
 
 `Sticky` позволяет закреплять элемент интерфейса в определенной позиции на экране при прокрутке страницы.
 Это полезно для создания «прилипающих» элементов, которые должны оставаться видимыми при прокрутке содержимого.

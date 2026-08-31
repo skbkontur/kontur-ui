@@ -1,6 +1,6 @@
 # TimePicker
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-timepicker--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-timepicker--docs)
 
 Поле с временем помогает пользователю быстро и удобно указать время в правильном формате.
 В поле можно ввести время с клавиатуры либо выбрать из выпадающего списка,
@@ -250,15 +250,15 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-[Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md) — если пользователю достаточно свободного текстового ввода без форматных ограничений.
+[Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md) — если пользователю достаточно свободного текстового ввода без форматных ограничений.
 
-[DatePicker](https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md) — если вместе со вводом нужно выбирать дату в календаре.
+[DatePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md) — если вместе со вводом нужно выбирать дату в календаре.
 
 ## Примеры
 
 ## Кастомизация
 
-Для кастомизации компонента через theme доступны переменные с префиксом `timePicker*`, которые можно найти в [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Для кастомизации компонента через theme доступны переменные с префиксом `timePicker*`, которые можно найти в [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ## Доступность
 
@@ -274,7 +274,7 @@ type: `string` · optional
 - `Enter` выбирает активный элемент из выпадающего меню, а если элемент не выбран, коммитит введённое значение.
 - `Escape` закрывает выпадающее меню.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
@@ -312,7 +312,7 @@ type: `string` · optional
 
 <br />
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 

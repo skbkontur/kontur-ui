@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { DatePicker } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-datepicker--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md",
   "sourcePath": "components/DatePicker/DatePicker.tsx",
   "props": [
     {
@@ -245,7 +245,7 @@
     {
       "name": "ExampleIsHoliday",
       "title": "Выходные и праздничные дни",
-      "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
+      "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
     },
     {
       "name": "ExampleDatePickerFormatting",
@@ -255,7 +255,7 @@
     {
       "name": "ExampleCustomDayRender",
       "title": "Кастомизация: рендер дня",
-      "description": "Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs)."
+      "description": "Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md)."
     }
   ]
 }

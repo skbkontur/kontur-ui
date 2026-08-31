@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { TimePicker } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-timepicker--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/timepicker.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-timepicker--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/timepicker.md",
   "sourcePath": "components/TimePicker/TimePicker.tsx",
   "props": [
     {

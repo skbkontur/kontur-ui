@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { DateRangePicker } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-daterangepicker--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/daterangepicker.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-daterangepicker--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/daterangepicker.md",
   "sourcePath": "components/DateRangePicker/DateRangePicker.tsx",
   "props": [
     {
@@ -156,7 +156,7 @@
     {
       "name": "ExampleCustomDayRender",
       "title": "Кастомизация: рендер дня",
-      "description": "Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs)."
+      "description": "Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md)."
     },
     {
       "name": "ExampleCustomWithoutDash",

@@ -1,6 +1,6 @@
 # Hint
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-hint--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-hint--docs)
 
 Краткая подсказка, которая объясняет контрол, иконку и добавляет контекста.
 Всплывает при наведении на элемент.
@@ -102,7 +102,7 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-Используйте [Tooltip](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md) в случаях, когда нужна:
+Используйте [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md) в случаях, когда нужна:
 
 - подсказка c инструкцией или с интерактивными элементами внутри;
 - подсказка по клику или фокусу.
@@ -231,7 +231,7 @@ return (
 
 По умолчанию подсказка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

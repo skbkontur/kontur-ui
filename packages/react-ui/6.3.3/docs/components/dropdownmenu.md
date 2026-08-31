@@ -1,6 +1,6 @@
 # DropdownMenu
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdownmenu--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdownmenu--docs)
 
 Раскрывающееся меню.
 
@@ -123,10 +123,10 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md) — используйте упрощенную версию, если вам не требуется гибкость настройки `caption`, `header`, `footer`, `positions`.
-- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — используйте, если вам нужно меню в тултипе.
-- [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md) — используйте для выбора значения из набора вариантов.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md) — используйте упрощенную версию, если вам не требуется гибкость настройки `caption`, `header`, `footer`, `positions`.
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — используйте, если вам нужно меню в тултипе.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md) — используйте для выбора значения из набора вариантов.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -411,7 +411,7 @@ return (
 - если важно сохранить элемент в потоке озвучивания скринридером, используйте `aria-disabled="true"` и блокируйте действия логически;
 - если клик по пункту не должен закрывать меню, вызывайте `event.preventDefault()` в обработчике `MenuItem`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -421,7 +421,7 @@ return (
 
 В мобильном режиме настройки `menuWidth` и `menuMaxHeight` не ограничивают попап так же, как на десктопе: мобильное меню занимает доступное пространство попапа.
 
-Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 

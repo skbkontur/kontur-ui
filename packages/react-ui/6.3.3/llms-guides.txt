@@ -1,6 +1,6 @@
 # @skbkontur/react-ui
 
-> Guides | Version: 6.3.3 | Homepage: https://tech.skbkontur.ru/kontur-ui
+> Guides | Version: 6.3.3 | Homepage: https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3
 
 ---
 

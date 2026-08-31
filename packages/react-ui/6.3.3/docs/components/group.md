@@ -1,6 +1,6 @@
 # Group
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-group--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-group--docs)
 
 Контейнер используется для создания логически сгруппированных элементов, выровненных по горизонтали.
 

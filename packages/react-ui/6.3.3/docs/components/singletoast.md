@@ -1,6 +1,6 @@
 # SingleToast
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-singletoast--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-singletoast--docs)
 
 Короткое немодальное уведомление, которое сообщает пользователю о результате выполнения его команды.
 Результат может быть положительным, отрицательным или нейтральным.
@@ -54,19 +54,19 @@ type: `string` · optional
 
 ## Использование
 
-Подходит, когда нужны те же короткие уведомления, что и у [Toast](https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md), но вызывать их из разных модулей без прокидывания `ref`: один раз монтируете `SingleToast` (обычно в корне приложения) и дальше пользуетесь `SingleToast.push` и `SingleToast.close`.
+Подходит, когда нужны те же короткие уведомления, что и у [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md), но вызывать их из разных модулей без прокидывания `ref`: один раз монтируете `SingleToast` (обычно в корне приложения) и дальше пользуетесь `SingleToast.push` и `SingleToast.close`.
 
 Для корректной работы `SingleToast` должен быть отрисован только **один раз** на странице. После чего его можно вызывать из любого места приложения методом `SingleToast.push`.
 Однако, переданные в компонент пропсы, такие как `theme`, `onPush` и остальные, будут применяться ко всем вызовам.
 
 **Связанные компоненты**
 
-- [Toast](https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md) — свой экземпляр в дереве и вызовы `push` / `close` через `ref`, если уведомление привязано к части интерфейса.
+- [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md) — свой экземпляр в дереве и вызовы `push` / `close` через `ref`, если уведомление привязано к части интерфейса.
 
 **Альтернативы и дополнения**
 
-- Долгие операции и уход фокуса с экрана — [Loader](https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md) и сообщение на месте операции.
-- Ошибки полей формы — [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs), а не тост вместо валидации.
+- Долгие операции и уход фокуса с экрана — [Loader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md) и сообщение на месте операции.
+- Ошибки полей формы — [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs), а не тост вместо валидации.
 
 **Когда не использовать**
 
@@ -77,15 +77,15 @@ type: `string` · optional
 
 ## Доступность
 
-Под капотом рендерится [Toast](https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md): семантика, кнопка действия, крестик и подписи совпадают с документацией `Toast`. Задавайте `aria-label` на `SingleToast` и при необходимости `action['aria-label']` так же, как для обычного `Toast`.
+Под капотом рендерится [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md): семантика, кнопка действия, крестик и подписи совпадают с документацией `Toast`. Задавайте `aria-label` на `SingleToast` и при необходимости `action['aria-label']` так же, как для обычного `Toast`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 Поведение как у `Toast`: увеличенный шрифт, фиксированное положение у верхнего края экрана с отступами, текст длиннее трёх строк обрезается многоточием.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 

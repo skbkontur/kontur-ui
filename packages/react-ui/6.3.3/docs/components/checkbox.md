@@ -1,6 +1,6 @@
 # Checkbox
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-checkbox--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-checkbox--docs)
 
 Чекбокс используется для управления параметром с двумя состояниями.
 
@@ -74,7 +74,7 @@ type: `ReactNode` · optional
 **Когда не использовать**
 
 Чекбокс не запускает действие немедленно. Как правило, для этого нужно нажать подтверждающую кнопку.
-Для немедленного включения какого-то режима в интерфейсе лучше подходит [Toggle](https://tech.skbkontur.ru/kontur-ui/docs/components/toggle.md).
+Для немедленного включения какого-то режима в интерфейсе лучше подходит [Toggle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toggle.md).
 
 ## Примеры
 
@@ -269,15 +269,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию чекбокс не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

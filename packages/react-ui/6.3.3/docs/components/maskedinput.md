@@ -1,6 +1,6 @@
 # MaskedInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-maskedinput--docs)
 
 Поле ввода, которое ограничивает формат вводимого значения по заданной маске. Такое поле облегчает пользователю ввод и снижает количество ошибок.
 
@@ -207,7 +207,7 @@ type: `string` · optional
 Используйте поле с маской, когда нужно гарантировать строгий формат данных от пользователя, например: номер телефона, номер карты, стандартные идентификаторы.
 
 Компонент наследует часть базовых пропcов от компонента Input — размер, ширина, иконка в поле и так далее. Они включены в таблицу пропсов выше.
-Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 Из пропсов Input исключены некоторые неприменимые к полю с маской пропсы и сокращен список возможных значений для пропа `type`.
 
 Для legacy-реализации маски включите фичафлаг `maskedInputUseLegacyBehavior` в `ReactUIFeatureFlagsContext`:
@@ -576,19 +576,19 @@ return (
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

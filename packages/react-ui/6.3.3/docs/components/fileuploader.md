@@ -1,6 +1,6 @@
 # FileUploader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fileuploader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fileuploader--docs)
 
 Контрол для выбора пользователем файла на компьютере и отображения статуса его отправки на сервер.
 
@@ -393,7 +393,7 @@ return (
 ### Собственная отрисовка файла
 
 Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.
-Подробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/?path=/docs/input-data-fileuploader-fileuploaderfile--docs).
+Подробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/input-data-fileuploader-fileuploaderfile--docs).
 
 ```tsx
 const initialFiles = [createFile('test1.txt'), createFile('test2.txt')];
@@ -488,19 +488,19 @@ import { FileUploaderFile } from '@skbkontur/react-ui';
 
 - **Семантика:** видимая область — `<label>` со скрытым `<input type="file" />`.
 - **Клавиатура:** `Tab` переводит фокус на поле выбора файла, у строки файла фокусируемый блок удаления реагирует на `Enter`.
-- **Подсказки:** обрезанное имя доступно через [Hint](https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md); текст проверки файла может выводиться в [Tooltip](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md) при `withValidationTooltip` или в плиточном виде.
+- **Подсказки:** обрезанное имя доступно через [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md); текст проверки файла может выводиться в [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md) при `withValidationTooltip` или в плиточном виде.
 
 Связывайте контрол с подписью через `<label htmlFor>` и `id` на `FileUploader` или через `aria-labelledby` / `aria-label` на наследуемых атрибутах input.
 
-Строка файла (FileUploaderFile) использует [Tooltip](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md) и [Hint](https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md). Удаление — фокусируемая кнопка с активацией по `Enter`.
+Строка файла (FileUploaderFile) использует [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md) и [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md). Удаление — фокусируемая кнопка с активацией по `Enter`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию контрол не меняет свой вид и поведение на мобильных устройствах. Ширину и вид можно задать пропсами `width` и `view`.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 

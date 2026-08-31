@@ -10,8 +10,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Autocomplete } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/autocomplete.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-autocomplete--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md",
       "sourcePath": "components/Autocomplete/Autocomplete.tsx",
       "props": [
         {
@@ -290,7 +290,7 @@
         {
           "name": "ExampleMask",
           "title": "Маска ввода",
-          "description": "Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
+          "description": "Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
         },
         {
           "name": "ExampleSelectAllOnFocus",
@@ -321,8 +321,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Button } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/button.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-button--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md",
       "sourcePath": "components/Button/Button.tsx",
       "props": [
         {
@@ -535,7 +535,7 @@
         {
           "name": "ExampleTheme",
           "title": "Кастомизация: брендовая кнопка через переменные темы",
-          "description": "Проп `theme` позволяет кастомизировать кнопку через свойства темы. Заданные переменные будут объединены с темой из `<ThemeContext>`.\nОбщие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs) ."
+          "description": "Проп `theme` позволяет кастомизировать кнопку через свойства темы. Заданные переменные будут объединены с темой из `<ThemeContext>`.\nОбщие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs) ."
         },
         {
           "name": "ExampleHoverColor",
@@ -547,12 +547,12 @@
     {
       "name": "Calendar",
       "slug": "calendar",
-      "description": "Блок календаря для выбора даты с помощью мыши. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs).",
+      "description": "Блок календаря для выбора даты с помощью мыши. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Calendar } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/calendar.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendar--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md",
       "sourcePath": "components/Calendar/Calendar.tsx",
       "props": [
         {
@@ -677,7 +677,7 @@
         {
           "name": "ExampleIsHoliday",
           "title": "Выходные и праздничные дни",
-          "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
+          "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
         },
         {
           "name": "ExampleScrollToMonth",
@@ -708,8 +708,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Center } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-center--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/center.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-center--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/center.md",
       "sourcePath": "components/Center/Center.tsx",
       "props": [
         {
@@ -756,8 +756,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Checkbox } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-checkbox--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/checkbox.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-checkbox--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/checkbox.md",
       "sourcePath": "components/Checkbox/Checkbox.tsx",
       "props": [
         {
@@ -863,8 +863,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { ComboBox } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-combobox--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md",
       "sourcePath": "components/ComboBox/ComboBox.tsx",
       "props": [
         {
@@ -1288,7 +1288,7 @@
         {
           "name": "ExampleMask",
           "title": "Маска ввода",
-          "description": "Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
+          "description": "Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
         },
         {
           "name": "ExampleAddButton",
@@ -1349,8 +1349,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { CurrencyInput } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-currencyinput--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/currencyinput.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-currencyinput--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencyinput.md",
       "sourcePath": "components/CurrencyInput/CurrencyInput.tsx",
       "props": [
         {
@@ -1574,8 +1574,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { CurrencyLabel } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-currencylabel--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/currencylabel.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-currencylabel--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencylabel.md",
       "sourcePath": "components/CurrencyLabel/CurrencyLabel.tsx",
       "props": [
         {
@@ -1655,12 +1655,12 @@
     {
       "name": "DateInput",
       "slug": "dateinput",
-      "description": "Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs).",
+      "description": "Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { DateInput } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-dateinput--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-dateinput--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md",
       "sourcePath": "components/DateInput/DateInput.tsx",
       "props": [
         {
@@ -1854,8 +1854,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { DatePicker } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-datepicker--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md",
       "sourcePath": "components/DatePicker/DatePicker.tsx",
       "props": [
         {
@@ -2094,7 +2094,7 @@
         {
           "name": "ExampleIsHoliday",
           "title": "Выходные и праздничные дни",
-          "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
+          "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
         },
         {
           "name": "ExampleDatePickerFormatting",
@@ -2104,7 +2104,7 @@
         {
           "name": "ExampleCustomDayRender",
           "title": "Кастомизация: рендер дня",
-          "description": "Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs)."
+          "description": "Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md)."
         }
       ]
     },
@@ -2115,8 +2115,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { DateRangePicker } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-daterangepicker--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/daterangepicker.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-daterangepicker--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/daterangepicker.md",
       "sourcePath": "components/DateRangePicker/DateRangePicker.tsx",
       "props": [
         {
@@ -2266,7 +2266,7 @@
         {
           "name": "ExampleCustomDayRender",
           "title": "Кастомизация: рендер дня",
-          "description": "Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs)."
+          "description": "Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md)."
         },
         {
           "name": "ExampleCustomWithoutDash",
@@ -2287,8 +2287,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Dropdown } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdown--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdown--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md",
       "sourcePath": "components/Dropdown/Dropdown.tsx",
       "props": [
         {
@@ -2460,7 +2460,7 @@
         {
           "name": "ExampleUse",
           "title": "Стиль кнопки",
-          "description": "Проп `use` задаёт визуальный стиль кнопки-меню.\nДоступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs#%D1%81%D1%82%D0%B8%D0%BB%D1%8C)."
+          "description": "Проп `use` задаёт визуальный стиль кнопки-меню.\nДоступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md#%D1%81%D1%82%D0%B8%D0%BB%D1%8C)."
         },
         {
           "name": "ExampleIcon",
@@ -2536,8 +2536,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { DropdownMenu } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdownmenu--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdownmenu--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md",
       "sourcePath": "components/DropdownMenu/DropdownMenu.tsx",
       "props": [
         {
@@ -2718,8 +2718,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { FileUploader } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fileuploader--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/fileuploader.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fileuploader--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/fileuploader.md",
       "sourcePath": "components/FileUploader/FileUploader.tsx",
       "props": [
         {
@@ -2995,7 +2995,7 @@
         {
           "name": "ExampleRenderFile",
           "title": "Собственная отрисовка файла",
-          "description": "Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.\nПодробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/?path=/docs/input-data-fileuploader-fileuploaderfile--docs)."
+          "description": "Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.\nПодробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/input-data-fileuploader-fileuploaderfile--docs)."
         },
         {
           "name": "ExampleManualList",
@@ -3016,8 +3016,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { FxInput } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fxinput--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/fxinput.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fxinput--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/fxinput.md",
       "sourcePath": "components/FxInput/FxInput.tsx",
       "props": [
         {
@@ -3275,8 +3275,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Gapped } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-gapped--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/gapped.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-gapped--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/gapped.md",
       "sourcePath": "components/Gapped/Gapped.tsx",
       "props": [
         {
@@ -3362,8 +3362,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { GlobalLoader } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-globalloader--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/globalloader.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-globalloader--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/globalloader.md",
       "sourcePath": "components/GlobalLoader/GlobalLoader.tsx",
       "props": [
         {
@@ -3478,8 +3478,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Group } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-group--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/group.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-group--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/group.md",
       "sourcePath": "components/Group/Group.tsx",
       "props": [
         {
@@ -3541,8 +3541,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Hint } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-hint--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-hint--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md",
       "sourcePath": "components/Hint/Hint.tsx",
       "props": [
         {
@@ -3692,8 +3692,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Input } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/input.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-input--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md",
       "sourcePath": "components/Input/Input.tsx",
       "props": [
         {
@@ -3921,8 +3921,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Kebab } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-kebab--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-kebab--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md",
       "sourcePath": "components/Kebab/Kebab.tsx",
       "props": [
         {
@@ -4076,8 +4076,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Link } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-link--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/link.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-link--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/link.md",
       "sourcePath": "components/Link/Link.tsx",
       "props": [
         {
@@ -4222,7 +4222,7 @@
         {
           "name": "ExampleTheme",
           "title": "Кастомизация: цвет ссылки",
-          "description": "Ссылки допускается выделять фирменным цветом продукта. Сделать это можно, изменяя свойства темы через проп `theme`. Заданные переменные будут объединены с темой из `<ThemeContext>`.\nОбщие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs)."
+          "description": "Ссылки допускается выделять фирменным цветом продукта. Сделать это можно, изменяя свойства темы через проп `theme`. Заданные переменные будут объединены с темой из `<ThemeContext>`.\nОбщие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs)."
         },
         {
           "name": "ExampleCustomLink",
@@ -4234,12 +4234,12 @@
     {
       "name": "Loader",
       "slug": "loader",
-      "description": "С помощью лоадера можно отобразить процесс выполнения задачи.\nЛоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.\nКогда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs).",
+      "description": "С помощью лоадера можно отобразить процесс выполнения задачи.\nЛоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.\nКогда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md).",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Loader } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-loader--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-loader--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md",
       "sourcePath": "components/Loader/Loader.tsx",
       "props": [
         {
@@ -4348,8 +4348,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { MaskedInput } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/maskedinput.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-maskedinput--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md",
       "sourcePath": "components/MaskedInput/MaskedInput.tsx",
       "props": [
         {
@@ -4597,8 +4597,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { MenuFooter } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menufooter--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menufooter--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md",
       "sourcePath": "components/MenuFooter/MenuFooter.tsx",
       "props": [
         {
@@ -4657,8 +4657,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { MenuHeader } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuheader--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuheader--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md",
       "sourcePath": "components/MenuHeader/MenuHeader.tsx",
       "props": [
         {
@@ -4717,8 +4717,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { MenuItem } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuitem--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuitem--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md",
       "sourcePath": "components/MenuItem/MenuItem.tsx",
       "props": [
         {
@@ -4886,8 +4886,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { MenuSeparator } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuseparator--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuseparator--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md",
       "sourcePath": "components/MenuSeparator/MenuSeparator.tsx",
       "props": [
         {
@@ -4927,8 +4927,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { MiniModal } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-minimodal--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/minimodal.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-minimodal--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/minimodal.md",
       "sourcePath": "components/MiniModal/MiniModal.tsx",
       "props": [
         {
@@ -4982,7 +4982,7 @@
         },
         {
           "name": "theme",
-          "description": "Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.\n\nОбщие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).",
+          "description": "Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.\n\nОбщие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).",
           "type": "Partial<typeof BasicThemeClass>",
           "required": false,
           "source": "react-ui/components/Modal/Modal.tsx"
@@ -5072,8 +5072,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Modal } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-modal--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-modal--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md",
       "sourcePath": "components/Modal/Modal.tsx",
       "props": [
         {
@@ -5128,7 +5128,7 @@
         },
         {
           "name": "theme",
-          "description": "Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.\n\nОбщие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).",
+          "description": "Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.\n\nОбщие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).",
           "type": "Partial<typeof BasicThemeClass>",
           "required": false,
           "source": "react-ui/components/Modal/Modal.tsx"
@@ -5208,8 +5208,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Paging } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-paging--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/paging.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-paging--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/paging.md",
       "sourcePath": "components/Paging/Paging.tsx",
       "props": [
         {
@@ -5355,8 +5355,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { PasswordInput } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-passwordinput--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/passwordinput.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-passwordinput--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/passwordinput.md",
       "sourcePath": "components/PasswordInput/PasswordInput.tsx",
       "props": [
         {
@@ -5514,12 +5514,12 @@
     {
       "name": "Radio",
       "slug": "radio",
-      "description": "Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5.\n\nДля создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs).",
+      "description": "Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5.\n\nДля создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md).",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Radio } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/radio.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radio--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radio.md",
       "sourcePath": "components/Radio/Radio.tsx",
       "props": [
         {
@@ -5613,12 +5613,12 @@
     {
       "name": "RadioGroup",
       "slug": "radiogroup",
-      "description": "Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs).",
+      "description": "Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radio.md).",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { RadioGroup } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/radiogroup.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radiogroup--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md",
       "sourcePath": "components/RadioGroup/RadioGroup.tsx",
       "props": [
         {
@@ -5790,8 +5790,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { ResponsiveLayout } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-responsivelayout--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/responsivelayout.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-responsivelayout--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/responsivelayout.md",
       "sourcePath": "components/ResponsiveLayout/ResponsiveLayout.tsx",
       "props": [
         {
@@ -5818,8 +5818,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { ScrollContainer } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-scrollcontainer--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/scrollcontainer.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-scrollcontainer--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/scrollcontainer.md",
       "sourcePath": "components/ScrollContainer/ScrollContainer.tsx",
       "props": [
         {
@@ -5997,7 +5997,7 @@
         {
           "name": "ExampleDisableAnimations",
           "title": "Отключенная анимация",
-          "description": "Проп `disableAnimations` отключает анимацию полосы прокрутки.\nℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)."
+          "description": "Проп `disableAnimations` отключает анимацию полосы прокрутки.\nℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)."
         },
         {
           "name": "ExampleScrollTo",
@@ -6018,8 +6018,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Select } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-select--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/select.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-select--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md",
       "sourcePath": "components/Select/Select.tsx",
       "props": [
         {
@@ -6236,7 +6236,7 @@
         },
         {
           "name": "use",
-          "description": "Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs).",
+          "description": "Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md).",
           "type": "\"link\" | \"text\" | \"fill\" | \"default\" | \"outline\" | \"accent\" | \"danger\" | \"success\" | \"pay\" | \"backless\" | \"primary\"",
           "required": false,
           "defaultValue": "default",
@@ -6401,12 +6401,12 @@
     {
       "name": "SidePage",
       "slug": "sidepage",
-      "description": "Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.\n\nСоставной компонент, включает в себя:\n- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;\n- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);\n- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).",
+      "description": "Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.\n\nСоставной компонент, включает в себя:\n- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;\n- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);\n- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { SidePage } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/sidepage.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/sidepage.md",
       "sourcePath": "components/SidePage/SidePage.tsx",
       "props": [
         {
@@ -6574,8 +6574,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { SingleToast } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-singletoast--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/singletoast.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-singletoast--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/singletoast.md",
       "sourcePath": "components/SingleToast/SingleToast.tsx",
       "props": [
         {
@@ -6630,8 +6630,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Spinner } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/spinner.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-spinner--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md",
       "sourcePath": "components/Spinner/Spinner.tsx",
       "props": [
         {
@@ -6749,8 +6749,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Sticky } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-sticky--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/sticky.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-sticky--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/sticky.md",
       "sourcePath": "components/Sticky/Sticky.tsx",
       "props": [
         {
@@ -6808,12 +6808,12 @@
     {
       "name": "Switcher",
       "slug": "switcher",
-      "description": "Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs), но более компактный.",
+      "description": "Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md), но более компактный.",
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Switcher } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-switcher--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/switcher.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-switcher--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/switcher.md",
       "sourcePath": "components/Switcher/Switcher.tsx",
       "props": [
         {
@@ -6951,8 +6951,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Tabs } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-tabs--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tabs.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-tabs--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tabs.md",
       "sourcePath": "components/Tabs/Tabs.tsx",
       "props": [
         {
@@ -7036,8 +7036,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Textarea } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-textarea--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/textarea.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-textarea--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/textarea.md",
       "sourcePath": "components/Textarea/Textarea.tsx",
       "props": [
         {
@@ -7234,8 +7234,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { TimePicker } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-timepicker--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/timepicker.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-timepicker--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/timepicker.md",
       "sourcePath": "components/TimePicker/TimePicker.tsx",
       "props": [
         {
@@ -7509,8 +7509,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Toast } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-toast--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-toast--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md",
       "sourcePath": "components/Toast/Toast.tsx",
       "props": [
         {
@@ -7565,8 +7565,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Toggle } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-toggle--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/toggle.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-toggle--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toggle.md",
       "sourcePath": "components/Toggle/Toggle.tsx",
       "props": [
         {
@@ -7754,8 +7754,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { TokenInput } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tokeninput.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-tokeninput--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tokeninput.md",
       "sourcePath": "components/TokenInput/TokenInput.tsx",
       "props": [
         {
@@ -7910,14 +7910,14 @@
         },
         {
           "name": "error",
-          "description": "Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
+          "description": "Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
           "type": "boolean",
           "required": false,
           "source": "react-ui/components/TokenInput/TokenInput.tsx"
         },
         {
           "name": "warning",
-          "description": "Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
+          "description": "Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
           "type": "boolean",
           "required": false,
           "source": "react-ui/components/TokenInput/TokenInput.tsx"
@@ -8047,7 +8047,7 @@
         {
           "name": "ExampleHideMenuIfEmptyInputValue",
           "title": "Скрытие выпадающего списка до ввода первого символа",
-          "description": "По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.\nПроп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs). Выпадающий список появляется, когда введён первый символ первого или последующего токена."
+          "description": "По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.\nПроп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md). Выпадающий список появляется, когда введён первый символ первого или последующего токена."
         },
         {
           "name": "ExampleType",
@@ -8108,8 +8108,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { Tooltip } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-tooltip--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-tooltip--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md",
       "sourcePath": "components/Tooltip/Tooltip.tsx",
       "props": [
         {
@@ -8317,8 +8317,8 @@
       "package": "@skbkontur/react-ui",
       "version": "6.3.3",
       "import": "import { TooltipMenu } from '@skbkontur/react-ui';",
-      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-tooltipmenu--docs",
-      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md",
+      "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-tooltipmenu--docs",
+      "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md",
       "sourcePath": "components/TooltipMenu/TooltipMenu.tsx",
       "props": [
         {

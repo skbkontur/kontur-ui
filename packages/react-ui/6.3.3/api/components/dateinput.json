@@ -1,12 +1,12 @@
 {
   "name": "DateInput",
   "slug": "dateinput",
-  "description": "Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs).",
+  "description": "Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).",
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { DateInput } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-dateinput--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-dateinput--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md",
   "sourcePath": "components/DateInput/DateInput.tsx",
   "props": [
     {

@@ -1,6 +1,6 @@
 # Kebab
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-kebab--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-kebab--docs)
 
 Кебаб-меню содержит действия с объектом.
 
@@ -98,9 +98,9 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md) — если необходима кастомизируемая кнопка вместо простой иконки кебаба.
-- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — если необходим произвольный элемент `caption` вместо кнопки.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md) — если необходима кастомизируемая кнопка вместо простой иконки кебаба.
+- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — если необходим произвольный элемент `caption` вместо кнопки.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -292,7 +292,7 @@ return (
 
 `Kebab` адаптивен: на мобильных устройствах выпадающее меню открывается модально по центру экрана. Сама кнопка не меняет внешний вид и поведение.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

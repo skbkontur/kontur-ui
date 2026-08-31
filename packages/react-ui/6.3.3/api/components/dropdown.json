@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Dropdown } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdown--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdown--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md",
   "sourcePath": "components/Dropdown/Dropdown.tsx",
   "props": [
     {
@@ -178,7 +178,7 @@
     {
       "name": "ExampleUse",
       "title": "Стиль кнопки",
-      "description": "Проп `use` задаёт визуальный стиль кнопки-меню.\nДоступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs#%D1%81%D1%82%D0%B8%D0%BB%D1%8C)."
+      "description": "Проп `use` задаёт визуальный стиль кнопки-меню.\nДоступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md#%D1%81%D1%82%D0%B8%D0%BB%D1%8C)."
     },
     {
       "name": "ExampleIcon",

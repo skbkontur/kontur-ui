@@ -1,6 +1,6 @@
 # Tabs
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-tabs--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-tabs--docs)
 
 Табы группируют контент и помогают в навигации.
 
@@ -71,7 +71,7 @@ type: `string` · optional
 **Когда не использовать**
 
 - Для основной навигации. Для этого лучше подходит главное меню на цветной плашке — оно более заметно на странице.
-- Для состояний — для этого есть [RadioGroup](https://tech.skbkontur.ru/kontur-ui/docs/components/radiogroup.md), [Toggle](https://tech.skbkontur.ru/kontur-ui/docs/components/toggle.md) и [Switcher](https://tech.skbkontur.ru/kontur-ui/docs/components/switcher.md).
+- Для состояний — для этого есть [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md), [Toggle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toggle.md) и [Switcher](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/switcher.md).
 
 **Связанные компоненты**
 
@@ -130,13 +130,13 @@ return (
 - Используйте `aria-describedby` для связи группы табов с элементом, содержащим дополнительное, развёрнутое описание.
 - Используйте `aria-label`, чтобы задать доступное имя таба для пользователей скринридеров.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию группа табов не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

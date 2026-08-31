@@ -1,6 +1,6 @@
 # ResponsiveLayout
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-responsivelayout--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-responsivelayout--docs)
 
 `ResponsiveLayout` определяет текущий режим.
 
@@ -42,7 +42,7 @@ type: `MediaQueriesType` · optional
 
 ## Использование
 
-Как альтернативу можно использовать хук [useResponsiveLayout](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs#%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B3%D0%BE-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC%D0%B0).
+Как альтернативу можно использовать хук [useResponsiveLayout](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs#%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B3%D0%BE-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC%D0%B0).
 
 Проп `onLayoutChange` вызывает переданный в него коллбэк при изменении режима. Аргументом передаётся объект с флагом.
 

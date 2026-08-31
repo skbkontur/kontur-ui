@@ -1,6 +1,6 @@
 # DateRangePicker
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-daterangepicker--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-daterangepicker--docs)
 
 Поле выбора периода дат.
 
@@ -10,8 +10,8 @@ import { DateRangePicker } from '@skbkontur/react-ui';
 
 Составной компонент, включает в себя:
 
-- `<DateRangePicker.Start>` — начало периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md).
-- `<DateRangePicker.End>` — окончание периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md).
+- `<DateRangePicker.Start>` — начало периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md).
+- `<DateRangePicker.End>` — окончание периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md).
 - `<DateRangePicker.Separator>` — разделитель между полями.
 
 Значения задается через пропсы у компонентов `Start` и `End`:
@@ -346,7 +346,7 @@ return (
 
 ### Кастомизация: рендер дня
 
-Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs).
+Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md).
 
 ```tsx
 const [valueStart, setValueStart] = React.useState('');
@@ -449,7 +449,7 @@ return (
 Через проп `useMobileNativeDatePicker` можно изменить режим на нативный календарь мобильного устройства.
 Обратите внимание, что [календарь в iOS не поддерживает](https://bugs.webkit.org/show_bug.cgi?id=225639) `minDate` и `maxDate`.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 

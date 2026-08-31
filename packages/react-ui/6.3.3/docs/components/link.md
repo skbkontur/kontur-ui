@@ -1,6 +1,6 @@
 # Link
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-link--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-link--docs)
 
 С помощью ссылки пользователь может перейти на другую страницу, раздел приложения или внешний URL.
 
@@ -96,9 +96,9 @@ type: `ButtonLinkAllowedValues` · optional · default: `a`
 
 **Когда не использовать**
 
-Не используйте ссылку для действий на странице, для этого подойдёт [кнопка](https://tech.skbkontur.ru/kontur-ui/docs/components/button.md), в том числе кнопка в стиле Text, если нужна более легкая версия кнопки.
+Не используйте ссылку для действий на странице, для этого подойдёт [кнопка](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md), в том числе кнопка в стиле Text, если нужна более легкая версия кнопки.
 
-Если же вам нужно сохранить нативные свойства ссылки, но визуально она должна выглядеть как кнопка, вы можете переопределить корневой элемент ссылки, см. пример [Управление корневым элементом](https://tech.skbkontur.ru/kontur-ui/docs/components/link.md#управление-корневым-элементом).
+Если же вам нужно сохранить нативные свойства ссылки, но визуально она должна выглядеть как кнопка, вы можете переопределить корневой элемент ссылки, см. пример [Управление корневым элементом](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/link.md#управление-корневым-элементом).
 
 ## Примеры
 
@@ -230,7 +230,7 @@ return <Link onClick={() => SingleToast.push('Ты нажал на ссылку'
 ### Кастомизация: цвет ссылки
 
 Ссылки допускается выделять фирменным цветом продукта. Сделать это можно, изменяя свойства темы через проп `theme`. Заданные переменные будут объединены с темой из `<ThemeContext>`.
-Общие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Общие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ```tsx
 return (
@@ -307,13 +307,13 @@ return (
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию ссылка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

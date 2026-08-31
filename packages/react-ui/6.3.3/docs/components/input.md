@@ -1,6 +1,6 @@
 # Input
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-input--docs)
 
 Поле ввода позволяет ввести или отредактировать значение.
 
@@ -162,20 +162,20 @@ type: `ReactElement<InputElementProps, string | JSXElementConstructor<any>>` · 
 
 **Альтернативы и дополнения**
 
-Для полей с длинными текстовыми комментариями используйте [Textarea](https://tech.skbkontur.ru/kontur-ui/docs/components/textarea.md).
+Для полей с длинными текстовыми комментариями используйте [Textarea](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/textarea.md).
 
 Для ввода значений в определенном формате, используйте специальную версию поля:
 
-- [PasswordInput](https://tech.skbkontur.ru/kontur-ui/docs/components/passwordinput.md) — поле для ввода пароля, в котором символы заменяются на точки.
-- [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/docs/components/currencyinput.md) — поле для ввода денежных сумм в разной валюте.
-- [MaskedInput](https://tech.skbkontur.ru/kontur-ui/docs/components/maskedinput.md) — поле с маской.
-- [FxInput](https://tech.skbkontur.ru/kontur-ui/docs/components/fxinput.md) — автополе.
+- [PasswordInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/passwordinput.md) — поле для ввода пароля, в котором символы заменяются на точки.
+- [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencyinput.md) — поле для ввода денежных сумм в разной валюте.
+- [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) — поле с маской.
+- [FxInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/fxinput.md) — автополе.
 
 Если же список значений заранее определен и должен отображаться пользователю для выбора, подойдут поля с подсказками:
 
-- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/docs/components/autocomplete.md)
-- [Combobox](https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md)
-- [TokenInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput-tokeninput--docs)
+- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md)
+- [Combobox](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md)
+- [TokenInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-tokeninput-tokeninput--docs)
 
 ## Примеры
 
@@ -495,15 +495,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

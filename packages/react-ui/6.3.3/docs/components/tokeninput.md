@@ -1,6 +1,6 @@
 # TokenInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-tokeninput--docs)
 
 Поле с токенами — это поле ввода со списком подсказок. Значения в поле отображаются в виде отдельных токенов.
 
@@ -144,13 +144,13 @@ type: `string[]` · optional · default: `[',', TEMP_FAKE_FLAG]`
 
 type: `boolean` · optional
 
-Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ### `warning`
 
 type: `boolean` · optional
 
-Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ### `disabled`
 
@@ -229,7 +229,7 @@ type: `string` · optional
 
 ## Использование
 
-Поле с токенами похоже на [комбобокс](https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md), но используется в случаях, когда нужно указать сразу много однородных элементов — токенов.
+Поле с токенами похоже на [комбобокс](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md), но используется в случаях, когда нужно указать сразу много однородных элементов — токенов.
 
 **Связанные компоненты**
 
@@ -488,7 +488,7 @@ return (
 ### Скрытие выпадающего списка до ввода первого символа
 
 По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.
-Проп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs). Выпадающий список появляется, когда введён первый символ первого или последующего токена.
+Проп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md). Выпадающий список появляется, когда введён первый символ первого или последующего токена.
 
 ```tsx
 const [selectedItems, setSelectedItems] = React.useState<string[]>([]);
@@ -916,11 +916,11 @@ import { Token } from '@skbkontur/react-ui';
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
 В примере добавлена комплексная валидация:
 
@@ -928,13 +928,13 @@ import { Token } from '@skbkontur/react-ui';
 2.  Классическая валидация компонента: проверка пробелов в токене.
 3.  Валидация каждого токена через `createValidator` и `renderToken`.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
-Поле с токенами адаптивно: на мобильных устройствах поле с выпадающим списком открывается модально в нижней части экрана. Мобильный режим активируется при ширине вьюпорта `(max-width: 576px)`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Поле с токенами адаптивно: на мобильных устройствах поле с выпадающим списком открывается модально в нижней части экрана. Мобильный режим активируется при ширине вьюпорта `(max-width: 576px)`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

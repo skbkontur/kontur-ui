@@ -1,12 +1,12 @@
 # @skbkontur/react-ui
 
-> Components | Version: 6.3.3 | Homepage: https://tech.skbkontur.ru/kontur-ui
+> Components | Version: 6.3.3 | Homepage: https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3
 
 ---
 
 # Autocomplete
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-autocomplete--docs)
 
 Автокомплит — поле ввода с выпадающим списком подсказок. Подсказки отображаются пользователю, когда он начинает вводить значение в поле.
 
@@ -248,7 +248,7 @@ type: `string` · optional
 
 ## Использование
 
-В отличие от [комбобокса](https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md) у поля нет стрелки и список со значениями нельзя открыть вручную. Подробнее об отличиях читайте в [Гайде](https://guides.kontur.ru/components/input-fields/combobox).
+В отличие от [комбобокса](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md) у поля нет стрелки и список со значениями нельзя открыть вручную. Подробнее об отличиях читайте в [Гайде](https://guides.kontur.ru/components/input-fields/combobox).
 
 ## Примеры
 
@@ -397,7 +397,7 @@ return (
 
 ### Маска ввода
 
-Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:
+Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) пропсы:
 - `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.
 - `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера
 - `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов.
@@ -538,15 +538,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 Автокомплит адаптивен: на мобильных устройствах поле с выпадающим списком открывается модально в нижней части экрана. Мобильный режим активируется при ширине вьюпорта < `768px`.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -556,7 +556,7 @@ return (
 
 # Button
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-button--docs)
 
 Кнопка запускает действие, сценарий или позволяет перейти на другую страницу.
 
@@ -729,8 +729,8 @@ type: `ButtonLinkAllowedValues` · optional · default: `button`
 
 **Альтернативы и дополнения**
 
-- [Link](https://tech.skbkontur.ru/kontur-ui/docs/components/link.md) — если необходима кнопка, выглядящая как ссылка, можно переопределить корневой элемент на `component=button`.
-- [Group](https://tech.skbkontur.ru/kontur-ui/docs/components/group.md) — если необходимы кнопки в составе группы элементов по горизонтали.
+- [Link](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/link.md) — если необходима кнопка, выглядящая как ссылка, можно переопределить корневой элемент на `component=button`.
+- [Group](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/group.md) — если необходимы кнопки в составе группы элементов по горизонтали.
 
 ## Примеры
 
@@ -942,7 +942,7 @@ return (
 ### Кастомизация: брендовая кнопка через переменные темы
 
 Проп `theme` позволяет кастомизировать кнопку через свойства темы. Заданные переменные будут объединены с темой из `<ThemeContext>`.
-Общие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs) .
+Общие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs) .
 
 ```tsx
 return (
@@ -1071,13 +1071,13 @@ return (
 
 В адаптивной верстке для кнопок, в особенности кнопок-иконок, используйте размеры Medium и Large. Если все же используете компактный размер, увеличивайте кликабельную область. [Подробнее в Контур.Гайдах](https://guides.kontur.ru/principles/base/adaptivity/#32).
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию кнопка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -1087,9 +1087,9 @@ return (
 
 # Calendar
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendar--docs)
 
-Блок календаря для выбора даты с помощью мыши. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs).
+Блок календаря для выбора даты с помощью мыши. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).
 
 ```jsx
 import { Calendar } from '@skbkontur/react-ui';
@@ -1232,7 +1232,7 @@ return (
 
 ### Выходные и праздничные дни
 
-В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendarday--docs).
+В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendarday--docs).
 Функция должна вернуть `true` для выходного дня и `false` — для рабочего.
 
 ```tsx
@@ -1386,7 +1386,7 @@ return (
 Через проп `useMobileNativeDatePicker` можно изменить режим на нативный календарь мобильного устройства.
 Обратите внимание, что [календарь в iOS не поддерживает](https://bugs.webkit.org/show_bug.cgi?id=225639) `minDate` и `maxDate`.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -1396,7 +1396,7 @@ return (
 
 # Center
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-center--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-center--docs)
 
 Контейнер, который центрирует элементы внутри себя.
 
@@ -1465,7 +1465,7 @@ return (
 
 # Checkbox
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-checkbox--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-checkbox--docs)
 
 Чекбокс используется для управления параметром с двумя состояниями.
 
@@ -1539,7 +1539,7 @@ type: `ReactNode` · optional
 **Когда не использовать**
 
 Чекбокс не запускает действие немедленно. Как правило, для этого нужно нажать подтверждающую кнопку.
-Для немедленного включения какого-то режима в интерфейсе лучше подходит [Toggle](https://tech.skbkontur.ru/kontur-ui/docs/components/toggle.md).
+Для немедленного включения какого-то режима в интерфейсе лучше подходит [Toggle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toggle.md).
 
 ## Примеры
 
@@ -1734,15 +1734,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию чекбокс не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -1752,7 +1752,7 @@ return (
 
 # ComboBox
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-combobox--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-combobox--docs)
 
 Комбобокс — поле ввода с выпадающим списком подсказок, из которых пользователь может выбрать нужное. Открыть выпадающий список можно ещё до начала ввода значения, нажав на поле.
 
@@ -2102,9 +2102,9 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/docs/components/autocomplete.md) — поле ввода со списком подсказок. Отличается от комбобокса тем, что в нём выпадающий список появляется только после ввода первого символа или изменении уже введенного значения, а в поле нет стрелки для раскрытия списка.
-- [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md) — используйте раскрывающийся список, если среди значений не больше 25 вариантов.
-- [RadioGroup](https://tech.skbkontur.ru/kontur-ui/docs/components/radiogroup.md) — используйте группу радиокнопок, если значений не больше 5.
+- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md) — поле ввода со списком подсказок. Отличается от комбобокса тем, что в нём выпадающий список появляется только после ввода первого символа или изменении уже введенного значения, а в поле нет стрелки для раскрытия списка.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md) — используйте раскрывающийся список, если среди значений не больше 25 вариантов.
+- [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md) — используйте группу радиокнопок, если значений не больше 5.
 
 ## Примеры
 
@@ -2585,7 +2585,7 @@ return (
 
 ### Маска ввода
 
-Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:
+Для комбобокса может быть задана маска. Комобобокс наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) пропсы:
 - `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.
 - `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера
 - `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов.
@@ -3255,15 +3255,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 Комбобокс адаптивен: на мобильных устройствах поле с выпадающим списком открывается модально в нижней части экрана.
 
-Мобильный режим активируется при ширине вьюпорта < `768px`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Мобильный режим активируется при ширине вьюпорта < `768px`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -3273,7 +3273,7 @@ return (
 
 # CurrencyInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-currencyinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-currencyinput--docs)
 
 Поле для денежных сумм.
 
@@ -3283,7 +3283,7 @@ import { CurrencyInput } from '@skbkontur/react-ui';
 
 По умолчанию значение в поле — десятичная дробь c запятой в качестве разделителя. Если ввести точку, она автоматически заменится на запятую. Максимальная длина числа — 15 цифр с разделителем в любом месте, мы опираемся на рекомендации [MDN web docs](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
 
-Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Все пропсы и методы
 
@@ -3463,7 +3463,7 @@ type: `() => void` · optional
 
 **Альтернативы и дополнения**
 
-Если вам нужно отобразить в интерфейсе просто денежную сумму, не включая её в поле ввода, используйте [CurrencyLabel](https://tech.skbkontur.ru/kontur-ui/docs/components/currencylabel.md).
+Если вам нужно отобразить в интерфейсе просто денежную сумму, не включая её в поле ввода, используйте [CurrencyLabel](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencylabel.md).
 
 ## Примеры
 
@@ -3582,13 +3582,13 @@ return (
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -3598,7 +3598,7 @@ return (
 
 # CurrencyLabel
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-currencylabel--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-currencylabel--docs)
 
 Подпись для денежных сумм и других числовых значений.
 
@@ -3697,9 +3697,9 @@ return <CurrencyLabel value={123.4} hideTrailingZeros />;
 
 # DateInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-dateinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-dateinput--docs)
 
-Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs).
+Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).
 
 ```jsx
 import { DateInput } from '@skbkontur/react-ui';
@@ -3820,7 +3820,7 @@ type: `string` · optional
 
 Используйте поле с датой, когда нужно ввести дату в формате ДД.ММ.ГГГГ. Отличается от обычного поля ввода наличием маски даты.
 
-Если вам нужно поле ввода даты не только с вводом с клавиатуры, но и с выбором в блоке календаря - используйте - [DatePicker](https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md).
+Если вам нужно поле ввода даты не только с вводом с клавиатуры, но и с выбором в блоке календаря - используйте - [DatePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).
 
 ## Примеры
 
@@ -3996,13 +3996,13 @@ return <DateInputFormatting2 />;
 
 ## Валидация
 
-Примеры обработок ошибок для поля смотрите на странице компонента [Поле с датой](https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md) в блоке «Валидация».
+Примеры обработок ошибок для поля смотрите на странице компонента [Поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md) в блоке «Валидация».
 
 ## Адаптивность
 
 По умолчанию поле ввода даты не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -4012,7 +4012,7 @@ return <DateInputFormatting2 />;
 
 # DatePicker
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-datepicker--docs)
 
 Поле с датой помогает вводить дату с клавиатуры или выбирать её с помощью мыши.
 
@@ -4194,8 +4194,8 @@ type: `string` · optional
 
 Составной компонент, включает в себя:
 
-- [DateInput](https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md) — компонент поля с маской для выбора даты с клавиатуры.
-- [Calendar](https://tech.skbkontur.ru/kontur-ui/docs/components/calendar.md) — компонент календаря для выбора даты с помощью мыши.
+- [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md) — компонент поля с маской для выбора даты с клавиатуры.
+- [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md) — компонент календаря для выбора даты с помощью мыши.
 
 ## Примеры
 
@@ -4287,7 +4287,7 @@ return <DatePicker value={value} onValueChange={setValue} warning />;
 
 ### Выходные и праздничные дни
 
-В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendarday--docs).
+В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-calendarday--docs).
 Функция должна вернуть `true` для выходного дня и `false` — для рабочего.
 
 ```tsx
@@ -4381,7 +4381,7 @@ return <DatePickerFormatting />;
 
 ### Кастомизация: рендер дня
 
-Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs).
+Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md).
 
 ```tsx
 const [value, setValue] = React.useState('12.05.2022');
@@ -4400,7 +4400,7 @@ return <DatePicker value={value} onValueChange={setValue} renderDay={renderDay} 
 
 ## Валидация
 
-Для сравнения и валидации дат в строках формата `DD.MM.YYYY` доступен набор утилит [Date Utilities](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-date-utilities--docs).
+Для сравнения и валидации дат в строках формата `DD.MM.YYYY` доступен набор утилит [Date Utilities](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-date-utilities--docs).
 
 Пример с обработкой ошибок, когда пользователь ввёл невалидную дату.
 
@@ -4411,7 +4411,7 @@ return <DatePicker value={value} onValueChange={setValue} renderDay={renderDay} 
 Через проп `useMobileNativeDatePicker` можно изменить режим на нативный календарь мобильного устройства.
 Обратите внимание, что [календарь в iOS не поддерживает](https://bugs.webkit.org/show_bug.cgi?id=225639) `minDate` и `maxDate`.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -4421,7 +4421,7 @@ return <DatePicker value={value} onValueChange={setValue} renderDay={renderDay} 
 
 # DateRangePicker
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-daterangepicker--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-daterangepicker--docs)
 
 Поле выбора периода дат.
 
@@ -4431,8 +4431,8 @@ import { DateRangePicker } from '@skbkontur/react-ui';
 
 Составной компонент, включает в себя:
 
-- `<DateRangePicker.Start>` — начало периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md).
-- `<DateRangePicker.End>` — окончание периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/docs/components/dateinput.md).
+- `<DateRangePicker.Start>` — начало периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md).
+- `<DateRangePicker.End>` — окончание периода с настройками как у [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dateinput.md).
 - `<DateRangePicker.Separator>` — разделитель между полями.
 
 Значения задается через пропсы у компонентов `Start` и `End`:
@@ -4767,7 +4767,7 @@ return (
 
 ### Кастомизация: рендер дня
 
-Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-calendar--docs).
+Вы можете кастомизировать части поля. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите на странице компонента [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/calendar.md).
 
 ```tsx
 const [valueStart, setValueStart] = React.useState('');
@@ -4870,7 +4870,7 @@ return (
 Через проп `useMobileNativeDatePicker` можно изменить режим на нативный календарь мобильного устройства.
 Обратите внимание, что [календарь в iOS не поддерживает](https://bugs.webkit.org/show_bug.cgi?id=225639) `minDate` и `maxDate`.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -4880,7 +4880,7 @@ return (
 
 # Dropdown
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdown--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdown--docs)
 
 Кнопка-меню содержит несколько команд, объединенных по смыслу..
 
@@ -5032,12 +5032,12 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — выбирайте, когда нужен более гибкий сценарий:
+- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — выбирайте, когда нужен более гибкий сценарий:
   произвольный `caption` (в том числе render-function), кастомные `header`/`footer`, управление `positions`.
-- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) — используйте, если меню должно отображаться в тултипе.
-- [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md) — используйте узкую кнопку для малоиспользуемых ссылок и действий.
-- [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md) — используйте для выбора значения из набора вариантов.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) — используйте, если меню должно отображаться в тултипе.
+- [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md) — используйте узкую кнопку для малоиспользуемых ссылок и действий.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md) — используйте для выбора значения из набора вариантов.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -5084,7 +5084,7 @@ return (
 ### Стиль кнопки
 
 Проп `use` задаёт визуальный стиль кнопки-меню.
-Доступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs#%D1%81%D1%82%D0%B8%D0%BB%D1%8C).
+Доступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md#%D1%81%D1%82%D0%B8%D0%BB%D1%8C).
 
 ```tsx
 return (
@@ -5338,7 +5338,7 @@ return (
 - для полного отключения используйте проп `disabled`: компонент становится недоступен для взаимодействия и клавиатурной навигации;
 - если важно сохранить элемент в потоке озвучивания скринридером, используйте `aria-disabled="true"` и блокируйте действия логически.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -5346,7 +5346,7 @@ return (
 
 Мобильный режим активируется при ширине вьюпорта < `768px`.
 
-Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -5356,7 +5356,7 @@ return (
 
 # DropdownMenu
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-dropdownmenu--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-dropdownmenu--docs)
 
 Раскрывающееся меню.
 
@@ -5479,10 +5479,10 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md) — используйте упрощенную версию, если вам не требуется гибкость настройки `caption`, `header`, `footer`, `positions`.
-- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — используйте, если вам нужно меню в тултипе.
-- [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md) — используйте для выбора значения из набора вариантов.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md) — используйте упрощенную версию, если вам не требуется гибкость настройки `caption`, `header`, `footer`, `positions`.
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — используйте, если вам нужно меню в тултипе.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md) — используйте для выбора значения из набора вариантов.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -5767,7 +5767,7 @@ return (
 - если важно сохранить элемент в потоке озвучивания скринридером, используйте `aria-disabled="true"` и блокируйте действия логически;
 - если клик по пункту не должен закрывать меню, вызывайте `event.preventDefault()` в обработчике `MenuItem`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -5777,7 +5777,7 @@ return (
 
 В мобильном режиме настройки `menuWidth` и `menuMaxHeight` не ограничивают попап так же, как на десктопе: мобильное меню занимает доступное пространство попапа.
 
-Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -5787,7 +5787,7 @@ return (
 
 # FileUploader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fileuploader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fileuploader--docs)
 
 Контрол для выбора пользователем файла на компьютере и отображения статуса его отправки на сервер.
 
@@ -6180,7 +6180,7 @@ return (
 ### Собственная отрисовка файла
 
 Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.
-Подробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/?path=/docs/input-data-fileuploader-fileuploaderfile--docs).
+Подробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/input-data-fileuploader-fileuploaderfile--docs).
 
 ```tsx
 const initialFiles = [createFile('test1.txt'), createFile('test2.txt')];
@@ -6275,19 +6275,19 @@ import { FileUploaderFile } from '@skbkontur/react-ui';
 
 - **Семантика:** видимая область — `<label>` со скрытым `<input type="file" />`.
 - **Клавиатура:** `Tab` переводит фокус на поле выбора файла, у строки файла фокусируемый блок удаления реагирует на `Enter`.
-- **Подсказки:** обрезанное имя доступно через [Hint](https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md); текст проверки файла может выводиться в [Tooltip](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md) при `withValidationTooltip` или в плиточном виде.
+- **Подсказки:** обрезанное имя доступно через [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md); текст проверки файла может выводиться в [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md) при `withValidationTooltip` или в плиточном виде.
 
 Связывайте контрол с подписью через `<label htmlFor>` и `id` на `FileUploader` или через `aria-labelledby` / `aria-label` на наследуемых атрибутах input.
 
-Строка файла (FileUploaderFile) использует [Tooltip](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md) и [Hint](https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md). Удаление — фокусируемая кнопка с активацией по `Enter`.
+Строка файла (FileUploaderFile) использует [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md) и [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md). Удаление — фокусируемая кнопка с активацией по `Enter`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию контрол не меняет свой вид и поведение на мобильных устройствах. Ширину и вид можно задать пропсами `width` и `view`.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 
@@ -6307,7 +6307,7 @@ import { FileUploaderFile } from '@skbkontur/react-ui';
 
 # FxInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fxinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fxinput--docs)
 
 В автополе можно вывести автоматически рассчитанное цифровое значение. В него можно передавать итог любого вычисления, например, сумму других полей, процент или более сложную функцию.
 
@@ -6543,9 +6543,9 @@ type: `string` · optional
 ## Использование
 
 Компонент наследует часть базовых пропcов (размер, ширина, количество символов до/после запятой и т.д.) от компонентов Input и CurrencyInput, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>.
-Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md) и [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/docs/components/currencyinput.md).
+Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md) и [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencyinput.md).
 
-Пропсы для добавления маски в поле наследуются от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/docs/components/maskedinput.md).
+Пропсы для добавления маски в поле наследуются от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md).
 
 ## Примеры
 
@@ -6648,13 +6648,13 @@ return (
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -6664,7 +6664,7 @@ return (
 
 # Gapped
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-gapped--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-gapped--docs)
 
 Контейнер, с помощью которого можно располагать элементы горизонтально или вертикально с нужным расстоянием между элементами.
 
@@ -6833,7 +6833,7 @@ return (
 
 # GlobalLoader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-globalloader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-globalloader--docs)
 
 Универсальный индикатор обмена данными с сервером.
 Он появляется у верхней границы экрана и выглядит как тоненькая полоска, окрашенная в фирменный цвет продукта.
@@ -6917,7 +6917,7 @@ type: `() => void` · optional
 Не используйте глобальный лоадер для:
 
 - для локальных операций, которые выполняются мгновенно;
-- для индикации загрузки отдельных элементов интерфейса, в этом случае используйте ['Loader'](https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md);
+- для индикации загрузки отдельных элементов интерфейса, в этом случае используйте ['Loader'](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md);
 - если в приложении уже есть другой глобальный индикатор загрузки.
 
 ## Примеры
@@ -7078,13 +7078,13 @@ return (
 - Предоставляйте текстовые альтернативы для индикации состояния операции.
 - Убедитесь, что пользователи могут понять, что происходит загрузка, даже без визуального индикатора.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию глобальный лоадер не меняет свой вид и поведение на мобильных устройствах. Лоадер отображается у верхней границы экрана независимо от размера вьюпорта.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -7094,7 +7094,7 @@ return (
 
 # Group
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-group--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-group--docs)
 
 Контейнер используется для создания логически сгруппированных элементов, выровненных по горизонтали.
 
@@ -7215,7 +7215,7 @@ return (
 
 # Hint
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-hint--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-hint--docs)
 
 Краткая подсказка, которая объясняет контрол, иконку и добавляет контекста.
 Всплывает при наведении на элемент.
@@ -7317,7 +7317,7 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-Используйте [Tooltip](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltip.md) в случаях, когда нужна:
+Используйте [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltip.md) в случаях, когда нужна:
 
 - подсказка c инструкцией или с интерактивными элементами внутри;
 - подсказка по клику или фокусу.
@@ -7446,7 +7446,7 @@ return (
 
 По умолчанию подсказка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -7456,7 +7456,7 @@ return (
 
 # Input
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-input--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-input--docs)
 
 Поле ввода позволяет ввести или отредактировать значение.
 
@@ -7618,20 +7618,20 @@ type: `ReactElement<InputElementProps, string | JSXElementConstructor<any>>` · 
 
 **Альтернативы и дополнения**
 
-Для полей с длинными текстовыми комментариями используйте [Textarea](https://tech.skbkontur.ru/kontur-ui/docs/components/textarea.md).
+Для полей с длинными текстовыми комментариями используйте [Textarea](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/textarea.md).
 
 Для ввода значений в определенном формате, используйте специальную версию поля:
 
-- [PasswordInput](https://tech.skbkontur.ru/kontur-ui/docs/components/passwordinput.md) — поле для ввода пароля, в котором символы заменяются на точки.
-- [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/docs/components/currencyinput.md) — поле для ввода денежных сумм в разной валюте.
-- [MaskedInput](https://tech.skbkontur.ru/kontur-ui/docs/components/maskedinput.md) — поле с маской.
-- [FxInput](https://tech.skbkontur.ru/kontur-ui/docs/components/fxinput.md) — автополе.
+- [PasswordInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/passwordinput.md) — поле для ввода пароля, в котором символы заменяются на точки.
+- [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencyinput.md) — поле для ввода денежных сумм в разной валюте.
+- [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) — поле с маской.
+- [FxInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/fxinput.md) — автополе.
 
 Если же список значений заранее определен и должен отображаться пользователю для выбора, подойдут поля с подсказками:
 
-- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/docs/components/autocomplete.md)
-- [Combobox](https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md)
-- [TokenInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput-tokeninput--docs)
+- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md)
+- [Combobox](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md)
+- [TokenInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-tokeninput-tokeninput--docs)
 
 ## Примеры
 
@@ -7951,15 +7951,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -7969,7 +7969,7 @@ return (
 
 # Kebab
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-kebab--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-kebab--docs)
 
 Кебаб-меню содержит действия с объектом.
 
@@ -8067,9 +8067,9 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-- [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md) — если необходима кастомизируемая кнопка вместо простой иконки кебаба.
-- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — если необходим произвольный элемент `caption` вместо кнопки.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md) — если необходима кастомизируемая кнопка вместо простой иконки кебаба.
+- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — если необходим произвольный элемент `caption` вместо кнопки.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -8261,7 +8261,7 @@ return (
 
 `Kebab` адаптивен: на мобильных устройствах выпадающее меню открывается модально по центру экрана. Сама кнопка не меняет внешний вид и поведение.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -8271,7 +8271,7 @@ return (
 
 # Link
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-link--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-link--docs)
 
 С помощью ссылки пользователь может перейти на другую страницу, раздел приложения или внешний URL.
 
@@ -8367,9 +8367,9 @@ type: `ButtonLinkAllowedValues` · optional · default: `a`
 
 **Когда не использовать**
 
-Не используйте ссылку для действий на странице, для этого подойдёт [кнопка](https://tech.skbkontur.ru/kontur-ui/docs/components/button.md), в том числе кнопка в стиле Text, если нужна более легкая версия кнопки.
+Не используйте ссылку для действий на странице, для этого подойдёт [кнопка](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md), в том числе кнопка в стиле Text, если нужна более легкая версия кнопки.
 
-Если же вам нужно сохранить нативные свойства ссылки, но визуально она должна выглядеть как кнопка, вы можете переопределить корневой элемент ссылки, см. пример [Управление корневым элементом](https://tech.skbkontur.ru/kontur-ui/docs/components/link.md#управление-корневым-элементом).
+Если же вам нужно сохранить нативные свойства ссылки, но визуально она должна выглядеть как кнопка, вы можете переопределить корневой элемент ссылки, см. пример [Управление корневым элементом](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/link.md#управление-корневым-элементом).
 
 ## Примеры
 
@@ -8501,7 +8501,7 @@ return <Link onClick={() => SingleToast.push('Ты нажал на ссылку'
 ### Кастомизация: цвет ссылки
 
 Ссылки допускается выделять фирменным цветом продукта. Сделать это можно, изменяя свойства темы через проп `theme`. Заданные переменные будут объединены с темой из `<ThemeContext>`.
-Общие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Общие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ```tsx
 return (
@@ -8578,13 +8578,13 @@ return (
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию ссылка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -8594,11 +8594,11 @@ return (
 
 # Loader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-loader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-loader--docs)
 
 С помощью лоадера можно отобразить процесс выполнения задачи.
 Лоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.
-Когда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs).
+Когда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md).
 
 ## Import
 
@@ -8614,8 +8614,8 @@ import { Loader } from '@skbkontur/react-ui';
 
 **Альтернативы и дополнения**
 
-- [Глобальный лоадер](https://tech.skbkontur.ru/kontur-ui/docs/components/globalloader.md) — подходит для индикации длительных операций обмена данными с сервером, таких как загрузка данных, сохранение формы, отправка запросов и др.
-- [Спиннер](https://tech.skbkontur.ru/kontur-ui/docs/components/spinner.md) — подходит для инлайн-встраивания или более гибкой настройки внешнего вида (цвет, толщина, затемнённый режим) используйте.
+- [Глобальный лоадер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/globalloader.md) — подходит для индикации длительных операций обмена данными с сервером, таких как загрузка данных, сохранение формы, отправка запросов и др.
+- [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/spinner.md) — подходит для инлайн-встраивания или более гибкой настройки внешнего вида (цвет, толщина, затемнённый режим) используйте.
 
 ## Все пропсы
 
@@ -8844,13 +8844,13 @@ return (
 - Предоставляйте текстовые альтернативы для индикации состояния операции.
 - Убедитесь, что пользователи могут понять, что происходит загрузка, даже без визуального индикатора.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию лоадер не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -8860,7 +8860,7 @@ return (
 
 # MaskedInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-maskedinput--docs)
 
 Поле ввода, которое ограничивает формат вводимого значения по заданной маске. Такое поле облегчает пользователю ввод и снижает количество ошибок.
 
@@ -9067,7 +9067,7 @@ type: `string` · optional
 Используйте поле с маской, когда нужно гарантировать строгий формат данных от пользователя, например: номер телефона, номер карты, стандартные идентификаторы.
 
 Компонент наследует часть базовых пропcов от компонента Input — размер, ширина, иконка в поле и так далее. Они включены в таблицу пропсов выше.
-Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 Из пропсов Input исключены некоторые неприменимые к полю с маской пропсы и сокращен список возможных значений для пропа `type`.
 
 Для legacy-реализации маски включите фичафлаг `maskedInputUseLegacyBehavior` в `ReactUIFeatureFlagsContext`:
@@ -9436,19 +9436,19 @@ return (
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -9458,7 +9458,7 @@ return (
 
 # MenuFooter
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menufooter--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menufooter--docs)
 
 Футер меню — надпись в нижней части меню.
 
@@ -9466,7 +9466,7 @@ return (
 import { MenuFooter } from '@skbkontur/react-ui';
 ```
 
-Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md).
+Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md).
 
 ## Все пропсы и методы
 
@@ -9568,7 +9568,7 @@ return (
 
 По умолчанию надпись в подвале не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -9578,7 +9578,7 @@ return (
 
 # MenuHeader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuheader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuheader--docs)
 
 Заголовок меню используется для того, чтобы разграничивать элементы меню на категории.
 
@@ -9586,7 +9586,7 @@ return (
 import { MenuHeader } from '@skbkontur/react-ui';
 ```
 
-Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md).
+Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md).
 
 ## Все пропсы и методы
 
@@ -9689,7 +9689,7 @@ return (
 
 По умолчанию заголовок не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -9699,7 +9699,7 @@ return (
 
 # MenuItem
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuitem--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuitem--docs)
 
 Пункт меню `MenuItem` — интерактивный элемент выполнения действий или навигации.
 
@@ -9707,7 +9707,7 @@ return (
 import { MenuItem } from '@skbkontur/react-ui';
 ```
 
-Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md).
+Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md).
 
 ## Все пропсы и методы
 
@@ -9967,13 +9967,13 @@ return (
 
 За блокировку кнопки отвечает специальный атрибут `disabled`. Однако этот атрибут скрывает кнопку от скринридеров — а это не подходит в случаях, когда кнопка разблокируется при заполнении обязательных полей. Для такого случая добавьте атрибуты `aria-disabled=”true”`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию пункт меню не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -9983,7 +9983,7 @@ return (
 
 # MenuSeparator
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menuseparator--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menuseparator--docs)
 
 Разделитель между элементами меню.
 
@@ -9991,7 +9991,7 @@ return (
 import { MenuSeparator } from '@skbkontur/react-ui';
 ```
 
-Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md).
+Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md).
 
 ## Все пропсы и методы
 
@@ -10017,7 +10017,7 @@ type: `string` · optional
 
 По умолчанию разделитель в меню не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Examples
 
@@ -10044,7 +10044,7 @@ return (
 
 # MiniModal
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-minimodal--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-minimodal--docs)
 
 Модальное диалоговое окно, которое предполагает обязательный отклик пользователя по одному из доступных действий. Обёртка над Modal.
 
@@ -10102,7 +10102,7 @@ type: `Partial<typeof BasicThemeClass>` · optional
 
 Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.
 
-Общие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Общие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ### `mobileAppearance`
 
@@ -10156,7 +10156,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-В следующих случаях лучше использовать обычное модальное окно [Modal](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md):
+В следующих случаях лучше использовать обычное модальное окно [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md):
 
 - длинные формы;
 - много прокручиваемого контента;
@@ -10627,7 +10627,7 @@ return (
 
 ## MiniModal.Indent
 
-Вертикальный отступ между группами элементов в зоне `MiniModal.Footer` (на практике — между группами кнопок). Не является частью [Modal](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md) — специфичен для мини-модалки.
+Вертикальный отступ между группами элементов в зоне `MiniModal.Footer` (на практике — между группами кнопок). Не является частью [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md) — специфичен для мини-модалки.
 
 Вставляйте `MiniModal.Indent` внутри `MiniModal.Footer`, когда нужно визуально разделить группы действий (см. пример «Синглтон»).
 
@@ -10639,11 +10639,11 @@ return (
 
 ## Доступность
 
-Поведение базируется на [Modal](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md): фокус внутри окна, поддержка стандартных aria-атрибутов при необходимости переопределения.
+Поведение базируется на [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md): фокус внутри окна, поддержка стандартных aria-атрибутов при необходимости переопределения.
 
-Смысл действия не должен опираться только на иконку в шапке — заголовок и подписи кнопок должны быть понятны без контекста дизайна. Кнопку, которая открывает мини-модалку, по возможности сопровождайте `aria-expanded` и `aria-haspopup="dialog"` (см. также раздел про кнопки и модальные окна в [документации Button](https://tech.skbkontur.ru/kontur-ui/docs/components/button.md)). Порядок фокуса по Tab должен логично вести по кнопкам действий в футере.
+Смысл действия не должен опираться только на иконку в шапке — заголовок и подписи кнопок должны быть понятны без контекста дизайна. Кнопку, которая открывает мини-модалку, по возможности сопровождайте `aria-expanded` и `aria-haspopup="dialog"` (см. также раздел про кнопки и модальные окна в [документации Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md)). Порядок фокуса по Tab должен логично вести по кнопкам действий в футере.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -10658,7 +10658,7 @@ return (
 
 Чтобы посмотреть мобильный вид на десктопе, сузьте окно браузера и используйте пример ниже (переопределённый медиазапрос темы) или инструменты разработчика.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -10668,7 +10668,7 @@ return (
 
 # Modal
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-modal--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-modal--docs)
 
 Модальное окно — это эмуляция диалогового окна браузера, оно появляется поверх страницы в ответ на действия пользователя и блокирует доступ к основному содержимому страницы.
 
@@ -10726,7 +10726,7 @@ type: `Partial<typeof BasicThemeClass>` · optional
 
 Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.
 
-Общие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Общие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ### `mobileAppearance`
 
@@ -10858,7 +10858,7 @@ Cобытие `onClose` задаёт функцию, которая вызыва
 
 Для просмотра примера на десктопе активируйте мобильный режим в браузере через инструменты разработчика.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Examples
 
@@ -11099,7 +11099,7 @@ return (
 
 # Paging
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-paging--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-paging--docs)
 
 Постраничная навигация `Paging` (пейджинг или пагинация) — способ представления большого количества однородной информации, когда контент разбивается на страницы.
 
@@ -11336,7 +11336,7 @@ return <Paging onPageChange={setActivePage} activePage={activePage} pagesCount={
 - Для блокировки используйте проп `disabled`: переходы между страницами и взаимодействие с элементами становятся недоступны.
 - Если необходимо оставить элемент в доступности для скринридеров, используйте `aria-disabled="true"` и обрабатывайте блокировку действий вручную.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -11344,7 +11344,7 @@ return <Paging onPageChange={setActivePage} activePage={activePage} pagesCount={
 
 Если нужно скрывать «последнюю страницу» до определенного шага, используйте сценарий из примера «Пейджинг без последней страницы».
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -11354,7 +11354,7 @@ return <Paging onPageChange={setActivePage} activePage={activePage} pagesCount={
 
 # PasswordInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-passwordinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-passwordinput--docs)
 
 Однострочное поле для ввода пароля, в котором символы заменяются на точки.
 
@@ -11510,11 +11510,11 @@ type: `ReactElement<InputElementProps, string | JSXElementConstructor<any>>` · 
 
 ## Использование
 
-Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 **Когда не использовать**
 
-Не используйте такое поле для ввода одноразовых СМС-кодов, так как пользователю нужно видеть вводимые цифры для самопроверки. Для этого лучше подойдет [MaskedInput](https://tech.skbkontur.ru/kontur-ui/docs/components/maskedinput.md).
+Не используйте такое поле для ввода одноразовых СМС-кодов, так как пользователю нужно видеть вводимые цифры для самопроверки. Для этого лучше подойдет [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md).
 
 ## Примеры
 
@@ -11534,17 +11534,17 @@ return <PasswordInput detectCapsLock />;
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs) можно добавить валидацию для поля.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs) можно добавить валидацию для поля.
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -11554,11 +11554,11 @@ return <PasswordInput detectCapsLock />;
 
 # Radio
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radio--docs)
 
 Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5.
 
-Для создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs).
+Для создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md).
 
 ```jsx
 import { Radio } from '@skbkontur/react-ui';
@@ -11728,13 +11728,13 @@ return (
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию радиокнопка не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -11744,9 +11744,9 @@ return (
 
 # RadioGroup
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radiogroup--docs)
 
-Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs).
+Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radio.md).
 
 ```jsx
 import { RadioGroup } from '@skbkontur/react-ui';
@@ -11972,19 +11972,19 @@ return <RadioGroup items={items} inline />;
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите [в документации пакета React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите [в документации пакета React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию группа радиокнопок не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -11994,7 +11994,7 @@ return <RadioGroup items={items} inline />;
 
 # ResponsiveLayout
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-responsivelayout--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-responsivelayout--docs)
 
 `ResponsiveLayout` определяет текущий режим.
 
@@ -12036,7 +12036,7 @@ type: `MediaQueriesType` · optional
 
 ## Использование
 
-Как альтернативу можно использовать хук [useResponsiveLayout](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs#%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B3%D0%BE-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC%D0%B0).
+Как альтернативу можно использовать хук [useResponsiveLayout](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs#%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B3%D0%BE-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC%D0%B0).
 
 Проп `onLayoutChange` вызывает переданный в него коллбэк при изменении режима. Аргументом передаётся объект с флагом.
 
@@ -12097,7 +12097,7 @@ class SomeComponent {
 
 # ScrollContainer
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-scrollcontainer--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-scrollcontainer--docs)
 
 Контейнер с кастомными полосами прокрутки при скролле.
 
@@ -12499,7 +12499,7 @@ return (
 ### Отключенная анимация
 
 Проп `disableAnimations` отключает анимацию полосы прокрутки.
-ℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F).
+ℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F).
 
 ```tsx
 const containerStyle = {
@@ -12640,7 +12640,7 @@ return (
 
 # Select
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-select--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-select--docs)
 
 Раскрывающийся список позволяет выбрать значение из заранее известного набора вариантов.
 
@@ -12854,7 +12854,7 @@ type: `boolean` · optional
 
 type: `"link" | "text" | "fill" | "default" | "outline" | "accent" | "danger" | "success" | "pay" | "backless" | "primary"` · optional · default: `default`
 
-Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-button--docs).
+Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/button.md).
 
 ### `size`
 
@@ -12914,7 +12914,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-Не используйте раскрывающийся список для выбора элементов меню. В таком случае воспользуйтесь компонентом [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md).
+Не используйте раскрывающийся список для выбора элементов меню. В таком случае воспользуйтесь компонентом [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md).
 
 ## Примеры
 
@@ -13196,13 +13196,13 @@ return <Select items={items} value={value} onValueChange={setValue} _renderButto
 
 В мобильном режиме у раскрывающегося списка появляется заголовок, который необходимо передать через проп `mobileMenuHeaderText`. Полное описание адаптивного вида и поведения компонента смотрите в [Гайде](https://guides.kontur.ru/components/selection-elements/select/#Аdaptivnost').
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Source
 
@@ -13212,14 +13212,14 @@ return <Select items={items} value={value} onValueChange={setValue} _renderButto
 
 # SidePage
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage--docs)
 
 Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.
 
 Составной компонент, включает в себя:
-- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;
-- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);
-- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).
+- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;
+- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);
+- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).
 
 ```jsx
 import { SidePage } from '@skbkontur/react-ui';
@@ -13331,7 +13331,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-Не используйте сайдпейдж для коротких сообщений и подтверждений, для этого лучше подходит [модальное окно](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md).
+Не используйте сайдпейдж для коротких сообщений и подтверждений, для этого лучше подходит [модальное окно](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md).
 Также сайдпейдж не может заменить полноценную страницу, потому что ограничен по ширине.
 
 **Связанные компоненты**
@@ -13750,7 +13750,7 @@ return (
 
 С помощью пропа `mobileWidth` можно управлять шириной сайдпейджа в мобильном режиме. По умолчанию ширина во весь экран.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 
@@ -13760,7 +13760,7 @@ return (
 
 # SingleToast
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-singletoast--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-singletoast--docs)
 
 Короткое немодальное уведомление, которое сообщает пользователю о результате выполнения его команды.
 Результат может быть положительным, отрицательным или нейтральным.
@@ -13814,19 +13814,19 @@ type: `string` · optional
 
 ## Использование
 
-Подходит, когда нужны те же короткие уведомления, что и у [Toast](https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md), но вызывать их из разных модулей без прокидывания `ref`: один раз монтируете `SingleToast` (обычно в корне приложения) и дальше пользуетесь `SingleToast.push` и `SingleToast.close`.
+Подходит, когда нужны те же короткие уведомления, что и у [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md), но вызывать их из разных модулей без прокидывания `ref`: один раз монтируете `SingleToast` (обычно в корне приложения) и дальше пользуетесь `SingleToast.push` и `SingleToast.close`.
 
 Для корректной работы `SingleToast` должен быть отрисован только **один раз** на странице. После чего его можно вызывать из любого места приложения методом `SingleToast.push`.
 Однако, переданные в компонент пропсы, такие как `theme`, `onPush` и остальные, будут применяться ко всем вызовам.
 
 **Связанные компоненты**
 
-- [Toast](https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md) — свой экземпляр в дереве и вызовы `push` / `close` через `ref`, если уведомление привязано к части интерфейса.
+- [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md) — свой экземпляр в дереве и вызовы `push` / `close` через `ref`, если уведомление привязано к части интерфейса.
 
 **Альтернативы и дополнения**
 
-- Долгие операции и уход фокуса с экрана — [Loader](https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md) и сообщение на месте операции.
-- Ошибки полей формы — [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs), а не тост вместо валидации.
+- Долгие операции и уход фокуса с экрана — [Loader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md) и сообщение на месте операции.
+- Ошибки полей формы — [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs), а не тост вместо валидации.
 
 **Когда не использовать**
 
@@ -13837,15 +13837,15 @@ type: `string` · optional
 
 ## Доступность
 
-Под капотом рендерится [Toast](https://tech.skbkontur.ru/kontur-ui/docs/components/toast.md): семантика, кнопка действия, крестик и подписи совпадают с документацией `Toast`. Задавайте `aria-label` на `SingleToast` и при необходимости `action['aria-label']` так же, как для обычного `Toast`.
+Под капотом рендерится [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toast.md): семантика, кнопка действия, крестик и подписи совпадают с документацией `Toast`. Задавайте `aria-label` на `SingleToast` и при необходимости `action['aria-label']` так же, как для обычного `Toast`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 Поведение как у `Toast`: увеличенный шрифт, фиксированное положение у верхнего края экрана с отступами, текст длиннее трёх строк обрезается многоточием.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 
@@ -13863,7 +13863,7 @@ type: `string` · optional
 
 # Spinner
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-spinner--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-spinner--docs)
 
 Зацикленный индикатор, не отображающий прогресс выполнения задачи
 
@@ -13941,7 +13941,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-Не применяйте `Spinner` для заполнения паузы при загрузке контента, для этого предназначен [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/docs/components/globalloader.md).
+Не применяйте `Spinner` для заполнения паузы при загрузке контента, для этого предназначен [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/globalloader.md).
 
 ## Примеры
 
@@ -14058,13 +14058,13 @@ const [active, setActive] = React.useState(false);
 </>;
 ```
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs), [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs), [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 
 ## Адаптивность
 
 По умолчанию лоадер не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -14074,7 +14074,7 @@ const [active, setActive] = React.useState(false);
 
 # Sticky
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_layout-sticky--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_layout-sticky--docs)
 
 `Sticky` позволяет закреплять элемент интерфейса в определенной позиции на экране при прокрутке страницы.
 Это полезно для создания «прилипающих» элементов, которые должны оставаться видимыми при прокрутке содержимого.
@@ -14178,9 +14178,9 @@ return (
 
 # Switcher
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-switcher--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-switcher--docs)
 
-Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs), но более компактный.
+Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md), но более компактный.
 
 ```jsx
 import { Switcher } from '@skbkontur/react-ui';
@@ -14269,7 +14269,7 @@ type: `string` · optional
 **Когда не использовать**
 
 - Старайтесь не использовать переключатель из двух значений — пользователи не понимают, какой из пунктов выбран.
-- Не используйте переключатель в качестве навигации, для этого лучше подходят [Tabs](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-tabs-tabs--docs).
+- Не используйте переключатель в качестве навигации, для этого лучше подходят [Tabs](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-tabs-tabs--docs).
 
 ## Примеры
 
@@ -14457,15 +14457,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию свитчер не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -14475,7 +14475,7 @@ return (
 
 # Tabs
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-tabs--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-tabs--docs)
 
 Табы группируют контент и помогают в навигации.
 
@@ -14546,7 +14546,7 @@ type: `string` · optional
 **Когда не использовать**
 
 - Для основной навигации. Для этого лучше подходит главное меню на цветной плашке — оно более заметно на странице.
-- Для состояний — для этого есть [RadioGroup](https://tech.skbkontur.ru/kontur-ui/docs/components/radiogroup.md), [Toggle](https://tech.skbkontur.ru/kontur-ui/docs/components/toggle.md) и [Switcher](https://tech.skbkontur.ru/kontur-ui/docs/components/switcher.md).
+- Для состояний — для этого есть [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md), [Toggle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/toggle.md) и [Switcher](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/switcher.md).
 
 **Связанные компоненты**
 
@@ -14605,13 +14605,13 @@ return (
 - Используйте `aria-describedby` для связи группы табов с элементом, содержащим дополнительное, развёрнутое описание.
 - Используйте `aria-label`, чтобы задать доступное имя таба для пользователей скринридеров.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию группа табов не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -14621,7 +14621,7 @@ return (
 
 # Textarea
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-textarea--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-textarea--docs)
 
 Многострочное поле — это поле ввода, в котором текст отображается в несколько строк.
 
@@ -14767,7 +14767,7 @@ type: `"left" | "center" | "right"` · optional
 
 **Когда не использовать**
 
-Если значение чаще всего состоит из 1–3 слов, следует использовать обычное поле ввода [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Если значение чаще всего состоит из 1–3 слов, следует использовать обычное поле ввода [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Примеры
 
@@ -14979,15 +14979,15 @@ return (
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
 По умолчанию многострочное поле не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -14997,7 +14997,7 @@ return (
 
 # TimePicker
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-timepicker--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-timepicker--docs)
 
 Поле с временем помогает пользователю быстро и удобно указать время в правильном формате.
 В поле можно ввести время с клавиатуры либо выбрать из выпадающего списка,
@@ -15247,15 +15247,15 @@ type: `string` · optional
 
 **Альтернативы и дополнения**
 
-[Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md) — если пользователю достаточно свободного текстового ввода без форматных ограничений.
+[Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md) — если пользователю достаточно свободного текстового ввода без форматных ограничений.
 
-[DatePicker](https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md) — если вместе со вводом нужно выбирать дату в календаре.
+[DatePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md) — если вместе со вводом нужно выбирать дату в календаре.
 
 ## Примеры
 
 ## Кастомизация
 
-Для кастомизации компонента через theme доступны переменные с префиксом `timePicker*`, которые можно найти в [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).
+Для кастомизации компонента через theme доступны переменные с префиксом `timePicker*`, которые можно найти в [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).
 
 ## Доступность
 
@@ -15271,7 +15271,7 @@ type: `string` · optional
 - `Enter` выбирает активный элемент из выпадающего меню, а если элемент не выбран, коммитит введённое значение.
 - `Escape` закрывает выпадающее меню.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
@@ -15309,7 +15309,7 @@ type: `string` · optional
 
 <br />
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 
@@ -15586,7 +15586,7 @@ return <TimePicker useMobileNativeTimePicker value={value} onValueChange={setVal
 
 # Toast
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-toast--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-toast--docs)
 
 Тост — это короткое немодальное уведомление о результате действия пользователя: успех, ошибка или нейтральный статус.
 
@@ -15638,12 +15638,12 @@ type: `string` · optional
 
 **Связанные компоненты**
 
-- [SingleToast](https://tech.skbkontur.ru/kontur-ui/docs/components/singletoast.md) — тот же сценарий уведомлений без монтирования своего `Toast` и вызова через `ref`.
+- [SingleToast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/singletoast.md) — тот же сценарий уведомлений без монтирования своего `Toast` и вызова через `ref`.
 
 **Альтернативы и дополнения**
 
-- Долгие операции и уход фокуса с экрана — [Loader](https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md) и сообщение на месте операции.
-- Ошибки полей формы — [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs), а не тост вместо валидации.
+- Долгие операции и уход фокуса с экрана — [Loader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md) и сообщение на месте операции.
+- Ошибки полей формы — [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs), а не тост вместо валидации.
 
 **Когда не использовать**
 
@@ -15659,14 +15659,14 @@ type: `string` · optional
 - **Клавиатура:** фокус по умолчанию не переносится внутрь тоста; кнопка действия доступна с клавиатуры, когда пользователь до неё доходит по `Tab`. Закрытие чаще всего по таймеру или клику мыши.
 - **Скринридеры:** текст уведомления и подписи кнопок/закрытия озвучиваются как видимый и помеченный контент; дополнительные пояснения — через `aria-label` у тоста и у `action`.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 Компонент адаптивен: на мобильных устройствах тост располагается у верха экрана по центру с фиксированными отступами сверху и по краям. Текст длиннее трёх строк обрезается многоточием. Шрифт увеличивается.
-Мобильный режим активируется при ширине вьюпорта < `768px`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Мобильный режим активируется при ширине вьюпорта < `768px`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## FAQ
 
@@ -15682,7 +15682,7 @@ type: `string` · optional
 
 # Toggle
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-toggle--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-toggle--docs)
 
 Тогл переключает состояния. Например, включает или отключает уведомления в настройках.
 Состоит из надписи и переключателя.
@@ -15897,7 +15897,7 @@ return <Toggle disableAnimations>Без анимации</Toggle>;
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
@@ -15907,7 +15907,7 @@ return <Toggle disableAnimations>Без анимации</Toggle>;
 
 По умолчанию тогл не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -15917,7 +15917,7 @@ return <Toggle disableAnimations>Без анимации</Toggle>;
 
 # TokenInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-tokeninput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-tokeninput--docs)
 
 Поле с токенами — это поле ввода со списком подсказок. Значения в поле отображаются в виде отдельных токенов.
 
@@ -16061,13 +16061,13 @@ type: `string[]` · optional · default: `[',', TEMP_FAKE_FLAG]`
 
 type: `boolean` · optional
 
-Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ### `warning`
 
 type: `boolean` · optional
 
-Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ### `disabled`
 
@@ -16146,7 +16146,7 @@ type: `string` · optional
 
 ## Использование
 
-Поле с токенами похоже на [комбобокс](https://tech.skbkontur.ru/kontur-ui/docs/components/combobox.md), но используется в случаях, когда нужно указать сразу много однородных элементов — токенов.
+Поле с токенами похоже на [комбобокс](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/combobox.md), но используется в случаях, когда нужно указать сразу много однородных элементов — токенов.
 
 **Связанные компоненты**
 
@@ -16405,7 +16405,7 @@ return (
 ### Скрытие выпадающего списка до ввода первого символа
 
 По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.
-Проп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs). Выпадающий список появляется, когда введён первый символ первого или последующего токена.
+Проп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md). Выпадающий список появляется, когда введён первый символ первого или последующего токена.
 
 ```tsx
 const [selectedItems, setSelectedItems] = React.useState<string[]>([]);
@@ -16833,11 +16833,11 @@ import { Token } from '@skbkontur/react-ui';
 
 Компонент поддерживает aria-атрибуты, если вам необходимо переопределить стандартное поведение.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Валидация
 
-С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
+С помощью пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_api-reference) можно добавить валидацию для компонента.
 
 В примере добавлена комплексная валидация:
 
@@ -16845,13 +16845,13 @@ import { Token } from '@skbkontur/react-ui';
 2.  Классическая валидация компонента: проверка пробелов в токене.
 3.  Валидация каждого токена через `createValidator` и `renderToken`.
 
-Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui-validations_displaying-getting-started--docs).
+Подробнее о том, как настроить тип, уровень валидации, формат сообщения об ошибке и другие параметры поведения, смотрите в документации пакета [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui-validations_displaying-getting-started--docs).
 
 ## Адаптивность
 
-Поле с токенами адаптивно: на мобильных устройствах поле с выпадающим списком открывается модально в нижней части экрана. Мобильный режим активируется при ширине вьюпорта `(max-width: 576px)`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Поле с токенами адаптивно: на мобильных устройствах поле с выпадающим списком открывается модально в нижней части экрана. Мобильный режим активируется при ширине вьюпорта `(max-width: 576px)`. Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -16861,7 +16861,7 @@ import { Token } from '@skbkontur/react-ui';
 
 # Tooltip
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-tooltip--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-tooltip--docs)
 
 Подсказка, которая объясняет состояние контрола или даёт контекстную справку.
 
@@ -16987,7 +16987,7 @@ type: `string` · optional
 
 Если для пояснения требуется большой объём текста, лучше написать статью и дать в тултипе ссылку на неё.
 
-Для краткой текстовой подсказки по наведению используйте [Hint](https://tech.skbkontur.ru/kontur-ui/docs/components/hint.md).
+Для краткой текстовой подсказки по наведению используйте [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/hint.md).
 
 ## Примеры
 
@@ -17326,7 +17326,7 @@ return (
 
 По умолчанию тултип не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 
@@ -17336,7 +17336,7 @@ return (
 
 # TooltipMenu
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-tooltipmenu--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-tooltipmenu--docs)
 
 Выпадающее меню в тултипе `TooltipMenu`. Раскрывается по клику на переданный в `caption` элемент.
 
@@ -17440,10 +17440,10 @@ type: `() => void` · optional
 
 ## Альтернативы и дополнения
 
-- [Dropdown](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdown.md) — используйте упрощенную версию не в тултипе, если вам не требуется гибкость настройки `caption`, `header`, `footer`, `positions`.
-- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md) — используйте, если вам нужно гибкое меню, но не в тултипе.
-- [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md) — используйте для выбора значения из набора вариантов.
-- [MenuItem](https://tech.skbkontur.ru/kontur-ui/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/docs/components/menufooter.md) — элементы внутри меню.
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdown.md) — используйте упрощенную версию не в тултипе, если вам не требуется гибкость настройки `caption`, `header`, `footer`, `positions`.
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md) — используйте, если вам нужно гибкое меню, но не в тултипе.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md) — используйте для выбора значения из набора вариантов.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuitem.md), [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuseparator.md), [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menuheader.md), [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/menufooter.md) — элементы внутри меню.
 
 ## Примеры
 
@@ -17644,13 +17644,13 @@ return (
 - для полного отключения используйте проп `disabled`: компонент становится недоступен для взаимодействия и клавиатурной навигации;
 - если важно сохранить элемент в потоке озвучивания скринридером, используйте `aria-disabled="true"` и блокируйте действия логически.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 `TooltipMenu` адаптивен: на мобильных устройствах раскрывающееся меню открывается в мобильном попапе (`MobilePopup`). Поведение включается настройками адаптивности React UI.
 
-Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Если нужно настроить пороги переключения между десктопным и мобильным режимами, используйте настройки из раздела [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 

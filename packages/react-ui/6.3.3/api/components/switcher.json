@@ -1,12 +1,12 @@
 {
   "name": "Switcher",
   "slug": "switcher",
-  "description": "Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs), но более компактный.",
+  "description": "Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md), но более компактный.",
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Switcher } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_button-switcher--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/switcher.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_button-switcher--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/switcher.md",
   "sourcePath": "components/Switcher/Switcher.tsx",
   "props": [
     {

@@ -1,12 +1,12 @@
 {
   "name": "Radio",
   "slug": "radio",
-  "description": "Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5.\n\nДля создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs).",
+  "description": "Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5.\n\nДля создания группы радиокнопок используйте специальный контейнер — компонент [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md).",
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Radio } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/radio.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radio--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radio.md",
   "sourcePath": "components/Radio/Radio.tsx",
   "props": [
     {

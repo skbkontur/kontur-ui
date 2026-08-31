@@ -1,13 +1,13 @@
 # SidePage
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage--docs)
 
 Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера.
 
 Составной компонент, включает в себя:
-- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;
-- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);
-- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).
+- «шапку» [SidePage.Header](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepageheader--docs), состоящую из заголовка и крестика закрытия окна;
+- контент-зону [SidePage.Body](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagebody--docs) и контейнер с отступами [SidePage.Container](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagecontainer--docs);
+- футер [SidePage.Footer](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-sidepage-sidepagefooter--docs).
 
 ```jsx
 import { SidePage } from '@skbkontur/react-ui';
@@ -119,7 +119,7 @@ type: `string` · optional
 
 **Когда не использовать**
 
-Не используйте сайдпейдж для коротких сообщений и подтверждений, для этого лучше подходит [модальное окно](https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md).
+Не используйте сайдпейдж для коротких сообщений и подтверждений, для этого лучше подходит [модальное окно](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md).
 Также сайдпейдж не может заменить полноценную страницу, потому что ограничен по ширине.
 
 **Связанные компоненты**
@@ -538,7 +538,7 @@ return (
 
 С помощью пропа `mobileWidth` можно управлять шириной сайдпейджа в мобильном режиме. По умолчанию ширина во весь экран.
 
-Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs).
+Вы можете передавать свои медиазапросы, больше о настройке адаптивности читайте в статье [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs).
 
 ## Source
 

@@ -1,6 +1,6 @@
 # GlobalLoader
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-globalloader--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-globalloader--docs)
 
 Универсальный индикатор обмена данными с сервером.
 Он появляется у верхней границы экрана и выглядит как тоненькая полоска, окрашенная в фирменный цвет продукта.
@@ -84,7 +84,7 @@ type: `() => void` · optional
 Не используйте глобальный лоадер для:
 
 - для локальных операций, которые выполняются мгновенно;
-- для индикации загрузки отдельных элементов интерфейса, в этом случае используйте ['Loader'](https://tech.skbkontur.ru/kontur-ui/docs/components/loader.md);
+- для индикации загрузки отдельных элементов интерфейса, в этом случае используйте ['Loader'](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/loader.md);
 - если в приложении уже есть другой глобальный индикатор загрузки.
 
 ## Примеры
@@ -245,13 +245,13 @@ return (
 - Предоставляйте текстовые альтернативы для индикации состояния операции.
 - Убедитесь, что пользователи могут понять, что происходит загрузка, даже без визуального индикатора.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
 По умолчанию глобальный лоадер не меняет свой вид и поведение на мобильных устройствах. Лоадер отображается у верхней границы экрана независимо от размера вьюпорта.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

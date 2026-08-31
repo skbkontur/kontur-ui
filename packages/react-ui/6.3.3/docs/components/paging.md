@@ -1,6 +1,6 @@
 # Paging
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-paging--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-paging--docs)
 
 Постраничная навигация `Paging` (пейджинг или пагинация) — способ представления большого количества однородной информации, когда контент разбивается на страницы.
 
@@ -237,7 +237,7 @@ return <Paging onPageChange={setActivePage} activePage={activePage} pagesCount={
 - Для блокировки используйте проп `disabled`: переходы между страницами и взаимодействие с элементами становятся недоступны.
 - Если необходимо оставить элемент в доступности для скринридеров, используйте `aria-disabled="true"` и обрабатывайте блокировку действий вручную.
 
-ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/?path=/docs/accessibility--docs)
+ℹ️ **Полезно:** [Чек-лист доступности](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/accessibility--docs)
 
 ## Адаптивность
 
@@ -245,7 +245,7 @@ return <Paging onPageChange={setActivePage} activePage={activePage} pagesCount={
 
 Если нужно скрывать «последнюю страницу» до определенного шага, используйте сценарий из примера «Пейджинг без последней страницы».
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

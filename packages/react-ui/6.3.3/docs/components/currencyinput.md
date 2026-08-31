@@ -1,6 +1,6 @@
 # CurrencyInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-currencyinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-currencyinput--docs)
 
 Поле для денежных сумм.
 
@@ -10,7 +10,7 @@ import { CurrencyInput } from '@skbkontur/react-ui';
 
 По умолчанию значение в поле — десятичная дробь c запятой в качестве разделителя. Если ввести точку, она автоматически заменится на запятую. Максимальная длина числа — 15 цифр с разделителем в любом месте, мы опираемся на рекомендации [MDN web docs](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
 
-Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Компонент наследует часть базовых пропcов (размер, ширина, иконка в поле и т.д.) от компонента Input, они включены <a href="#все-пропсы-и-методы" target="-_self"> в таблицу пропсов </a>. Примеры для базовых пропсов вы можете посмотреть на странице [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Все пропсы и методы
 
@@ -190,7 +190,7 @@ type: `() => void` · optional
 
 **Альтернативы и дополнения**
 
-Если вам нужно отобразить в интерфейсе просто денежную сумму, не включая её в поле ввода, используйте [CurrencyLabel](https://tech.skbkontur.ru/kontur-ui/docs/components/currencylabel.md).
+Если вам нужно отобразить в интерфейсе просто денежную сумму, не включая её в поле ввода, используйте [CurrencyLabel](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencylabel.md).
 
 ## Примеры
 
@@ -309,13 +309,13 @@ return (
 
 ## Доступность
 
-Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/docs/components/input.md).
+Для компонента действуют все те же рекомендации по доступности, что и для компонента [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/input.md).
 
 ## Адаптивность
 
 По умолчанию поле ввода не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ Полезно: [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

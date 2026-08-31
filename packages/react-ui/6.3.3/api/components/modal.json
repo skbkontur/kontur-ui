@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Modal } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_overlay-modal--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/modal.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_overlay-modal--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/modal.md",
   "sourcePath": "components/Modal/Modal.tsx",
   "props": [
     {
@@ -61,7 +61,7 @@
     },
     {
       "name": "theme",
-      "description": "Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.\n\nОбщие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-themeplayground--docs).",
+      "description": "Объект с переменными темы. Он будет объединён с темой из `<ThemeContext>`.\n\nОбщие переменные темы и переменные для модального окна (с префиксом modal) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-themeplayground--docs).",
       "type": "Partial<typeof BasicThemeClass>",
       "required": false,
       "source": "react-ui/components/Modal/Modal.tsx"

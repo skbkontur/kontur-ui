@@ -1,6 +1,6 @@
 # MenuFooter
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_menu-menufooter--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_menu-menufooter--docs)
 
 Футер меню — надпись в нижней части меню.
 
@@ -8,7 +8,7 @@
 import { MenuFooter } from '@skbkontur/react-ui';
 ```
 
-Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/docs/components/select.md).
+Используется в компонентах [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/dropdownmenu.md), [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/kebab.md), [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/tooltipmenu.md) и [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/select.md).
 
 ## Все пропсы и методы
 
@@ -110,7 +110,7 @@ return (
 
 По умолчанию надпись в подвале не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { Autocomplete } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-autocomplete--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/autocomplete.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-autocomplete--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/autocomplete.md",
   "sourcePath": "components/Autocomplete/Autocomplete.tsx",
   "props": [
     {
@@ -285,7 +285,7 @@
     {
       "name": "ExampleMask",
       "title": "Маска ввода",
-      "description": "Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-maskedinput--docs) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
+      "description": "Для автокомплита может быть задана маска. Автокомплит наследует от [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/maskedinput.md) пропсы:\n- `mask` — определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле.\n- `maskChar` — задаёт cимвол маски. Он отображается в шаблоне маски в качестве плейсхолдера\n- `formatChars` — задаёт словарь символов-регулярок. С помощью него вы можете настроить собственный словарь символов."
     },
     {
       "name": "ExampleSelectAllOnFocus",

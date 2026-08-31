@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { CurrencyLabel } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_display-data-currencylabel--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/currencylabel.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_display-data-currencylabel--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/currencylabel.md",
   "sourcePath": "components/CurrencyLabel/CurrencyLabel.tsx",
   "props": [
     {

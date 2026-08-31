@@ -5,8 +5,8 @@
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { FileUploader } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-fileuploader--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/fileuploader.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-fileuploader--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/fileuploader.md",
   "sourcePath": "components/FileUploader/FileUploader.tsx",
   "props": [
     {
@@ -282,7 +282,7 @@
     {
       "name": "ExampleRenderFile",
       "title": "Собственная отрисовка файла",
-      "description": "Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.\nПодробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/?path=/docs/input-data-fileuploader-fileuploaderfile--docs)."
+      "description": "Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.\nПодробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/input-data-fileuploader-fileuploaderfile--docs)."
     },
     {
       "name": "ExampleManualList",

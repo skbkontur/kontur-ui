@@ -1,8 +1,8 @@
 # DateInput
 
-> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-dateinput--docs)
+> Package: `@skbkontur/react-ui` · Version: `6.3.3` · [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_date-components-dateinput--docs)
 
-Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_date-components-datepicker--docs).
+Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).
 
 ```jsx
 import { DateInput } from '@skbkontur/react-ui';
@@ -123,7 +123,7 @@ type: `string` · optional
 
 Используйте поле с датой, когда нужно ввести дату в формате ДД.ММ.ГГГГ. Отличается от обычного поля ввода наличием маски даты.
 
-Если вам нужно поле ввода даты не только с вводом с клавиатуры, но и с выбором в блоке календаря - используйте - [DatePicker](https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md).
+Если вам нужно поле ввода даты не только с вводом с клавиатуры, но и с выбором в блоке календаря - используйте - [DatePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md).
 
 ## Примеры
 
@@ -299,13 +299,13 @@ return <DateInputFormatting2 />;
 
 ## Валидация
 
-Примеры обработок ошибок для поля смотрите на странице компонента [Поле с датой](https://tech.skbkontur.ru/kontur-ui/docs/components/datepicker.md) в блоке «Валидация».
+Примеры обработок ошибок для поля смотрите на странице компонента [Поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/datepicker.md) в блоке «Валидация».
 
 ## Адаптивность
 
 По умолчанию поле ввода даты не меняет свой вид и поведение на мобильных устройствах.
 
-ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_information-responsive--docs)
+ℹ️ **Полезно:** [Адаптивность компонентов](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_information-responsive--docs)
 
 ## Source
 

@@ -1,12 +1,12 @@
 {
   "name": "RadioGroup",
   "slug": "radiogroup",
-  "description": "Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radio--docs).",
+  "description": "Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radio.md).",
   "package": "@skbkontur/react-ui",
   "version": "6.3.3",
   "import": "import { RadioGroup } from '@skbkontur/react-ui';",
-  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/?path=/docs/react-ui_input-data-radiogroup--docs",
-  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/docs/components/radiogroup.md",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/?path=/docs/react-ui_input-data-radiogroup--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.3/docs/components/radiogroup.md",
   "sourcePath": "components/RadioGroup/RadioGroup.tsx",
   "props": [
     {
