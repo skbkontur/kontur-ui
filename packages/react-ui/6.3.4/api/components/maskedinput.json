@@ -1,0 +1,249 @@
+{
+  "name": "MaskedInput",
+  "slug": "maskedinput",
+  "description": "Поле ввода, которое ограничивает формат вводимого значения по заданной маске. Такое поле облегчает пользователю ввод и снижает количество ошибок.\n\nПо умолчанию используется исправленная реализация MaskedInputV2. Для legacy-поведения включите фичафлаг `maskedInputUseLegacyBehavior` в {@link ReactUIFeatureFlagsContext}.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { MaskedInput } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_input-data-maskedinput--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/maskedinput.md",
+  "sourcePath": "components/MaskedInput/MaskedInput.tsx",
+  "props": [
+    {
+      "name": "mask",
+      "description": "Шаблон ввода, определяющий допустимые символы.",
+      "type": "string",
+      "required": true,
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "maskChar",
+      "description": "Плейсхолдер, который отображается на месте ещё не введённых пользователем символов.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "_",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "formatChars",
+      "description": "Словарь правил для настройки маски, где:\nключ — символ для использования в маске;\nзначение — регулярка-правило.",
+      "type": "Record<string, string>",
+      "required": false,
+      "defaultValue": "{ '9': '[0-9]', 'a': '[A-Za-z]', '*': '[A-Za-z0-9]' }",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "alwaysShowMask",
+      "description": "Всегда показывать символы маски, независимо от фокуса в поле.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Событие некорректного ввода.\nВторым аргументом передаётся метод вспыхивания рамки поля.\n\nЕсли обработчик не задан, то при событии рамка всегда вспыхивает.\n@param value значение поля\n@param blink метод вспыхивания рамки поля",
+      "type": "(value: string, blink: () => void) => void",
+      "required": false,
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "onBeforePasteValue",
+      "description": "Событие перед вставкой текста в поле.\nВызывается с аргументом value — текст из буфера.\n\nОбработчик должен вернуть текст — он попадёт в поле.\n\nПри `type=\"tel\"` и отсутствии обработчика применяется\n`normalizeRussianPhonePaste` (только в MaskedInputV2).\n@param value значение вставки.",
+      "type": "MaskedInputOnBeforePasteValue",
+      "required": false,
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "unmask",
+      "description": "Убирает из value символы маски, которые пользователь не вводил.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/MaskedInput/MaskedInput.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small"
+    },
+    {
+      "name": "value",
+      "description": "Значение внутри поля.",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "prefix",
+      "description": "Устанавливает префикс `ReactNode` перед значением, но после иконки.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "showClearIcon",
+      "description": "Показывает иконку очистки значения в заполненном поле.",
+      "type": "\"auto\" | \"always\" | \"never\"",
+      "required": false,
+      "defaultValue": "never"
+    },
+    {
+      "name": "leftIcon",
+      "description": "Добавляет иконку слева.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа.\nПри использовании `ReactNode` применяются дефолтные стили для иконки.\nПри использовании `() => ReactNode` применяются только стили для позиционирования.",
+      "type": "InputIconType",
+      "required": false
+    },
+    {
+      "name": "error",
+      "description": "Переводит поле в состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Переводит поле в состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "borderless",
+      "description": "Убирает обводку поля.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "align",
+      "description": "Выравнивает контент внутри поля.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения `value` в поле.",
+      "type": "(value: string) => void",
+      "required": false
+    },
+    {
+      "name": "suffix",
+      "description": "Устанавливает суффикс `ReactNode` после значения, но перед правой иконкой.",
+      "type": "ReactNode",
+      "required": false
+    },
+    {
+      "name": "selectAllOnFocus",
+      "description": "Выделяет введённое значение при фокусе в поле. Работает с типами `text`, `password`, `tel`, `search`, `url`.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "showLengthCounter",
+      "description": "Отображает счётчик введённых символов.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "lengthCounter",
+      "description": "Допустимое количество символов в поле. Отображается в счётчике символов.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "maxLength"
+    },
+    {
+      "name": "counterHelp",
+      "description": "Подсказка для счётчика символов.\n\nЕсли передать `ReactNode`, рисует тултип со встроенной иконкой.\nЕсли передать функцию, рисует произвольный элемент.\n@example ```\ncounterHelp={() => <Hint text=\"...\"><Icon /></Hint>}\n```",
+      "type": "ReactNode | (() => ReactNode)",
+      "required": false
+    },
+    {
+      "name": "element",
+      "description": "Устанавливает элемент, заменяющий нативный input. Должен иметь пропсы `InputElementProps` и тип `InputElement`.",
+      "type": "ReactElement<InputElementProps, string | JSXElementConstructor<any>>",
+      "required": false
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExamplePhone",
+      "title": "Номер телефона",
+      "description": "Номер телефона по [гайду](https://guides.kontur.ru/components/input-fields/phone/).\nПрефикс `+7` всегда виден.\nОстальные символы маски появляются только в фокусе.\nДля телефона задавайте `type=\"tel\"` и `autoComplete=\"tel\"` — так браузер подставит номер из сохранённых контактов.\nПри `type=\"tel\"` вставка российских номеров (`8…`, `+7…`, со скобками и пробелами)\nнормализуется автоматически (`normalizeRussianPhonePaste`)."
+    },
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleFormats",
+      "title": "Типичные форматы",
+      "description": "Типичные форматы для форм\nДля ИНН длина значения может быть 10 или 12 цифр — по [гайдам](https://guides.kontur.ru/components/input-fields/mask/#Opisanie_raboti) маску в пустом поле не показывают, чтобы не путать пользователя."
+    },
+    {
+      "name": "ExampleMask",
+      "title": "Маска",
+      "description": "Проп `mask` определяет шаблон маски, используемый для форматирования и проверки корректности вводимых данных в поле."
+    },
+    {
+      "name": "ExampleMaskChar",
+      "title": "Символ маски",
+      "description": "Проп `maskChar` задаёт символ маски. Он отображается в шаблоне маски в качестве плейсхолдера. Символом маски может быть любой символ."
+    },
+    {
+      "name": "ExampleFormatChars",
+      "title": "Словарь символов-регулярок",
+      "description": "Проп `formatChars` задаёт словарь символов-регулярок. Вы можете настроить собственный словарь символов.\nКаждая запись описывает один токен маски: допустимые символы или регулярное выражение. Например для ввода кириллицы или времени."
+    },
+    {
+      "name": "ExampleType",
+      "title": "Тип",
+      "description": "Проп `type` задаёт тип.\nЭто стандартные типы поля ввода в HTML. Тип наделяет компонент нативными свойствами, может влиять на отображение подсказок, валидацию, автоматическое переключение раскладки клавиатуры на мобильных устройствах и другие свойства поведения. Подробнее смотрите в [Справке по HTML](https://developer.mozilla.org/ru/docs/Web/HTML/Reference/Elements/input#type).\nДля `type=\"tel\"` также задайте `autoComplete=\"tel\"`, чтобы браузер предлагал автозаполнение номера.\nПолный список значений для типа смотрите в таблице пропсов."
+    },
+    {
+      "name": "ExampleAlwaysShowMask",
+      "title": "Показывать маску всегда",
+      "description": "По умолчанию маска показывается только после того, как поле получает фокус. Это поведение рекомендуемое и закреплено в [Гайдах](https://guides.kontur.ru/components/input-fields/mask/#Opisanie_raboti).\nНо если вам необходимо переопределить стандартное поведение, используйте проп `alwaysShowMask`. Маска будет отображаться независимо от фокуса в поле."
+    },
+    {
+      "name": "ExampleUnMask",
+      "title": "Чистое значение",
+      "description": "Проп `unmask` позволяет сразу получать value, в котором будет только введённое пользователем значение, без символов маски."
+    },
+    {
+      "name": "ExampleUnMaskPlus",
+      "title": "Чистое значение, но с выбранными символами",
+      "description": "Проп `unmask` позволяет выбрать, какие символы из маски должны быть переданы в `value`. Для этого в маске оберните в фигурные скобки нужные символы."
+    },
+    {
+      "name": "ExampleonBeforePasteValue",
+      "title": "Фильтрация значения при вставке из буфера обмена",
+      "description": "При `type=\"tel\"` вставка российских номеров нормализуется по умолчанию (`normalizeRussianPhonePaste`):\nубираются нецифровые символы и код страны `7`/`8` у 11+ значных номеров.\nПроп `onBeforePasteValue` полностью переопределяет эту логику — используйте его для нестандартных кейсов.\nВ примере ниже явно применяется тот же хелпер (эквивалент дефолтного поведения)."
+    }
+  ]
+}

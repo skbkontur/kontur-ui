@@ -1,0 +1,60 @@
+{
+  "name": "MenuFooter",
+  "slug": "menufooter",
+  "description": "Футер меню — надпись в нижней части меню.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { MenuFooter } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_menu-menufooter--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/menufooter.md",
+  "sourcePath": "components/MenuFooter/MenuFooter.tsx",
+  "props": [
+    {
+      "name": "size",
+      "description": "Размер надписи.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/MenuFooter/MenuFooter.tsx"
+    },
+    {
+      "name": "_enableIconPadding",
+      "description": "Добавляет отступ слева для выравнивания текста по иконкам MenuItem",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/MenuFooter/MenuFooter.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер."
+    }
+  ]
+}

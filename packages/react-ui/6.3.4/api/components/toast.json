@@ -1,0 +1,56 @@
+{
+  "name": "Toast",
+  "slug": "toast",
+  "description": "Тост — это короткое немодальное уведомление о результате действия пользователя: успех, ошибка или нейтральный статус.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Toast } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_overlay-toast--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/toast.md",
+  "sourcePath": "components/Toast/Toast.tsx",
+  "props": [
+    {
+      "name": "onPush",
+      "description": "Событие появления уведомления.",
+      "type": "(notification: string, action?: Action) => void",
+      "required": false,
+      "source": "react-ui/components/Toast/Toast.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Событие закрытия уведомления.",
+      "type": "(notification: string, action?: Action) => void",
+      "required": false,
+      "source": "react-ui/components/Toast/Toast.tsx"
+    },
+    {
+      "name": "theme",
+      "description": "Переменные темы поверх значений из контекста.",
+      "type": "Partial<typeof BasicThemeClass>",
+      "required": false,
+      "source": "react-ui/components/Toast/Toast.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": []
+}

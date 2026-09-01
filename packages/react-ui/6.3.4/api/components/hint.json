@@ -1,0 +1,151 @@
+{
+  "name": "Hint",
+  "slug": "hint",
+  "description": "Краткая подсказка, которая объясняет контрол, иконку и добавляет контекста.\nВсплывает при наведении на элемент.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Hint } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_overlay-hint--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/hint.md",
+  "sourcePath": "components/Hint/Hint.tsx",
+  "props": [
+    {
+      "name": "text",
+      "description": "Текст подсказки.",
+      "type": "ReactNode",
+      "required": true,
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "maxWidth",
+      "description": "Максимальная ширина подсказки.",
+      "type": "MaxWidth<string | number>",
+      "required": false,
+      "defaultValue": "200",
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "pos",
+      "description": "Приоритетное расположение подсказки относительно текста.",
+      "type": "\"top\" | \"bottom\" | \"left\" | \"right\" | \"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\"",
+      "required": false,
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "allowedPositions",
+      "description": "Список позиций, которые может занимать подсказка. В списке обязательно должна быть позиция из пропа `pos`.",
+      "type": "(\"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\")[]",
+      "required": false,
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "manual",
+      "description": "Переводит отображение подсказки в ручной режим, где состояние контролируется значением пропа `opened`.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "opened",
+      "description": "Открывает подсказку. Работает только при `manual=true`.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "useWrapper",
+      "description": "Оборачивает вложенные элементы в `<span />`.\n\n_Примечание_: при двух и более вложенных элементах обёртка будет добавлена автоматически.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "Вызывается при наведении курсора (событие `onmouseenter`).",
+      "type": "(event: MouseEventType) => void",
+      "required": false,
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "Вызывается при уходе курсора с объекта (событие `onmouseleave`).",
+      "type": "(event: MouseEventType) => void",
+      "required": false,
+      "source": "react-ui/components/Hint/Hint.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleMaxWidth",
+      "title": "Максимальная ширина",
+      "description": "Проп `maxWidth` задаёт максимальную ширину подсказки"
+    },
+    {
+      "name": "ExamplePos",
+      "title": "Позиционирование",
+      "description": "Проп `pos` позиционирует подсказку относительно элемента.\nВозможные значения:\n+ `top`, `top center`, `top left`, `top right`;\n+ `bottom`, `bottom center`, `bottom left`, `bottom right`;\n+ `left`, `left middle`, `left top`, `left bottom`;\n+ `right`, `right middle`, `right top`, `right bottom`."
+    },
+    {
+      "name": "ExampleAllowedPositions",
+      "title": "Доступные позиции для отображения",
+      "description": "С помощью пропа `allowedPositions` можно определить список доступных позиций для отображения подсказки.\nЕсли подсказка в определенной позиции выходит за край экрана, используется следующая.\nПопробуйте пример ниже с разным положением элемента относительно краёв экрана."
+    },
+    {
+      "name": "ExampleManual",
+      "title": "Ручное управление",
+      "description": "Через проп `manual` можно управлять отображением подсказки вручную. Для этого нужно передавать значения в проп `opened`."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Всплытие без анимации",
+      "description": "Проп `disableAnimations` отключает анимацию всплывающей подсказки."
+    },
+    {
+      "name": "ExampleUseWrapper",
+      "title": "Встроенная обёртка",
+      "description": "С помощью пропа `useWrapper` можно обернуть вложенные элементы в `<span />`.\nЭто особенно полезно в двух сценариях:\n+ для правильного позиционирования двух или более вложенных объектов;\n+ для отображения подсказки у отключённых нативных элементов (аттрибут `disabled` блокирует события мыши)."
+    },
+    {
+      "name": "ExampleCustomWrapper",
+      "title": "Кастомизация: собственная обёртка",
+      "description": "Поскольку встроенная обёртка из пропа `useWrapper` — это простой `<span />` без стилей, она может работать некорректно.\nВ таких случаях стоит использовать собственную обёртку:"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "name": "Button",
+  "slug": "button",
+  "description": "Кнопка запускает действие, сценарий или позволяет перейти на другую страницу.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Button } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_button-button--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/button.md",
+  "sourcePath": "components/Button/Button.tsx",
+  "props": [
+    {
+      "name": "active",
+      "description": "Применяет к кнопке стили псевдокласса `:active`.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "align",
+      "description": "Выравнивание текста в кнопке.",
+      "type": "\"inherit\" | \"left\" | \"center\" | \"right\" | \"-moz-initial\" | \"initial\" | \"revert\" | \"revert-layer\" | \"unset\" | \"-khtml-center\" | \"-khtml-left\" | \"-khtml-right\" | \"-moz-center\" | \"-moz-left\" | \"-moz-right\" | \"-webkit-center\" | \"-webkit-left\" | \"-webkit-match-parent\" | \"-webkit-right\" | \"end\" | \"justify\" | \"match-parent\" | \"start\"",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "arrow",
+      "description": "Преобразует обычную кнопку в кнопку со стрелкой.",
+      "type": "boolean | \"left\"",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на кнопке после окончания загрузки страницы.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "borderless",
+      "description": "Убирает обводку у кнопки.\n\n**Не рекомендуем использовать, противоречит дизайн-требованиям.\n@deprecated Состояние не соответствует Контур.Гайдам, проп будет удален в 7.0.\n\nАльтернативный вариант использования — use=\"fill\" или переменную темы `btnBorderWidth`",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует кнопку и перекрашивает в серый.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит кнопку в состояние валидации \"Ошибка\".\n@deprecated Состояние не соответствует Контур.Гайдам, проп будет удален в 7.0.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "icon",
+      "description": "Добавляет иконку слева от текста кнопки.",
+      "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа от текста кнопки.",
+      "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "loading",
+      "description": "Переводит кнопку в состояние загрузки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "narrow",
+      "description": "Сужает кнопку.\n@deprecated Состояние не соответствует Контур.Гайдам, проп будет удален в 7.0.\n\nАльтернативный вариант использования — через переменные темы `btnPaddingXSmall`, `btnPaddingXMedium`, `btnPaddingXLarge`",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер кнопки.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "type",
+      "description": "HTML-атрибут `type`.",
+      "type": "any",
+      "required": false,
+      "defaultValue": "button",
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "title",
+      "description": "HTML-атрибут `title`.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "use",
+      "description": "Стиль кнопки.\n- accent — кнопка основного действия\n- outline — кнопка второстепенного действия с границами без фона\n- fill — кнопка второстепенного действия с фоном без границ\n- text — кнопка второстепенного действия без фона и обводки\n- danger — кнопка деструктивного действия\n- success — кнопка позитивного действия\n- pay — кнопка, связанная с оплатой\n\n⚠️ Deprecated-стили, будут удалены в 7.0:\n- use=\"primary\" → use=\"accent\"\n- use=\"backless\" → use=\"outline\"\n- use=\"link\" → `<Link component=\"button\">`\n- use=\"default\" → use=\"outline\" или use=\"fill\"",
+      "type": "\"link\" | \"text\" | \"fill\" | \"default\" | \"outline\" | \"accent\" | \"danger\" | \"success\" | \"pay\" | \"backless\" | \"primary\"",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит кнопку в состояние валидации \"Предупреждение\".\n@deprecated Состояние не соответствует Контур.Гайдам, проп будет удален в 7.0.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина кнопки.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "theme",
+      "description": "Объект с переменными темы.",
+      "type": "Partial<typeof BasicThemeClass>",
+      "required": false,
+      "source": "react-ui/components/Button/Button.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "component",
+      "description": "Компонент, используемый в качестве корневого узла.",
+      "type": "ButtonLinkAllowedValues",
+      "required": false,
+      "defaultValue": "button"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleStyles",
+      "title": "Стиль",
+      "description": "Проп `use` задаёт стиль кнопки. Список доступных:\n- outline — кнопка второстепенного действия с обводкой, но без заливки\n- fill — кнопка второстепенного действия с заливкой, но без обводки\n- text — кнопка второстепенного действия без заливки и обводки\n- accent — кнопка основного действия\n- danger — кнопка деструктивного действия\n- success — кнопка позитивного действия\n- pay — кнопка, связанная с оплатой\n⚠️ Deprecated-стили, будут удалены в следующих мажорных версиях:\n- use=\"primary\" → use=\"accent\"\n- use=\"backless\" → use=\"outline\"\n- use=\"link\" → &lt;Link component=\"button\"&gt;\n- use=\"default\" → use=\"outline\" для границ или use=\"fill\" для фона"
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер. По умолчанию: `'small'`."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Пропом `width` можно задать свою ширину кнопки. Может принимать как абсолютные значения — например, 150, так и относительные — например, 50%."
+    },
+    {
+      "name": "ExampleAlign",
+      "title": "Выравнивание текста",
+      "description": "Проп `align` задаёт выравнивание текста внутри кнопки."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Иконки в кнопке",
+      "description": "В кнопку можно передать иконку.\nИконка может находиться слева от текста кнопки — проп `icon`, справа — проп `rightIcon`, в обоих позициях одновременно.\nЕсли не передавать текст кнопки, будет отображаться кнопка-иконка. Для кнопки-иконки есть рекомендации по соблюдению доступности, изучите раздел <a href=\"#доступность\" target=\"-_self\"> Доступность </a>.\nПод разный размер кнопок используйте подходящие начертания и размер иконок:\n- Small — Light 16\n- Medium — Light 20\n- Large — Regular 24"
+    },
+    {
+      "name": "ExampleArrow",
+      "title": "Кнопки-стрелки",
+      "description": "Проп `arrow` создаёт кнопку со стрелкой. Рекомендуется использовать для пошаговых мастеров.\nПри указании `arrow` без значения будет добавлена кнопка со стрелкой вправо, для кнопки со стрелкой влево укажите значение `arrow=\"left\"`.\nПри изменении ширины кнопки стрелка будет оставаться прикреплена к внешнему краю кнопки, а не к тексту, как это происходит при добавлении отдельной иконки."
+    },
+    {
+      "name": "ExampleLoading",
+      "title": "Состояние загрузки",
+      "description": "Проп `loading` переводит кнопку в состояние загрузки.\nКнопка на время загрузки отключается.\nЕсли в кнопке есть иконка, на время загрузки иконка заменяется на спиннер, если иконки нет — весь контент кнопки заменяется на спиннер. Когда иконки две — заменяется только левая."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует кнопку. Кнопка меняет цвет на серый и становится недоступна для нажатия."
+    },
+    {
+      "name": "ExampleLink",
+      "title": "Кнопка-ссылка",
+      "description": "Кнопка может рендерить ссылку в качестве корневого элемента.\nПереопределить корневой элемент можно c помощью пропа `component`. Кнопка принимает все пропсы переданного компонента."
+    },
+    {
+      "name": "ExampleTheme",
+      "title": "Кастомизация: брендовая кнопка через переменные темы",
+      "description": "Проп `theme` позволяет кастомизировать кнопку через свойства темы. Заданные переменные будут объединены с темой из `<ThemeContext>`.\nОбщие переменные темы и переменные для кнопки (с префиксом `btn`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_information-themeplayground--docs) ."
+    },
+    {
+      "name": "ExampleHoverColor",
+      "title": "Кастомизация: смена цвета при наведении",
+      "description": ""
+    }
+  ]
+}

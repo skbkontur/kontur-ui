@@ -1,0 +1,298 @@
+{
+  "name": "FileUploader",
+  "slug": "fileuploader",
+  "description": "Контрол для выбора пользователем файла на компьютере и отображения статуса его отправки на сервер.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { FileUploader } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_input-data-fileuploader--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/fileuploader.md",
+  "sourcePath": "components/FileUploader/FileUploader.tsx",
+  "props": [
+    {
+      "name": "error",
+      "description": "Состояние ошибки всего контрола",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Состояние предупреждения всего контрола.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "validationTooltipPosition",
+      "description": "Расположение тултипа с текстом валидации файла.",
+      "type": "\"top\" | \"bottom\" | \"left\" | \"right\" | \"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\" | \"middle center\" | \"middle left\" | \"middle right\"",
+      "required": false,
+      "defaultValue": "'top left'",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "withValidationTooltip",
+      "description": "Включает отображение текста валидации файла во всплывающей подсказке вместо строки рядом с именем.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "withWarningIcon",
+      "description": "Включает отображение иконки предупреждения (восклицательный знак) при статусе предупреждения у файла.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина контрола.",
+      "type": "Width<string | number>",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер контрола и вложенных элементов.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "hideFiles",
+      "description": "Скрывает встроенный список файлов.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "uploaderText",
+      "description": "Текст ссылки выбора файла.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "\"Выберите файл\"",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "uploaderIcon",
+      "description": "Иконка в кнопке загрузки.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "view",
+      "description": "Режим отображения списка файлов: строка (`row`) или плитка (`tile`).",
+      "type": "\"row\" | \"tile\"",
+      "required": false,
+      "defaultValue": "row",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "validationSummary",
+      "description": "Режим блока-саммари по ошибкам и предупреждениям:\n- `auto` — от порога `validationSummaryStart`,\n- `enabled` / `disabled` — всегда или никогда.",
+      "type": "\"disabled\" | \"auto\" | \"enabled\"",
+      "required": false,
+      "defaultValue": "auto",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "validationSummaryStart",
+      "description": "Порог числа файлов для показа саммари при `validationSummary=\"auto\"`.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "5",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "uploadButtonPosition",
+      "description": "Расположение кнопки загрузки относительно списка: в начале или в конце.",
+      "type": "\"end\" | \"start\"",
+      "required": false,
+      "defaultValue": "start",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "request",
+      "description": "Включает асинхронный режим загрузки файлов.\nОтклонённый промис помечает файл(ы) ошибкой загрузки.",
+      "type": "(file: FileUploaderAttachedFile) => Promise<void>",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "onRequestSuccess",
+      "description": "Колбэк после успешного завершения `request` для файла.",
+      "type": "(fileId: string) => void",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "onRequestError",
+      "description": "Колбэк после ошибки `request` для файла.",
+      "type": "(fileId: string) => void",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "validateBeforeUpload",
+      "description": "Проверка файла после выбора и до `request`: строка или `{ message, status }` — ошибка/предупреждение. Пустой результат — файл проходит.",
+      "type": "(file: FileUploaderAttachedFile) => Promise<string | { message: string; status: FileUploaderFileStatus; }>",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "renderFile",
+      "description": "Задаёт метод отрисовки файлов.",
+      "type": "(props: FileUploaderFileProps) => ReactNode",
+      "required": false,
+      "defaultValue": "(props: FileUploaderFileProps) => <FileUploaderFile {...props} />",
+      "source": "react-ui/components/FileUploader/FileUploader.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "initialFiles",
+      "description": "Файлы при первом рендере (в одиночном режиме берётся только первый).",
+      "type": "File[]",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploaderControlProvider.tsx"
+    },
+    {
+      "name": "onAttach",
+      "description": "Вызывается при добавлении файлов через контрол (перед обновлением состояния списка).",
+      "type": "(files: FileUploaderAttachedFile[]) => void",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploaderControlProvider.tsx"
+    },
+    {
+      "name": "onRemove",
+      "description": "Вызывается при удалении файла.",
+      "type": "(fileId: string) => void",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploaderControlProvider.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Вызывается при любом изменении массива прикреплённых файлов.",
+      "type": "(files: FileUploaderAttachedFile[]) => void",
+      "required": false,
+      "source": "react-ui/components/FileUploader/FileUploaderControlProvider.tsx"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер контрола. По умолчанию `\"small\"`."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину контрола."
+    },
+    {
+      "name": "ExampleMultiple",
+      "title": "Мультивыбор",
+      "description": "Проп `multiple` включает мультивыбор, который позволяет выбрать несколько файлов за одно действие и отобразить список вложений."
+    },
+    {
+      "name": "ExampleViewTile",
+      "title": "Плиточный вид",
+      "description": "Проп `view` включает плиточный вид. По умолчанию `\"list\"`."
+    },
+    {
+      "name": "ExampleUploadButtonPosition",
+      "title": "Расположение кнопки загрузки",
+      "description": "Проп `uploadButtonPosition` задаёт расположение кнопки загрузки. По умолчанию `\"start\"`."
+    },
+    {
+      "name": "ExampleUploaderText",
+      "title": "Текст кнопки выбора",
+      "description": "Проп `uploaderText` задаёт текст на кнопке выбора. По умолчанию `\"Выберите файл\"`."
+    },
+    {
+      "name": "ExampleInitialFiles",
+      "title": "Начальные файлы",
+      "description": "`initialFiles` — файлы, которые будут показаны при первом рендере компонента, в одиночном режиме используется только первый файл."
+    },
+    {
+      "name": "ExampleAccept",
+      "title": "Ограничение типов файлов",
+      "description": "Проп `accept` ограничивает типы файлов для загрузки. Принимает значения HTML-атрибута [accept](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept)."
+    },
+    {
+      "name": "ExampleValidationList",
+      "title": "Валидация файлов перед отправкой",
+      "description": "Проп `validateBeforeUpload` задаёт сообщения валидации файлов перед отправкой."
+    },
+    {
+      "name": "ExampleValidationTooltip",
+      "title": "Сообщение валидации в тултипе",
+      "description": "Проп `withValidationTooltip` задаёт отображение текста валидации файла во всплывающей подсказке."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит поле в состояние валидации «Ошибка»."
+    },
+    {
+      "name": "ExampleValidationSummary",
+      "title": "Результат валидации загруженных файлов",
+      "description": "Пропсы `validationSummary`, `validationSummaryStart` управляют показом блока с результатом валидации загруженных файлов."
+    },
+    {
+      "name": "ExampleAsyncRequest",
+      "title": "Асинхронный режим",
+      "description": "Проп `request` включает асинхронны режим. Прикреплённые файлы отправляются на сервер асинхронно сразу после выбора.\nВыполненный промис считается успешной загрузкой файла, отклонённый — ошибкой."
+    },
+    {
+      "name": "ExampleValidationRequestError",
+      "title": "Обработка результата загрузки в асинхронном режиме",
+      "description": "Пропсы `onRequestError`, `onRequestSuccess` позволяют управлять состоянием формы."
+    },
+    {
+      "name": "ExampleRenderFile",
+      "title": "Собственная отрисовка файла",
+      "description": "Отрисовку строк файлов можно настраивать — менять разметку и параметры по умолчанию.\nПодробнее на странице [FileUploaderFile](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/input-data-fileuploader-fileuploaderfile--docs)."
+    },
+    {
+      "name": "ExampleManualList",
+      "title": "Скрытие списка файлов",
+      "description": "Проп `hideFiles` позволяет скрыть список файлов. Полезно для реализации своего списка файлов."
+    },
+    {
+      "name": "ExampleCustomizationTheme",
+      "title": "Кастомизация: тема",
+      "description": "Переменные темы `fileUploaderLinkColor`, `fileUploaderBorderRadius`, `fileUploaderBorderStyle`."
+    }
+  ]
+}

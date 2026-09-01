@@ -1,0 +1,107 @@
+{
+  "name": "Checkbox",
+  "slug": "checkbox",
+  "description": "Чекбокс используется для управления параметром с двумя состояниями.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Checkbox } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_input-data-checkbox--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/checkbox.md",
+  "sourcePath": "components/Checkbox/Checkbox.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "error",
+      "description": "Переводит контрол в состояние ошибки.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "warning",
+      "description": "Переводит контрол в состояние предупреждения.",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "size",
+      "description": "Размер чекбокса.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения value.",
+      "type": "(value: boolean) => void",
+      "required": false
+    },
+    {
+      "name": "initialIndeterminate",
+      "description": "Устанавливает начальное [неопределенное состояние чекбокса](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#attr-indeterminate).",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "comment",
+      "description": "Задаёт второстепенный пояснительный текст под основным текстом чекбокса.",
+      "type": "ReactNode",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример чекбокса",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер чекбокса."
+    },
+    {
+      "name": "ExampleComment",
+      "title": "Поясняющий текст",
+      "description": "Проп `comment` задаёт второстепенный пояснительный текст под основным текстом чекбокса."
+    },
+    {
+      "name": "ExampleState",
+      "title": "Cостояния ошибки и предупреждения",
+      "description": "Проп `error` переводит чекбокс в состояние ошибки, а `warning` — в состояние предупреждения."
+    },
+    {
+      "name": "ExampleFocusBlur",
+      "title": "Программная установка фокуса и снятие фокуса",
+      "description": "Методы `focus` и `blur` программно управляют состоянием фокуса на чекбоксе."
+    },
+    {
+      "name": "ExampleIndeterminate",
+      "title": "Неопределенное состояние",
+      "description": "Чекбокс может находится в неопределённом состоянии.\nЭто состояние полностью копирует поведение состояния `indeterminate` ([подробнее](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)) из HTML.\nВлияет только на внешний вид и не влияет на состояние `checked`."
+    },
+    {
+      "name": "ExampleIndeterminateStory",
+      "title": "Пример использования неопределённого состояния чекбокса",
+      "description": ""
+    }
+  ]
+}

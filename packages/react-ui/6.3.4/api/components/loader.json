@@ -1,0 +1,110 @@
+{
+  "name": "Loader",
+  "slug": "loader",
+  "description": "С помощью лоадера можно отобразить процесс выполнения задачи.\nЛоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране.\nКогда происходит загрузка, поверх этого компонента или контента будет отображаться [Спиннер](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/spinner.md).",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Loader } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_display-data-loader--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/loader.md",
+  "sourcePath": "components/Loader/Loader.tsx",
+  "props": [
+    {
+      "name": "active",
+      "description": "Показывает лоадер.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "caption",
+      "description": "Подпись под спиннером.",
+      "type": "ReactNode",
+      "required": false,
+      "defaultValue": "\"\"",
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "component",
+      "description": "Задает компонент, заменяющий спиннер.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер спиннера и текста.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small",
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "type",
+      "description": "Размер спиннера и текста.\n@deprecated Начиная с версии `6.1`, тип и проп устарели в пользу нового `SizeContext`. Они будут удалены в `7.0`.\n@see {@link size }",
+      "type": "\"big\" | \"mini\" | \"normal\"",
+      "required": false,
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "delayBeforeSpinnerShow",
+      "description": "Время в миллисекундах для показа вуали без спиннера.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "isTestEnv ? 0 : 300",
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "minimalDelayBeforeSpinnerHide",
+      "description": "Минимальное время в миллисекундах для показа спиннера.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "isTestEnv ? 0 : 1000",
+      "source": "react-ui/components/Loader/Loader.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleCaption",
+      "title": "Подпись лоадера",
+      "description": "Проп `caption` задаёт подпись для лоадера. Примеры наиболее подходящих формулировок перечислены в [Гайде](https://guides.kontur.ru/components/progress-indicators/spinner/)."
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размеры",
+      "description": "Проп `type` задаёт размер лоадера.\nДоступные размеры:\n- big — для использования в рамках всей страницы.\n- normal (по умолчанию) — для показа в модальных окнах и компонентах среднего размера.\n- mini — для встраивания в строку или небольшой контрол."
+    },
+    {
+      "name": "ExampleTime",
+      "title": "Тайминги",
+      "description": "Для того чтобы спиннер не мигал, применяются 2 пропса:\n- `delayBeforeSpinnerShow` — задержка перед показом лоадера (по умолчанию 300 миллисекунд)\n- `minimalDelayBeforeSpinnerHide` — минимальное время показа лоадера (по умолчанию 1 секунда)"
+    }
+  ]
+}

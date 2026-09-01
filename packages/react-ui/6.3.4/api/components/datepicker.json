@@ -1,0 +1,261 @@
+{
+  "name": "DatePicker",
+  "slug": "datepicker",
+  "description": "Поле с датой помогает вводить дату с клавиатуры или выбирать её с помощью мыши.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { DatePicker } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_date-components-datepicker--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/datepicker.md",
+  "sourcePath": "components/DatePicker/DatePicker.tsx",
+  "props": [
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на поле с датой после окончания загрузки страницы.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует поле с датой. Поле становится недоступно для редактирования.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "enableTodayLink",
+      "description": "Отображает в календаре кнопку «Сегодня», которая меняет выбранное значение на текущую дату.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Меняет визуальное отображение поля на состояние «ошибка».",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "menuPos",
+      "description": "Расположение календаря — над или под полем.",
+      "type": "\"top\" | \"bottom\"",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание выпадающего окна с календарём.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля с датой.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Значение поля в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Меняет визуальное отображение поля на состояние «предупреждение».",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина поля с датой.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "Задает функцию, которая вызывается при потере датапикером фокуса.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Задает функцию, вызывающуюся при изменении value.\n@param value - строка в формате `dd.mm.yyyy`.",
+      "type": "(value: string) => void",
+      "required": true,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onFocus",
+      "description": "Задает функцию, которая вызывается при получении датапикером фокуса.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onKeyDown",
+      "description": "Задает функцию, которая вызывается при нажатии кнопки на клавиатуре.",
+      "type": "(e: KeyboardEvent<any>) => void",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "Задает функцию, которая вызывается при наведении мышкой (событие `onmouseenter`). См разницу с onMouseOver в [документации](https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave)",
+      "type": "(e: MouseEvent<any, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "Задает функцию, которая вызывается при уходе мышки с объекта (событие `onmouseleave`).",
+      "type": "(e: MouseEvent<any, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "onMouseOver",
+      "description": "Задает функцию, которая вызывается при наведении мышкой (событие `onmouseover`).",
+      "type": "(e: MouseEvent<any, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "useMobileNativeDatePicker",
+      "description": "Позволяет использовать на мобильных устройствах нативный календарь для выбора дат.\nНа iOS нативный календарь не умеет работать с minDate и maxDate.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DatePicker/DatePicker.tsx"
+    },
+    {
+      "name": "minDate",
+      "description": "Минимальная дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "01.01.1900",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "maxDate",
+      "description": "Максимальная дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "31.12.2099",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "isHoliday",
+      "description": "Определение праздничных дней.\n@param day - строка в формате `dd.mm.yyyy`.\n@param isWeekend - флаг выходного (суббота или воскресенье).\n@returns `true` для выходного или `false` для рабочего дня.",
+      "type": "(day: string, isWeekend: boolean) => boolean",
+      "required": false,
+      "defaultValue": "(_day, isWeekend) => isWeekend.",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "renderDay",
+      "description": "Отрисовка дат в календаре.\n@param props - параметры дня.\n@returns элемент, который отрисовывает контент числа месяца.",
+      "type": "(props: CalendarDayProps) => ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "defaultValue": "(props: CalendarDayProps) => <CalendarDay {...props} />",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "onMonthChange",
+      "description": "Событие изменения месяца.\n@param changeInfo - информация об изменении отображаемого месяца, где\n`month: number` - номер текущего отображаемого месяца от 1 до 12,\n`year: number` - отображаемый год.",
+      "type": "(changeInfo: CalendarMonthChangeInfo) => void",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля с датой."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину поля с датой."
+    },
+    {
+      "name": "ExampleEnableTodayLink",
+      "title": "Кнопка «Сегодня»",
+      "description": "Проп `enableTodayLink` добавляет в календарь кнопку «Сегодня», которая меняет выбранное значение на текущую дату."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Расположение календаря",
+      "description": "Проп `menuPos` фиксирует расположение выпадающего окна с календарём. Оно может быть под полем — `\"bottom\"` или над ним — `\"top\"`.\nПо умолчанию календарь отображается под полем, а если не хватает места, то динамически меняет расположение и показывается над полем."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание календаря",
+      "description": "Проп `menuAlign` выравнивает выпадающее окно с календарём. Оно может быть прикреплено к левому краю — `\"left\"` или к правому — `\"right\"`."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` переводит поле в состояние блокировки. Поле визуально приглушается и становится недоступно для редактирования."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит поле в состояние ошибки."
+    },
+    {
+      "name": "ExampleWarning",
+      "title": "Состояние предупреждения",
+      "description": "Проп `warning` переводит поле в состояние предупреждения."
+    },
+    {
+      "name": "ExampleIsHoliday",
+      "title": "Выходные и праздничные дни",
+      "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
+    },
+    {
+      "name": "ExampleDatePickerFormatting",
+      "title": "Форматирование даты",
+      "description": "В примере показано, как менять формат отображения даты в рантайме: порядок компонентов день/месяц/год и разделитель между ними."
+    },
+    {
+      "name": "ExampleCustomDayRender",
+      "title": "Кастомизация: рендер дня",
+      "description": "Вы можете кастомизировать части поля с датой. В примере ниже задан кастомный вид для дня календаря. Ещё примеры кастомизации смотрите в компоненте [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/calendar.md)."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+# @skbkontur/react-ui
+
+> React component library by SKB Kontur with components, validation tools, and design-system utilities.
+
+> Version: 6.3.4 | Homepage: https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4 | npm: @skbkontur/react-ui
+
+## Documentation bundles
+
+- [Full documentation](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/llms-full.txt): All guides, component APIs, and examples in one file.
+- [Components bundle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/llms-components.txt): Component APIs and examples without the guides.
+- [Guides bundle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/llms-guides.txt): Cross-component setup, migration, and usage guides.
+- [Component API manifest](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/api/components.json): Structured JSON index of public components and props.
+- [Sitemap](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/sitemap.xml): Crawlable index of the published documentation.
+
+## Guides
+
+- [DATATIDS](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/datatids.md): DATATIDS documentation.
+- [FEATUREFLAGSCONTEXT](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/featureflagscontext.md): FEATUREFLAGSCONTEXT documentation.
+- [FAQ](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/faq.md): FAQ documentation.
+- [StrictMode](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/strictmode.md): StrictMode documentation.
+- [LOCALECONTEXT](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/localecontext.md): LOCALECONTEXT documentation.
+- [Migration](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/migration.md): Migration documentation.
+- [Responsive](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/responsive.md): Responsive documentation.
+- [SSR](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/ssr.md): SSR documentation.
+- [SizeControls](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/sizecontrols.md): SizeControls documentation.
+- [Theme](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/theme.md): Theme documentation.
+- [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/guides/themeplayground.md): ThemePlayground documentation.
+
+## Components
+
+- [Autocomplete](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/autocomplete.md): Автокомплит — поле ввода с выпадающим списком подсказок. Подсказки отображаются пользователю, когда он начинает вводить значение в поле.
+- [Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/button.md): Кнопка запускает действие, сценарий или позволяет перейти на другую страницу.
+- [Calendar](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/calendar.md): Блок календаря для выбора даты с помощью мыши. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/datepicker.md).
+- [Center](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/center.md): Контейнер, который центрирует элементы внутри себя. Выравнивание задаётся пропом `align`: слева, по центру или справа.
+- [Checkbox](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/checkbox.md): Чекбокс используется для управления параметром с двумя состояниями.
+- [ComboBox](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/combobox.md): Комбобокс — поле ввода с выпадающим списком подсказок, из которых пользователь может выбрать нужное. Открыть выпадающий список можно ещё до начала ввода значения, нажав на поле.
+- [CurrencyInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/currencyinput.md): Поле для денежных сумм.
+- [CurrencyLabel](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/currencylabel.md): Подпись для денежных сумм и других числовых значений.
+- [DateInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/dateinput.md): Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/datepicker.md).
+- [DatePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/datepicker.md): Поле с датой помогает вводить дату с клавиатуры или выбирать её с помощью мыши.
+- [DateRangePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/daterangepicker.md): Поле выбора периода дат.
+- [Dropdown](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/dropdown.md): Кнопка-меню содержит несколько команд, объединенных по смыслу..
+- [DropdownMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/dropdownmenu.md): Раскрывающееся меню. Раскрывается по клику на переданный в `caption` элемент. Поддерживает настройку `header`, `footer`, позиций открытия `positions` и другие настройки внешнего ви
+- [FileUploader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/fileuploader.md): Контрол для выбора пользователем файла на компьютере и отображения статуса его отправки на сервер.
+- [FxInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/fxinput.md): В автополе можно вывести автоматически рассчитанное цифровое значение. В него можно передавать итог любого вычисления, например, сумму других полей, процент или более сложную функц
+- [Gapped](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/gapped.md): Контейнер, с помощью которого можно располагать элементы горизонтально или вертикально с нужным расстоянием между элементами. По умолчанию располагает элементы горизонтально в одну
+- [GlobalLoader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/globalloader.md): Универсальный индикатор обмена данными с сервером. Он появляется у верхней границы экрана и выглядит как тоненькая полоска, окрашенная в фирменный цвет продукта. Глобальный лоадер 
+- [Group](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/group.md): Контейнер используется для создания логически сгруппированных элементов, выровненных по горизонтали.
+- [Hint](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/hint.md): Краткая подсказка, которая объясняет контрол, иконку и добавляет контекста. Всплывает при наведении на элемент.
+- [Input](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/input.md): Поле ввода позволяет ввести или отредактировать значение.
+- [Kebab](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/kebab.md): Кебаб-меню содержит действия с объектом.
+- [Link](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/link.md): С помощью ссылки пользователь может перейти на другую страницу, раздел приложения или внешний URL.
+- [Loader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/loader.md): С помощью лоадера можно отобразить процесс выполнения задачи. Лоадер принимает в качестве дочернего элемента другой компонент или контент, который будет показан на экране. Когда пр
+- [MaskedInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/maskedinput.md): Поле ввода, которое ограничивает формат вводимого значения по заданной маске. Такое поле облегчает пользователю ввод и снижает количество ошибок. По умолчанию используется исправле
+- [MenuFooter](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/menufooter.md): Футер меню — надпись в нижней части меню.
+- [MenuHeader](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/menuheader.md): Заголовок меню используется для того, чтобы разграничивать элементы меню на категории.
+- [MenuItem](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/menuitem.md): Пункт меню `MenuItem` — интерактивный элемент выполнения действий или навигации.
+- [MenuSeparator](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/menuseparator.md): Разделитель между элементами меню.
+- [MiniModal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/minimodal.md): Модальное диалоговое окно, которое предполагает обязательный отклик пользователя по одному из доступных действий. Обёртка над Modal.
+- [Modal](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/modal.md): Модальное окно — это эмуляция диалогового окна браузера, оно появляется поверх страницы в ответ на действия пользователя и блокирует доступ к основному содержимому страницы.
+- [Paging](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/paging.md): Постраничная навигация `Paging` (пейджинг или пагинация) — способ представления большого количества однородной информации, когда контент разбивается на страницы.
+- [PasswordInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/passwordinput.md): Однострочное поле для ввода пароля, в котором символы заменяются на точки.
+- [Radio](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/radio.md): Радиокнопка позволяет выбрать одно значение из нескольких. Подходит при небольшом количестве вариантов — 2–5. Для создания группы радиокнопок используйте специальный контейнер — ко
+- [RadioGroup](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/radiogroup.md): Группирует радиокнопки. Контейнер для компонента [Radio](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/radio.md).
+- [ResponsiveLayout](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/responsivelayout.md): `ResponsiveLayout` определяет текущий режим.
+- [ScrollContainer](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/scrollcontainer.md): Контейнер с кастомными полосами прокрутки при скролле.
+- [Select](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/select.md): Раскрывающийся список позволяет выбрать значение из заранее известного набора вариантов.
+- [SidePage](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/sidepage.md): Сайдпейдж — это модальное окно, которое открывается поверх основной страницы и занимает всю высоту окна браузера. Составной компонент, включает в себя: - «шапку» [SidePage.Header](
+- [SingleToast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/singletoast.md): Короткое немодальное уведомление, которое сообщает пользователю о результате выполнения его команды. Результат может быть положительным, отрицательным или нейтральным. Компонент по
+- [Spinner](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/spinner.md): Зацикленный индикатор, не отображающий прогресс выполнения задачи
+- [Sticky](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/sticky.md): `Sticky` позволяет закреплять элемент интерфейса в определенной позиции на экране при прокрутке страницы. Это полезно для создания «прилипающих» элементов, которые должны оставатьс
+- [Switcher](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/switcher.md): Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/radio
+- [Tabs](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/tabs.md): Табы группируют контент и помогают в навигации.
+- [Textarea](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/textarea.md): Многострочное поле — это поле ввода, в котором текст отображается в несколько строк.
+- [TimePicker](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/timepicker.md): Поле с временем помогает пользователю быстро и удобно указать время в правильном формате. В поле можно ввести время с клавиатуры либо выбрать из выпадающего списка, передав массив 
+- [Toast](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/toast.md): Тост — это короткое немодальное уведомление о результате действия пользователя: успех, ошибка или нейтральный статус.
+- [Toggle](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/toggle.md): Тогл переключает состояния. Например, включает или отключает уведомления в настройках. Состоит из надписи и переключателя.
+- [TokenInput](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/tokeninput.md): Поле с токенами — это поле ввода со списком подсказок. Значения в поле отображаются в виде отдельных токенов.
+- [Tooltip](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/tooltip.md): Подсказка, которая объясняет состояние контрола или даёт контекстную справку. Открывается по клику, фокусу на элемент или наведению. Может содержать изображения, кнопки, ссылки и п
+- [TooltipMenu](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/tooltipmenu.md): Выпадающее меню в тултипе `TooltipMenu`. Раскрывается по клику на переданный в `caption` элемент. Поддерживает настройку `header`, `footer`, позиций открытия `positions` и другие н
+
+## Optional
+
+- [Storybook](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4): Interactive playground with rendered examples.

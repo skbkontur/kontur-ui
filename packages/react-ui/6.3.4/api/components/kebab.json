@@ -1,0 +1,155 @@
+{
+  "name": "Kebab",
+  "slug": "kebab",
+  "description": "Кебаб-меню содержит действия с объектом.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Kebab } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_menu-kebab--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/kebab.md",
+  "sourcePath": "components/Kebab/Kebab.tsx",
+  "props": [
+    {
+      "name": "size",
+      "description": "Размер кнопки.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/Kebab/Kebab.tsx"
+    },
+    {
+      "name": "positions",
+      "description": "Список доступных позиций выпадающего меню относительно кнопки.",
+      "type": "(\"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\" | \"middle center\" | \"middle left\" | \"middle right\")[]",
+      "required": false,
+      "defaultValue": "['bottom left', 'bottom right', 'top left', 'top right']",
+      "source": "react-ui/components/Kebab/Kebab.tsx"
+    },
+    {
+      "name": "menuMaxHeight",
+      "description": "Максимальная высота меню.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/Kebab/Kebab.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует кнопку.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Kebab/Kebab.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию выпадающего меню.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/Kebab/Kebab.tsx"
+    },
+    {
+      "name": "icon",
+      "description": "Заменяет иконку кебаба у кнопки.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/Kebab/Kebab.tsx"
+    },
+    {
+      "name": "preventIconsOffset",
+      "description": "Отключает выравнивание текста пунктов меню относительно иконок в других пунктах.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/internal/Menu/Menu.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Действие при закрытии меню.",
+      "type": "() => void",
+      "required": false,
+      "defaultValue": "() => undefined",
+      "source": "react-ui/internal/PopupMenu/PopupMenu.tsx"
+    },
+    {
+      "name": "onOpen",
+      "description": "Действие при открытии меню.",
+      "type": "() => void",
+      "required": false,
+      "defaultValue": "() => undefined",
+      "source": "react-ui/internal/PopupMenu/PopupMenu.tsx"
+    },
+    {
+      "name": "popupMenuId",
+      "description": "`id` выпадающего меню.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/PopupMenu/PopupMenu.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер кнопки. По умолчанию: `'small'`."
+    },
+    {
+      "name": "ExamplePositions",
+      "title": "Позиционирование",
+      "description": "Проп `positions` задаёт список доступных позиций выпадающего меню относительно кнопки.\nПо умолчанию: `['bottom left', 'bottom right', 'top left', 'top right']`.\nЕсли во всех позициях в списке выпадающее меню вылезает за пределы `viewport`, будет использована первая."
+    },
+    {
+      "name": "ExampleMaxHeight",
+      "title": "Максимальная высота меню",
+      "description": "Пропом `menuMaxHeight` можно задать максимальную высоту выпадающего меню в пикселях."
+    },
+    {
+      "name": "ExampleIconsOffset",
+      "title": "Выравнивание пунктов меню",
+      "description": "Проп `preventIconsOffset` отключает выравнивание текста пунктов меню относительно иконок в других пунктах."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Кастомная иконка у кнопки",
+      "description": "Пропом `icon` можно задать свою иконку кнопке."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует кнопку, делая её недоступной для нажатия."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Отключение анимации",
+      "description": "Проп `disableAnimations` отключает анимацию выпадающего меню."
+    },
+    {
+      "name": "ExampleOnOpenAndClose",
+      "title": "События открытия и закрытия",
+      "description": "Коллбеки `onOpen` и `onClose` вызываются при открытии и закрытии кебаб-меню."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Center",
+  "slug": "center",
+  "description": "Контейнер, который центрирует элементы внутри себя.\n\nВыравнивание задаётся пропом `align`: слева, по центру или справа.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Center } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_layout-center--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/center.md",
+  "sourcePath": "components/Center/Center.tsx",
+  "props": [
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "align",
+      "description": "Выравнивает контент по горизонтали: слева, по центру или справа.",
+      "type": "\"left\" | \"center\" | \"right\"",
+      "required": false,
+      "defaultValue": "center"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Пример использования",
+      "description": ""
+    }
+  ]
+}

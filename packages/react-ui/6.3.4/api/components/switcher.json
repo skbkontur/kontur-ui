@@ -1,0 +1,139 @@
+{
+  "name": "Switcher",
+  "slug": "switcher",
+  "description": "Переключатель используется для выбора одного значения из нескольких. Похож на [группу радиокнопок](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/radiogroup.md), но более компактный.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Switcher } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_button-switcher--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/switcher.md",
+  "sourcePath": "components/Switcher/Switcher.tsx",
+  "props": [
+    {
+      "name": "items",
+      "description": "Задаёт список элементов в свитчере. Это массив строк или объектов типа `{ label: string, value: string, buttonProps?: Partial<ButtonProps> }`",
+      "type": "SwitcherItems[]",
+      "required": true,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Значение свитчера.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения свитчера (value).",
+      "type": "(value: string) => void",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "caption",
+      "description": "Подпись около свитчера.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит свитчер в состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер свитчера.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина свитчера. С этим пропом элементы внутри автоматически равномерно растянутся.",
+      "type": "Width<string | number>",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует свитчер.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "renderItem",
+      "description": "Задаёт функцию отрисовки элемента. Параметр `renderDefault` - это встроенная дефолтная функция отрисовки элемента, которую можно вызывать в `renderItem`.",
+      "type": "(label: string, value: string, buttonProps: ButtonProps, renderDefault: () => ReactNode, ariaLabel?: string) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/Switcher/Switcher.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер свитчера."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину свитчера."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует свитчер."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит свитчер в состояние ошибки."
+    },
+    {
+      "name": "ExampleWithItemsAsObjects",
+      "title": "items в виде объектов",
+      "description": "В примере задан случай, когда `items` принимает объект типа `{ label: string, value: string }`."
+    },
+    {
+      "name": "ExampleWithCustomButtonProps",
+      "title": "Кастомизация кнопки",
+      "description": "Пример с `items` с полем `buttonProps`, который позволяет кастомизировать кнопку."
+    },
+    {
+      "name": "ExampleWithCustomRenderItem",
+      "title": "Кастомизация items",
+      "description": "Пример с методом `renderItem` для кастомизации `items`."
+    }
+  ]
+}

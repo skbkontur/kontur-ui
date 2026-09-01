@@ -1,0 +1,116 @@
+{
+  "name": "GlobalLoader",
+  "slug": "globalloader",
+  "description": "Универсальный индикатор обмена данными с сервером.\nОн появляется у верхней границы экрана и выглядит как тоненькая полоска, окрашенная в фирменный цвет продукта.\n\nГлобальный лоадер может быть только один в приложении. Поэтому каждый новый экземпляр компонента заменяет предыдущий экземпляр и начинает перехватывать статические методы.\n\nПредполагается монтирование компонента в единственном месте. И управление им через статические методы, либо через пропсы.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { GlobalLoader } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_display-data-globalloader--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/globalloader.md",
+  "sourcePath": "components/GlobalLoader/GlobalLoader.tsx",
+  "props": [
+    {
+      "name": "delayBeforeShow",
+      "description": "Задержка до появления лоадера в миллисекундах.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "1000",
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "delayBeforeHide",
+      "description": "Задержка до исчезновения лоадера в миллисекундах.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "1000",
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "expectedResponseTime",
+      "description": "Ожидаемое время(ms) ответа сервера.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "1000",
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "rejected",
+      "description": "Показывать лоадер в виде бегающей полоски.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "active",
+      "description": "Показывать лоадер.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключить анимацию.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "onStart",
+      "description": "Событие после появления лоадера.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "onDone",
+      "description": "Событие после исчезновения лоадера.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "onReject",
+      "description": "Событие после вызова reject.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    },
+    {
+      "name": "onAccept",
+      "description": "Событие после вызова accept.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/GlobalLoader/GlobalLoader.tsx"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleStaticMethods",
+      "title": "Cтатические методы",
+      "description": "У компонента есть набор статических методов: `GlobalLoader.start()`, `GlobalLoader.done()`, `GlobalLoader.reject()`, `GlobalLoader.accept()`.\nЗапустить лоадер `\"start\"` — активирует анимацию загрузки.\nЗавершить `\"done\"` — переведёт глобальный лоадер в успешное завершённое состояние.\nЭмулировать проблему `\"reject\"` — переведёт глобальный лоадер в состояние с ошибкой.\nВернуться в состояние загрузки `\"accept\"` — запустит глобальный лоадер с момента остановки при ошибке."
+    },
+    {
+      "name": "ExampleMount",
+      "title": "Монтирование",
+      "description": "Вместо статических методов можно воспользоваться управлением через пропсы."
+    },
+    {
+      "name": "ExampleInModal",
+      "title": "Статические методы в модальном окне",
+      "description": "Глобальный лоадер можно запустить в модальном окне. Тогда он перекроет вуаль."
+    },
+    {
+      "name": "ExampleCustomizeColor",
+      "title": "Кастомизация: изменение цвета индикатора загрузки",
+      "description": "Через переменные темы можно изменять параметры глобального лоадера. Например, цвет индикатора загрузки."
+    }
+  ]
+}

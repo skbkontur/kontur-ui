@@ -1,0 +1,157 @@
+{
+  "name": "Calendar",
+  "slug": "calendar",
+  "description": "Блок календаря для выбора даты с помощью мыши. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/datepicker.md).",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Calendar } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_date-components-calendar--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/calendar.md",
+  "sourcePath": "components/Calendar/Calendar.tsx",
+  "props": [
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения value.\n@param date - строка в формате `dd.mm.yyyy`.",
+      "type": "(date: string) => void",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Текущая дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": true,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "maxDate",
+      "description": "Максимальная дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "Calendar.formatDate(MAX_DATE, MAX_MONTH, MAX_YEAR)",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "minDate",
+      "description": "Минимальная дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "Calendar.formatDate(MIN_DATE, MIN_MONTH, MIN_YEAR)",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "periodStartDate",
+      "description": "Начальная дата периода в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "periodEndDate",
+      "description": "Конечная дата периода в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "isHoliday",
+      "description": "Определение праздничных дней.\n@param day - строка в формате `dd.mm.yyyy`.\n@param isWeekend - флаг выходного (суббота или воскресенье).\n@returns `true` для выходного или `false` для рабочего дня.",
+      "type": "(day: string, isWeekend: boolean) => boolean",
+      "required": false,
+      "defaultValue": "(_day: string, isWeekend: boolean) => isWeekend",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "initialMonth",
+      "description": "Начальный месяц.",
+      "type": "9 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 10 | 11 | 12",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "initialYear",
+      "description": "Начальный год.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "renderDay",
+      "description": "Отрисовка дат в календаре.\n@param props - параметры дня.\n@returns элемент, который отрисовывает контент числа месяца.",
+      "type": "(props: CalendarDayProps) => ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "defaultValue": "(props: CalendarDayProps) => <CalendarDay {...props} />",
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "onMonthChange",
+      "description": "Событие изменения месяца.\n@param changeInfo - информация об изменении отображаемого месяца, где\n`month: number` - номер текущего отображаемого месяца от 1 до 12,\n`year: number` - отображаемый год.",
+      "type": "(changeInfo: CalendarMonthChangeInfo) => void",
+      "required": false,
+      "source": "react-ui/components/Calendar/Calendar.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleMinMaxDate",
+      "title": "Минимальная и максимальная даты в календаре",
+      "description": "С помощью пропсов `minDate` и `maxDate` можно задавать минимально и максимально возможную дату для выбора в календаре."
+    },
+    {
+      "name": "ExampleInitialMonthYear",
+      "title": "Начальные год и месяц",
+      "description": "С помощью пропсов `initialMonth` и `initialYear` можно изменить отображение начального года и месяца. Вне зависимости от того, какая дата выбрана в календаре в данный момент."
+    },
+    {
+      "name": "ExampleIsHoliday",
+      "title": "Выходные и праздничные дни",
+      "description": "В проп `isHoliday` можно передать функцию, которая будет получать день строкой формата `dd.mm.yyyy` и флаг `isWeekend` из [компонента дня](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_date-components-calendarday--docs).\nФункция должна вернуть `true` для выходного дня и `false` — для рабочего."
+    },
+    {
+      "name": "ExampleScrollToMonth",
+      "title": "Скролл к месяцу",
+      "description": "С помощью метода `scrollToMonth` можно реализовать контрол для быстрого скролла к определённому месяцу года."
+    },
+    {
+      "name": "ExampleCustomHeight",
+      "title": "Кастомизация: высота",
+      "description": "Календарю можно задать кастомную высоту с помощью переменной темы `calendarWrapperHeight`:\n- базовая высота календаря — `330px`\n- максимальная высота календаря — `450px`"
+    },
+    {
+      "name": "ExampleCustomDayRender",
+      "title": "Кастомизация: рендер дня",
+      "description": "Для кастомизации дней в календаре используется проп `renderDay`.\nДля корректной работы компонента обязательно используйте компонент `<CalendarDay />` и передайте в него все приходящие в функцию пропсы: `<Calendar renderDay={(props) => <CalendarDay {...props} />} />`."
+    },
+    {
+      "name": "ExampleCustomPrice",
+      "title": "Кастомизация: календарь с ценами",
+      "description": "В примере кастомизирована тема календаря и рендер дня."
+    }
+  ]
+}

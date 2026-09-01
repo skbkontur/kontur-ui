@@ -1,0 +1,387 @@
+{
+  "name": "Select",
+  "slug": "select",
+  "description": "Раскрывающийся список позволяет выбрать значение из заранее известного набора вариантов.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Select } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_input-data-select--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/select.md",
+  "sourcePath": "components/Select/Select.tsx",
+  "props": [
+    {
+      "name": "_renderButton",
+      "description": "Отрисовывает кнопку.",
+      "type": "(params: ButtonParams) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "defaultValue",
+      "description": "Значение по умолчанию.",
+      "type": "TValue",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "menuOffset",
+      "description": "Смещение списка относительно поля по горизонтали. При нуле смещения нет, при положительном значении — список сдвигается вправо, при отрицательном — влево.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "0",
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "disablePortal",
+      "description": "По умолчанию список рендерится через [паттерн Portal](https://react.dev/reference/react-dom/createPortal). Проп отключает использование Portal и список рендерится как обычный блок с абсолютным позиционированием внутри компонента.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует раскрывающийся список.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит компонент в состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "filterItem",
+      "description": "Отфильтровывает элементы по заданному паттерну.",
+      "type": "(value: TValue, item: TItem, pattern: string) => boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "items",
+      "description": "Набор значений. Поддерживаются любые перечисляемые типы, в том числе `Array`, `Map`, `Immutable.Map`.\n\nЭлементы воспринимаются следующим образом:\n- если элемент — это массив, то первый элемент является значением, второй — отображается в списке, а третий – комментарий;\n- если элемент не является массивом, то он используется и для отображения, и для значения.\n\nДля вставки разделителя между значениями можно использовать `Select.SEP`.\n@example Вставить невыделяемый элемент со своей разметкой можно так:\n```\n<Select ...\n  items={[Select.staticElement(() => <div>My Element</div>)]}\n/>\n```\n@example Чтобы добавить стандартный отступ для статического элемента:\n```\n<Select.Item>My Element</Select.Item>\n```",
+      "type": "SelectItem<TValue, TItem>[]",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "maxMenuHeight",
+      "description": "Максимальная высота раскрывающегося списка.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "maxWidth",
+      "description": "Максимальная ширина кнопки.",
+      "type": "MaxWidth<string | number>",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "positions",
+      "description": "Список значений, определяющих расположение списка относительно кнопки. Если во всех позициях список выходит за пределы `viewport`, будет использована первая из этого списка.\n\n`\"top left\"`, `\"top center\"`, `\"top right\"`, `\"right top\"`, `\"right middle\"`, `\"right bottom\"`, `\"bottom left\"`, `\"bottom center\"`, `\"bottom right\"`, `\"left top\"`, `\"left middle\"`, `\"left bottom\"`.",
+      "type": "(\"top center\" | \"top left\" | \"top right\" | \"bottom center\" | \"bottom left\" | \"bottom right\" | \"left middle\" | \"left top\" | \"left bottom\" | \"right middle\" | \"right top\" | \"right bottom\" | \"middle center\" | \"middle left\" | \"middle right\")[]",
+      "required": false,
+      "defaultValue": "['bottom left', 'bottom right', 'top left', 'top right']",
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "menuPos",
+      "description": "Фиксирует расположение списка относительно кнопки.",
+      "type": "\"top\" | \"bottom\" | \"middle\"",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание списка.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "menuWidth",
+      "description": "Ширина списка.",
+      "type": "Width<string | number>",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения значения (`value`) в поле.",
+      "type": "(value: TValue) => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Событие закрытия меню.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "Событие наведения мышкой (событие `onmouseenter`). Смотрите разницу с `onMouseOver` в [документации](https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave).",
+      "type": "(e: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "Событие ухода мышки с объекта (событие `onmouseleave`).",
+      "type": "(e: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onMouseOver",
+      "description": "Событие наведения мышкой (событие `onmouseover`).",
+      "type": "(e: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onKeyDown",
+      "description": "Событие нажатия кнопки на клавиатуре.",
+      "type": "(e: KeyboardEvent<HTMLElement>) => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onOpen",
+      "description": "Событие открытия меню.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "placeholder",
+      "description": "Текст, который отображается если не введено никакое значение.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "renderItem",
+      "description": "Отрисовывает элементы в списке.",
+      "type": "(value: TValue, item?: TItem) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "renderValue",
+      "description": "Отрисовывает выбранный элемент.",
+      "type": "(value: TValue, item?: TItem) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "areValuesEqual",
+      "description": "Сравнивает `value` с элементом из `items`.",
+      "type": "(value1: TValue, value2: TValue) => boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "search",
+      "description": "Отображает строчку поиска в списке значений.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Задаёт значение.",
+      "type": "TValue",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "theme",
+      "description": "Объект с переменными темы.",
+      "type": "Partial<typeof BasicThemeClass> | Readonly<typeof BasicThemeClass>",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина раскрывающегося списка.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит компонент в состояние предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "use",
+      "description": "Стиль кнопки. Примеры стилей смотрите [в документации компонента Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/button.md).",
+      "type": "\"link\" | \"text\" | \"fill\" | \"default\" | \"outline\" | \"accent\" | \"danger\" | \"success\" | \"pay\" | \"backless\" | \"primary\"",
+      "required": false,
+      "defaultValue": "default",
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер раскрывающегося списка.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small",
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onFocus",
+      "description": "HTML-событие `onfocus`.",
+      "type": "FocusEventHandler<HTMLElement>",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "HTML-событие `onblur`.",
+      "type": "FocusEventHandler<HTMLElement>",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "mobileMenuHeaderText",
+      "description": "Текст заголовка списка в мобильной версии.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "preventIconsOffset",
+      "description": "Отключает выравнивание текста элементов в списке относительно иконок в других элементах.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Select/Select.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер раскрывающегося списка."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Фиксированная ширина",
+      "description": "Проп `width` задаёт фиксированную ширину раскрывающегося списка, в том числе ширину кнопки."
+    },
+    {
+      "name": "ExampleMaxWidth",
+      "title": "Максимальная ширина",
+      "description": "Проп `maxWidth` задаёт максимальную ширину кнопки, не влияет на ширину списка."
+    },
+    {
+      "name": "ExampleMaxMenuHeight",
+      "title": "Высота списка",
+      "description": "Проп `maxMenuHeight` задаёт максимальную высоту списка."
+    },
+    {
+      "name": "ExampleMenuWidth",
+      "title": "Фиксированная ширина списка",
+      "description": "Проп `menuWidth` задаёт фиксированную ширину списка, не влияет на ширину кнопки."
+    },
+    {
+      "name": "ExampleSelectSep",
+      "title": "Разделитель между значениями",
+      "description": "Добавить визуальный разделитель между значениями можно через константу `Select.SEP` — рендерится как линия. Размещать разделитель можно в любом месте передаваемого массива."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Расположение списка",
+      "description": "Проп `menuPos` фиксирует расположение выпадающего списка. Он может быть под кнопкой — `\"bottom\"`, над ней — `\"top\"` или посередине — `\"middle\"`.\nПо умолчанию список отображается под кнопкой, а если не хватает места, то динамически меняет расположение и показывается над кнопкой."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание списка",
+      "description": "Проп `menuAlign` выравнивает список. Список может быть прикреплен к левому краю кнопки — \"left\" или к правому — \"right\"."
+    },
+    {
+      "name": "ExamplePositions",
+      "title": "Список позиций",
+      "description": "Проп `positions` задаёт расположение и выравнивание списка относительно кнопки, можно передать одно значение или список значений — если во всех позициях список выходит за пределы `viewport`, будет использована первая из этого списка.\nВозможные значения: `\"top left\"`, `\"top center\"`, `\"top right\"`, `\"right top\"`, `\"right middle\"`, `\"right bottom\"`, `\"bottom left\"`, `\"bottom center\"`, `\"bottom right\"`, `\"left top\"`, `\"left middle\"`, `\"left bottom\"`."
+    },
+    {
+      "name": "ExampleMenuOffset",
+      "title": "Смещение списка по горизонтали",
+      "description": "Проп `menuOffset` смещает список относительно кнопки по горизонтали. При 0 — смещения нет, при положительном значении — список сдвигается влево, при отрицательном — вправо."
+    },
+    {
+      "name": "ExamplePlaceholder",
+      "title": "Плейсхолдер",
+      "description": "Проп `placeholder` переопределяет текст, который отображается если не введено никакое значение."
+    },
+    {
+      "name": "ExampleSearch",
+      "title": "Строка поиска",
+      "description": "Проп `search` отображает строчку поиска в списке значений. Дополнительно через проп `filterItem` можно фильтровать элементы по заданному паттерну."
+    },
+    {
+      "name": "ExampleClear",
+      "title": "Очистка значения",
+      "description": "Очистить выбранное значение в раскрывающемся списке можно только с помощью `null`."
+    },
+    {
+      "name": "ExampleIsNotSelectable",
+      "title": "Запрет выделения и выбора",
+      "description": "Проп `isNotSelectable` для Select.Item запрещает выделение и выбор этого значения из списка."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует раскрывающийся список."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит раскрывающийся список в состояние ошибки."
+    },
+    {
+      "name": "ExampleCustomValue",
+      "title": "Переопределение `renderValue`, `renderItem` и `areValuesEqual`",
+      "description": "Если элемент в пропе `items` имеет кастомный тип, то компоненту нужны подсказки по работе с ним."
+    },
+    {
+      "name": "ExampleRenderButton",
+      "title": "Кастомизация кнопки",
+      "description": "Проп `_renderButton` позволяет задать функцию отрисовки кнопки. В примере заданы параметры для отображения кнопки-ссылки с иконкой."
+    }
+  ]
+}

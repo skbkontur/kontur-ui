@@ -1,0 +1,162 @@
+{
+  "name": "Link",
+  "slug": "link",
+  "description": "С помощью ссылки пользователь может перейти на другую страницу, раздел приложения или внешний URL.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Link } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_button-link--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/link.md",
+  "sourcePath": "components/Link/Link.tsx",
+  "props": [
+    {
+      "name": "disabled",
+      "description": "Ссылка меняет цвет на серый и становится недоступна для нажатия.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "icon",
+      "description": "Добавляет иконку слева от ссылки.",
+      "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "rightIcon",
+      "description": "Добавляет иконку справа от ссылки.",
+      "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "use",
+      "description": "Стиль ссылки.",
+      "type": "\"default\" | \"danger\" | \"success\" | \"grayed\"",
+      "required": false,
+      "defaultValue": "default",
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "tabIndex",
+      "description": "HTML-атрибут `tabindex`.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "loading",
+      "description": "Переводит ссылку в состояние загрузки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "theme",
+      "description": "Объект с переменными темы.",
+      "type": "Partial<typeof BasicThemeClass>",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит ссылку в состояние валидации \"Ошибка\".",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит ссылку в состояние валидации \"Предупреждение\".",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Link/Link.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "any",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "component",
+      "description": "Компонент, используемый в качестве корневого узла.",
+      "type": "ButtonLinkAllowedValues",
+      "required": false,
+      "defaultValue": "a"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleStyle",
+      "title": "Стили",
+      "description": "Проп `use` задаёт стиль ссылки.\nСтиль влияет на внешний вид cсылки. По умолчанию: `'default'`.\nДоступны стили:\n- Default — чёрная ссылка.\n- Grayed — серая ссылка.\n- Success — зелёная ссылка на действие с положительной окраской.\n- Danger — красная ссылка для необратимых или негативных по смыслу действий."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Иконка",
+      "description": "В ссылку можно передать иконку.\nИконка может находиться слева от ссылки — проп `icon`, справа — проп `rightIcon`."
+    },
+    {
+      "name": "ExampleExternal",
+      "title": "Открытие ссылок на внешние ресурсы",
+      "description": "По умолчанию ссылка открывается в текущей открытой вкладке. Переопределить это поведение можно с помощью нативного атрибута `target=\"_blank\"` — ссылка будет открываться в новой вкладке.\nЕсли ссылка ведёт на внешний URL, компонент автоматически добавит атрибут `rel` с необходимым значением, чтобы защитить от проблем безопасности и утечки реферера. При этом не будет меняться или добавляться атрибут `target`."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` переводит ссылку в состояние блокировки. Ссылка меняет цвет на серый и становится недоступна для нажатия."
+    },
+    {
+      "name": "ExampleSpinner",
+      "title": "Состояние загрузки",
+      "description": "Проп `loading` переводит ссылку в состояние загрузки. При загрузке ссылка переходит в состояние блокировки и становится серой.\nЕсли у ссылки есть иконка, она заменяется на спиннер."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит сслыку в  состояние ошибки."
+    },
+    {
+      "name": "ExampleButton",
+      "title": "Управление корневым элементом",
+      "description": "Проп `component` позволяет переопределить корневой элемент.\nПримеры:\n- Ссылка может рендерить кнопку в качестве корневого элемента. Ссылка принимает все пропсы переданного компонента. Рекомендуется к использованию вместо кнопки с `use=link`, если нужна кнопка с визуалом ссылки.\n- В `component` можно передать [Link из библиотеки React Router](https://reactrouter.com/api/components/Link), если нужен переход внутри одностраничного приложения без полной перезагрузки страницы."
+    },
+    {
+      "name": "ExampleClickCustom",
+      "title": "Кастомизация: действие при нажатии",
+      "description": "Вы можете управлять тем, какое именно действие присходит при нажатии на ссылку."
+    },
+    {
+      "name": "ExampleTheme",
+      "title": "Кастомизация: цвет ссылки",
+      "description": "Ссылки допускается выделять фирменным цветом продукта. Сделать это можно, изменяя свойства темы через проп `theme`. Заданные переменные будут объединены с темой из `<ThemeContext>`.\nОбщие переменные темы и переменные для ссылки (с префиксом `link`) смотрите на странице [ThemePlayground](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_information-themeplayground--docs)."
+    },
+    {
+      "name": "ExampleCustomLink",
+      "title": "Кастомизация: вид ссылки",
+      "description": ""
+    }
+  ]
+}

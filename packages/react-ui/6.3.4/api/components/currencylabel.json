@@ -1,0 +1,85 @@
+{
+  "name": "CurrencyLabel",
+  "slug": "currencylabel",
+  "description": "Подпись для денежных сумм и других числовых значений.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { CurrencyLabel } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_display-data-currencylabel--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/currencylabel.md",
+  "sourcePath": "components/CurrencyLabel/CurrencyLabel.tsx",
+  "props": [
+    {
+      "name": "fractionDigits",
+      "description": "Минимальное количество отображаемых знаков после запятой.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "2",
+      "source": "react-ui/components/CurrencyLabel/CurrencyLabel.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Значение.",
+      "type": "number",
+      "required": true,
+      "source": "react-ui/components/CurrencyLabel/CurrencyLabel.tsx"
+    },
+    {
+      "name": "currencySymbol",
+      "description": "Символ валюты.",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/CurrencyLabel/CurrencyLabel.tsx"
+    },
+    {
+      "name": "hideTrailingZeros",
+      "description": "Убирает лишние нули после запятой.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/CurrencyLabel/CurrencyLabel.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleCurrencySymbol",
+      "title": "Символ валюты",
+      "description": "В пропе `currencySymbol` указывается нужный символ валюты."
+    },
+    {
+      "name": "ExampleFractionDigits",
+      "title": "Минимальное количество знаков после запятой",
+      "description": "Проп `fractionDigits` устанавливает минимальное количество знаков после запятой."
+    },
+    {
+      "name": "ExampleHideTrailingZeros",
+      "title": "Удаление лишних нулей",
+      "description": "Проп `hideTrailingZeros` удаляет лишние нули, если они есть в конце значения."
+    }
+  ]
+}

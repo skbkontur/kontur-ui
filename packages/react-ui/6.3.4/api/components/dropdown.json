@@ -1,0 +1,249 @@
+{
+  "name": "Dropdown",
+  "slug": "dropdown",
+  "description": "Кнопка-меню содержит несколько команд, объединенных по смыслу..",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Dropdown } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_menu-dropdown--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/dropdown.md",
+  "sourcePath": "components/Dropdown/Dropdown.tsx",
+  "props": [
+    {
+      "name": "caption",
+      "description": "Текст кнопки-меню.",
+      "type": "ReactNode",
+      "required": true,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "icon",
+      "description": "Добавляет иконку слева от текста кнопки.",
+      "type": "ReactElement<unknown, string | JSXElementConstructor<any>>",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина кнопки-меню. Если `menuWidth` не задан, такая же минимальная ширина применяется к раскрывающемуся меню.",
+      "type": "Width<string | number>",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "disablePortal",
+      "description": "Отключает использование портала.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует компонент.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Переводит кнопку-меню в состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Переводит кнопку-меню в состояние предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "maxMenuHeight",
+      "description": "Ограничивает максимальную высоту раскрывающегося меню.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "menuPos",
+      "description": "Фиксирует положение раскрывающегося меню относительно кнопки-меню.",
+      "type": "\"top\" | \"bottom\"",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивает раскрывающееся меню относительно кнопки-меню.",
+      "type": "\"left\" | \"right\"",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "menuWidth",
+      "description": "Ширина раскрывающегося меню.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер кнопки-меню.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "use",
+      "description": "Визуальный стиль кнопки-меню.",
+      "type": "\"link\" | \"text\" | \"fill\" | \"default\" | \"outline\" | \"accent\" | \"danger\" | \"success\" | \"pay\" | \"backless\" | \"primary\"",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "onClose",
+      "description": "Событие закрытия раскрывающегося меню.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "onOpen",
+      "description": "Событие открытия раскрывающегося меню.",
+      "type": "() => void",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "onMouseEnter",
+      "description": "Событие наведения курсора (событие `onmouseenter`). Разницу с `onMouseOver` смотрите в [документации](https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave).",
+      "type": "(event: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "onMouseLeave",
+      "description": "Событие ухода курсора с элемента (событие `onmouseleave`).",
+      "type": "(event: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "onMouseOver",
+      "description": "Событие движения курсора над элементом (событие `onmouseover`).",
+      "type": "(event: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "preventIconsOffset",
+      "description": "Отключает выравнивание текста пунктов меню относительно иконок в других пунктах.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/Dropdown/Dropdown.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": "Базовый пример с подписью и элементами меню в `children`."
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер кнопки-меню."
+    },
+    {
+      "name": "ExampleUse",
+      "title": "Стиль кнопки",
+      "description": "Проп `use` задаёт визуальный стиль кнопки-меню.\nДоступные стили соответствуют кнопке, подробнее в [Button](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/button.md#%D1%81%D1%82%D0%B8%D0%BB%D1%8C)."
+    },
+    {
+      "name": "ExampleIcon",
+      "title": "Иконка",
+      "description": "Проп `icon` добавляет иконку слева от подписи кнопки."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина кнопки",
+      "description": "Проп `width` задаёт ширину кнопки-меню. Может быть в пикселях, процентах или других конкретных единицах. Заданная ширина применяется к полю и выпадающему списку."
+    },
+    {
+      "name": "ExampleMenuWidth",
+      "title": "Ширина меню",
+      "description": "Проп `menuWidth` задаёт ширину выпадающего меню."
+    },
+    {
+      "name": "ExampleMaxMenuHeight",
+      "title": "Максимальная высота меню",
+      "description": "Проп `maxMenuHeight` ограничивает максимальную высоту меню."
+    },
+    {
+      "name": "ExampleMenuPos",
+      "title": "Расположение выпадающего меню",
+      "description": "Проп `menuPos` фиксирует расположение выпадающего меню. Оно может быть под полем — `\"bottom\"` или над полем — `\"top\"`.\nПо умолчанию меню раскрывается под полем, а если меню находится близко к нижней границе страницы, то оно динамически меняет расположение и раскрывается над полем."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание выпадающего меню",
+      "description": "Проп `menuAlign` выравнивает выпадающий список. Выпадающий список может быть прикреплен к левому краю — `\"left\"` или к правому — `\"right\"`."
+    },
+    {
+      "name": "ExamplePreventIconsOffset",
+      "title": "Выравнивание пунктов меню",
+      "description": "Проп `preventIconsOffset` отключает выравнивание текста пунктов меню относительно иконок в других пунктах."
+    },
+    {
+      "name": "ExampleDisablePortal",
+      "title": "Отключение портала",
+      "description": "Проп `disablePortal` отключает рендер через портал."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` переводит компонент в недоступное состояние."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` показывает состояние ошибки."
+    },
+    {
+      "name": "ExampleWarning",
+      "title": "Состояние предупреждения",
+      "description": "Проп `warning` показывает состояние предупреждения."
+    },
+    {
+      "name": "ExampleOpenCloseCallbacks",
+      "title": "События открытия и закрытия",
+      "description": "Коллбеки `onOpen` и `onClose` вызываются при открытии и закрытии меню."
+    },
+    {
+      "name": "ExampleRefMethods",
+      "title": "Кастомизация: управление через ref",
+      "description": "Публичные методы `open()` и `close()` доступны через `ref`."
+    }
+  ]
+}

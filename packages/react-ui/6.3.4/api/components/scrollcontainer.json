@@ -1,0 +1,200 @@
+{
+  "name": "ScrollContainer",
+  "slug": "scrollcontainer",
+  "description": "Контейнер с кастомными полосами прокрутки при скролле.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { ScrollContainer } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_layout-scrollcontainer--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/scrollcontainer.md",
+  "sourcePath": "components/ScrollContainer/ScrollContainer.tsx",
+  "props": [
+    {
+      "name": "invert",
+      "description": "Инвертирует цвет полосы прокрутки.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "maxHeight",
+      "description": "Максимальная высота скролл-контейнера.",
+      "type": "MaxHeight<string | number>",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "maxWidth",
+      "description": "Максимальная ширина скролл-контейнера.",
+      "type": "MaxWidth<string | number>",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "preventWindowScroll",
+      "description": "Отключает скролл окна, когда меню открыто.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "scrollBehaviour",
+      "description": "Поведение скролла. (https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)",
+      "type": "\"auto\" | \"smooth\"",
+      "required": false,
+      "defaultValue": "auto",
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "onScrollStateChangeX",
+      "description": "Событие скролла по горизонтали.",
+      "type": "(scrollState: ScrollContainerScrollStateX) => void",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "onScrollStateChangeY",
+      "description": "Событие скролла по вертикали.",
+      "type": "(scrollState: ScrollContainerScrollStateY) => void",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "onScroll",
+      "description": "Событие скролла.",
+      "type": "(e: UIEvent<HTMLDivElement, UIEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Отключает кастомный скролл.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "offsetY",
+      "description": "Смещение вертикальной полосы прокрутки.",
+      "type": "Partial<Record<OffsetCSSPropsY, string | number | (string & {})>>",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "offsetX",
+      "description": "Смещение горизонтальной полосы прокрутки.",
+      "type": "Partial<Record<OffsetCSSPropsX, string | number | (string & {})>>",
+      "required": false,
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "showScrollBar",
+      "description": "Определяет, нужно ли показывать полосу прокрутки.",
+      "type": "\"always\" | \"never\" | \"hover\" | \"scroll\"",
+      "required": false,
+      "defaultValue": "always",
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "hideScrollBarDelay",
+      "description": "Устанавливает задержку в миллисекундах перед скрытием полосы прокрутки.\nРаботает только при hideScrollBar = true или showScrollBar = 'scroll' | 'hover'.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "500",
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "disableAnimations",
+      "description": "Отключает анимацию.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "isNodeTestEnv || isReactUITestEnv()",
+      "source": "react-ui/components/ScrollContainer/ScrollContainer.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleHeight",
+      "title": "Высота скролл-контейнера",
+      "description": "Проп `maxHeight` задаёт максимальную высоту скролл-контейнера."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина скролл-контейнера",
+      "description": "Проп `maxWidth` задаёт максимальную ширину скролл-контейнера."
+    },
+    {
+      "name": "ExampleInvert",
+      "title": "Инвертация полосы прокрутки",
+      "description": "Проп `invert` инвертирует цвет полосы прокрутки."
+    },
+    {
+      "name": "ExampleOffsetY",
+      "title": "Смещение вертикальной полосы прокрутки",
+      "description": "Проп `offsetY` смещает вертикальную полосу прокрутки от краёв контейнера."
+    },
+    {
+      "name": "ExampleXScrollBar",
+      "title": "Горизонтальная полоса прокрутки",
+      "description": ""
+    },
+    {
+      "name": "ExampleOffsetX",
+      "title": "Смещение горизонтальной полосы прокрутки",
+      "description": "Проп `offsetX` смещает горизонтальную полосу прокрутки от краёв контейнера."
+    },
+    {
+      "name": "ExampleShowScrollBarScroll",
+      "title": "Скрытие полосы прокрутки при бездействии",
+      "description": "Проп `showScrollBar` со значением `scroll` скрывает полосу прокрутки при отсутствии активности пользователя. Задержку на скрытие полосы прокрутки можно регулировать пропом `hideScrollBarDelay` (по умолчанию 500ms)."
+    },
+    {
+      "name": "ExampleShowScrollBarHover",
+      "title": "Показ полосы прокрутки при наведении",
+      "description": "Проп `showScrollBar` со значением `hover` позволяет показывать полосу прокрутки только когда курсор находится над скролл-контейнером."
+    },
+    {
+      "name": "ExampleDisableAnimations",
+      "title": "Отключенная анимация",
+      "description": "Проп `disableAnimations` отключает анимацию полосы прокрутки.\nℹ️ **Полезно:** [Глобальное отключение анимации](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_information-faq--docs#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)."
+    },
+    {
+      "name": "ExampleScrollTo",
+      "title": "Скролл к началу/концу контента или границе",
+      "description": "С помощью методов `scrollTo` можно реализовать контрол для быстрого скролла к началу или концу контента в скролл-контейнере."
+    },
+    {
+      "name": "ExampleOnScroll",
+      "title": "Событие onScroll",
+      "description": "Событие `onScroll` даёт доступ к нативному событию, с помощью него можно получать точные координаты прокрутки.\nДля простых сценариев можно использовать обработчики изменений прокрутки по вертикали (Y) — `onScrollStateChangeY`, и горизонтали (X) — `onScrollStateChangeX`."
+    }
+  ]
+}

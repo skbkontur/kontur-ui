@@ -1,0 +1,354 @@
+{
+  "name": "TokenInput",
+  "slug": "tokeninput",
+  "description": "Поле с токенами — это поле ввода со списком подсказок. Значения в поле отображаются в виде отдельных токенов.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { TokenInput } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_input-data-tokeninput--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/tokeninput.md",
+  "sourcePath": "components/TokenInput/TokenInput.tsx",
+  "props": [
+    {
+      "name": "selectedItems",
+      "description": "Токены, которые будут отображаться в поле ввода.",
+      "type": "T[]",
+      "required": false,
+      "defaultValue": "[]",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие добавления нового токена.",
+      "type": "(items: T[]) => void",
+      "required": false,
+      "defaultValue": "() => void 0",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "onKeyDown",
+      "description": "HTML-событие `onkeydown`.",
+      "type": "KeyboardEventHandler<HTMLTextAreaElement>",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на поле с токенами после окончания загрузки страницы.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля с токенами.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "type",
+      "description": "Тип инпута.\nВозможные значения:\n- `TokenInputType.Combined` — в поле можно выбирать значения из справочника и добавлять свои значения.\n- `TokenInputType.WithReference` — можно только выбрать значения из справочника, но нельзя добавлять свои.\n- `TokenInputType.WithoutReference` — можно добавлять любые значения, но подсказок из справочника нет.",
+      "type": "0 | 1 | 2",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "menuWidth",
+      "description": "Ширина выпадающего списка.",
+      "type": "Width<string | number>",
+      "required": false,
+      "defaultValue": "auto",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "menuAlign",
+      "description": "Выравнивание выпадающего списка.",
+      "type": "\"left\" | \"cursor\"",
+      "required": false,
+      "defaultValue": "cursor",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "getItems",
+      "description": "Задаёт функцию поиска значений, которая должна возвращать Promise с массивом значений. По умолчанию ожидаются строки.\nЭлементы могут быть любого типа. В этом случае необходимо определить свойства `renderItem`, `renderToken`, `valueToString` и `valueToItem`.",
+      "type": "(query: string) => Promise<TokenInputExtendedItem<T>[]>",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "hideMenuIfEmptyInputValue",
+      "description": "Ограничивает отображение выпадающего списка при фокусе на пустом поле: выпадающий список появится, только когда будет введён хотя бы один символ токена.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "renderItem",
+      "description": "Отрисовывает элемент списка.",
+      "type": "(item: T, state: MenuItemState) => ReactNode",
+      "required": false,
+      "defaultValue": "<T extends unknown>(item: T): T => item",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "renderValue",
+      "description": "Отрисовывает выбранное значение.\n@deprecated Используйте `renderToken` для отрисовки выбранного значения и `valueToString` для преобразования значения в строку.",
+      "type": "(item: T) => ReactNode",
+      "required": false,
+      "defaultValue": "<T extends unknown>(item: T): T => item",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "valueToString",
+      "description": "Возвращает строковое представление `value`. Необходимо при фокусировке.",
+      "type": "(item: T) => string",
+      "required": false,
+      "defaultValue": "<T extends unknown>(item: T): T => item",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "renderTotalCount",
+      "description": "Отрисовывает сообщение об общем количестве элементов.\n@param found - количество элементов по результатам поиска. Учитывает только компонент MenuItem. Им оборачиваются элементы, возвращаемые `getItems()`.\n@param total - количество всех элементов.",
+      "type": "(found: number, total: number) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "totalCount",
+      "description": "Определяет общее количество элементов. Необходим для работы `renderTotalCount`.",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "renderNotFound",
+      "description": "Отрисовывает сообщение о пустом результате поиска. При `renderAddButton` не работает.",
+      "type": "() => ReactNode",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "valueToItem",
+      "description": "Преобразовывает значение в элемент списка.",
+      "type": "(value: string) => T",
+      "required": false,
+      "defaultValue": "(item: string) => item",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "itemToId",
+      "description": "Сравнивает полученные результаты с `value`.",
+      "type": "(item: T) => string | number",
+      "required": false,
+      "defaultValue": "<T extends unknown>(item: T): T => item",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "placeholder",
+      "description": "Текст, который отображается если не введено никакое значение.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "delimiters",
+      "description": "Символы, которые разделяют введённый текст на токены. По умолчанию — запятая.",
+      "type": "string[]",
+      "required": false,
+      "defaultValue": "[',', TEMP_FAKE_FLAG]",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Меняет визуальное отображение токена на состояние «ошибка». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Меняет визуальное отображение токена на состояние «предупреждение». Может быть полезен при разработке собственной валидации, если вы не используете пакет [React UI Validations](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui-validations_displaying-getting-started--docs).",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует поле с токенами.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина поля с токенами.",
+      "type": "string | number",
+      "required": false,
+      "defaultValue": "250 as string | number",
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "maxMenuHeight",
+      "description": "Максимальная высота выпадающего списка.",
+      "type": "string | number",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "renderToken",
+      "description": "Отрисовывает токен и даёт возможность кастомизировать внешний вид и поведение токена.",
+      "type": "(item: T, props: Partial<TokenProps>, index: number) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "onInputValueChange",
+      "description": "Событие изменения текста в поле ввода, если результатом функции будет строка, то она станет следующим состоянием полем ввода.",
+      "type": "(value: string) => void",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "renderAddButton",
+      "description": "Отрисовывает кнопку добавления нового токена в выпадающем списке.",
+      "type": "(query?: string, onAddItem?: () => void) => ReactNode",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "onUnexpectedInput",
+      "description": "Событие обработки ввода строки в поле ввода и последующая потеря фокуса компонентом.\nФункция срабатывает с аргументом поля строки.\nЕсли при потере фокуса в выпадающем списке будет только один элемент и результат `valueToString` с этим элементом будет совпадать со значением в текстовом поле, то сработает `onValueChange` со значением данного элемента.\nСама функция также может вернуть значение, не равное undefined, с которым будет вызван `onValueChange`. Если возвращаемое значение будет равно null, то сработает очистка текущего значения поля, а в режиме редактирования токен будет удален.",
+      "type": "(value: string) => void | T",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "inputMode",
+      "description": "Задаёт типы вводимых данных. Передаёт браузеру информацию о том, какой набор символов показать при вводе данных в конкретное поле на устройствах с экранной клавиатурой.",
+      "type": "\"none\" | \"search\" | \"email\" | \"tel\" | \"text\" | \"url\" | \"numeric\" | \"decimal\"",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "maxHeight",
+      "description": "Максимальная высота компонента. При её достижении появится скроллбар",
+      "type": "number",
+      "required": false,
+      "source": "react-ui/components/TokenInput/TokenInput.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля с токенами."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина поля с токенами",
+      "description": "Проп `width` задаёт ширину поля с токенами."
+    },
+    {
+      "name": "ExampleMaxHeight",
+      "title": "Высота поля с токенами",
+      "description": "Проп `maxHeight` ограничивает высоту поля с токенами. При достижении этой высоты будет появляться скроллбар."
+    },
+    {
+      "name": "ExampleMenuWidth",
+      "title": "Ширина выпадающего списка",
+      "description": "Проп `menuWidth` задаёт максимальную ширину выпадающего списка. Может быть `auto` — по ширине текста, в пикселях, процентах от ширины поля и других конкретных единицах.\nПроп зависит от другого пропа `menuAlign`. Ширина выпадающего списка всегда будет равна `\"auto\"`, когда  'menuAlign'='cursor' — для поля с токенами является значением по умолчанию."
+    },
+    {
+      "name": "ExampleMaxMenuHeight",
+      "title": "Высота выпадающего списка",
+      "description": "Проп `maxMenuHeight` задаёт максимальную высоту выпадающего списка."
+    },
+    {
+      "name": "ExampleMenuAlign",
+      "title": "Выравнивание выпадающего списка",
+      "description": "Проп `menuAlign` выравнивает выпадающий список. По умолчанию `cursor` — выпадающий список отображается по линии текущего положения курсора в поле с токенами. Можно закрепить строго по левому краю через значение `\"left\"`."
+    },
+    {
+      "name": "ExampleHideMenuIfEmptyInputValue",
+      "title": "Скрытие выпадающего списка до ввода первого символа",
+      "description": "По умолчанию выпадающий список с подсказками появляется сразу при фокусе в поле и продолжает отображаться всё время, пока пользователь вводит в поле токены.\nПроп `hideMenuIfEmptyInputValue` отключает это поведение. Такой режим похож на работу [автокомплита](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/autocomplete.md). Выпадающий список появляется, когда введён первый символ первого или последующего токена."
+    },
+    {
+      "name": "ExampleType",
+      "title": "Тип",
+      "description": "Проп `type` задаёт тип поля:\n- `TokenInputType.Combined` — можно и выбирать, и добавлять значения.\n- `TokenInputType.WithReference` — в поле можно ввести только значения из справочника, но нельзя добавлять свои.\n- `TokenInputType.WithoutReference` — можно добавлять любые значения, но подсказок из справочника нет."
+    },
+    {
+      "name": "ExampleDelimiters",
+      "title": "Знак разделителя",
+      "description": "Проп `delimiters` определяет знак разделителя токенов при вводе. По умолчанию запятая.\nРаботает только с типами `TokenInputType.WithoutReference` и `TokenInputType.Combined`.\nПри смене разделителей смените текст для подсказки добавления нового токена, по умолчанию — «Нажмите запятую»."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует поле с токенами. Поле меняет цвет на серый и становится недоступно для редактирования."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит поле с токенами в состояние ошибки. Поле подсвечивается красной рамкой."
+    },
+    {
+      "name": "ExampleRenderToken",
+      "title": "Поле с кастомными токенами",
+      "description": "Проп `renderToken` задаёт функцию, которая отображает токен и даёт возможность кастомизировать внешний вид и поведение токена."
+    },
+    {
+      "name": "ExampleTotalCount",
+      "title": "Счётчик найденных значений и ограничение количества значений в выпадающем списке",
+      "description": "Пропсы `totalCount` и `renderTotalCount` позволяют добавить в выпадающий список счётчик найденных значений.\n- `renderTotalCount` — задаёт функцию, которая отображает сообщение о количестве значений.\n- `totalCount` — определяет общее количество значений.\nВ примере также настроено ограничение количества значений в результате поиска."
+    },
+    {
+      "name": "ExampleOnKeyDown",
+      "title": "Запрет ввода определённых символов",
+      "description": "Проп `onKeyDown` вызывает HTML-событие `onkeydown`. Вызывая `preventDefault` на его события можно нативно блокировать ввод конкретных символов."
+    },
+    {
+      "name": "ExampleCustomItems",
+      "title": "Кастомный тип элементов списка",
+      "description": "В примере показано, как передать кастомный тип значений для справочника."
+    },
+    {
+      "name": "ExampleExtendedItems",
+      "title": "Шапка, разделитель и футер в списке",
+      "description": "В массиве, возвращаемом `getItems`, могут быть переданы React-компоненты:\n`<MenuHeader>`, `<MenuFooter>`, `<MenuSeparator />` и любые другие.\nВ таких случаях поиск необходимо контролировать дополнительно."
+    },
+    {
+      "name": "ExampleFuncDebounceAsync",
+      "title": "Кастомизация debounce-функции getItems()",
+      "description": "Функция `debounce` из lodash некорректно работает с `async/promise`, поэтому лучше использовать кастомную функцию, как в примере ниже."
+    }
+  ]
+}

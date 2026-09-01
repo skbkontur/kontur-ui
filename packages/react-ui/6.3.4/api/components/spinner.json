@@ -1,0 +1,119 @@
+{
+  "name": "Spinner",
+  "slug": "spinner",
+  "description": "Зацикленный индикатор, не отображающий прогресс выполнения задачи",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { Spinner } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_display-data-spinner--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/spinner.md",
+  "sourcePath": "components/Spinner/Spinner.tsx",
+  "props": [
+    {
+      "name": "caption",
+      "description": "Подпись спиннера",
+      "type": "ReactNode",
+      "required": false,
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер спиннера",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "defaultValue": "small",
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "type",
+      "description": "Размер спиннера\n@deprecated Начиная с версии `6.1`, тип и проп устарели в пользу нового `SizeContext`. Они будут удалены в `7.0`.\n@see {@link size }",
+      "type": "\"big\" | \"mini\" | \"normal\"",
+      "required": false,
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "inline",
+      "description": "Уменьшает размер индикатора для работы в строках. Если задан, то размер спиннера из `size` игнорируется",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Толщина индикатора в пикселях.",
+      "type": "number",
+      "required": false,
+      "defaultValue": "2",
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "color",
+      "description": "Цвет спиннера в одноцветном режиме. Альтернатива пропа `dimmed`",
+      "type": "Color",
+      "required": false,
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "dimmed",
+      "description": "Включает одноцветный режим, в котором цвет спиннера не переливается. Можно кастомизировать переменной `spinnerDimmedColor`",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "false",
+      "source": "react-ui/components/Spinner/Spinner.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleType",
+      "title": "Размер спиннера и текста",
+      "description": "Проп `type` меняет размер индикатора и текста."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Толщина индикатора",
+      "description": "Проп `width` задаёт толщину индикатора в пикселях."
+    },
+    {
+      "name": "ExampleCaption",
+      "title": "Подпись",
+      "description": "Проп `caption` добавляет текст рядом с индикатором."
+    },
+    {
+      "name": "ExampleInline",
+      "title": "Инлайновый режим",
+      "description": "Проп `inline` уменьшает размер индикатора для работы в строках."
+    },
+    {
+      "name": "ExampleColor",
+      "title": "Кастомизация: одноцветный режим",
+      "description": "Проп `color` делает индикатор одноцветным, позволяя напрямую задать цвет.\nАльтернативой является проп `dimmed`, который включает одноцветный режим.\nПо умолчанию цвета становятся приглушёнными, но их можно изменить через тему."
+    }
+  ]
+}

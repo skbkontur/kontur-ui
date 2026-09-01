@@ -1,0 +1,195 @@
+{
+  "name": "DateInput",
+  "slug": "dateinput",
+  "description": "Поле ввода для выбора даты с клавиатуры. Используется в [поле с датой](https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/datepicker.md).",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { DateInput } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_date-components-dateinput--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/dateinput.md",
+  "sourcePath": "components/DateInput/DateInput.tsx",
+  "props": [
+    {
+      "name": "autoFocus",
+      "description": "Устанавливает фокус на поле после окончания загрузки страницы.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "value",
+      "description": "Значение поля.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "",
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "error",
+      "description": "Меняет визуальное отображение поля на состояние ошибки.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "warning",
+      "description": "Меняет визуальное отображение поля на состояние предупреждения.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "disabled",
+      "description": "Блокирует поле.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "minDate",
+      "description": "Минимальная дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "01.01.1900",
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "maxDate",
+      "description": "Максимальная дата в формате `dd.mm.yyyy`.",
+      "type": "string",
+      "required": false,
+      "defaultValue": "31.12.2099",
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "width",
+      "description": "Ширина поля.",
+      "type": "string | number",
+      "required": false,
+      "defaultValue": "125",
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "withIcon",
+      "description": "Добавляет иконку календаря.",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "size",
+      "description": "Размер поля.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "onBlur",
+      "description": "Событие потери полем фокуса.",
+      "type": "(x0: FocusEvent<HTMLElement, Element>) => void",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "onClick",
+      "description": "Событие нажатия на поле.",
+      "type": "(x0: MouseEvent<HTMLElement, MouseEvent>) => void",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "onFocus",
+      "description": "Событие получения полем фокуса.",
+      "type": "(x0: FocusEvent<HTMLElement, Element>) => void",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "onValueChange",
+      "description": "Событие изменения value.\n@param value - строка в формате `dd.mm.yyyy`.",
+      "type": "(value: string) => void",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "onKeyDown",
+      "description": "Событие нажатия кнопки на клавиатуре.",
+      "type": "(x0: KeyboardEvent<HTMLElement>) => void",
+      "required": false,
+      "source": "react-ui/components/DateInput/DateInput.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "ExampleBasic",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер поля."
+    },
+    {
+      "name": "ExampleWidth",
+      "title": "Ширина",
+      "description": "Проп `width` задаёт ширину поля."
+    },
+    {
+      "name": "ExampleWithIcon",
+      "title": "Иконка календаря",
+      "description": "Проп `withIcon` добавляет иконку календаря в поле."
+    },
+    {
+      "name": "ExampleMinMaxDate",
+      "title": "Минимальная и максимальная даты",
+      "description": "С помощью пропсов `minDate` и `maxDate` можно задавать минимально и максимально возможную дату для выбора в поле. Подняться выше или ниже установленных дат при использовании стрелок на клавиатуре у пользователя не получится, но сами по себе пропсы не блокируют ручной ввод и вставку дат в поле вне заданных рамок."
+    },
+    {
+      "name": "ExampleDisabled",
+      "title": "Состояние блокировки",
+      "description": "Проп `disabled` блокирует поле."
+    },
+    {
+      "name": "ExampleError",
+      "title": "Состояние ошибки",
+      "description": "Проп `error` переводит поле в состояние ошибки."
+    },
+    {
+      "name": "ExampleWarning",
+      "title": "Состояние предупреждения",
+      "description": "Проп `warning` переводит поле в состояние предупреждения."
+    },
+    {
+      "name": "ExampleFormatting",
+      "title": "Форматирование даты",
+      "description": "Поле ввода даты может быть настроено с нужным порядком компонентов даты (год/месяц/день) и символом-разделителем."
+    },
+    {
+      "name": "ExampleFormattingLocale",
+      "title": "Форматирование даты при смене локали",
+      "description": "Формат даты зависит от локали в `LangCodes`."
+    }
+  ]
+}

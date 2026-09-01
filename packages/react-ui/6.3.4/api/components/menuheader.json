@@ -1,0 +1,60 @@
+{
+  "name": "MenuHeader",
+  "slug": "menuheader",
+  "description": "Заголовок меню используется для того, чтобы разграничивать элементы меню на категории.",
+  "package": "@skbkontur/react-ui",
+  "version": "6.3.4",
+  "import": "import { MenuHeader } from '@skbkontur/react-ui';",
+  "storybookUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/?path=/docs/react-ui_menu-menuheader--docs",
+  "documentationUrl": "https://tech.skbkontur.ru/kontur-ui/packages/react-ui/6.3.4/docs/components/menuheader.md",
+  "sourcePath": "components/MenuHeader/MenuHeader.tsx",
+  "props": [
+    {
+      "name": "size",
+      "description": "Размер заголовка.",
+      "type": "\"small\" | \"medium\" | \"large\"",
+      "required": false,
+      "source": "react-ui/components/MenuHeader/MenuHeader.tsx"
+    },
+    {
+      "name": "_enableIconPadding",
+      "description": "Добавляет отступ слева для выравнивания текста по иконкам MenuItem",
+      "type": "boolean",
+      "required": false,
+      "source": "react-ui/components/MenuHeader/MenuHeader.tsx"
+    },
+    {
+      "name": "className",
+      "description": "HTML-атрибут `class`.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "style",
+      "description": "HTML-атрибут `style`.",
+      "type": "CSSProperties",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    },
+    {
+      "name": "data-tid",
+      "description": "Наравне с data-tid транслируются любые data-атрибуты. Они попадают на корневой элемент.",
+      "type": "string",
+      "required": false,
+      "source": "react-ui/internal/CommonWrapper/types.ts"
+    }
+  ],
+  "examples": [
+    {
+      "name": "ExampleBasic",
+      "title": "Базовый пример",
+      "description": ""
+    },
+    {
+      "name": "ExampleSize",
+      "title": "Размер",
+      "description": "Проп `size` задаёт размер."
+    }
+  ]
+}
