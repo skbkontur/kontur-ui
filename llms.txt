@@ -2,10 +2,6 @@
 > A comprehensive React component library providing UI components, validation tools, and design utilities for building user interfaces.
 > Version: 5.x | Homepage: https://tech.skbkontur.ru/kontur-ui | npm: @skbkontur/react-ui
 
-## Docs
-
-- [Full Documentation](https://tech.skbkontur.ru/kontur-ui/llms-full.txt): Complete documentation with all components, props, and examples in one file
-
 ## Guides
 
 - [DATATIDS](https://tech.skbkontur.ru/kontur-ui/docs/guides/datatids.md): DATATIDS documentation
