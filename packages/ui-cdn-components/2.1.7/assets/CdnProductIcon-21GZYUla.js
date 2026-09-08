@@ -1,0 +1,22 @@
+import{j as e}from"./jsx-runtime-wTqLqomF.js";import{useMDXComponents as s}from"./index-DHoIkTbl.js";import{S as c}from"./index-4bZV4TXw.js";import{M as t,H as o}from"./Meta-ncWQtVG5.js";import{C as i}from"./CdnProductIcon.docs.stories-uvwOdTEB.js";import"./index-Bk3ZmH4I.js";import"./iframe-UB3j6usE.js";import"./index-B_peBN76.js";import"./index-Nwkb1jlR.js";import"./index-J3bWmEqI.js";import"./index-DgH-xKnr.js";import"./index-DrFu-skq.js";import"./m-Dz_YzSTF.js";import"./CdnProductIcon-BfxDGI8P.js";import"./Gapped-uHYrem14.js";import"./toPropertyKey-D-GQYuxn.js";import"./Toggle-DRvRUm_k.js";function r(d){const n={a:"a",code:"code",h2:"h2",p:"p",pre:"pre",strong:"strong",table:"table",tbody:"tbody",td:"td",th:"th",thead:"thead",tr:"tr",...s(),...d.components};return e.jsxs(e.Fragment,{children:[e.jsx(t,{of:i}),`
+`,e.jsx(o,{component:"CdnProductIcon",figma:"https://www.figma.com/design/ZyM7Ms3HjFL9PFX3ALthDx/%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2?m=auto&t=32P54zPqIYfdEJUH-6",guides:"https://guides.kontur.ru/re/sources/icons-products/"}),`
+`,e.jsxs(n.p,{children:["Обёртка на React для runtime-загрузки продуктовых иконок с ",e.jsx(n.a,{href:"https://s.kontur.ru/common-v2/",rel:"nofollow",children:"сервера статики"}),"."]}),`
+`,e.jsx(n.p,{children:e.jsx(n.strong,{children:"Связанные компоненты"})}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.a,{href:"https://tech.skbkontur.ru/kontur-ui/?path=/docs/ui-cdn-components_cdnlogo--docs",rel:"nofollow",children:"CdnLogo"})," — логотипы продуктов Контура с сервера статики. Не заменяйте логотип продуктовой иконкой, используйте их вместе."]}),`
+`,e.jsx(n.h2,{id:"установка-и-использование",children:"Установка и использование"}),`
+`,e.jsx(n.p,{children:"Команда установки пакета с продуктовыми иконками:"}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm i @skbkontur/ui-cdn-components
+`})}),`
+`,e.jsx(n.p,{children:"Код импорта продуктовых иконок в проект:"}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-jsx",children:`import { CdnProductIcon } from "@skbkontur/ui-cdn-components";
+`})}),`
+`,e.jsx(n.h2,{id:"все-пропсы",children:"Все пропсы"}),`
+`,e.jsxs(n.table,{children:[e.jsx(n.thead,{children:e.jsxs(n.tr,{children:[e.jsx(n.th,{children:"Name"}),e.jsx(n.th,{children:"Description"}),e.jsx(n.th,{children:"Default"})]})}),e.jsxs(n.tbody,{children:[e.jsxs(n.tr,{children:[e.jsx(n.td,{children:e.jsx(n.code,{children:"product"})}),e.jsxs(n.td,{children:["Название продукта (",e.jsx(n.code,{children:"ProductIconsType"}),")"]}),e.jsx(n.td,{children:"—"})]}),e.jsxs(n.tr,{children:[e.jsx(n.td,{children:e.jsx(n.code,{children:"size"})}),e.jsxs(n.td,{children:["Размер: ",e.jsx(n.code,{children:"16"})," | ",e.jsx(n.code,{children:"24"})," | ",e.jsx(n.code,{children:"32"})," | ",e.jsx(n.code,{children:"36"})," | ",e.jsx(n.code,{children:"48"})," | ",e.jsx(n.code,{children:"64"})," | ",e.jsx(n.code,{children:"82"})," | ",e.jsx(n.code,{children:"128"})," | ",e.jsx(n.code,{children:"256"})," | ",e.jsx(n.code,{children:"512"})]}),e.jsx(n.td,{children:"—"})]}),e.jsxs(n.tr,{children:[e.jsx(n.td,{children:e.jsx(n.code,{children:"symbol"})}),e.jsx(n.td,{children:"Использовать символьную версию (размеры 16–64)"}),e.jsx(n.td,{children:e.jsx(n.code,{children:"false"})})]}),e.jsxs(n.tr,{children:[e.jsx(n.td,{children:e.jsx(n.code,{children:"name"})}),e.jsxs(n.td,{children:["Текст для ",e.jsx(n.code,{children:"alt"}),"; если не задан — скрыто от скринридеров"]}),e.jsx(n.td,{children:"—"})]})]})]}),`
+`,e.jsxs(n.p,{children:["Компонент рендерит ",e.jsx(n.code,{children:"<img>"})," и принимает стандартные HTML-атрибуты изображения."]}),`
+`,e.jsx(n.h2,{id:"примеры",children:"Примеры"}),`
+`,e.jsx(c,{title:"",includePrimary:!0}),`
+`,e.jsx(n.h2,{id:"доступность",children:"Доступность"}),`
+`,e.jsxs(n.p,{children:["Если иконка важна для понимания контекста, укажите ",e.jsx(n.code,{children:"name"})," для атрибута ",e.jsx(n.code,{children:"alt"}),":"]}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-jsx",children:`<CdnProductIcon product="adaptation" size={128} name="Адаптация" />
+`})}),`
+`,e.jsxs(n.p,{children:["Если иконка декоративная, ",e.jsx(n.code,{children:"name"})," можно не указывать — она будет скрыта от скринридеров."]})]})}function y(d={}){const{wrapper:n}={...s(),...d.components};return n?e.jsx(n,{...d,children:e.jsx(r,{...d})}):r(d)}export{y as default};
