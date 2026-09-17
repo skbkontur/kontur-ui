@@ -1,0 +1,68 @@
+# Server Side Rendering
+
+Контролы поддерживают рендеринг на стороне сервера начиная с версии `2.12.0`.
+Но для предварительного рендеринга стилей понадобится установить пакеты `@emotion/react` и `@emotion/server`. И импортировать `cache` из хука `useEmotion()` из библиотеки контролов.
+
+Подробнее - [https://emotion.sh](https://emotion.sh/docs/ssr)
+
+Условный файл `server.js` будет выглядеть примерно так:
+
+```typescript static
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer, { EmotionCritical } from '@emotion/server/create-instance';
+import { useEmotion } from '@skbkontur/react-ui/lib/renderEnvironment';
+
+import { App } from './App';
+
+const { extractCritical } = createEmotionServer(cache);
+
+let cache;
+
+const element = () => {
+  cache = useEmotion().cache;
+  return (
+    <CacheProvider value={cache}>
+      <App />
+    </CacheProvider>
+  );
+};
+
+const { html, css, ids } = extractCritical(renderToString(element));
+
+res.status(200).header('Content-Type', 'text/html').send(`<!DOCTYPE html>
+<html>
+  <head>
+    <style data-emotion-css="${cache.key} ${ids.join(' ')}">${css}</style>
+  </head>
+  <body>
+    <div id="root">${html}</div>
+    <script src="client.js"></script>
+  </body>
+</html>`);
+```
+
+`client.js`
+
+```typescript static
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { CacheProvider } from '@emotion/react';
+import { useEmotion } from '@skbkontur/react-ui/lib/renderEnvironment';
+
+import { App } from './App';
+
+const AppProvider = () => {
+  const { cache } = useEmotion();
+  return (
+    <CacheProvider value={cache}>
+      <App />
+    </CacheProvider>
+  );
+};
+
+ReactDOM.hydrate(<AppProvider />, document.getElementById('root'));
+```
+
+Для `react-ui` версии `2.x` актуален [старый пример](https://github.com/skbkontur/retail-ui/blob/2.x/packages/react-ui/SSR.md) с Emotion 10.
