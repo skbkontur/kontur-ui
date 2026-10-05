@@ -74,11 +74,11 @@ function sortVersions(a, b) {
 const openGitIDE = (packageName, path) => {
   let url;
   if (packageName === "react-ui" || packageName === "react-ui-validations") {
-    url = `https://git.skbkontur.ru/-/ide/project/ui/react-ui/edit/master/-/packages/${packageName}/${path}`;
+    url = `https://git.skbkontur.ru/-/ide/project/ui/kontur-ui/edit/master/-/packages/${packageName}/${path}`;
   } else if (packageName === "storybook_internal") {
     url = `https://git.skbkontur.ru/-/ide/project/ui/storybook-documentation/edit/master/-/${path}`;
   } else {
-    url = `https://git.skbkontur.ru/-/ide/project/ui/ui-parking-2/edit/master/-/${path}`;
+    url = `https://git.skbkontur.ru/-/ide/project/ui/kontur-ui-addons/edit/master/-/${path}`;
   }
   window.open(url, "_blank");
 };
