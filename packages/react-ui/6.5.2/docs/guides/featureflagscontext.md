@@ -1,0 +1,71 @@
+# Feature flags
+
+Фича-флаги позволяют заранее применять будущие **breaking changes** (ломающие изменения) до выхода очередного мажорного релиза библиотеки.
+
+При выходе очередной мажорной версии, например, `5.x.x` → `6.x.x`, будет применено новое поведение, а сами фича-флаги будут удалены.
+
+## Подключение фича-флагов
+
+Чтобы применить доработку/исправление нужно указать фича-флаги в `<ReactUIFeatureFlagsContext.Provider>`
+
+```jsx static
+import { ReactUIFeatureFlagsContext } from '@skbkontur/react-ui';
+
+function ExampleComponent() {
+  return (
+    <ReactUIFeatureFlagsContext.Provider
+      value={{
+        selectAutoScrollToSelectedItem: true,
+      }}
+    >
+      {/* Внутри будут работать все фича-флаги с true */}
+    </ReactUIFeatureFlagsContext.Provider>
+  );
+}
+```
+
+Механизм работы: новая функциональность применяется или не применяется в зависимости от того, был ли передан со значением true соответствующий флаг или нет.
+
+Флаги задаются с помощью `ReactUIFeatureFlagsContext.Provider`.
+
+```jsx static
+import { ReactUIFeatureFlagsContext } from '@skbkontur/react-ui';
+
+<ReactUIFeatureFlagsContext.Provider value={{ selectAutoScrollToSelectedItem: true }}>
+  {/* ... */}
+</ReactUIFeatureFlagsContext.Provider>;
+```
+
+## Список фича-флагов
+
+### selectAutoScrollToSelectedItem
+
+Флаг включает автоскролл к выбранному значению при открытии меню.
+
+### maskedInputUseLegacyBehavior
+
+По умолчанию `MaskedInput` и `ComboBox` с маской используют исправленную реализацию MaskedInputV2. Флаг включает legacy-поведение прежней реализации.
+
+### resizeDetectorUseIframe
+
+По умолчанию `false`: `ResizeDetector` отслеживает размеры через `ResizeObserver`, в том числе для пересчёта позиции `Popup`-компонентов при изменении размера контента.
+
+При значении `true` используется прежняя реализация с iframe. Если браузер не поддерживает `ResizeObserver`, iframe используется независимо от значения флага.
+
+`Modal`, `ModalBody`, `Textarea` и `Tab` явно используют iframe через `useResizeObserver={false}` независимо от глобального флага, сохраняя прежнюю DOM-структуру и стили.
+
+```jsx static
+<ReactUIFeatureFlagsContext.Provider value={{ resizeDetectorUseIframe: true }}>
+  {/* Использовать iframe вместо ResizeObserver */}
+</ReactUIFeatureFlagsContext.Provider>
+```
+
+## Объект со всеми флагами
+
+Для получения объекта со списком всех фича-флагов необходимо применить вспомогательные функции к объектам заданных флагов
+
+```typescript static
+import { getFullReactUIFlagsContext } from '@skbkontur/react-ui';
+
+getFullReactUIFlagsContext(useContext(ReactUIFeatureFlagsContext));
+```
